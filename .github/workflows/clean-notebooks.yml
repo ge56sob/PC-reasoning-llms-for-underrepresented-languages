@@ -1,0 +1,59 @@
+name: Clean notebook metadata
+
+on:
+  push:
+    paths:
+      - "Aarna_SmallModel1/**.ipynb"
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+
+    if: github.actor != 'github-actions[bot]'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Remove broken widget metadata
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          changed = False
+
+          for path in Path("Aarna_SmallModel1").rglob("*.ipynb"):
+              with open(path, "r", encoding="utf-8") as f:
+                  notebook = json.load(f)
+
+              metadata = notebook.get("metadata", {})
+
+              if "widgets" in metadata:
+                  del metadata["widgets"]
+                  changed = True
+                  print(f"Cleaned widgets metadata from {path}")
+
+              with open(path, "w", encoding="utf-8") as f:
+                  json.dump(notebook, f, ensure_ascii=False, indent=1)
+                  f.write("\n")
+
+          if not changed:
+              print("No widget metadata found.")
+          PY
+
+      - name: Commit cleaned notebooks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
+            git add -A
+            git commit -m "Clean notebook widget metadata"
+            git push
+          fi
