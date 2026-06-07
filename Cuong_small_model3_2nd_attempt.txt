@@ -6,6 +6,376 @@
 
 
 ========== MEDIUM ==========
+ID: medium-vi-0
+Question: Trong $\triangle ABC$, $(a+c)(\sin A - \sin C) = b(\sin A - \sin B)$, giá trị của $\angle C$ tính bằng radian là bao nhiêu?
+Model's Full Answer: \[ \angle C = 90^\circ \]
+
+Áp dụng công thức tổng quát cho tam giác:
+
+\[ a(c + c') \sin A - a (\sin A - \sin C) = b(c' + c') \sin C \]
+\[ (c + c') \sin A = bc' \]
+
+Với \( \cos A = \frac{1}{2} \):
+\[ a(2 + \sin^2 A) = b(a + 1) \implies a(4 + \sin^2 A) = ab \]
+
+Suy ra:
+\[ a^2 + 2ac = ba \quad \Rightarrow \quad a^2 + ac + b^2 = ba \]
+
+Thay \( a = \cos C \):
+
+\[ a^2 + \cos^2 C + b^2 = 3b \]
+\[ a^2 + b^2 = 3b \]
+\[ a(b + c) = b^2 \]
+\[ a = \sqrt{3} \]
+
+Mà \( \angle C = 90^\circ \):
+
+\[ \angle C = 90^\circ \]
+
+Do đó, giải pháp cuối cùng là:
+\[ \boxed{\frac{π}{2}} \]
+\frac{π--$\frac{\pi}{3}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-1
+Question: Bài toán cho hàm số $$f(x) = \ln \frac{x}{2-x} + ax + b(x-1)^2.$$ Biết rằng \(f(x) > -2\) và điều này chỉ đúng khi \(1 < x < 2\), hãy tìm khoảng giá trị của \(b\).
+Model's Full Answer: **Hàm số được đưa ra là**: 
+\[ f(x) = \ln \frac{x}{2-x} + ax + b(x-1)^2 \]
+
+**Điều kiện ràng buộc**: 
+\[ 1 < x < 2 \]
+Vì vậy, chúng ta cần giải quyết các trường hợp:
+
+1. **Khi \(x = 0\)**:
+   \[ f(0) = a \cdot 0 + b(0-1)^2 = 0 \Rightarrow a = 0 \]
+   Do đó, \(a = 0\).
+
+2. **Khi \(x = 1\)**:
+   \[ f(1) = \ln \frac{1}{3} + 0 + (1-1)^2 \cdot 0 = \ln \frac{1}{3} \]
+   Vì \(f(1)\geq -2\), đây không thỏa mãn.
+
+3. **Khi \(x = 2\)**:
+   \[ f(2) = \ln \frac{2}{5} + b(2-1)^2 \]
+   Thay vào giả thuyết ban đầu:
+   \[ \ln \frac{2}{5} + 2b(0) = -2 \Rightarrow b = -2 \]
+
+Do đó, khoảng giá trị của \(b\) là:
+\[ \boxed{-2} \]
+-2--$b \geq $-\frac{2}{3}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-2
+Question: Cho rằng $\alpha$ là một góc nhọn và $\cos \alpha = \frac{1+\sqrt{5}}{4}$. Tìm $\sin \frac{\alpha}{2}$.
+Model's Full Answer: \(\alpha\) là góc nhọn, nên \(\cos \alpha < 0\).
+
+Ta có:
+\[ \cos \alpha = \frac{1 + \sqrt{5}}{4}, \quad \Rightarrow -\cos \alpha > 0 \]
+
+Áp dụng định lý cosine cho \(\frac{\alpha}{2}\):
+\[
+-\left(1 - \frac{\sqrt{5}}{4}\right) \leq \sin \frac{\alpha}{2}
+\]
+
+Đơn giản hóa:
+\[
+-\frac{\sqrt{5}}{4} \leq \sin \frac{\alpha}{2} < \frac{\sqrt{5}}{4}
+\]
+
+Tìm \( \sin \frac{\alpha}{2} \):
+\[
+\boxed{\frac{\sqrt{5}}{4}}
+\]
+\frac{\sqrt{5--$\frac{-1+\sqrt{5}}{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-3
+Question: Cho $S_{n}$ là tổng của $n$ phần tử đầu tiên trong một cấp số nhân $\{a_{n}\}$. Nếu $S_{4}=-5$ và $S_{6}=21S_{2}$, hãy tìm $S_{8}$.
+Model's Full Answer: **Giải pháp**
+
+Để giải quyết vấn đề này, chúng ta sẽ sử dụng định lý cơ bản về cấp số nhân:
+
+\[ S_n = \frac{a_1 (1 - r^n)}{r} \]
+
+Trong trường hợp đặc biệt cho \( n = 4 \):
+\[ S_4 = \frac{a_1 (1 - r^4)}{r} \]
+\[ a_1 = -5 \quad \text{(vì } S_4 = -5) \]
+\[ r = -\frac{1}{3} \]
+
+Áp dụng vào phương trình:
+\[ S_4 = \frac{-5 (1 - (-\frac{1}{3})^4)}{-\frac{1}{3}} \]
+\[ S_4 = \frac{(-5)(1 + \frac{1}{9})}{-\frac{1}{3}} \]
+\[ S_4 = \frac{5}{3} \cdot 9 \]
+\[ S_4 = 15 \]
+
+Tiếp theo, áp dụng cho \( n = 6 \):
+\[ S_6 = \frac{a_1 (1 - r^6)}{r} \]
+\[ a_1 = 21 \]
+\[ r = -\frac{1}{2} \]
+
+Tính toán:
+\[ S_6 = \frac{21 (1 - (-\frac{1}{2})^6)}{-\frac{1}{2}} \]
+\[ S_6 = \frac{21 (1 + \frac{1}{8})}{-\frac{1}{2}} \]
+\[ S_6 = \frac{21 \cdot 9}{-\frac{1}{2}} \]
+\[ S_6 = 90 \]
+
+Vậy giá trị của \( S_8 \) là:
+\[ \boxed{90} \]
+90---85 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-4
+Question: Đường thẳng $l: x-my+1=0$ cắt đường tròn $\odot C: (x-1)^{2}+y^{2}=4$ tại các điểm A và B. Diện tích tam giác $\triangle ABC$ là $\frac{8}{5}$. Hãy tìm một giá trị có thể của $m$.
+Model's Full Answer: **Áp dụng phương trình đường thẳng \((l) \):
+\[ x - my + 1 = 0 \]
+Tìm các hệ số \( m \):
+
+\[ a = 1, b = -m, c = 1 \]
+
+Sử dụng công thức diện tích tam giác:
+
+\[ \text{Diện tích} = \frac{1}{2} \cdot a \cdot b \]
+
+\[
+\begin{align*}
+a &= 1 \\
+b &= -m & \Rightarrow c &= (-m)(1) &= -m \\
+\end{align*}
+\]
+
+Vậy, diện tích tam giác là:
+\[ \Delta = \frac{1}{2} \cdot 1 \cdot (-m) = -\frac{1}{2} \]
+
+Theo đề bài cho rằng diện tích bằng \(\frac{8}{5}\), ta giải quyết:
+
+\[
+-\frac{1}{2} = \frac{8}{5} \implies m = \frac{-3}{8}
+\]
+
+Do đó, giá trị có thể của \(m\) là:
+\[ \boxed{\frac{-3}{8}} \]
+\frac{-3--${2, -2, \frac{1}{2}, -\frac{1}{2}}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-5
+Question: Nếu $\sin(\alpha - \beta)=\frac{1}{3}$ và $\cos \alpha \sin \beta=\frac{1}{6}$, hãy tìm $\cos (2\alpha + 2\beta).$
+Model's Full Answer: \[ \begin{aligned} &\sin(\alpha - \beta) = \frac{1}{3},\\ &\cos \alpha \sin \beta = \frac{1}{6}. \end{aligned} \]
+
+**Tìm \( \cos(2\alpha + 2\beta) \)**:
+
+1. Sử dụng phương trình tổng quát:
+   \[
+   \cos(2\alpha + 2\beta) = \cos^2 \left(2\alpha + 2\beta\right) - \sin^2 \left(2\alpha + 2\beta\right).
+   \]
+
+2. Áp dụng công thức cosine cho tam giác đơn giản:
+   \[
+   \cos^2 \left(2\alpha + 2\beta\right) = (\cos 2\alpha)(\cos 2\beta) - (\sin 2\alpha)\sin 2\beta.
+   \]
+   Thay các giá trị đã biết vào phương trình này:
+
+   \[
+   \cos^2 \left(2\alpha + 2\beta\right) = \left(\frac{1}{3}\right)^2 - \left(\frac{1}{6}\right)^2.
+   \]
+
+3. Tính toán các hệ số:
+   \[
+   \cos^2 \left(2\alpha + 2\beta\right) = \frac{1}{9} - \frac{1}{36}.
+   \]
+   \[
+   \cos^2 \left(2\alpha + 2\beta\right) = \frac{84}{90} - \frac{7}{90}.
+   \]
+   \[
+   \cos^2 \left(2\alpha + 2\beta\right) = \frac{7}{90}.
+   \]
+
+4. Chia cả hai bên bởi \(\sqrt{3}\):
+   \[
+   \cos(2\alpha + 2\beta) = \pm \frac{\sqrt{7}}{9}.
+   \]
+
+Vậy, giải pháp là:
+\[
+\boxed{\frac{\sqrt{7}}{9}}
+\]
+\frac{\sqrt{7--$\frac{1}{9}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-6
+Question: Hàm $f(x)=\cos \omega x -1\;(\omega>0)$ có 3 nghiệm trên khoảng $[0, 2\pi]$. Hỏi miền giá trị của $\omega$ là bao nhiêu?
+Model's Full Answer: **Miền giá trị của \(\omega\) cần tìm là:**
+
+\[ \omega > 0 \]
+
+Dựa vào định lý về các hàm cosin:
+
+- Hàm \( f(x) = \cos(2\pi kx + \frac{\pi}{2}) \) cho \( k \in \mathbb{Z} \).
+- Vì \( \omega > 0 \), điều kiện này chỉ áp dụng cho một số nguyên dương.
+
+Vậy, **miền giá trị của \(\omega\) là**: 
+
+**\[ \omega > 0 \]**.
+NO_BOXED_ANSWER--$[2,3)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-7
+Question: Đường hyperbol $C$ được cho bởi $\frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\;(a>0,b>0).$ Các tiêu điểm trái và phải của nó lần lượt là $F_{1}$ và $F_{2}$. Điểm $A$ nằm trên $C$, và điểm $B$ nằm trên trục $y$. $\overrightarrow{F_{1}A} \perp \overrightarrow{F_{1}B}$ và $\overrightarrow{F_{2}A} = -\frac{2}{3}\overrightarrow{F_{2}B}$. Tâm sai của $C$ là bao nhiêu?
+Model's Full Answer: Dựa vào thông tin:
+- \( F_1(A, B) \) (tâm sai)
+- \( \overrightarrow{F_1A} \cdot \overrightarrow{F_1B} = 0 \)
+- \(\overrightarrow{F_2A} = -\frac{2}{3}\left(\overrightarrow{F_2B}\right)\)
+
+Từ đây, suy ra:
+
+\[ \overrightarrow{F_1A} \cdot \overrightarrow{F_1B} = 0 \]
+\[ \overrightarrow{F_1A} \times \overrightarrow{F_1B} = -\frac{2}{3} \]
+
+Giải hệ này cho tâm sai.
+
+\[
+\begin{aligned}
+\overrightarrow{F_1A} &= A + B \\
+\overrightarrow{F_1B} &= A - B.
+\end{aligned}
+\]
+Sử dụng tính chất hình học và định lý Pythagoras:
+\[ AB^2 = AF^2 + BF^2 = (\overrightarrow{F_1A})^2 + (\overrightarrow{F_1B})^2 \Rightarrow 9 + 81 = (AF)^2 + (BF)^2 \quad \Rightarrow 90 = (AB)^2.\]
+\[ \Rightarrow AB = 9\sqrt{2}. \]
+
+Do đó, tâm sai của đường hyperbol là:
+\[ \boxed{9\sqrt{2}} \]
+9\sqrt{2--$\frac{3\sqrt{5}}{5}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-8
+Question: Cho \(a = 0.1e^{0.1}\), \(b = \frac{1}{9}\), \(c = -\ln 0.9\). So sánh kích thước của \(a\), \(b\), và \(c\).
+Model's Full Answer: \[ a = 0.1e^{0.1} = 1.0178534 \]
+\[ b = \frac{1}{9} = 0.1111111 \]
+
+Sử dụng các giá trị này:
+
+Kích thước tương ứng:
+- \(a\) (khoảng): \(1.0178534\)
+- \(b\) (hằng số): \(0.1111111\)
+
+Tính toán bằng cách chia cho cơ số tự nhiên:
+\[ c = \frac{1}{a} = \frac{1}{1.0178534} \approx 0.0967478 \]
+
+Do đó,
+\[ \boxed{0.0967478} \] là kích thước tương ứng.
+
+**Giải thích chi tiết:**
+- **\(a = 1.0178534\)** đại diện cho khoảng kích thước.
+- **\(b = 0.1111111\)** thể hiện hằng số với độ chính xác nhỏ hơn.
+- **\(c = 0.0967478\)** đo lường sự phân chia giữa hai yếu tố lớn hơn hoặc bằng nhau.
+
+Cả ba đều nằm trong phạm vi hợp lý, minh họa mối quan hệ tuyến tính giữa kích thước và cơ sở tự nhiên.
+0.0967478--$c < a < b$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-9
+Question: Cho rằng điểm \(A(2,1)\) nằm trên hyperbol \(C: \frac{x^2}{a^2} - \frac{y^2}{a^2 - 1} = 1 (a > 1)\), và đường thẳng \(l\) cắt \(C\) tại các điểm \(P\) và \(Q\), với tổng hệ số góc của các đường thẳng \(AP\) và \(AQ\) bằng 0. Nếu \(\tan \angle PAQ = 2\sqrt{2}\), tìm diện tích của \(\triangle PAQ\).
+Model's Full Answer: **Để giải quyết vấn đề này, chúng ta sẽ sử dụng phương pháp liên quan đến hệ số góc và tọa độ của điểm \(A\).**
+
+**Hệ thống thông tin được cung cấp:**
+- Điểm \(A(2,1)\) thuộc hyperbol \(C: \frac{x^2}{a^2} - \frac{y^2}{a^2 - 1} = 1\) với \(a > 1\).
+- Tổng hệ số góc của hai đường thẳng \(AP\) và \(AQ\) là:
+\[ \tan \angle PQA = \frac{PA}{AQ} = \frac{\tan A + \tan B}{1 - \tan A\tan B} = \frac{2\sqrt{2}}{1 - \sqrt{2}} \]
+
+**Áp dụng công thức cho các góc:**
+\[ \tan \angle PQA = \frac{\cos A}{\sin A + \cos B} = \frac{\frac{2\sqrt{2}}{3}}{\frac{1}{2} - \frac{\sqrt{2}}{2}} = \frac{4\sqrt{2}}{6} = \frac{2\sqrt{2}}{3} \]
+
+Với \(A(2,1)\):
+\[ \tan A = \frac{2\sqrt{2}}{3} \Rightarrow \theta_A = \arctan \left( \frac{2\sqrt{2}}{3} \right) = \frac{\pi}{6} \]
+
+**Tính toán bán kính cong \(a\):**
+Bán kính cong \(a\) từ \(A\) về phía tiêu cực của hyperbol:
+
+\[ a = |2| = 2 \]
+
+**Xác định đường thẳng \(l\):**
+\[ l: x - y = 1 \]
+\( l \) đi qua \(A(2,1)\):
+
+\[ \text{Mặt phẳng} \text{ của } C \text{ có hướng dẫn bởi} [2, 1] \]
+
+**Gọi \(P(x_1, y_1)\) và \(Q(x_2, y_2)\) như sau để tính diện tích \(\triangle PAQ\):
+\[ AP = |x_1 - x_2| = \sqrt{(x_1 - 2)^2 + (y_1 - 1)^2} \]
+\[ AQ = \sqrt{(x_2 - 2)^2 + (y_2 - 1)^2} \]
+
+Do đó, diện tích \(\triangle PAQ\) bằng:
+
+\[ \Delta_{PAQ} = \frac{1}{2} \left| AP + AQ \right| = \frac{1}{2} \left| \sqrt{(x_1 - 2)^2 + (y_1 - 1)^2} + \sqrt{(x_2 - 2)^2 + (y_2 - 1)^2} \right| \]
+
+Sử dụng giá trị đã biết, ta có:
+
+\[ \sqrt{(x_1 - 2)^2 + (y_1 - 1)^2} = 2\sqrt{2}, \quad (x_2 - 2)^2 + (y_2 - 1)^2 = 1 \implies x_2^2 + y_2^2 - 2(x_1 - 2)(y_2 - 1) = 0 \]
+
+\[ \Delta_{PAQ} = \frac{1}{2} \cdot 2\sqrt{2} \cdot 2\sqrt{2} = \frac{4\sqrt{2}}{3} \]
+
+**Chốt lại:** 
+\[ \boxed{\frac{4\sqrt{2}}{3}} \]
+\frac{4\sqrt{2--$\frac{16\sqrt{2}}{9}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-10
+Question: Dãy số $\{a_{n}\}$ là một cấp số nhân. $S_n$ là tổng của $n$ số đầu tiên của $\{a_{n}\}$ và $a_{n+1} = 2S_{n} + 2$. Giá trị của $a_{4}$ là bao nhiêu?
+Model's Full Answer: Trong đó \( S_n \) đại diện cho tổng các phần tử của dãy.
+
+\[ S_4 = a_3 + 2a_3 + 2a_3 = 6a_3 \]
+
+Áp dụng công thức cấp số nhân:
+
+\[
+a_4 = 2S_4 + 2 = 2(6a_3) + 2
+\]
+
+Tính toán giá trị:
+
+\[
+a_4 = 12a_3 + 4
+\]
+
+Vậy, giá trị của \( a_{4} \) là:
+
+\[
+\boxed{12}
+\]
+12--54 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-11
+Question: Tiêu điểm trái và phải của hyperbol $\frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} (a>0, b>0)$ lần lượt là $F_{1}, F_{2}$. Một đường thẳng vuông góc được vẽ từ $F_{2}$ đến một trong các đường tiệm cận và giao điểm vuông góc là điểm P. Nếu $PF_{2} = 2$, và hệ số góc của $PF_{1}$ là $\frac{\sqrt{2}}{4}$, tìm phương trình của hyperbol này.
+Model's Full Answer: \[
+PF_2 = 2,
+\]
+\[
+PF_1 = \frac{\sqrt{2}}{4}
+\]
+
+Từ đó:
+\[ PF_1^2 + PF_2^2 = a^2 \Rightarrow 1 + \left(\frac{\sqrt{2}}{2}\right)^2 = a^2 \implies a^2 = \frac{(a+1)(a-1)}{2} \quad (\text{thỏa điều kiện}) \]
+
+Phương trình hyperbol \( f(x,y) = x^2 - y^2 \):
+
+Mặt khác, tính chu vi:
+
+\[
+CP = \sqrt{PF_1^2 + PF_2^2} = \sqrt{\left(1 + \frac{\sqrt{2}}{2}\right)^2 + 1 + \frac{\sqrt{2}}{2}} = \sqrt{1 + \frac{3}{4} + \frac{1}{4}} = \sqrt{2.5}.
+\]
+
+Sử dụng chu vi để giải tìm hyperbol:
+
+\[ a^2 = \frac{1}{2} \Rightarrow a = \pm \sqrt{2/2} = \pm \sqrt{1} = \pm 1 \]
+
+Chọn \( a = 1 \):
+\[ f(x,y) = x^2 - y^2 \]
+Đáp án: 
+\[
+f(x,y) = x^2 - y^2.
+\]
+NO_BOXED_ANSWER--$\frac{x^{2}}{2} - \frac{y^{2}}{4}=1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
 ID: medium-vi-12
 Question: Ba hộp A, B, C chứa một số lượng nhất định bóng đen và bóng trắng. Tổng số bóng trong mỗi hộp lần lượt theo tỷ lệ 5:4:6. Tỷ lệ phần trăm bóng đen trong mỗi hộp lần lượt là 40%, 25% và 50%. Một quả bóng được rút ngẫu nhiên từ mỗi trong ba hộp. Xác suất để cả ba quả bóng đều là bóng đen là $p_1$. Nếu gộp tất cả các quả bóng trong ba hộp lại thành một hộp và rút ngẫu nhiên một quả bóng, xác suất để rút được một quả bóng trắng là $p_2$(Thể hiện dưới dạng số thập phân). Hãy tính $p_1+p_2$.
 Model's Full Answer: \[ p_1 + p_2 = \frac{3}{9} + \frac{3}{8} = \frac{15}{27} \]
