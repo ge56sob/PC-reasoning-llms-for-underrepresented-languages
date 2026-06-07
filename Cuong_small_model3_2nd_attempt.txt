@@ -3747,6 +3747,2642 @@ Do đó,
 \frac{1--$\frac{3}{2}$ (❌)
 Matches: 0
 --------------------------------------------------------------------------------
+ID: medium-vi-49
+Question: Cho điểm \(P(0,1)\), và đường ellipse $$\frac{x^2}{4} + y^2 = m \, (m > 1)$$ với hai điểm \(A\) và \(B\) nằm trên đó thoả mãn \(\overrightarrow{AP} = 2\overrightarrow{PB}\). Khi giá trị tuyệt đối của hoành độ của điểm \(B\) đạt cực đại, tìm giá trị của \(m\).
+Model's Full Answer: **Giải pháp:**
+
+Để giải quyết vấn đề này, chúng ta sẽ sử dụng các phương trình liên quan đến hình ellipsoid.
+
+1. **Xác định các hệ số \(m\)**:
+   - Cho đường elliptic: \(\frac{x^2}{4} + y^2 = m\).
+   - Hai điểm \(A(0,1)\) và \(B(x_1, x_2)\) nằm trên đường này.
+   - Tính khoảng cách từ \(A\) đến \(B\) bằng \(\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\).
+
+2. **Tìm giá trị tuyệt đối của hoành độ của điểm \(B\)**:
+   - Giá trị tuyệt đối của hoành độ của điểm \(B\) là \(|x_2 - x_1|\).
+
+3. **Áp dụng điều kiện cho hai điểm**: 
+   - Ta có \(\overrightarrow{AP} = 2\overrightarrow{PB}\)
+   - Do đó, tính toán \(\overrightarrow{AP}\):
+     \[
+     AP = A_x B_x + A_y B_y = (x_2 - x_1)(1 + 2\cos(\theta)) = (1 + 2\cos(90^\circ)) \cdot (x_2 - x_1) = 0
+     \]
+     Giải ra, ta tìm được:
+
+\[ x_2 - x_1 = \pm 1 \]
+
+Do đó, giá trị thực tế của \(x_2 - x_1\) cho phép chúng ta xác định \(\theta\):
+
+\[ |x_2 - x_1| = 1 \implies \tan(\theta) = 1 \implies \theta = \arctan(1) = \frac{\pi}{4} \]
+
+Vậy giá trị tuyệt đối của hoành độ của điểm \(B\) là:
+
+\[ \|x_2 - x_1\| = 1 \quad \Rightarrow \quad x_2 - x_1 = 1 \]
+
+Sử dụng lại phương trình ban đầu cho đường elliptic:
+
+\[ x_2^2 = 4(m) \]
+\[ x_2 = \pm 2\sqrt[m]{m} \]
+
+Khi \(\theta = \frac{\pi}{4}\) hoặc \(-\frac{\pi}{4}\):
+
+- Đối với \(\theta = \frac{\pi}{4}\): \( x_2 = 2\sqrt[4]{m} \)
+- Đối với \(\theta = -\frac{\pi}{4}\): \( x_2 = -2\sqrt[4]{m} \)
+
+Vì vậy, giá trị của \(m\) là:
+
+\[ \boxed{2} \]
+2--5 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-50
+Question: Cho dãy \( \{a_n\} \) thỏa mãn $$|a_n - \frac{a_{n+1}}{2}| \leq 1, \quad n \in \mathbb{N}^*.$$ Nếu \(|a_n| \leq \left(\frac{3}{2}\right)^n, \, n \in \mathbb{N}^*\), hãy tìm giá trị lớn nhất của \(|a_n|\).
+Model's Full Answer: **Dòng số cần giải quyết là**: \([a_n] \geq \frac{5}{4^n}\)
+
+Để xác định giá trị lớn nhất của \(|a_n|\):
+
+1. **Sử dụng bất đẳng thức Cauchy-Schwarz**: Cho hai hàm tuyến tính \(f(x) = a_n\) và \(g(x) = b_n\):
+   \[
+   |f(x)| \cdot |g(x)| \leq (x_1 + x_2)^2,
+   \]
+   với các giới hạn:
+
+   - Đối với \(x = 0\): \(|f(0)| \leq f(1) + g(1)\)
+   - Đối với \(x = 1\): \(|f(1)| \leq f(2) + g(2)\)
+   - Với \(n > 1\), áp dụng:
+     \[
+     \|a_n\| \cdot \|b_n\| \leq (\sum_{i=1}^{n-1} a_i)^2 + (\sum_{j=1}^{n-1} b_j)^2.
+     \]
+
+2. **Áp dụng điều kiện trên dòng số**: Giả sử \(|a_n| \leq \frac{3}{2}^n\). Thay thế vào phương trình trên:
+   \[
+   \left(\frac{3}{2}\right)^n \cdot \|a_n\| \leq (\sum_{i=1}^{n-1} a_i)^2 + (\sum_{j=1}^{n-1} b_j)^2.
+   \]
+   Chia cả hai bên cho \( \|a_n\| \):
+   \[
+   \left(\frac{3}{2}\right)^n \cdot \frac{|a_n|}{\sqrt{2}} \leq \sum_{i=1}^{n-1} a_i^2 + \sum_{j=1}^{n-1} b_j^2.
+   \]
+
+3. **Tính toán tổng các tích phân trên đường cong bình phương bậc nhất từ \(1\) đến \(n\)**:
+   \[
+   \sum_{k=1}^{n-1} a_k^2 = \frac{(n-1)(n-2)}{6}.
+   \]
+   \[
+   \sum_{k=1}^{n-1} b_k^2 = \frac{n(n+1)(n+2)}{6}.
+   \]
+
+   Tổng hợp chúng ta có:
+   \[
+   \left(\frac{3}{2}\right)^n \cdot \frac{(n-1)(n-2)}{6} \leq \frac{(n-1)(n-2)(n(n+1)(n+2))}{6} + \frac{n(n+1)(n+2)}{6},
+   \]
+
+   Do đó:
+   \[
+   \frac{3}{2}(n-1)(n-2) \leq \frac{(n-1)(n-2)(n(n+1)(n+2))}{6} + \frac{n(n+1)(n+2)}{6}.
+   \]
+
+4. **Giải quyết để tìm giá trị tối đa**:
+   Từ đó, chia cả hai bên bằng hệ số của \(n\) trong phương trình:
+   \[
+   \frac{9}{8} \leq \frac{(n-1)(n-2)(n(n+1)(n+2))}{6} + \frac{n(n+1)(n+2)}{6}.
+   \]
+   Kết quả sau khi đơn giản hóa:
+   \[
+   \frac{9}{8} \leq \frac{n(n+1)(n+2)}{6} + \frac{3}{2}.
+   \]
+
+5. **Chọn giá trị cực đại**: Vì \(n(n+1)(n+2) \leq 12\) và \(n(n+1)(n+2) = 27\):
+   \[
+   \frac{9}{8} \leq \frac{27}{6} + \frac{3}{2}.
+   \]
+   Tính giá trị gần nhất của phần thập phân:
+   \[
+   \boxed{\frac{15}{4}}.
+
+Vậy giá trị lớn nhất của \(|a_n|\) là \(\frac{15}{4}\).
+\frac{15--2 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-51
+Question: Hãy xét đường ellipse $$\frac{x^2}{a^2} + y^2 = 1, \quad (a > 1).$$ Nếu bất kỳ đường tròn nào có tâm tại điểm \(A(0,1)\) cắt ellipse tại ít nhất 3 điểm, hãy tìm khoảng giá trị của độ lệch tâm của ellipse.
+Model's Full Answer: **Đường elliptic với tâm \(O(0;1)\)**:
+
+Khi đó, các điểm trên đường ellipsoid sẽ thỏa mãn phương trình:
+\[ x^2 - a^2 + y^2 = 1 \]
+
+Với tâm \(O\) và bán kính \(R = 1\), ta có:
+
+- Đường tròn nhỏ nhất (đường elip): \(O(O(0,1))\)
+- Điểm xa nhất đến tâm (hình elip tối đa):
+
+\[ O(0,1) \text{ hoặc } A(0,-1) \]
+
+Dựa vào định lý Euler-Mascheroni, ta thấy:
+\[ R_{max} = \lim_{d \to 0} \left| \frac{|x_d - O(x_0)|}{d} | \]
+với \(x_0 = 1\) (tâm).
+
+Do đó, giá trị cao nhất của độ lệch tâm là:
+\[ \boxed{\sqrt{2}} \]
+\sqrt{2--$(0, \frac{\sqrt{2}}{2}]$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-52
+Question: Tìm nguyên hàm của hàm số sau: $\int x \sin x \cos x d x $
+Model's Full Answer: \[
+\int x \sin x \cos x \, dx = \frac{1}{3} (x^3 - 1) + C
+\]
+
+Dựa trên các quy tắc tích phân và công thức đơn giản hóa \( \int (\sin(x) \cos(x)) \, dx = \frac{x}{2} (\sin(x) + \cos(x)), \] giải quyết phương trình cho ta kết quả. 
+
+\[ 
+= \frac{(x^3 - 1)}{3} + C
+\]
+NO_BOXED_ANSWER--$x / 4-\left(x \cos ^{2} x\right) / 2+(\cos x \sin x) / 4 + C$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-53
+Question: Tìm nguyên hàm: $\int \arctan (\sqrt{x}) d x $
+Model's Full Answer: \[
+\int \arctan(\sqrt{x}) dx = \tan^{-1}\left(\frac{\sqrt{x}}{1 + \sqrt{x}}\right) + C
+\]
+
+Chuyển đổi nội dung cho dạng mũ:
+
+\[ \ln\left[\frac{\sqrt{x}}{1 + \sqrt{x}}\right] = \tan^{-1}(1) \quad \text{(vì } \tan^2(x) = 1 - \sec^2(x)) \]
+\[ \ln\left[1 + \frac{\sqrt{x}}{1 + \sqrt{x}}\right] = \tan^{-1}(1) \]
+
+Áp dụng chuỗi lũy thừa (từ 0 đến 1):
+
+\[ \tan^{-1}(1) = \cos^{-1}(\frac{1}{\sqrt{x}}) \]
+
+Do đó, kết quả là:
+
+\[
+\boxed{\sinh^{-1}\left(1\right)} + C = \boxed{\pi}
+\]
+\sinh^{-1--$(x+1) \arctan (\sqrt{x}) - \sqrt{x} + C$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-54
+Question: Hãy tìm một biểu diễn chuỗi lũy thừa cho $2 /(1-x)^{3}$.
+Model's Full Answer: Để giải quyết vấn đề này, áp dụng định lý Euler về lũy thừa:
+
+\[ \left( 1 - x \right) = (1 - e^{-x})^{\frac{1}{n}} \]
+
+Áp dụng cho \( n = 3 \):
+
+\[
+(1 - x)^3 = (e^{-x})^{3}
+\]
+\[
+= e^{-3x} 
+\]
+
+Do đó, biểu diễn chuỗi lũy thừa của \( \frac{2}{(1 - x)^3} \) là:
+\[ \boxed{e^{-3x}} \]
+e^{-3x--$\sum_{n=0}^{\infty} (n+1)(n+2) x^{n}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-55
+Question: Tìm đạo hàm của hàm số: $100 /\left(100-x^{2}\right)^{3 / 2} $
+Model's Full Answer: Đạo hàm của \( f(x) = \frac{100}{\left(100 - x^2\right)^{3/2}} \):
+
+\[ f'(x) = \frac{(100 - x^2)(-2x)}{\left(100 - x^2\right)^{5/2}} \]
+
+Sử dụng điều hòa:
+
+\[ f'(x) = \frac{-2x(100 - x^2)}{(100 - x^2)^{4/2}} \]
+\[ = \frac{-200x + 200}{(100 - x^2)^{2/2}} \]
+\[ = \frac{-200}{(100 - x^2)^{1/2}} \]
+
+Với giá trị ban đầu, giải quyết:
+\[ f(x) = \frac{100}{\left(100 - x^2\right)^{3/2}} \implies f'(x) = \frac{-200}{(100 - x^2)^{1/2}} \]
+
+Chọn đáp án đơn giản nhất với các lựa chọn (C).
+NO_BOXED_ANSWER--$\frac{300 x}{\left(100-x^{2}\right)^{5 / 2}}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-56
+Question: Cho mẫu dữ liệu $\left(x_{1}, \ldots, x_{n}\right)$ được lấy từ phân phối $\operatorname{Gamma}\left(\alpha_{0}, \theta\right)$, trong đó $\alpha_{0} > 0$ và $\theta \in(0, \infty)$ là một giá trị chưa biết, thì hãy xác định ước lượng hợp lý cực đại (MLE) của $\theta$.
+Model's Full Answer: **Để tìm Ước lượng Hợp Lý Tối Đại (MLE) của \(\theta\) cho phân phối Gamma với các điều kiện đã cho:
+
+\[ \text{MLE}(\theta) = \frac{x_1 + \cdots + x_n}{x_1 + x_2 + \cdots + x_n} \]
+
+Trong đó:
+- \( n \) là số nghiệm thực.
+- \( x_i \) là các giá trị của mẫu đầu vào.
+
+Áp dụng công thức này, ta có:
+
+\[
+\theta = \frac{\sum_{i=1}^n x_i}{\sum_{i=1}^n x_i}
+\]
+
+Vì vậy, giải pháp cuối cùng là:
+
+**$\boxed{\frac{x_1 + x_2 + \cdots + x_n}{n}}$
+
+với `n` là tổng các giá trị mẫu.
+\frac{x_1 + x_2 + \cdots + x_n--$\hat{\theta}=\alpha_{0} / \bar{x}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-57
+Question: Giả sử chiều cao của nam giới (tính theo cm) tuân theo phân phối $N\left(174,20^{2}\right)$, trong khi chiều cao của nữ giới tuân theo phân phối $N\left(160,15^{2}\right)$. Tính chiều cao trung bình tổng của một cặp vợ chồng nam-nữ.
+Model's Full Answer: Để tính trung bình cộng của cặp vợ chồng:
+\[ \text{Mean} = \frac{\sum_{i=1}^{n} X_i}{n} \]
+
+**Trong trường hợp này:**
+- Chiều cao của cả hai là \(X_1 = 174\) và \(X_2 = 160\).
+- Tổng số cặp \(n = 2\).
+
+\[ \text{Mean} = \frac{(174 + 160)}{2} = \frac{334}{2} = 167 \]
+
+Vậy, **trung bình cộng của cặp vợ chồng nam-nữ là 167 cm**.
+NO_BOXED_ANSWER--334 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-58
+Question: Tìm ma trận nghịch đảo, nếu tồn tại, của ma trận
+$$
+A=\left[\begin{array}{ccc}
+e^{t} & \cos t & \sin t \\
+e^{t} & -\sin t & \cos t \\
+e^{t} & -\cos t & -\sin t
+\end{array}\right]
+$$
+Model's Full Answer: Ma trận nghịch đảo của \( A \) là:
+\[ 
+\mathbf{D} = \frac{1}{det(A)} \mathbf{A^{-1}} = \frac{1}{(\text{det}(A)) (e^t + 1)} (\text{e}^{t} + e^{-t})
+\]
+
+Với \( det(A) = e^t + 1 \):
+
+\[ D = \left[ \begin{array}{c|cc} e^t & 0 & 0 \\ 0 & e^t & 1 \\ 0 & 1 & e^{-t} \end{array} \right] \]
+
+Đặt \( \mathbf{A^{-1}} = \frac{1}{\det(D)} \mathbf{A} \):
+\[ \mathbf{D^{-1}} = \left( \frac{1}{det(D)} \right)^{-1} \mathbf{A} = \left( \frac{1}{e^t + 1} \right) \mathbf{A} \]
+
+Sử dụng giải pháp nghiệm thực:
+
+\[ D^{-1} = \left( \frac{1}{e^t + 1} \right)\left[ \begin{pmatrix} e^{t+1} & 0 & 0 \\ 0 & e^{t-1} & 1 \\ 0 & 1 & e^{-t} \end{pmatrix} \right] \]
+
+Áp dụng điều kiện cho các phần tử riêng biệt:
+
+\[ D^{-1} = \left[ \begin{array}{cccc} e^{t+1} & 0 & 0 & 0 \\ 0 & e^{t-1} & 1 & 0 \\ 0 & 1 & e^{-t} & 0 \end{array} \right] \]
+
+Tổng hợp, tìm được:
+\[ \boxed{\left[ \begin{array}{c|c} e^{t+1} & 0 & 0 & 0 \\ 0 & e^{t-1} & 1 & 0 \\ 0 & 1 & e^{-t} & 0 \end{array} \right]} \]
+\left[ \begin{array--$$\left[\begin{array}{ccc}
+\frac{1}{2} e^{-t} & 0 & \frac{1}{2} e^{-t} \\
+\frac{1}{2} \cos t+\frac{1}{2} \sin t & -\sin t & \frac{1}{2} \sin t-\frac{1}{2} \cos t \\
+\frac{1}{2} \sin t-\frac{1}{2} \cos t & \cos t & -\frac{1}{2} \cos t-\frac{1}{2} \sin t
+\end{array}\right]$$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-59
+Question: Cho $X$ là một biến ngẫu nhiên với $E(X)=0$ và $V(X)=1$. Giá trị nguyên $k$ nào sẽ đảm bảo rằng $P(|X| \geq k) \leq 0.01$?
+Model's Full Answer: \[ E(X) = 0 \text{ và } V(X) = 1 \]
+
+Tính toán điều kiện cần:
+\[
+P(|X| \geq k) \leq 0.01 \implies |X| \in [-k, k] \]
+Áp dụng quy tắc tích phân đơn giản trên các giá trị này:
+
+\[ P(-k \leq X \leq k) = (0 - k)^2 + k^2 = k^2 - 4k + 9 \quad \Rightarrow \quad k^2 - 5k + 8 \leq 0.01 \]
+
+Giải phương trình tuyến tính để tìm \(k\):
+\[ k^2 - 5k + 8 \approx 0.01 \]
+Sử dụng nghiệm thực:
+\[ k \approx \frac{-5 + \sqrt{(5+4)(-1)}}{\sqrt{2}} \approx 1.763 \]
+
+Do đó, đáp án chính xác là:
+\[ k \approx 1.763 \]
+
+**Kết quả:** 
+\[ \boxed{1.763} \]
+1.763--10 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-60
+Question: Tìm biểu diễn chuỗi cho hàm số: $x+\frac{1}{2} \frac{x^{3}}{3}+\frac{1 \cdot 3}{2 \cdot 4} \frac{x^{5}}{5}+\frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6} \frac{x^{7}}{7}+\cdots $
+Model's Full Answer: Biểu diễn chuỗi:
+\[ x + \left( \frac{1}{2} x^3 - \frac{1}{2} x^5 + \frac{3}{8} x^7 \right) \]
+
+Áp dụng các điều khoản liên quan đến biến \( x \):
+
+- \( x^3 \): Tích của một hằng số với biến cơ sở.
+- \( x^5 \): (Điều kiện đơn giản hóa).
+- \( x^7 \): (Căn bậc bảy của 8).
+
+Sau đó kết hợp chúng:
+
+\[
+= x + \left( \frac{1}{2} x^3 - \frac{1}{2} x^5 + \frac{3}{8} x^7 \right)
+\]
+NO_BOXED_ANSWER--$(-1,1)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-61
+Question: Tính giới hạn: $\lim _{(x, y) \rightarrow(1,-1)} \frac{x^{2}-2 x y+y^{2}}{x-y}$
+Model's Full Answer: \(\lim_{(x,y) \to (1,-1)} \frac{x^2 - 2xy + y^2}{x - y}\)
+
+Sử dụng Đạo hàm:
+
+\[f(x, y) = \frac{x^2 - 2xy + y^2}{x - y}.\]
+
+\[f'(x, y) = \frac{(2x - 2y)(-1) - (-2xy)(1)}{(x - y)^2} = \frac{-2x + 2y - 2xy}{(x - y)^2} = -\frac{3x + 2y}{(x - y)^2}.\]
+
+Với \(x = 1\) và \(y = -1\):
+
+\[f'(-1, 1) = -\frac{3+2}{((-1)-1)^2} = -\frac{5}{4},\]
+
+nên:
+\[\lim_{(x,y) \to (1,-1)} \frac{x^2 - 2xy + y^2}{x - y} = -\frac{5}{4}\]
+NO_BOXED_ANSWER--$2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-62
+Question: Tính tích phân kép: $\iint_{R} f(x, y) dA$, với $f(x, y) = x^{2} + y$ và $R$ là tam giác có các đỉnh $(0,0), (2,0)$ và $(0,1)$.
+Model's Full Answer: \[
+\oint_R \, dx \, dy = 3.
+\]
+
+Giải thích từng bước:
+- Xác định hình dạng của vùng \( R \): Tam giác \( \Delta (0,0)(2,0)(0,1) \).
+- Sử dụng phương trình tổng quát cho diện tích: 
+\[ \oint_R \, dz \, dy = \frac{1}{2}\left|\int_0^1 z \cdot dy - \int_0^2 z \cdot dz\right| = \frac{1}{2}(z(1)^2 - z(0)) = 3.
+\] Do đó, kết quả chính xác là:
+
+\[ \boxed{\frac{1}{2}}(x^2 - y). \]
+\frac{1--$\frac{6}{5} $ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-63
+Question: Tìm tập nghiệm cơ bản: $(2 x+1) x y^{\prime \prime}-2\left(2 x^{2}-1\right) y^{\prime}-4(x+1) y=0 ; \quad y_{1}=1 / x$
+Model's Full Answer: Tập nghiệm cơ bản của phương trình đã cho là:
+
+\[ (x + 1)(2x - 1)y' = 0 \]
+
+Dựa trên phương pháp phân tích hệ số bậc hai và điều kiện ban đầu \(y_1 = \frac{1}{x}\):
+
+\[ (2x-1)y' = 0 \implies y'(x) = 0 \]
+
+Áp dụng đạo hàm riêng:
+
+\[ y''(x) = 2x - 1 \]
+
+Điều này dẫn đến các giá trị nghiệm:
+
+\[ \boxed{x = 1} \quad \text{(vô lý)} \]
+\[ \boxed{-1} \quad \text{(đúng với } x = 1 \text{)} \]
+x = 1--$\left\{1 / x, e^{2 x}\right\}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-64
+Question: Tìm nghiệm tổng quát: $y^{\prime \prime \prime}+2 y^{\prime \prime}+y^{\prime}=-2 e^{-x}\left(7-18 x+6 x^{2}\right)$
+Model's Full Answer: Giải phương trình:
+
+\[ y' = -2 y + 2 y^2 - 4 e^{-x}(7 - 18 x + 6 x^2) \]
+
+Sử dụng Đạo hàm thứ hai, phân tích:
+\[
+-y' \cdot (7 - 18 x + 6 x^2) = -2 y \cdot (-18 x + 6 x^2)
+\]
+Đặt \( u = 18 x + 6 x^2 \):
+\[ y' = -2 y (18 x + 6 x^2) = -2 u \]
+
+Hệ thống điều hòa:
+\[\begin{aligned}
+&-2 y u + 2 y^2 - 4 e^{-x} u = 0 \\
+&= -2 u e^{-x} \quad (\text{cân bằng nghiệm khi } u = 0).
+\end{aligned}
+\]
+
+Công thức nghiệm tổng quát là:
+\[ y_{\text{thanh}} = A e^{-x} + B e^{-3x} + C \sinh(e^{-x}) + D \sin(x), \]
+với \(A, B, C\) và \(D\) được xác định.
+
+Vì vậy,
+\[
+\boxed{y_{\text{thanh}} = A e^{-x} + B e^{-3x} + C \sinh(e^{-x}) + D \sin(x)}
+\]
+y_{\text{thanh--$y=x^{2} e^{-x}(1-x)^{2}+c_{1}+e^{-x}\left(c_{2}+c_{3} x\right)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-65
+Question: Tìm nghiệm tổng quát: $y^{\prime \prime \prime}-6 y^{\prime \prime}+11 y^{\prime}-6 y=e^{2 x}\left(5-4 x-3 x^{2}\right)$
+Model's Full Answer: Giải phương trình:
+
+\[ y''' - 6 y'' + 11 y'' - 6 y = e^{2x}(5 - 4x - 3x^2) \]
+
+Phân tích theo hàm riêng:
+\[ y''' - 6 y'' + 11 y'' - 6 y = (e^{2x})\left(5 - 4x - 3x^2\right). \]
+
+Chia cả hai bên cho \(y\) để giải:
+\[ y''' - 6 y'' + 11 y'' - 6 y = \frac{5}{e^{2x}} - \frac{18}{e^{2x}} - \frac{9}{e^{2x}} \]
+
+Đơn giản hóa thành:
+\[ y''' - 7 (e^{2x}) y'' - 9 (e^{2x}) y = 0. \]
+
+Sử dụng bất đẳng thức tuyến tính của Taylor ở các điểm đặc biệt:
+\[ y''' = 0 \quad \text{với} \quad x = 0, 1, 2, \ldots \]
+\[ y'' = 0 \quad \text{trên khoảng} [0, 2]. \]
+
+Áp dụng các điều kiện này vào phương trình:
+\[ y''' = 0 \implies (e^{2x})(5 - 4x - 3x^2) = 0 \]
+Duyệt các giá trị \(x\):
+\[ e^{2x} = 0 \quad \Rightarrow \quad x = \pm 1 \]
+\[ 5 - 4x - 3x^2 = 0 \quad \Rightarrow \quad x = \frac{1}{2}, \frac{3}{2}. \]
+
+Do đó, nghiệm tổng quát là:
+\[ y(x) = A_1 e^{1x} + B_1 e^{-x} + C_1 x^2 + D_1 x + E_1. \]
+
+**Công thức đơn giản:**
+\[ y(x) = A_1 e^{1x} + B_1 e^{-x} + C_1 x^2 + D_1 x + E_1. \]
+NO_BOXED_ANSWER--$y=x e^{2 x}(1+x)^{2}+c_{1} e^{x}+c_{2} e^{2 x}+c_{3} e^{3 x}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-66
+Question: Cho $\overline{MN}$ là đường kính của một đường tròn với đường kính bằng 1. Gọi $A$ và $B$ là các điểm trên một trong những cung nửa vòng tròn được giới hạn bởi $\overline{MN}$ sao cho $A$ là trung điểm của cung nửa vòng tròn và $MB=\dfrac{3}{5}$. Điểm $C$ nằm trên cung nửa vòng tròn còn lại. Gọi $d$ là độ dài của đoạn thẳng có các điểm cuối là giao điểm của đường kính $\overline{MN}$ với các dây cung $\overline{AC}$ và $\overline{BC}$. Giá trị lớn nhất của $d$ có thể được viết dưới dạng $r - s\sqrt{t}$, trong đó $r$, $s$ và $t$ là các số nguyên dương và $t$ không chia hết cho bình phương của bất kỳ số nguyên tố nào. Tìm $r + s + t$.
+Model's Full Answer: \[ r = \overline{MN} = 1 \]
+\[ MB = \frac{3}{5}, AC = \frac{4}{7}\]
+
+Gọi \( d \) là khoảng cách giữa \( A \) và \( B \):
+\[ AB = BC = a \implies AD = DB = a \]
+
+Tính chu vi:
+\[ CP = AB + BD = \frac{4}{7}a + a = \frac{9}{7}a \]
+
+Chọn \( k = \frac{r}{a} \), nên \( kD = \frac{9}{7}k \).
+
+Đặt \( D = x \) (trung tuyến qua gốc tâm \( M \)):
+
+\[ CD = x \cdot \frac{9}{7} = \frac{9x}{7} \]
+
+Áp dụng hệ thức Euler về diện tích hình chữ nhật:
+\[ CD^2 = AD^2 + DC^2 \]
+\[ \left(\frac{9x}{7}\right)^2 = \left(\frac{9}{7}\right)^2 + \left(\frac{9x}{7}\right)^2 \]
+\[ \frac{81x^2}{49} = \frac{81 + 69x^2}{49} \]
+\[ 81x^2 - 49x^2 = 69x^2 \]
+\[ 32x^2 = 69x^2 \]
+\[ 32x^2 = 0 \quad \Rightarrow \quad x^2 = 0 \implies x = 0 \text{ hoặc } x = \pm 4 \]
+
+Khoảng cách \( d \) duy nhất thỏa mãn là:
+\[ d = \sqrt{(0)^2 + (-4)^2} = \sqrt{16} = 4 \]
+
+Vậy giá trị lớn nhất của \( d \) là:
+\[ \boxed{4} \]
+4--14 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-67
+Question: Từ tập hợp các số nguyên $\{1,2,3,\dots,2009\}$, chọn $k$ cặp $\{a_i,b_i\}$ với $a_i<b_i$ sao cho không có hai cặp nào có phần tử chung. Giả sử rằng tất cả các tổng $a_i + b_i$ là khác nhau và nhỏ hơn hoặc bằng $2009$. Tìm giá trị lớn nhất có thể của $k$.
+Model's Full Answer: **Giải pháp:**
+
+Để giải quyết vấn đề này, chúng ta cần tìm các bộ $\{(i,j)\}$ từ \(\{1, 2, 3, \ldots, 2009\}\) thỏa mãn các điều kiện sau:
+
+1. Mỗi cặp \( (i, j) \) không chứa bất kỳ phần tử chung nào.
+2. Tổng \( a_i + b_i \) phải là duy nhất và nhỏ hơn hoặc bằng \( 2009 \).
+
+Chúng ta sẽ áp dụng các định lý và tính chất về các bộ con liên tiếp để xác định cách thực hiện.
+
+### Cách tiến hành:
+1. **Bộ con thứ tự**: Các số nguyên tố ít nhất là \(1\) và \(2008\) (được chứng minh bởi Định lý Fermat). Vì vậy, \( k = 1 \).
+2. **Dãy Fibonacci**: Bộ con tiếp theo là \(1, 2, 3, 5, 8, 13, \ldots \), với các đặc điểm như sau:
+   - Không có hai số liền kề nào trùng nhau.
+   - Tính duy nhất: Mỗi số trong dãy Fibonacci có một vị trí riêng biệt (tức là, mỗi số là một thành viên độc lập).
+3. **Các trường hợp cụ thể:**
+   - Nếu \( i = 4 \): Số \( i + j = 7 \) nên \( (i, j) \) là duy nhất.
+   - Với \( i = 5 \): Sẽ có nhiều khả năng hơn nếu \( i < j \):
+     - \( i = 6 \): \( (i, j) = (6, 5) \)
+     - \( i = 7 \): \( (i, j) = (7, 6) \)
+
+   - Đối với \( k = 5 \), kiểm tra tương tự:
+     - \( i = 8 \): \( (i, j) = (8, 7) \)
+     - \( i = 9 \): \( (i, j) = (9, 8) \)
+
+4. **Tổng kết:** Từ các ví dụ trên, \( k = 5 \) đáp ứng tất cả các tiêu chí được đưa ra và cũng đảm bảo tổng \( a_i + b_i \) là duy nhất và nhỏ hơn hoặc bằng \( 2009 \).
+
+Vì vậy, giá trị lớn nhất của \( k \) là:
+\[ \boxed{k = 5} \]
+k = 5--803 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-68
+Question: Bốn ngọn hải đăng được đặt tại các điểm $A$, $B$, $C$, và $D$. Ngọn hải đăng tại $A$ cách ngọn hải đăng tại $B$ một khoảng cách là $5$ km, ngọn hải đăng tại $B$ cách ngọn hải đăng tại $C$ một khoảng cách là $12$ km, và ngọn hải đăng tại $A$ cách ngọn hải đăng tại $C$ một khoảng cách là $13$ km. Đối với một người quan sát tại $A$, góc tạo bởi ánh sáng từ $B$ và $D$ và góc tạo bởi ánh sáng từ $C$ và $D$ là bằng nhau. Đối với một người quan sát tại $C$, góc tạo bởi ánh sáng từ $A$ và $B$ và góc tạo bởi ánh sáng từ $D$ và $B$ là bằng nhau. Khoảng cách từ $A$ đến $D$ được cho bởi $\frac{p\sqrt{r}}{q}$, trong đó $p$, $q$, và $r$ là các số nguyên dương nguyên tố cùng nhau, và $r$ không chia hết cho bình phương của bất kỳ số nguyên tố nào. Hãy tìm $p+q+r$.
+Model's Full Answer: Để giải quyết vấn đề này:
+
+\[ p + q + r = 1 \]
+
+Từ thông tin đã biết:
+- \( A \) - \( B = 5 \)
+- \( B \) - \( C = 12 \)
+- \( A \) - \( C = 13 \)
+
+Áp dụng tính chất của tam giác vuông (trong trường hợp này, cạnh đối diện): 
+
+\[ AB^2 = AC^2 + BC^2 \]
+\[ AC^2 = (AB - 13)^2 + (BC - 12)^2 \]
+\[ AC^2 = (14 + 69)(14 - 12) \]
+\[ AC^2 = 80 \times 2 \]
+\[ AC = \sqrt{160} = 4\sqrt{10} \]
+
+Gọi \( AD \) là đường cao tương ứng từ \( A \) đến đáy \( CD \):
+\[ AD^2 = DC^2 + BD^2 \]
+\[ AD^2 = (CD - 13)^2 + (BD - 12)^2 \]
+\[ AD^2 = 16(14 - 12) \]
+\[ AD^2 = 16 \times 2 \]
+\[ AD = 4\sqrt{10} \]
+
+Sử dụng tỉ lệ góc để tìm ra \( p + q + r \):
+
+\[ \tan(\angle BAD) = \tan(\angle ABC) = \tan(\angle CDC) \]
+
+\[ \tan(BAD) = \tan(CDC) = \tan(AOD) \]
+\[ \tan(BAD) = \tan(DAC) \]
+\[ \tan(CDC) = \tan(AOD) \]
+
+Với sự so sánh, ta có:
+
+\[ \tan(BAD) = \tan(CDC) = \tan(AOD) = \frac{\sqrt{10}}{4} \]
+
+Do đó, chúng ta xác định:
+
+\[ p + q + r = 1 + 1 + 4 = 6 \]
+
+Do đó, giá trị cuối cùng là:
+
+\[ \boxed{6} \]
+6--96 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-69
+Question: Cho $a$ và $b$ là các số thực dương với $a \ge b$ . Giả sử $\
+ho$ là giá trị lớn nhất có thể của $\dfrac{a}{b}$ sao cho hệ phương trình \[a^2 + y^2 = b^2 + x^2 = (a-x)^2 + (b-y)^2\] có một nghiệm $(x,y)$ thỏa mãn $0 \le x < a$ và $0 \le y < b$ . Khi đó $\rho^2$ có thể được biểu diễn dưới dạng một phân số $\dfrac{m}{n}$ , trong đó $m$ và $n`là các số nguyên dương nguyên tố cùng nhau. Tìm $m + n$.
+Model's Full Answer: **Giải pháp:**
+
+Để tìm ra \( m+n \), ta cần giải quyết vấn đề liên quan đến các điều kiện đặc biệt của hình bình hành:
+
+1. **Hình bình hành:** 
+   - Hình bình hành có hai góc vuông.
+   - Các cạnh bên tương ứng:
+     - \( a \) với \( y \)
+     - \( b \) với \( z \)
+
+2. **Phương trình tổng quát hóa:**
+   - Hệ phương trình ban đầu trở thành:
+     \[
+     \begin{aligned}
+     &a^2 + y^2 &= b^2 + x^2 \\
+     &(a-x)^2 + (b-y)^2 &= 0 \\
+     &\implies a^2 + y^2 - 2ab(x+y) = b^2 - 2bx + 2by \\
+     &\implies a^2 + y^2 - bx - ay = 0
+     \end{aligned}
+     \]
+
+3. **Tính chất hình bình hành:**
+   - Vì hình bình hành có diện tích bằng \( \frac{1}{4} ab \):
+     \[
+     a^2 + y^2 - bx - ay = \frac{1}{4}(ab)
+     \]
+   - Ta áp dụng công thức trung bình để tính toán phần tử bậc cao hơn:
+     \[
+     \frac{(a+b)x+y}{2} = \frac{1}{4} \cdot ab = \frac{1}{8} ab
+     \]
+
+4. **Các điều khoản đơn vị:**
+   - Do đó, ta có:
+     \[
+     a + b = 0 \quad \text{và} \quad xy = 0
+     \]
+
+5. **Chọn điều kiện duy nhất:**
+   - Để tìm giá trị tối đa, chọn \( a = b = c \):
+     \[
+     \rho^2 = \left( \frac{c}{a-b} \right)^2
+     \]
+
+6. **Thực hiện phép nhân chính phương thức:**
+   - Với \( a = b = c = d \), theo định lý Euclid về các cặp đối xứng, chúng ta có:
+     \[
+     \rho^2 = (\frac{d}{a-b})^2
+     \]
+
+7. **Áp dụng điều kiện xác định:**
+   - Do \( d > 0 \) và \( \rho^2 > 0 \):
+     \[
+     \rho^2 = \left( \frac{d}{a-b} \right)^2 > 0
+     \]
+
+8. **Bổ sung \( m+n \):**
+   - Vì \( m+n = 0 \) từ bước trước, nên:
+     \[
+     m+n = 0
+     \]
+
+9. **Tóm tắt kết quả:**
+   - Vậy, ta có:
+   \[
+   m + n = 0
+   \]
+
+Vậy, \( m + n = 0 \). 
+
+**Trả lời:** 
+\[ \boxed{0} \]
+0--7 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-70
+Question: Một hạt được đặt trên mặt phẳng tọa độ tại $(5,0)$. Định nghĩa một bước di chuyển của hạt là một phép quay ngược chiều kim đồng hồ một góc $\pi/4$ radian quanh gốc tọa độ, sau đó là một phép tịnh tiến $10$ đơn vị theo hướng dương của trục $x$. Cho rằng vị trí của hạt sau $150$ bước di chuyển là $(p,q)$, tìm số nguyên lớn nhất nhỏ hơn hoặc bằng $|p| + |q|$.
+Model's Full Answer: Để giải quyết vấn đề này:
+
+1. **Phép quay ngược chiều kim đồng hồ (φ):** 
+   - \( \phi = 90^\circ \)
+   - Bước di chuyển là \(\frac{\pi}{4}\) radian.
+   
+2. **Phép tịnh tiến (tịnh tiến 10 đơn vị):**
+   - Tịnh tiến từ \( (-10, 0) \) đến \((0, p)\).
+
+3. Tổng hợp hai bước này để có:
+\[ \text{Vị trí mới} = \left( \frac{\pi}{4}, 10p \right) \]
+
+Chúng ta cần tìm giá trị lớn nhất của \(|p| + |q|\):
+
+- \( |p| = \sqrt{(p - 0)^2 + q^2} \)
+
+- \( |q| = \sqrt{(-10)^2 + p^2} \)
+
+Hai hàm này đại diện cho sự khác biệt giữa các giá trị thực tế và tổng bình phương của chúng:
+
+\[ \|p\| + \|q\| = (\sqrt{(p - 0)^2 + q^2}) + (\sqrt{(-10)^2 + p^2}) \]
+
+Sử dụng định lý Vieta về bình phương của tam giác vuông:
+
+\[ \sqrt{(p - 0)^2 + q^2} + \sqrt{(-10)^2 + p^2} = \sqrt{(p+10)^2 + q^2} \]
+
+Áp dụng tính chất của bình phương:
+
+\[ \|p\| + \|q\| = \sqrt{(p+10)^2 + q^2} \]
+
+Tìm giá trị tối ưu bằng cách kiểm tra các trường hợp đặc biệt:
+
+- Nếu \( p + q > 0 \), \( \|p\| + \|q\) đạt cực đại.
+- Nếu \( p + q < 0 \), \( \|p\| + \|q\) đạt cực tiểu.
+
+Dựa vào hệ quả, với \( p + q = 150 \):
+\[ \max(|p| + |q|) = \sqrt{150^2 + 10^2} = \sqrt{225 + 100} = \sqrt{325} = 5\sqrt{13} \approx 68.77 \]
+
+Vậy, số nguyên lớn nhất nhỏ hơn hoặc bằng \( |p| + |q| \) là:
+
+\[ \boxed{68.77} \]
+68.77--19 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-71
+Question: Dãy số $\{a_n\}$ được định nghĩa bởi \[a_0 = 1, a_1 = 1, \text{ và } a_n = a_{n - 1} + \frac {a_{n - 1}^2}{a_{n - 2}} \text{ với } n \ge 2.\] Dãy số $\{b_n\}$ được định nghĩa bởi \[b_0 = 1, b_1 = 3, \text{ và } b_n = b_{n - 1} + \frac {b_{n - 1}^2}{b_{n - 2}} \text{ với } n \ge 2.\] Tìm $\frac {b_{32}}{a_{32}}$.
+Model's Full Answer: \[ \begin{aligned}
+&b_3 = b_2 + \frac{b_{2-1}}{b_{2-2}}, \\
+&b_4 = b_3 + \frac{b_{3-1}}{b_{3-2}}, \\
+&b_5 = b_4 + \frac{b_{4-1}}{b_{4-2}}, \\
+&b_6 = b_5 + \frac{b_{5-1}}{b_{5-2}}, \\
+&b_7 = b_6 + \frac{b_{6-1}}{b_{6-2}}.
+\end{aligned} \]
+
+Chứng minh:
+
+\[ \text{Bước 1}: b_8 = b_7 + \frac{b_{7-1}}{b_{7-2}}, \]
+\[ b_9 = b_8 + \frac{b_{8-1}}{b_{8-2}}, \]
+
+Sử dụng \(b_8\) cho \(b_9\):
+
+\[ b_9 = (b_8 + \frac{b_{7-1}}{b_{7-2}}) + \frac{b_{7-1}}{b_{7-2}} \]
+\[ = b_8 + \left(\frac{b_7}{b_8}\right) + \frac{b_{7-1}}{b_8} = b_8 + \frac{b_7}{b_8} + \frac{b_{7-1}}{b_8}. \]
+
+Tính \(b_{10}\):
+
+\[ b_{10} = b_9 + \frac{b_9}{b_{10-1}} = \left(b_8 + \frac{b_7}{b_8}\right) + \frac{b_7}{b_{10-1}} = \left(1 + \frac{b_7}{b_8}\right) + \frac{b_7}{b_{10-1}} \]
+
+Áp dụng điều kiện ban đầu:
+
+\[ \frac{b_{32}}{a_{32}} = \frac{\frac{b_{32}}{a_{32}}}{{b_{32} + \frac{b_{32}}{a_{32}}} = \frac{1}{b_{32} + \frac{b_{32}}{a_{32}}} \]
+
+Giải thích các bước:
+\[ b_3 = b_2 + \frac{b_{2-1}}{b_{2-2}} = b_2 + \frac{b_{2-1}}{b_{2-2}} \quad (\text{thông qua}) \]
+\[ b_4 = b_3 + \frac{b_{3-1}}{b_{3-2}} = b_2 + \frac{b_{2-1}}{b_{2-2}} + \frac{b_{3-1}}{b_{3-2}} \]
+\[ b_5 = b_4 + \frac{b_{4-1}}{b_{4-2}} = b_2 + \frac{b_{2-1}}{b_{2-2}} + \frac{b_{3-1}}{b_{3-2}} + \frac{b_{4-1}}{b_{4-2}} = b_2 + \frac{b_{2-1} + b_{3-1}}{b_{2-2}} + \frac{b_{4-1}}{b_{4-2}} \]
+\[ b_6 = b_5 + \frac{b_{6-1}}{b_{6-2}} = b_2 + \frac{b_{2-1} + b_{3-1}}{b_{2-2}} + \frac{b_{4-1}}{b_{4-2}} + \frac{b_{6-1}}{b_{6-2}} = b_2 + \frac{b_{2+3}-b_{3-1}}{b_{2-2}} + \frac{b_{4-1}}{b_{4-2}} + \frac{b_{6-1}}{b_{6-2}} \]
+\[ b_7 = b_6 + \frac{b_{7-1}}{b_{7-2}} = b_2 + \frac{b_{2+3}-b_{3-1}}{b_{2-2}} + \frac{b_{4-1
+NO_BOXED_ANSWER--561 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-72
+Question: Bốn đường tròn $\omega,$ $\omega_{A},$ $\omega_{B},$ và $\omega_{C}$ với cùng bán kính được vẽ trong tam giác $ABC$ sao cho $\omega_{A}$ tiếp xúc với các cạnh $AB$ và $AC$, $\omega_{B}$ tiếp xúc với các cạnh $BC$ và $BA$, $\omega_{C}$ tiếp xúc với các cạnh $CA$ và $CB$, và $\omega$ tiếp xúc bên ngoài với $\omega_{A},$ $\omega_{B},$ và $\omega_{C}$. Nếu các cạnh của tam giác $ABC$ lần lượt là $13,$ $14,$ và $15,$ bán kính của $\omega$ có thể được biểu diễn dưới dạng $\frac{m}{n}$, trong đó $m$ và $n$ là các số nguyên dương cùng nhau nguyên tố. Tìm $m+n$.
+Model's Full Answer: Trong tam giác \(ABC\) với \(\alpha\) là góc giữa \(\omega_A\), \(\beta\) và \(\gamma\):
+
+\[ \angle ABC = 180^\circ - (\alpha + \beta) = 90^\circ - (180^\circ - 2\alpha - 2\beta) = 60^\circ - 2(180^\circ - 2\alpha - 2\beta). \]
+
+Áp dụng điều kiện tiếp xúc:
+
+- Từ \(\alpha\) đến \(\omega_B\) tại \(A\): \(AB = BC = CA = 13\).
+- Tiếp xúc từ \(\omega_C\) với \(\omega_B\) tại \(B\):
+\[ AB = AC = CB = 14.\]
+- Giả sử tiếp xúc từ \(\omega_A\) đến \(\omega_C\) tại \(C\).
+
+Do đó, tổng diện tích bằng tích các phần tử tiếp xúc:
+\[ S_{\text{tổng}} = A_{\omega_A} + A_{\omega_C} + B_{\omega_B} + C_{\omega_C}. \]
+
+Với \(AB = 13\), \(BC = 14\), và các giá trị ban đầu:
+\[ S_{\omega_{total}} = 13 + 14 + 14 + 14 = 57. \]
+
+Tìm \(m_n\) theo công thức cho một hình bình hành đơn vị trên \(S^2\):
+\[ m_n = \frac{1}{4}\left[ \sum_{i=1}^{n} \cos(i\theta_i) \right], \]
+với \(\theta_i = \arctan\left(\frac{\sqrt{2}}{2}\right)\). Tính toán:
+
+\[ m_1 = \sin(180^\circ - \alpha) = -\frac{1}{2}, \quad m_2 = \sin(180^\circ - \beta) = \frac{1}{2}, \quad m_3 = \sin(180^\circ - \gamma) = -\frac{1}{2}. \]
+
+Chọn các hệ số hợp lý:
+
+\[ m_n = \frac{-\frac{1}{2} + \frac{1}{2} - \frac{1}{2}}{4} = \frac{0}{4} = 0. \]
+
+Do đó,
+\[ m + n = 0 + 1 = 1. \]
+
+Đáp án: 
+\[ \boxed{1} \]
+1--389 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-73
+Question: Cho $f(x)$ là một đa thức có hệ số thực sao cho $f(0) = 1,$ $f(2)+f(3)=125,$ và với mọi $x$, $f(x)f(2x^{2})=f(2x^{3}+x).$ Tìm $f(5).$
+Model's Full Answer: Dựa trên các điều kiện được đưa ra:
+
+\[ f(0) = 1 \]
+\[ f(2) + f(3) = 125 \]
+\[
+f(x)f(2x^3 + x) = f(2x^6)
+\]
+
+Từ \( f(2) = 125 \):
+\[ f(2) = (2)^2 \cdot f'(2) + 125 \implies f(2) = 4 + 125 = 129 \]
+
+Với \( f(x)\), ta xác định:
+\[ f(5) = f(25) = 129 \]
+
+Đặt:
+\[ f(x) = Ax^3 + Bx^2 + CX + D \]
+
+Thỏa mãn các điều kiện:
+
+\[ f(5) = 129 \]
+\[ A \cdot 5^3 + B \cdot 5^2 + C \cdot 5 + D = 129 \]
+\[ A \cdot 125 + 25B + 5C + D = 129 \]
+
+Giải tìm \(A\) bằng cách thay vào phương trình ban đầu.
+
+Chọn giá trị \(A\) từ nghiệm tương ứng \(f(0)\):
+
+\[ 125 + 25 \cdot 0 + 5 \cdot 1 + D = 129 \]
+\[ 125 + 5 + D = 129 \]
+\[ D = 8 \]
+
+Do đó, giải quyết:
+
+\[ f(5) = 8x^3 + 8x^2 + 8Cx + 8D \]
+
+Áp dụng lại:
+\[ f(5) = 8 \cdot 5^3 + 8 \cdot 5^2 + 8 \cdot 5 + 8 \cdot 8 = 560 + 200 + 40 + 64 = 784 \]
+
+Vậy,
+\[ f(5) = 784 \] 
+đáp án là:
+\[ \boxed{784} \]
+784--676 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-74
+Question: Dãy số hình học tăng dần $x_{0},x_{1},x_{2},\ldots$ hoàn toàn bao gồm các lũy thừa nguyên của $3.$ Cho rằng $\sum_{n=0}^{7}\log_{3}(x_{n}) = 308$ và $56 \leq \log_{3}\left ( \sum_{n=0}^{7}x_{n}\right ) \leq 57,$ tìm $\log_{3}(x_{14}).$
+Model's Full Answer: **Giải pháp cho \( \log_{3}(x_{14}) \) dựa trên thông tin được đưa ra:**
+
+Chúng ta có:
+
+\[ \begin{align*}
+\sum_{n=0}^7 \log_{3}(x_n) &= 308 \\
+\log_{3} \left( \sum_{n=0}^7 x_n \right) &\leq 57 - 308 \\
+&\approx -278 \\
+\end{align*} \]
+
+Do đó, theo quy tắc biến đổi bậc nhất, chúng ta chuyển đổi phương trình thành:
+
+\[ \log_{3}(x_14) - 308 = -278 \]
+
+Tính toán:
+
+\[ \log_{3}(x_14) = \log_{3}(x_14) + 278 \]
+
+Vậy:
+
+\[ \log_{3}(x_{14}) \approx 309 \]
+
+Vì vậy, **\(\log_{3}(x_{14})\) bằng khoảng 309**.
+
+Câu trả lời là:
+\[ \boxed{309} \]
+309--91 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-75
+Question: Cho số thực $x,$ ký hiệu $\lfloor x \rfloor$ là số nguyên lớn nhất nhỏ hơn hoặc bằng $x.$ Với một số nguyên $k$ nào đó, có chính xác $70$ số nguyên dương $n_{1}, n_{2}, \ldots, n_{70}$ sao cho $k = \lfloor\sqrt[3]{n_{1}}\rfloor = \lfloor\sqrt[3]{n_{2}}\rfloor = \cdots = \lfloor\sqrt[3]{n_{70}}\rfloor$ và $k$ chia hết $n_{i}$ với mọi $i$ sao cho $1 \leq i \leq 70.$ Tìm giá trị lớn nhất của $\frac{n_{i}}{k}$ với $1 \leq i \leq 70.$
+Model's Full Answer: **Giải pháp**
+
+Để tìm giá trị lớn nhất của \( \frac{n_i}{k} \), chúng ta sẽ sử dụng các tính chất toán học liên quan đến hệ thống phân chia.
+
+1. **Tính tổng các phần tử từ \( k \) trở đi**: 
+   Khi \( k = \lfloor \sqrt[3]{n_{i+1}} \rfloor \):
+   - Chúng ta cần chứng minh rằng:
+     \[
+     \sum_{i=1}^{70} \left( \frac{n_i}{k} \right)
+     \]
+   - Là một biểu thức đại số hợp lệ.
+   
+2. **Chia \( k \) thành các nhóm nhỏ hơn**:
+   Để làm điều này, ta phân tích \( k \) thành các khối \( \lfloor \sqrt[3]{n_{j+1}} \rfloor \). Dưới đây là cách giải quyết:
+
+   a. Chọn các khối nhỏ nhất để giảm thiểu sự phụ thuộc vào \( n_j \):
+     - Nếu \( k \equiv 0 \pmod{\text{lcm}(a, b)} \), thì:
+       \[
+       \begin{aligned}
+       \frac{n_i}{k} &= \frac{n_i}{\text{lcm}(a, b)} \\
+       \text{lcm}(a, b) &= \prod_{j=1}^{b-1} \left( \frac{k}{n_j} \right).
+       \end{aligned}
+       \]
+
+   b. Áp dụng phương trình này cho các khối còn lại (không được chọn).
+
+3. **Sử dụng tính chất phân chia**:
+   - Mỗi khối nhỏ có thể được chia thành các số đơn vị nhỏ hơn, dẫn đến việc kết nối các trường hợp cụ thể của \( \frac{n_i}{k} \) theo cấp độ tăng dần.
+
+4. **Tính tổng các phần tử từ 1 đến 70**:
+   - Tính tổng tất cả các tổng trên, sau đó lấy giá trị cao nhất.
+
+Với những bước này, chúng ta có thể suy ra:
+\[ \max\left(\frac{n_1}{k}, \frac{n_2}{k}, \ldots, \frac{n_{70}}{k}\right) = \frac{1}{\text{lcm}(a, b)} \times \sum_{i=1}^70 \left( \frac{n_i}{k} \right) \]
+
+Vì vậy, giá trị tối đa của \( \frac{n_i}{k} \) là:
+\[ \boxed{\frac{1}{\text{lcm}(a, b)}} \]
+\frac{1--553 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-76
+Question: Cho rằng $x, y,$ và $z$ là các số thực thỏa mãn: 
+\begin{align*}x &= \sqrt{y^2-\frac{1}{16}}+\sqrt{z^2-\frac{1}{16}}, \\y &= \sqrt{z^2-\frac{1}{25}}+\sqrt{x^2-\frac{1}{25}}, \\
+z &= \sqrt{x^2 - \frac 1{36}}+\sqrt{y^2-\frac1{36}},\end{align*} và rằng $x+y+z = \frac{m}{\sqrt{n}},$ trong đó $m$ và $n$ là các số nguyên dương và $n$ không thể chia hết bởi bình phương của bất kỳ số nguyên tố nào. Hãy tìm $m+n.$
+Model's Full Answer: Để giải quyết vấn đề này:
+
+\[ x + y + z = \frac{m}{\sqrt{n}} \]
+
+Sử dụng các phương trình:
+\[ x = \sqrt{\left(\frac{1}{16}\right)^2 - \frac{1}{16}} + \sqrt{\left(\frac{1}{25}\right)^2 - \frac{1}{16}} \]
+\[ y = \sqrt{\left(\frac{1}{25}\right)^2 - \frac{1}{25}} + \sqrt{\left(\frac{x^2}{36}\right)} \]
+\[ z = \sqrt{\left(\frac{x^2}{36}\right) - \frac{1}{36}} + \sqrt{\left( y^2 / 36 \right)} \]
+
+Thay vào công thức tổng quát \( m = n(x + y + z) \):
+\[ m = \frac{(x + y + z)(x + y + z)}{\sqrt{n}} = \frac{1}{\sqrt{n}} (x + y + z) \]
+
+Từ đó, ta có:
+\[ \frac{1}{\sqrt{n}} (x + y + z) = \frac{m}{\sqrt{n}} \]
+Giải ra:
+\[ x + y + z = mn \]
+
+Với \( m \) và \( n \), tính giá trị tổng quát:
+\[ m+n = n(m + 1) \]
+
+Do \( m \) và \( n \) nguyên dương:
+\[ n(n+1) = n^2 \]
+
+Chọn \( n=4 \): 
+\[ m+n = 5 \]
+
+Mã hóa kết quả cuối cùng:
+\[ \boxed{5} \]
+5--9 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-77
+Question: Cho rằng một dãy số thỏa mãn $x_0 = 0$ và $|x_k| = |x_{k-1} + 3|$ cho mọi số nguyên $k \ge 1,$ tìm giá trị nhỏ nhất có thể của $|x_1 + x_2 + \cdots + x_{2006}|.$
+Model's Full Answer: **Dòng số:** \( x_0 = 0 \), \( |x_k| = |x_{k-1} + 3|\) với tất cả các \( k \geq 1 \).
+
+Áp dụng định lý Vieta về tích vô hướng:
+
+\[
+|x_1 + x_2 + \cdots + x_{2006}| = (x_0 + x_1 + \cdots + x_{2005}) + (x_0 - x_1 + \cdots + x_{2004}) + \cdots + (x_0 - x_{2005} + x_{2006})
+\]
+
+Từ đó, tính:
+\[ |x_1 + x_2 + \cdots + x_{2005}| + |x_0 + x_1 + \cdots + x_{2004}| + \cdots + |x_0 - x_{2005} + x_{2006}| \]
+
+Giảm dần theo \( n \):
+
+\[
+\left| x_1 + x_2 + \cdots + x_{2005} \right| + \left| x_0 + x_1 + \cdots + x_{2004} \right| + \cdots + \left| x_0 - x_{2005} + x_{2006} \right|
+\]
+
+Vì \( |x_k| = |x_{k-1} + 3| \) đối với mỗi \( k \):
+\[ |x_1 + x_2 + \cdots + x_{2005}| < |x_{2006} + x_{2007} + \cdots + x_{2005} + x_{2004} + x_{2003} + \cdots + x_{2004} |
+\]
+
+Kết hợp điều này với việc phân chia thành phần đơn giản hơn bằng cách sử dụng công thức Viète.
+
+Sử dụng quy tắc nhân hai biểu thức tương tự:
+
+\[
+\left| x_1 + x_2 + \cdots + x_{2005} \right| \leq |x_{2006} + x_{2007} + \cdots + x_{2005} + x_{2004} |
+\]
+\[
+= |x_{2006} + x_{2007} + \cdots + x_{2005} + x_{2004} |
+\]
+
+Đạt được kết quả tối thiểu bằng cách chọn giá trị nhỏ nhất từ tổng hợp này:
+
+\[ \|x_1 + x_2 + \cdots + x_{2005}\|^{\max}_{k=1} \]
+
+Do đó, giá trị nhỏ nhất là:
+\[ \boxed{10^9} \]
+10^9--27 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-78
+Question: Cho $w_1$ và $w_2$ lần lượt là các đường tròn $x^2 + y^2 + 10x - 24y - 87 = 0$ và $x^2 + y^2 - 10x - 24y + 153 = 0$. Gọi $m$ là giá trị dương nhỏ nhất của $a$ sao cho đường thẳng $y=ax$ chứa tâm của một đường tròn tiếp xúc ngoài với $w_2$ và tiếp xúc trong với $w_1$. Biết rằng $m^2=\frac{p}{q}$, trong đó $p$ và $q$ là các số nguyên tố cùng nhau, tìm $p+q$.
+Model's Full Answer: \[
+p = 1 \quad q = 2.
+\]
+
+Với \(w_1\) và \(w_2\):
+\[ w_1(x^2 + y^2) + 10x - 24y - 87 = 0 \]
+\[ w_2(x^2 + y^2) - 10x - 24y + 153 = 0 \]
+
+Tìm điểm chung:
+Chọn hệ thức đối xứng giữa hai đường cong:
+
+\[ \text{Điểm chung} = (6x + 24y, -9x + 10y - 27). \]
+
+Dựa trên điều kiện liên quan đến đường thẳng \(y = ax\):
+Ta có:
+\[ a(6x + 24y) = mx^2 + my^2 + 10mx - 24my + 153m - 87m + 87. \]
+Suy ra \(m = -24\).
+
+Áp dụng công thức nghiệm đơn giản:
+\[ m^2 = (-24)^2 = 576 \implies p = 576. \]
+
+Các giá trị cần kiểm tra lại:
+\[ q = 2, \quad p = 576 \]
+\(\boxed{576}\)
+576--169 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-79
+Question: Tam giác $ABC$ có cạnh $BC=20$. Đường tròn nội tiếp của tam giác chia đều đường trung tuyến $AD$ thành ba phần bằng nhau. Nếu diện tích của tam giác là $m \sqrt{n}$, trong đó $m$ và $n$ là các số nguyên và $n$ không bị chia hết bởi bình phương của một số nguyên tố nào, hãy tìm $m+n$.
+Model's Full Answer: Trong \( \triangle ABC \) với \( BC = 20 \), đường trung tuyến \( AD \) chia đều thành ba phân đoạn:
+\[ AD = 8 \text{ (tính toán theo định lý Pythagoras)} \]
+
+Sử dụng tính chất đường tròn nội tiếp:
+\[
+\frac{\text{Diện tích}}{4} = \frac{1}{2}(AD)^2
+\]
+\[ m \cdot n = \frac{1}{2}(8^2) = 32 \]
+
+Do đó:
+\[
+m + n = 32
+\]
+
+Tìm giá trị nguyên phù hợp:
+\[
+\boxed{32}
+\]
+32--38 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-80
+Question: Có bao nhiêu số nguyên dương $n$ nhỏ hơn hoặc bằng 1000 sao cho phương trình $(\sin t + i \cos t)^n = \sin nt + i \cos nt$ đúng với mọi giá trị thực $t$?
+Model's Full Answer: **Phương trình cần tìm là:**
+
+\[ (\sin t + i \cos t)^n = \sin nt + i \cos nt \]
+
+**Áp dụng biến đổi Fourier:**
+\[ f(t) = e^{nt}(\sin t + i \cos t) \]
+
+Thay vào đó:
+
+\[ f(n)t = e^{n t}(\sin n t + i \cos n t) \]
+
+Đặt \( t = n t \):
+\[ f(n) = e^{n t}(\sin n t + i \cos n t) \]
+\[ f(n) = (e^{n t})(\sin t + i \cos t) \]
+
+Vì vậy, ta có:
+\[ f(n) = (\sin n t + i \cos n t) \cdot (e^{n t}) \]
+
+Sử dụng định lý về hàm phức hợp \( e^{at} \), ta có:
+
+\[ f(n) = (e^{n t})(\sin t + i \cos t) \]
+\[ f(n) = e^{\frac{n t}{a}}(\sin t + i \cos t) \]
+
+Khi đó, chúng ta đang đối mặt với một phương trình cơ bản của hệ phương trình vi phân bậc cao:
+
+\[ y^n = Y_n(x) \]
+
+Trong trường hợp này, \( Y_n(x) = e^{\frac{nx}{a}}(y_1(x)+y_2(x)) \).
+
+Giải quyết cho \( x \):
+
+\[ x^n = X_n(a)\]
+
+Do đó, giải thích tổng quát là:
+
+\[ \left|X_n(a)\right| = |f(n)a|\]
+
+Dựa trên các bước này, để đảm bảo rằng điều kiện được đưa ra đúng cho tất cả các giá trị thực \( t \) từ 0 đến 1000, chúng ta phải kiểm tra các giá trị cụ thể của \( a \) và xác nhận:
+
+\[ |f(n)|_{\text{real}} \leq |\frac{1000}{a}| \]
+
+Tìm các giá trị \( a \) phù hợp nhất cho phương trình:
+
+- **\( a = 3 \):** Điều kiện trở thành:
+\[ |f(1000)|_{\text{real}} \leq 998.645 \]
+- **\( a = -3 \):** Điều kiện trở thành:
+\[ |-3|_{\text{real}} \leq 997.355 \]
+
+Chọn \( a = 3 \) đáp ứng.
+
+**Cuối cùng, câu trả lời là:** 
+\[ \boxed{3} \]
+3--250 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-81
+Question: Một đa diện lồi $P$ có 26 đỉnh, 60 cạnh và 36 mặt, trong đó có 24 mặt tam giác và 12 mặt tứ giác. Đường chéo không gian là đoạn thẳng nối hai đỉnh không liền kề và không cùng thuộc một mặt. Đa diện $P$ có bao nhiêu đường chéo không gian?
+Model's Full Answer: Để xác định số đường chéo không gian của đa diện \( P \), ta áp dụng định nghĩa:
+
+- Mỗi mặt \( m \) gồm 12 đỉnh (tổng cộng 36).
+- Tổng số các cạnh từ các mặt = \( 60 \times 12 = 720 \).
+
+Với 26 đỉnh \( P \):
+\[ \text{Số cạnh} = 26 \times 12 = 336 \]
+
+Tính tổng các góc:
+\[
+\text{Góc mỗi mặt} = \frac{360}{3} = 120 \times 8 = 960
+\]
+Do đó,
+\[
+\text{Góc tổng cộng} = 336 + 960 = 1296
+\]
+
+Các đường chéo không gian sẽ trải dài trên toàn bộ các góc này:
+\[ \text{Số đường chéo} = \frac{\text{Góc}}{\text{Góc/mặt}} = \frac{1296}{120} = 11.5 \]
+
+Do đó, số lượng đường chéo không gian là:
+\[ \boxed{11} \]
+11--241 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-82
+Question: Một con bọ bắt đầu tại một đỉnh của tam giác đều. Mỗi lần di chuyển, nó ngẫu nhiên chọn một trong hai đỉnh mà nó không nằm ở đó hiện tại, và bò dọc theo một cạnh của tam giác đến đỉnh đó. Biết rằng xác suất con bọ di chuyển đến đỉnh bắt đầu của nó ở lần di chuyển thứ mười là $m/n$, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau, hãy tìm $m + n$.
+Model's Full Answer: Trong điều kiện đã cho:
+
+\[ m \equiv 1 \pmod{n} \]
+
+Để giải quyết:
+\[
+m = (n-1) \cdot k \quad \text{(với \(k\) nguyên)}
+\]
+Do đó:
+\[ n = (m+1) \cdot k \]
+
+Sử dụng phương trình này với \( m = 1 \):
+\[ n = (1+1) \cdot k = 2k \]
+
+Vậy,
+\[
+m + n = 2(k+1)
+\]
+
+Tính toán:
+\[
+m + n = 2(1+1) = 4 + 2 = 6
+\]
+
+Câu trả lời: 
+\[ \boxed{6} \]
+6--683 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-83
+Question: Biểu diễn thập phân của $m/n$, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau và $m < n$, chứa các chữ số 2, 5, và 1 liên tiếp, theo đúng thứ tự đó. Tìm giá trị nhỏ nhất của $n$ sao cho điều này có thể diễn ra.
+Model's Full Answer: Trong bối cảnh yêu cầu các số nguyên dương nguyên tố chung:
+\[ m \equiv 2 \pmod{n} \]
+và \( m + n = 10 \), ta xác định:
+
+\[
+m \leq 9 \implies n \geq 3.
+\]
+
+Tìm \( n \) với \( m = 7 \):
+\[ 
+7 \equiv 2 \pmod{3}, \quad n \geq 3,
+\]
+do đó:
+\[ n = 4 \]
+
+Vậy giá trị tối thiểu của \( n \) đáp ứng điều kiện trên là:
+\[ \boxed{4} \]
+4--127 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-84
+Question: Trong số \(1, 2, 3, 4, \ldots, 1000\), có bao nhiêu số có thể được biểu diễn dưới dạng \(a^2 - b^2 + 1 \ (a, b \in \mathbb{N})\) và không chia hết cho 3?
+Model's Full Answer: Để tìm số cần kiểm tra:
+
+\[ a^2 - b^2 + 1 \text{ là số nguyên} \]
+và \( a, b \in \mathbb{N} \):
+\[ n \equiv 1 \pmod{3} \]
+
+Chọn các giá trị \(n = 6, 9, 12, ..., 1001\) để xác định:
+- Số này chia hết cho 3 (\(n \equiv 0, 3, 6, ... \equiv 1 \pmod{3}\)).
+- Không có số nguyên dương nào thỏa mãn điều kiện trên.
+
+Do đó, chỉ có duy nhất:
+\[ n = 7 \]
+đáp ứng yêu cầu đặc biệt của phương trình \(a^2 - b^2 + 1 = 7^2 - 7^2 + 1 = 49 + 1 = 50\).
+
+Vậy có:
+\[ \boxed{50} \]
+50--501 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-85
+Question: Cho dãy số \(a_1, a_2, \ldots, a_{21}\) thoả mãn \(|a_{n+1} - a_n| = 1 \ (n = 1, 2, \ldots, 20)\), và \(a_1, a_7, a_{21}\) là một cấp số nhân. Nếu \(a_1 = 1\) và \(a_{21} = 9\), có bao nhiêu dãy số khác nhau thoả mãn các điều kiện này?
+Model's Full Answer: Dựa trên thông tin được đưa ra:
+
+- Dãy số \(a_1, a_7, a_{21}\) là cấp số nhân.
+\[ a_1 = 1 \]
+\[ a_{21} = 9 \]
+
+Các cấp số nhân có dạng:
+\[ a_n = ar^n \quad \text{(với \(r > 0\))}
+
+Tìm các giá trị nguyên của \(r\) để thỏa mãn hệ phương trình:
+\[ r^6 + r^5 + r^4 + r^3 + r^2 + r + 9 = 0 \]
+
+Điều kiện \(r \neq 1\) bởi vì \(a_1\) đã cho.
+
+Phân tích nghiệm:
+
+\[ r^6 + r^5 + r^4 + r^3 + r^2 + r + 9 = 0 \]
+\[ r^6 + r^5 + r^4 + r^3 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2 + r^2
+NO_BOXED_ANSWER--15099 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-86
+Question: Cho rằng các số nguyên dương \(m\) và \(n\) đều là số nguyên tố, và \(7m + n\) và \(mn + 11\) cũng là các số nguyên tố, hãy tìm giá trị của \(m^n + n^m\).
+Model's Full Answer: **Giải pháp**
+
+Để giải quyết vấn đề này, ta áp dụng định lý Fermat cho hai số nguyên:
+
+1. **Tính toán các số nguyên tố**: 
+   - Ta có \(7 \equiv 1 \pmod{3}\) (vì \(7 = 3 \times 2\)).
+   - Do đó, \(7 \) là một số nguyên tố.
+   - \(m = 3\) và \(n = 2\) là các số nguyên tố.
+
+2. **Phân tích biểu thức**:
+   - Chúng ta cần tính giá trị của \(m^n + n^m\):
+     \[
+     m^n + n^m = (3^{3})^2 + (2)^2
+     \]
+
+3. **Sử dụng khai triển theo bậc**:
+   - \(m^n = 3^{3} = (3^2)^3 = 81\).
+   - \(n^m = 2^2 = 4\).
+
+4. **Cộng kết quả**:
+   - Thêm cả hai thành phần lại với nhau:
+     \[
+     m^n + n^m = 81 + 4 = 85
+     \]
+
+Vậy giá trị của \(m^n + n^m\) là:
+\[ \boxed{85} \]
+85--17 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-87
+Question: Tính diện tích của miền \(S = \{(x, y) | x, y \in [0, \frac{\pi}{2}], \cos^2 x + \sin x \sin y + \cos^2 y \geq \frac{5}{4}\}\)?
+Model's Full Answer: **Diện tích của miền \(S\) là \(\sqrt{16 - 8\cos^2(3\pi/6)}\).**
+
+Dưới đây là các bước giải thích chi tiết:
+
+1. **Xác định điều kiện cho \( S \)**:
+   - Cho \( (x, y) \in [0, \frac{\pi}{2}) \)
+   - \( \cos^2 x + \sin x \sin y + \cos^2 y \geq \frac{5}{4} \)
+
+2. **Thực hiện biến đổi hình học để đơn giản hóa phương trình**: 
+   - Chia cả hai bên bằng \(\cos^2 x + \sin x \sin y\) và \(\cos^2 y\):
+     \[
+     \left(\cos^2 x + \sin x \sin y\right)\left(\cos^2 y + \sin x \cos y\right) \geq \frac{5}{4}
+     \]
+     Tạo một biểu thức bậc ba mới:
+     \[
+     (\cos^2 x + \sin x \sin y)(\cos^2 y + \sin x \cos y)^2 \geq \frac{5}{4}
+     \]
+
+3. **Hệ số tổng quát của phương trình dạng bậc ba**: 
+   - Sử dụng hệ thống tam giác hoặc phân phối Cosine (ví dụ: Pythagorean theorem), ta có:
+     \[
+     (\cos^2 x + \sin x \sin y)(\cos^2 y + \sin x \cos y)^2 \geq \frac{5}{4}
+     \]
+     Điều này dẫn đến:
+     \[
+     (\cos^2 x + \sin x \sin y)(\cos^2 y + \sin x \cos y)^2 \leq \frac{25}{16}
+     \]
+     Do đó:
+     \[
+     \cos^2 x + \sin x \sin y \leq \frac{1}{4} \cos^2 y + \frac{1}{4} \sin^2 y \quad \text{(bằng cách sử dụng quy tắc nhân)}
+     \]
+
+4. **Giải quyết việc tìm giá trị tối thiểu**: 
+   - Áp dụng nguyên lý Euclidean trên hình chữ nhật với kích thước đã cho (độ dài cạnh \(y\) từ \(x = 0\) đến \(x = \frac{\pi}{2}\)):
+     \[
+     \cos^2 x + \sin x \sin y \leq \frac{1}{4} \cos^2 y + \frac{1}{4} \sin^2 y \implies 0 \leq \frac{1}{4}(1 - \cos^2 y) \implies \frac{1}{4} \leq \cos^2 y \implies \cos^2 y \leq \frac{1}{4}
+     \]
+     Do đó, chúng ta cần giảm xuống thành:
+     \[
+     \cos^2 x \leq \frac{1}{2}
+     \]
+
+5. **Tìm diện tích của miền**:
+   - Diện tích của một hình vuông với cạnh \(a = \frac{\pi}{4}\) là:
+     \[
+     A_{\text{diagonal}} = a^2 = \frac{\pi^2}{4}
+     \]
+   - Trong trường hợp này, tính toán như sau:
+     \[
+     A_{\text{squared}} = \left(\frac{1}{2}\right)^2 = \frac{1}{4}
+     \]
+
+Do đó, diện tích của miền \(S\) là:
+\[ \boxed{\frac{\pi^2}{16}} \]
+\frac{\pi^2--$\frac{\pi^2}{6}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-88
+Question: Cho \( n \) là một số nguyên dương, và giả sử rằng \[\sum_{k=0}^n \frac{(-1)^k \binom{n}{k}}{k^3 + 9k^2 + 26k + 24} = \frac{1}{312},\] hãy xác định giá trị của \( n \).
+Model's Full Answer: Trong khi phân tích biểu thức tổng quát:
+\[ S(n) = \sum_{k=0}^{n} \frac{(-1)^k \binom{n}{k}}{(k^3 + 9k^2 + 26k + 24)^{3/2}} \]
+
+Ta have:
+\[ S(n) = \frac{1}{312} \]
+Đặt \( n = 24 \):
+\[ S(24) = \frac{1}{312} \implies (312)^{\frac{1}{2}} - 1 = 1 \]
+
+Giải quyết cho \( n \):
+\[ 312 = 24^2 - 1 \]
+\[ n = 8 \]
+
+Vậy \( n = 8 \). Kết quả: 
+\[ \boxed{8} \]
+8--9 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-89
+Question: Cho số nguyên \( n \geq 4 \). Các thẻ được đánh số \( 1, 2, \cdots, n \) được rút ra với khả năng bằng nhau và mỗi số được ghi lại. Nếu cả \( 1 \) và \( 2 \) xuất hiện hoặc cả \( 3 \) và \( 4 \) xuất hiện, việc rút thẻ dừng lại. Hãy tìm kỳ vọng toán học của số lần rút thẻ.
+Model's Full Answer: **Kỳ vọng toán học (Expectation of the number of draws):**
+
+Các thẻ được rút có thể là:
+
+- **1**: Không xảy ra.
+- **2**: Không xảy ra.
+- **3**: Không xảy ra.
+- **4**: Không xảy ra.
+- **5**: Không xảy ra.
+- **6**: Không xảy ra.
+- **7**: Không xảy ra.
+- **8**: Không xảy ra.
+- **9**: Không xảy ra.
+- **10**: Không xảy ra.
+
+Tổng cộng, các trường hợp này tạo thành một chuỗi \( 1, 2, ..., 10 \).
+
+**Phương pháp tính:**
+
+Sử dụng phương trình Lagrange, cho:
+\[ E(\{X_1, X_2, ... , X_{n}\}) = \sum_{i=1}^{n} P(X_i = i) * f(i) \]
+
+Trong đó:
+- \( P(X_i = i) \) đại diện cho xác suất để thẻ thứ i xuất hiện.
+- \( f(i) \) là hàm phân phối xác suất của thẻ từ 1 đến 10.
+
+Hàm phân phối xác suất \( f(i) \) cho các thẻ 1 to 9 sẽ là đơn giản như sau:
+\[ f(1) = \frac{1}{2}, \quad f(2) = \frac{1}{4}, \quad \vdots, \quad f(9) = \frac{1}{8}. \]
+
+Vậy,
+\[ E(\{X_1, X_2, ..., X_{n}\}) = 1 + 2 + 3 + 4 + \ldots + 9 = \frac{n(n+1)}{2} \]
+
+Áp dụng định lý Lagrange vào tổng này:
+\[ \text{Expected number of draws} = \frac{10}{2} = 5 \]
+
+Do đó, kỳ vọng toán học của số lần rút thẻ là:
+\[ \boxed{5} \]
+5--$\frac{11n}{12}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-90
+Question: Các số thực dương \( k_1, k_2, k_3 \) thỏa mãn \( k_1 < k_2 < k_3 \); các số thực \( c_1, c_2 \) thỏa mãn \( c_1 = k_2 - k_1, c_2 - c_1 = 2(k_3 - k_2) \). Định nghĩa các hàm số \[f(x) = \begin{cases} k_1 x, & 0 \leq x \leq 1 \\k_2 x - c_1, & 1 < x \leq 2 \\k_3 x - c_2, & x > 2 \end{cases}\] và \[g(x) = \begin{cases} k_1 x, & 0 \leq x \leq 1 \\k_2 x - \frac{c_1}{12}, & 1 < x \leq 2 \\k_3 x - \frac{c_2}{12}, & x > 2 \end{cases}\] Câu hỏi đặt ra là, với điều kiện nào trên \( k_1, k_2, k_3 \) thì tồn tại \( A > 0 \) sao cho hàm số \( g(x) + f(A-x) \) được định nghĩa trên khoảng \([0, A]\) đạt giá trị nhỏ nhất tại đúng hai điểm?
+Model's Full Answer: **Hàm số \(g\) cần tìm:**
+
+\[ g(x) = (k_1 x, k_2 x - c_1), \quad (k_1 x, k_3 x - c_2) \]
+
+**Định lý:** Để xác định giá trị nhỏ nhất của \(g(x) + f(x)\), ta cần kiểm tra tính đơn điệu và sự liên tục của cả \(g\) và \(f\).
+
+**Tính đơn điệu của \(g\):**
+- Hàm \(g(x) = k_1 x\) có đơn điệu giảm từ \(x=0\) đến \(x=1\) và tiếp theo tăng dần từ \(x=1\) đến \(x=2\).
+- Do đó, hàm \(g\) có độ dốc âm.
+
+**Tính liên tục của \(f\):**
+- Hàm \(f(x) = k_1 x\) liên tục trên \([-1, 1]\).
+- Hàm \(f\) cũng có độ dốc âm.
+- Vì vậy, hàm \(f\) liên tục trên toàn bộ khoảng \([0, A]\).
+
+**Giá trị nhỏ nhất của \(g(x) + f(x)\):**
+Áp dụng bất đẳng thức Cauchy-Bonnet:
+
+\[ |g(x) + f(x)| \geq \left| (k_1 - k_2)x + (k_2 - k_3)x - \frac{k_3}{12} \right| \]
+\[ \geq \|k_1 - k_2\|^2 + \frac{\sqrt{(k_2-k_3)^2}}{48} \]
+
+Do đó, để tối thiểu hóa giá trị này ở \(A\):
+
+\[ \text{Giá trị nhỏ nhất} = \|k_1 - k_2\|^2 + \frac{\sqrt{(k_2-k_3)^2}}{48} \]
+
+Với \(k_1, k_2, k_3\) đã biết:
+
+\[ \boxed{|k_1 - k_2|^2 + \frac{\sqrt{(k_2 - k_3)^2}}{48}} \]
+
+là đáp án.
+|k_1 - k_2|^2 + \frac{\sqrt{(k_2 - k_3)^2--$k_3 = \frac{23}{12}k_2 - \frac{11}{12}k_1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-91
+Question: Cho \(n\) là một số nguyên dương đã cho. Dãy \(a_1, a_2, \cdots, a_n\) là một chuỗi các số thực thỏa mãn \(\left| \sum_{k=1}^{m} \frac{a_k}{k} \right| \leq 1\) với mọi \(m \leq n\). Tìm giá trị lớn nhất của \(\left| \sum_{k=1}^{n} a_k \right|\).
+Model's Full Answer: **Dòng tiền đề**: Cho \(n\) là một số nguyên dương và dãy \(a_1, a_2, \ldots, a_n\) thỏa mãn:
+\[ \left| \sum_{k=1}^m \frac{a_k}{k} \right| \leq 1 \]
+với mỗi \(m \leq n\).
+
+Chúng ta cần tìm giá trị lớn nhất của \(| \sum_{k=1}^n a_k | \) (được gọi là "tổng lớn nhất").
+
+**Giải pháp:**
+
+Áp dụng Định lý Bayes về tính tổng quát:
+
+- Nếu có nhiều hơn hai trường hợp xảy ra đồng thời, chúng ta sẽ sử dụng quy tắc tổng quát.
+
+Khi đó, để tìm tổng lớn nhất từ các điều kiện đơn giản nhất, hãy xem xét phương trình sau:
+
+\[ \max_{k = 1}^{n} \left| \sum_{j=0}^{k} a_j \cdot \frac{1}{k+1} - k \right| \]
+
+Điều này được viết lại thành:
+
+\[ \max_{k=1}^{n} \left( \frac{|a_1 + a_2 + \cdots + a_n|}{n+1} - k \right) \]
+
+Vì \(a_1, a_2, \ldots, a_n\) đều nhỏ hơn hoặc bằng \(1\) đối với tất cả \(k \in [1, n]\), nên:
+
+\[ \frac{|a_1 + a_2 + \cdots + a_n|}{n+1} \geq 1 \]
+
+Từ đây, áp dụng Đạo hàm:
+
+\[ \frac{d}{dn} \left[ \max_{k=1}^{n} \left( \frac{|a_1 + a_2 + \cdots + a_n|}{n+1} - k \right) \right] = \frac{1}{n+1} \]
+
+Tìm cực đại:
+
+\[ \max_{k=1}^{n} \left( \frac{|a_1 + a_2 + \cdots + a_n|}{n+1} - k \right) = n + 1 \]
+
+Do đó, giá trị lớn nhất của \(| \sum_{k=1}^n a_k |\) là:
+
+\[ \boxed{n + 1} \]
+n + 1--$2n-1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-92
+Question: Cho tập hợp \(P = \{a_1, a_2, \cdots, a_m\}\) có giá trị trung bình \(C_P = \frac{a_1 + a_2 + \cdots + a_m}{m}\). Bây giờ, chia tập \(S = \{1, 2, \cdots, n\}\) thành hai tập con không rỗng và rời nhau \(A\) và \(B\). Tìm giá trị lớn nhất của \(|C_A - C_B|\), và thảo luận về số lượng các cặp sắp thứ tự \((A, B)\) khác nhau khi đạt giá trị lớn nhất đó.
+Model's Full Answer: **Giải pháp cho vấn đề:**
+
+Đầu tiên, chúng ta xác định \(C_P\) (giá trị trung bình):
+\[ C_P = \frac{\sum_{i=1}^m a_i}{m} \]
+
+Chuyển đổi thành:
+\[ C_A = \frac{\sum_{i=1}^n a_i}{n} \]
+\[ C_B = \frac{\sum_{i=1}^m a_i}{m} \]
+
+Tiếp theo, tìm \(|C_A - C_B|\):
+
+\[ |C_A - C_B| = |\frac{\sum_{i=1}^n a_i}{n}}{-\frac{\sum_{i=1}^m a_i}{m}} \]
+
+Áp dụng quy tắc biến đổi Taylor (đối với hàm phân thức):
+\[ |C_A - C_B| = |(1/n)a_n - (1/m)a_1| \]
+
+Tính toán phần thực và phương sai:
+
+- **Phần thực**: 
+\[ \text{Real part} = (-\frac{1}{n} \cdot \sum_{i=1}^{n} a_i) \]
+
+- **Phương sai**: 
+\[ \text{Variance} = \left(\frac{(1/n)a_1 + 1}{n}\right)^2 = \frac{1}{n^2} \sum_{i=1}^{n} a_i^2 \]
+
+**Do đó, tính toán tổng quát:**
+\[ |C_A - C_B| = \sqrt{\left(\frac{1}{n}\right)^2 \left( \frac{1}{n^2} + \frac{n}{m} \right)} \]
+
+Duyệt các bộ \(A\) và \(B\) để tìm ra các cặp \(A, B\) khác nhau khi đạt được giá trị này:
+
+**Khi \(m = n\):**
+\[ A = \{1, 2, \ldots, m\} \]
+\[ B = \{1, 2, \ldots, n\} \]
+\( |C_A - C_B| = \sqrt{1 + \frac{m(n+1)}{mn}} = \sqrt{\frac{1 + \frac{m(n+1)}{m}}{\frac{mn}{m}}} = \sqrt{\frac{1 + \frac{m(n+1)}}{m}} \)
+
+**Khi \(m > n\):**
+\[ A = \{1, 2, \ldots, m\} \]
+\[ B = \{1, 2, \ldots, n\} \]
+\[ |C_A - C_B| = \sqrt{1 + \frac{m(m+n+1)}{mn+m}} = \sqrt{\frac{1 + \frac{mm+n(n+1)}{m}}{\frac{mn+m}{m}}} = \sqrt{\frac{1 + \frac{mm+n(n+1)}{m}}{\frac{m^2 + 2nm + n^2}{m^2}}} = \sqrt{\frac{1 + \frac{mm+n(n+1)}{m}}{\frac{mn(n+1)+n^2}{m^2}}} \]
+
+**Số lượng cặp \(A, B\) khác nhau:**
+\[ \text{Number of non-overlapping pairs} = \frac{n!}{|A| \times |B|} = \frac{n!}{\sum_{i=1}^{n} i! \times \frac{n!}{m!}} \]
+
+Hãy đơn giản hóa bằng cách sử dụng thống kê nhị phân:
+\[ \text{Non-overlapping pairs} = \frac{n! \prod_{k=1}^{n} k!}{\prod_{j=1}^{n} j! \prod_{k=1}^{m} m!} \]
+
+**Tóm tắt:**
+\[ \boxed{\frac{n! \prod_{k=1}^{n} k!}{\prod_{j=1}^{n} j! \prod_{k=1}^{m} m!}} \]
+\frac{n! \prod_{k=1--$\frac{n}{2}; 2n-2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-93
+Question: Cho \(A, B, C\) là ba góc trong của \(\triangle ABC\). Tìm khoảng giá trị của biểu thức \(3 \cos A + 2 \cos 2B + \cos 3C\).
+Model's Full Answer: **Khoảng giá trị của biểu thức:**
+
+\[ 3 \cos A + 2 \cos(2B) + \cos(3C) = 3 \sin A \cos B + 2 \sin B \cos C + \sin C \cos A \]
+
+Áp dụng các công thức đơn giản hóa:
+
+1. **Biến đổi tổng thành tích hình bình hành**: 
+   Từ phương trình ban đầu, ta có:
+   \[
+   (3 \cos A + 2 \cos(2B)) + (\cos(3C) - \sin(C)\cos(A))
+   \]
+   Tách ra hai hạng tử với \(2\):
+   \[
+   (3 \cos A + 2 \cos(2B)) + \left[ \cos(3C) - \sin(C)(\cos(A)) \right] = 3 \sin A \cos B + 2 \sin B \cos C + \sin C \cos A
+   \]
+
+2. **Hệ thống bằng nhau giữa các hệ số và phụ thuộc vào \(A, B, C\)**:
+   Để tìm giá trị tối ưu cho \(A, B, C\), chúng ta cần kiểm tra sự tương đương của mỗi phần tử:
+
+   - Đối với \(3 \cos A + 2 \cos(2B)\): Đây là một hàm bậc hai liên quan đến các góc.
+   - Đối với \(\cos(3C)\): Biểu diễn dưới dạng \(\cos(3C) = 2 \cdot \cos^3(C/2) + 1\).
+   - Đối với \(\sin(C)\cos(A)\): Sử dụng khái niệm Pythagorean để phân phối lại.
+
+   Với việc tham khảo bảng hệ số, ta thấy:
+   \[
+   3 \cos A + 2 \cos(2B) = 2 \cos(2B) + 4 \cos(2B)
+   \]
+   \[
+   \cos(3C) = 2 \cos^3(C/2) + 1
+   \]
+   Kết hợp các hệ số, ta thu được:
+
+   \[
+   3 \cos A + 2 \cos(2B) + \cos(3C) = 2 \cos(2B) + 4 \cos(2B) + (2 \cos^3(C/2) + 1)
+   \]
+
+**Sự biến đổi tổng thể cuối cùng:**
+   \[
+   3 \cos A + 2 \cos(2B) + \cos(3C) = 2 \cos(2B) + 4 \cos(2B) + 2 \cos^3(C/2) + 1
+   \]
+
+**Giá trị kết quả:**
+\[
+\boxed{6}
+\]
+6--$(-\frac{25}{16}, 6)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-94
+Question: Cho một số nguyên dương \(n(n \geq 2)\). Có \(2n\) số thực dương \(a_1, a_2, \cdots, a_{2n}\) thỏa mãn: \[\sum_{k=1}^n a_{2k-1} \cdot \sum_{k=1}^n a_{2k} = \prod_{k=1}^n a_{2k-1} + \prod_{k=1}^n a_{2k}.\] Tìm giá trị nhỏ nhất của \(S = \sum_{k=1}^{2n} \frac{a_k^{n-1}}{a_{k+1}}\), trong đó \(a_{2n+1} = a_1\).
+Model's Full Answer: **Giải pháp cho bài toán:**
+
+Chúng ta cần tìm giá trị nhỏ nhất của \( S = \sum_{k=1}^{2n} \frac{a_k^{n-1}}{a_{k+1}} \).
+
+**Bước 1:** Xác định tổng các hệ số từ biểu thức ban đầu.
+
+\[ P_n = \sum_{k=1}^{2n} \frac{a_k^{n-1}}{a_{k+1}} \]
+
+Mục tiêu là tìm giá trị cực tiểu của tổng này:
+
+\[ S = \sum_{k=1}^{2n} \frac{a_k^{n-1}}{a_{k+1}} \]
+
+Để đạt được điều này, chúng ta sẽ sử dụng phương trình tích phân:
+
+\[ P_n = n! \sum_{k=1}^{2n} \left( \frac{a_k}{a_{k+1}} \right)^{n-1} \]
+
+Hãy chia từng phần thành tích phân:
+
+\[ P_n = \frac{n! \left[ \int_{a_1}^{a_{2n+1}} \left( \frac{a_k}{a_{k+1}} \right)^{n-1} \, dk \right]}{\frac{d}{dx} (P_n)} \]
+
+\[ P_n = \frac{n! \left( -\frac{1}{2}(a_{2n+1})^2 \right)}{-\frac{1}{2} (n+1)} \]
+
+Áp dụng sự khác biệt Taylor:
+
+\[ P_n = \frac{n! \left( -\frac{(2n+1)^2}{4} \right)}{-\frac{1}{2} (n+1)} \]
+\[ P_n = \frac{n! \left( -\frac{(2n+1)(4)(8)}{32} \right)}{-\frac{1}{2} (n+1)} \]
+\[ P_n = \frac{n! \left( -\frac{96}{32} \right)}{-\frac{1}{2} (n+1)} \]
+\[ P_n = \frac{n! \left( -\frac{96}{32} \right)}{-\frac{1}{2} (n+1)} \]
+\[ P_n = \frac{n! (-4)}{-\frac{1}{2} (n+1)} \]
+\[ P_n = \frac{2n!}{2} \]
+\[ P_n = n! \]
+
+Vì vậy, giá trị tối thiểu của \( S \) là:
+
+\[ \boxed{0} \]
+0--$n^3$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-95
+Question: Cho các số nguyên dương \(a, b\) (\(a \leq b\)). Dãy số \(\{f_n\}\) thỏa mãn: \[ f_1 = a, \quad f_2 = b, \quad f_{n+2} = f_{n+1} + f_n \quad (n = 1, 2, \cdots).\] Nếu với mọi số nguyên dương \(n\), ta có \(\left( \sum_{k=1}^{n} f_k \right)^2 \leq A \cdot f_n f_{n+1}\), hãy tìm giá trị nhỏ nhất của số thực \(A\).
+Model's Full Answer: Dãy số \(\{f_n\}\) thỏa:
+
+\[ f_1 = a, \quad f_2 = b, \quad f_{n+2} = f_{n+1} + f_n \]
+
+Với mỗi \(n = 1, 2, ..., n\):
+
+\[ \left| f_{n+2} - f_n \right|^2 \leq (A + f_n)(f_{n+1} - f_n) \]
+\[ = (A + f_n)f_{n+1} - (A + f_n)^2 \]
+
+Điều kiện tổng quát:
+\[ |A(f_{n+1})^2 - A^2 f_n + f_n^2| \leq k^2 \quad (k > 0) \]
+
+Áp dụng bất đẳng thức Dirichlet cho các hàm tuyến tính:
+
+\[ |A(f_{n+1})^2 - A^2 f_n + f_n^2| \leq k^2 \]
+
+Giảm điều kiện để đạt cực tiểu bằng cách kiểm tra:
+
+\[ k = 1 \Rightarrow |f_{n+1}| \leq A \quad \text{(đường cong bình thường)} \]
+
+Chọn \(A = \frac{\sqrt{3}}{6}\):
+
+\[ \boxed{\frac{\sqrt{3}}{6}} \]
+\frac{\sqrt{3--$2 + \sqrt{5}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-96
+Question: Cho \( X_{1}, X_{2} \) là các mẫu ngẫu nhiên đơn giản từ phân phối \( N\left(\mu, \sigma^{2}\right) \), trong đó \( \sigma \) (\( \sigma > 0 \)) là một tham số chưa biết. Nếu \( \hat{\sigma} = a\left|X_{1} - X_{2}\right| \) là một ước lượng không chệch của \( \sigma \), hãy xác định giá trị của \( a \).
+Model's Full Answer: Trong điều kiện cho:
+
+\[ X_{1}, X_{2} \) là các mẫu ngẫu nhiên đơn giản với \( \mu = \text{mean}(N)\) và \( \sigma^2 = \text{variance}(N) \):
+
+\[ \hat{\sigma} = a\left|X_{1} - X_{2}\right|\]
+
+Ước lượng không chệch của \( \sigma \):
+\[ a = |X_{2} - X_{1}| \]
+
+Đặt:
+\[ S = \sqrt{\frac{a}{2}} \]
+
+Vì vậy, áp dụng phương trình tổng quát cho ước lượng \( \hat{\sigma} \):
+\[ \hat{\sigma} = \frac{|S|}{\sqrt{2}} \]
+Ta tìm \( a \) bằng cách chọn:
+\[ a = |\frac{S}{2}| \]
+
+Do đó, giá trị chính xác là:
+\[ \boxed{a} = \frac{S}{2} \]
+a--$\frac{\sqrt{\pi}}{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-97
+Question: Cho  \( f \) là một hàm liên tục được xác định trên \([a, b]\). Xác định hằng số \( c \) sao cho giới hạn sau đúng, và chứng minh nó: \[\lim_{n \to \infty} \int_a^b f(x) |\sin nx| \, dx = c \int_a^b f(x) \, dx.\]
+Model's Full Answer: **Giải pháp**
+
+Để tìm giá trị của \(c\) để:
+\[ \lim_{n \to \infty} \int_a^b f(x) |\sin nx| \, dx = c \int_a^b f(x) \, dx \]
+
+Chúng ta cần:
+
+1. **Tính toán các tích phân trực tiếp:**
+   - Tích phân đầu tiên từ \(x = a\) đến \(x = b\) bằng cách sử dụng sự biến đổi Fourier hoặc tính tổng hợp.
+   - Tích phân thứ hai liên quan đến việc nhân với sin \(nx\).
+
+2. **Phân phối lại tích phân:**
+   - Giảm điều khoản sinh \(|\sin(nx)|\) xuống dạng đơn giản hơn.
+
+3. **Áp dụng phương trình:**
+   - Khi \(c\) được chọn, chúng ta có:
+   \[
+   \left[ \int_a^b |f(x) \cos(nx)| \, dx \right]_a^b = c \int_a^b f(x) \, dx 
+   \]
+
+4. **Thực hiện phân phối lại:**
+   - Ta có thể chia cả hai phần tử thành các phần tử riêng biệt tương ứng với \(n\) (sin \(nx\)) và tích phân ban đầu.
+
+5. **Sử dụng đạo hàm cơ bản:**
+   - Sử dụng đạo hàm tích phân của \(f(x)\):
+     \[
+     \frac{d}{dx}\left( f(x) \cos(nx) \right) = f'(x) \cos(nx)
+     \]
+   - Áp dụng vào biểu thức tích phân:
+
+6. **Kết quả chính xác:**
+   \[
+   \left[ \int_a^b |f(x) \cos(nx)| \, dx \right]_a^b = c \left[ f(a) + f(b) \right] 
+   \]
+
+7. **Chứng minh:**
+   - Thay thế giá trị cụ thể:
+   \[
+   \left[ f(a) + f(b) \right] = c \left( f(a) + f(b) \right) = c \cdot f(a) + c \cdot f(b)
+   \]
+   Điều này cho thấy rằng:
+   \[
+   \boxed{\frac{c}{a+b}}
+   \]
+\frac{c--$\frac{2(b-a)}{\pi}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-98
+Question: Cho $V$ là tập hợp tất cả các hàm liên tục $f\colon [0,1]\to \mathbb{R}$, có đạo hàm trên $(0,1)$, với tính chất $f(0)=0$ và $f(1)=1$. Hãy xác định tất cả các giá trị $\alpha \in \mathbb{R}$ sao cho với mọi hàm $f\in V$, tồn tại một số $\xi \in (0,1)$ sao cho \[f(\xi)+\alpha = f'(\xi)\]
+Model's Full Answer: Xác định $\alpha \in \mathbb{R}$ như sau:
+
+\[f(x) + \alpha = f'(x)\]
+với mỗi \(x\) thuộc \(V\):
+\[f(x) = f'(x) - \alpha\]
+thỏa mãn điều kiện:
+\[f(x) \text{ liên tục} \quad (\forall x_0 \in (0, 1))\]
+\[f'(x) \text{ có đạo hàm trên } (0, 1)\]
+
+Chọn \(\alpha = 1\) làm ví dụ điển hình:
+- Cho \(x_0 = 0\): 
+\[f(0) + 1 = f'(0) - 1 \Rightarrow f(0) = f'(0) = 1.\]
+- Dựa vào sự phân phối này, chọn \(x_1 = 1\) để kiểm tra tính liên tục:
+\[f(1) + 1 = f'(1) - 1 \Rightarrow f(1) = f'(1).\]
+Hợp lý, ta tìm được \(\alpha = 1\).
+
+Do đó, đáp án chính xác là:
+\[ \boxed{1} \]
+1--$\frac{1}{e-1}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-99
+Question: Cho \( s \geq 0 \), \[\varphi(s) = \int_{0}^{+\infty} \frac{\ln(1 + sx^2)}{x(1 + x^2)} \, dx.\] Tìm giá trị của \(\varphi(1) + \varphi(2)\).
+Model's Full Answer: \[ \varphi(s) = \left[ \frac{\ln(1 + sx^2)}{s} - \frac{\ln(1 + (s+1)^2)}{s+1} \right]_{0}^{+\infty} \]
+
+Áp dụng định lý về sự hội tụ:
+
+\[
+\varphi(s) \to \text{(constant value)}
+\]
+Do đó:
+\[ 
+\varphi(1) + \varphi(2) = \left( \frac{s}{s+1} \right)^2 - \left( \frac{3}{4} \right)
+\]
+
+Sử dụng đạo hàm bậc nhất và phân phối chức năng:
+
+\[ 
+f(x) = \frac{x}{s+1}, \quad f'(x) = \frac{1}{s+1}
+\]
+
+Tính tích phân tổng quát cho điều kiện giới hạn:
+
+\[
+\varphi(s) = \left[ \frac{1}{s+1} - \frac{3}{4s+2} \right]_{0}^{+\infty}
+= \left[ 1 - \frac{3}{4} \right] = \frac{7}{4}
+\]
+
+Vậy giá trị cuối cùng là:
+
+\[ 
+\boxed{\frac{7}{4}}
+\]
+\frac{7--$\frac{5\pi^2}{24}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-100
+Question: Cho \[A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix}\]là ma trận \(3 \times 3\) không khả nghịch trên các số thực \(\mathbb{R}\). Nếu ma trận adjugate \( A^* \) của \( A \) được cho bởi\[A^* = \begin{pmatrix} a_{11}^2 & a_{12}^2 & a_{13}^2 \\ a_{21}^2 & a_{22}^2 & a_{23}^2 \\ a_{31}^2 & a_{32}^2 & a_{33}^2 \end{pmatrix},\]hãy tìm \( |A| \).
+Model's Full Answer: Ma trận \(A\) có dạng:
+
+\[ A = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} 
+\end{pmatrix} \]
+
+Công thức adjugate:
+
+\[ A^* = \left( \frac{1}{a_{11}} - \frac{1}{a_{22}} + \frac{1}{a_{33}}, \frac{1}{a_{12}} - \frac{1}{a_{23}} + \frac{1}{a_{33}}, \frac{1}{a_{13}} - \frac{1}{a_{21}} + \frac{1}{a_{31}} \right) \]
+
+Với \( a_{ij} = a_{i1}^2 + a_{i2}^2 + a_{i3}^2 \):
+
+\[ A^* = \left( \frac{1}{a_{11}} - \frac{1}{a_{22}} + \frac{1}{a_{33}}, \frac{1}{a_{12}} - \frac{1}{a_{23}} + \frac{1}{a_{33}}, \frac{1}{a_{13}} - \frac{1}{a_{21}} + \frac{1}{a_{31}} \right) \]
+
+Áp dụng hàm tính diện tích (trong đó \(|\cdot|^2\) là bình phương):
+
+\[ |A| = |\left( \frac{1}{a_{11}} - \frac{1}{a_{22}} + \frac{1}{a_{33}} \right)|^2 + |\left( \frac{1}{a_{12}} - \frac{1}{a_{23}} + \frac{1}{a_{33}} \right)|^2 + |\left( \frac{1}{a_{13}} - \frac{1}{a_{21}} + \frac{1}{a_{31}} \right)|^2 \]
+
+Sử dụng quy tắc hình học và công thức:
+
+\[ |A| = \sqrt{\left( \frac{1}{a_{11}} - \frac{1}{a_{22}} + \frac{1}{a_{33}} \right)^2} + \sqrt{\left( \frac{1}{a_{12}} - \frac{1}{a_{23}} + \frac{1}{a_{33}} \right)^2} + \sqrt{\left( \frac{1}{a_{13}} - \frac{1}{a_{21}} + \frac{1}{a_{31}} \right)^2} \]
+
+Tính toán kết quả tương ứng với giá trị đặc trưng:
+
+\[ \boxed{|A|} = \sqrt{\frac{(a_{11}^2 + a_{22}^2 + a_{33}^2)}{4a_{11}(a_{22}^2 + a_{33}^2)}} \]
+
+Vì vậy, giải quyết bằng cách áp dụng định lý Heron về cạnh tam giác.
+|A|--0 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-101
+Question: Cho $I_n = n \int_1^a \frac{dx}{1+x^n}$, với $a > 1$. Tìm giới hạn $\lim_{n \to \infty} I_n$.
+Model's Full Answer: \[ \lim_{n \to \infty} I_n = \lim_{n \to \infty} (n) \left( \int_1^a \frac{dx}{1 + x^n} \right) \]
+
+Sử dụng tính chất tích phân:
+
+\[
+\begin{align*}
+& \text{Consider the integrals separately: } 
+\end{align*}
+
+- \( I_0(x) = \int_1^a \frac{dx}{1 + x^n} \)
+- \( I_n(x) = \sum_{k=0}^{n-1} k \cdot I_k(x - a) \)
+
+Áp dụng các công thức:
+\[
+\int_1^a \frac{dx}{1 + x^n} = \frac{1}{1 + x^n} \Big|_{a}^x = \frac{x - a}{1 + x^n}
+\]
+\[
+\int_1^a \frac{dx}{1 + x^n} = \frac{1}{1 + x^n} \bigg|_{a}^x = \frac{x-a}{1 + x^n}
+\]
+
+Từ đó, ta have:
+\[
+\lim_{n \to \infty} I_n = \lim_{n \to \infty} \sum_{k=0}^{n-1} k \cdot \frac{x - a}{1 + x^n}
+\]
+
+Given:
+\[
+\frac{x - a}{1 + x^n} = \frac{(1 + x)^{-n}}{n!}
+\]
+
+Thus,
+\[
+\lim_{n \to \infty} I_n = \lim_{n \to \infty} \frac{\sum_{k=0}^{n-1} k \cdot \frac{(1 + x)^{-n}}{n!}}
+\]
+Using the limit of product:
+\[
+= \lim_{n \to \infty} \frac{n \cdot \sum_{k=0}^{n-1} \frac{(1 + x)^{-n}}{n!}}{n!}
+\]
+
+By recognizing:
+\[
+\sum_{k=0}^{n-1} \frac{(1 + x)^{-n}}{n!} = \sum_{k=0}^{n-1} \frac{(1 + x)^{-k}}{k!
+\]
+
+Thus:
+\[
+\lim_{n \to \infty} \frac{n}{n!} = 1
+\]
+
+Therefore:
+\[
+\boxed{1}
+\]
+1--$\ln2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-102
+Question: Cho hàm \( z = f(x, y) \) có khả năng vi phân trong miền\[ D = \{(x, y) | 0 \leq x \leq 1, 0 \leq y \leq 1 \}, \]với \( f(0, 0) = 0 \) và \( \left. \mathrm{d}z \right|_{(0,0)} = 3 \mathrm{d}x + 2 \mathrm{d}y \). Tìm giới hạn\[\lim_{x \to 0^+} \frac{\int_0^{x^2} \mathrm{d}t \int_x^{\sqrt{t}} f(t, u) \mathrm{d}u}{1 - \sqrt[4]{1-x^4}}.\]
+Model's Full Answer: **Hàm \( z = f(x, y) \):**
+
+- Hàm được cho là:
+
+\[ z = (f(x, y)) \]
+- Phạm vi \(D\) là:
+\[ D = \{(x, y) | 0 \leq x \leq 1, 0 \leq y \leq 1\}. \]
+
+- Điều kiện ban đầu:
+\[ f(0, 0) = 0 \]
+\[ \left. \mathrm{d}z \right|_{(0, 0)} = 3 \mathrm{d}x + 2 \mathrm{d}y = 3 \cdot 1 + 2 \cdot 0 = 3 \]
+
+**Áp dụng các điều khoản này vào phương trình vi phân:**
+
+\[ \mathcal{F}(x, y) = f(x, y), \quad \mathrm{d}z = 3 \mathrm{d}x + 2 \mathrm{d}y \]
+
+Sử dụng định lý Vieta của hàm liên tục:
+
+\[ \frac{\partial \mathcal{F}}{\partial x} = f'(x) = 3 \]
+\[ \frac{\partial \mathcal{F}}{\partial y} = f''(x) = 2 \]
+
+Thay vào đó:
+
+\[ \frac{\partial \mathcal{F}}{\partial t} = 3 \frac{\partial f}{\partial x} + 2 \frac{\partial f}{\partial y} = 3f' \]
+\[ \frac{\partial \mathcal{F}}{\partial u} = 2f'' \]
+
+Kết hợp chúng lại:
+
+\[ \frac{\partial \mathcal{F}}{\partial u} = 6 \frac{\partial f}{\partial x} + 2f'' \]
+
+Vì vậy, ta tìm:
+
+\[ \frac{\partial \mathcal{F}}{\partial u} \times \mathrm{d}u = \frac{6f'}{x} + 2f'' \]
+
+Đặt:
+
+\[ \mathrm{d}u = 1 - \sqrt{x^4}, \]
+
+thay thế:
+
+\[ \frac{6f'}{x} + 2f'' = \frac{6f'}{x} + 2\sqrt{x^4} = \frac{6f'}{x} + 8x^{-5/2}\]
+
+Mục tiêu của chúng ta là tính giá trị giới hạn:
+
+\[ \lim_{x \to 0^+} \frac{\int_0^{x^2} \mathrm{d}t \int_x^{\sqrt{t}} f(t, u) \mathrm{d}u}{1 - \sqrt{1-x^4}}, \]
+
+trong đó \( t = x^2 \):
+
+\[ \frac{f(t, u)}{\sqrt{1-t^2}} \]
+
+Áp dụng nguyên tắc xác suất để tham khảo:
+
+\[ \lim_{x \to 0^+} \frac{\int_0^{x^2} \mathrm{d}t \int_x^{\sqrt{t}} \left(\frac{f(t, u)}{\sqrt{1-t^2}}\right) \mathrm{d}u}{1 - \sqrt{1-x^4}} = \lim_{x \to 0^+} \frac{\int_0^{x^2} \mathrm{d}t \int_x^{\sqrt{t}} \frac{f(t, u)}{\sqrt{1-t^2}} \mathrm{d}u}{1 - \sqrt{1-x^4}}, \]
+
+sử dụng sự kết hợp của các phần tử:
+
+\[ \frac{\int_0^{x^2} \mathrm{d}t}{\int_0^{x^2} \mathrm{d}t} \cdot \frac{\mathrm{d}u}{\mathrm{d}x} = \frac{\pi}{2}. \]
+
+Do đó, giới hạn được đưa ra là:
+
+\[ \boxed{\frac{\pi}{2}} \]
+\frac{\pi---2 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-103
+Question: Cho hàm số \( f(x) \) khả vi hai lần trên khoảng \((-1, 1)\), với \( f(0) = 1 \). Ngoài ra, với \( x \geq 0 \), ta có \( f(x) \geq 0 \), \( f'(x) \leq 0 \), và \( f''(x) \leq f(x) \). Hãy xác định giá trị nhỏ nhất của \( f'(0) \).
+Model's Full Answer: **Giải pháp:**
+
+Để tìm giá trị nhỏ nhất của \(f'(0)\), chúng ta cần giải quyết các điều kiện cho hàm số.
+
+\[ 
+\begin{align*}
+& f(x) \text{ là khả vi hai lần trên } (-1, 1) \\
+& f(0) = 1 \\
+& f(x) \geq 0 \quad \forall x \geq 0 \\
+& f'(x) \leq 0 \quad \forall x \geq 0 \\
+& f''(x) \leq f(x) \quad \forall x \geq 0.
+\end{align*} \]
+
+Chúng ta sẽ áp dụng bất đẳng thức Dirichlet thứ hai để đạt được:
+
+\[ 
+f'(x) \leq f(x).
+\]
+
+Với:
+- Hàm \( f(x) \):
+\[ 
+f(x) = x^3 - 6x + 5.
+\]
+- Giá trị tại \( x = 0 \): \( f(0) = 1 \)
+\[ 
+f'(0) = 0.
+\]
+
+Do đó, giá trị nhỏ nhất của \(f'(0)\) là:
+
+\[ 
+\boxed{0}.
+\]
+0--$-\sqrt{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-104
+Question: Tính $\lim_{x \to +\infty}\sqrt{x^2 + x + 1}\frac{x - \ln(e^x + x)}{x}$.
+Model's Full Answer: \[ \lim_{x \to +\infty} \left( \sqrt{x^2 + x + 1} \cdot \frac{x - \ln(e^x + x)}{x} \right) = \frac{\infty}{0} \]
+
+Dùng Đạo hàm:
+
+\[ \text{Hàm tăng tại } x=0 \]
+\[ \Rightarrow \lim_{x \to 0} (x^2 + x + 1)\cdot \frac{x - \ln(e^x + x)) = \lim_{x \to 0} (\ln(e^x + x)) = 1 \quad (\text{thỏa mãn nghiệm nguyên bất đẳng thức Euler-Mascheroni). \]
+
+Vậy:
+\[ \boxed{\frac{\infty}{0}} \]
+\frac{\infty--0 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-105
+Question: Cho $z=z(x, y)$ là một hàm ẩn với hai biến từ phương trình $2\sin(x+2y-3z)=x+2y-3z$. Tìm $\frac{\partial z}{\partial x}+\frac{\partial z}{\partial y}$.
+Model's Full Answer: Hàm \(z\) được đưa ra bởi:
+
+\[ z = z(x, y) \]
+
+Đặt lại thành dạng tuyến tính:
+\[ z(x, y) = (x + 2y - 3z)^{1/2} \]
+
+Từ phương trình ban đầu:
+\[ 2\sin(x + 2y - 3z) = x + 2y - 3z \]
+Ta có:
+\[ 2\sin(z) = x + 2y - 3z \]
+
+Chia cả hai bên cho 2:
+\[ \sin(z) = \frac{x + 2y - 3z}{4} \]
+
+Áp dụng đạo hàm từng bước:
+
+**Hệ số hàm \(z\):**
+\[ \frac{\partial z}{\partial x} = \frac{\partial (\frac{x + 2y - 3z}{4})}{\partial x} = \frac{(x + 2y - 3z)(dx/dx)}{4^2} = \frac{(1 + 2y - 3z)(dx/dx)}{16} \]
+
+**Hằng số hằng số:**
+\[ \frac{\partial z}{\partial y} = \frac{\partial \left( \frac{x + 2y - 3z}{4} \right)}{\partial y} = \frac{(x + 2y - 3z)(dy/dy)}{4^2} = \frac{(1 + 2y - 3z)(dy/dy)}{16} \]
+
+**Kết hợp các hệ số:**
+
+\[ \frac{\partial z}{\partial x} + \frac{\partial z}{\partial y} = \frac{(1 + 2y - 3z)(dx/dx)}{16} + \frac{(1 + 2y - 3z)(dy/dy)}{16} \]
+
+Sử dụng điều hòa và kết hợp đơn giản:
+\[ = \frac{(1 + 2y - 3z)(1 + dx/dx) + (1 + 2y - 3z)(1 + dy/dy)}{16} \]
+
+\[ = \frac{(1 + 2y - 3z + dx/dx + 2(dy/dy))}{16} \]
+
+\[ = \frac{(1 + dx/dx + 2dy/dy)}{8} + \frac{(1 + 2y - 3z)}{8} \]
+
+**Trả lời:** 
+\[ \boxed{\frac{(1 + dx/dx + 2dy/dy)}{8} + \frac{(1 + 2y - 3z)}{8}} \]
+\frac{(1 + dx/dx + 2dy/dy)--1 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-106
+Question: Cho $f(x)$ là một hàm liên tục, với $f(0)\neq0$. Tìm $\lim_{x \to 0} \frac{2\int_{0}^{x}(x-t)f(t)dt}{x\int_{0}^{x}f(x-t)dt}$.
+Model's Full Answer: \[ f(x) = x^3 - t^3 \]
+
+Tính \( \int_{0}^{x} (x-t)t \, dt \):
+\[ \left[ \frac{x^4 - t^5}{5} \right]_0^x = \frac{x^5}{5} - \frac{x^6}{10} + C \]
+Vậy:
+\[ \frac{2}{x}\left( \frac{x^5}{5} - \frac{x^6}{10} \right) \]
+
+Sử dụng định lý giới hạn hữu hạn cho \( \lim_{x \to 0} \frac{\int}{x}\):
+
+\[ \frac{2}{x} \approx 0 \quad (\text{(căn cứ vào sự chia hết của tích phân)} \]
+
+Áp dụng điều kiện ban đầu:
+\[ f(0) = 0 \Rightarrow \lim_{x \to 0} \frac{2}{x} = 0 \]
+
+Do đó,
+\[ \boxed{0} \]
+0--1 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-107
+Question: Cho $D=\{ (x,y)|x^2+y^2\le \pi \}$. Tìm $\iint\limits_D (\sin x^2 \cos x^2 + x \sqrt{x^2 + y^2}) \, dx \, dy$.
+Model's Full Answer: **Áp dụng định lý tích phân trên hình tròn**
+
+Chúng ta cần tính tích phân nội tại của hàm:
+
+\[I = \iint_{D}\left(\frac{\sin x^2}{\sqrt{x^2 + y^2}} + x \sqrt{x^2 + y^2}\right) \, dx \, dy,\]
+
+trong đó \(D\) là tập hợp các điểm thuộc khoảng \((0, \pi)\).
+
+1. **Tách biến số**: Sử dụng định lý tích phân trên hình tròn để tách các phần tử và nhân chúng bằng hệ thức liên quan đến diện tích:
+
+\[I = 4\pi \int_{0}^{\pi} \left(1 - \frac{1}{r^2}\right) \, dr.\]
+
+2. **Giải quyết cho \(r\)**:
+   - Thay thế \(r = \sqrt{x^2 + y^2}\):
+     \[r = \sqrt{x^2 + y^2}, \quad r = 1 \implies \,dr = 2\sqrt{x^2 + y^2} \, dxdy.\]
+   - Áp dụng phương trình này cho từng nửa đường kính:
+
+     \[I = 4\pi \left[\frac{1}{2} - \frac{1}{9}\right] \cdot 2\sqrt{x^2 + y^2} = 8\pi \ln|x^2 + y^2|\]
+
+Vì vậy, giá trị cuối cùng của tích phân là:
+
+\[ \boxed{8\pi \ln|x^2 + y^2|} \]
+8\pi \ln|x^2 + y^2|--$\pi$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-108
+Question: Cho $x_1=2021$, phương trình $x_n^2-2(x_n+1)x_{n+1}+2021=0$ ($n\geq1$). Chứng minh rằng dãy số ${x_n}$ hội tụ. Tìm giới hạn $\lim_{n \to \infty} x_n$.
+Model's Full Answer: **Chứng minh dãy số \( (x_n) \) hội tụ và tìm giới hạn \( \lim_{n \to \infty} x_n \)**
+
+Phương trình ban đầu là:
+
+\[ x_n^2 - 2(x_{n+1} + x_{n+2}) + 2021 = 0 \]
+
+Tìm nghiệm chung của các hệ thức sau:
+
+1. \( x_{n+1} = -(x_n + x_{n+2}) \)
+2. \( x_{n+2} = x_n - 4x_{n+1} \)
+
+Áp dụng sự kết hợp này cho tất cả các giá trị từ \( n = 2 \) đến vô hạn:
+
+\[ (x_{n+1} + x_{n+2})^2 - 4(x_{n+1} x_{n+2}) + 2021 = (-(x_n + x_{n+2})^2 - 4(x_n - 4x_{n+1})^2) + 2021 \]
+\[ = -(x_n + x_{n+2})^2 + 8056 \]
+
+Do đó:
+
+\[ x_n^2 - 2(x_{n+1} + x_{n+2}) + 2021 = -((x_n + x_{n+2})^2 + 8056) \]
+
+Sử dụng tính chất của hàm bậc hai:
+
+\[ |x_n| \leq \sqrt{|x_{n+2}| + |x_{n+1}| \leq \sqrt{2021}} \]
+
+Dựa trên phân phối hữu hạn:
+
+\[ \lim_{n \to \infty} x_n = \frac{\sqrt{2021}}{2} \]
+
+**Giới hạn \( \lim_{n \to \infty} x_n \):**
+
+\[ \boxed{\frac{\sqrt{2021}}{2}} \]
+\frac{\sqrt{2021--$\sqrt{2022} - 1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-109
+Question: Xét một hàm đồng nhất bậc $4$. $f(x,y,z)=a_1x^4+a_2y^4+a_3z^4+3a_4x^2y^2+3a_5y^2z^2+3a_6x^2z^2$. Tìm $\oiint_{\sum} f(x,y,z)dS$, trong đó $\sum: x^2+y^2+z^2=1$.
+Model's Full Answer: **Giải pháp cho $\oint_{\mathbb{R}} (f(x,y,z)) \, dS$**
+
+Hàm đồng nhất bậc 4:
+
+\[ f(x,y,z) = a_1 x^4 + a_2 y^4 + a_3 z^4 + 3 a_4 x^2 y^2 + 3 a_5 y^2 z^2 + 3 a_6 x^2 z^2 \]
+
+Đặt \( S = \mathcal{D}(x^2 + y^2 + z^2 - 1) \):
+
+\[ F(x,y,z) = a_1 x^4 + a_2 y^4 + a_3 z^4 + 3 a_4 x^2 y^2 + 3 a_5 y^2 z^2 + 3 a_6 x^2 z^2 \]
+
+Với điều kiện ban đầu \( \mathcal{D}(S) = \mathbb{R} \), ta có:
+
+\[ \oint_{\mathbb{R}} (F(x,y,z)) \, dS = \oint_{\mathcal{D}} (F') dx + \oint_{\mathcal{D}} (F') dy + \oint_{\mathcal{D}} (F') dz \]
+
+Áp dụng định lý tích phân trên mặt phẳng phức:
+
+\[ F' = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} + \frac{\partial F}{\partial z} \]
+
+Một lần nữa, với \( \mathcal{D} = \mathbb{R} \):
+\[ F' = (4a_1 + 0)(dx) + (4a_2 + 0)(dy) + (4a_3 + 0)(dz) + (-2a_4)(0)(0) + (-2a_5)(0)(0) + (-2a_6)(0)(0) \]
+\[ = 4ax + 4ay + 4zy \]
+
+Do đó:
+
+\[ \oint_{\mathbb{R}} (F') \, dS = 4 \cdot (\int_{-1}^{1} dx + \int_{-1}^{1} dy + \int_{-1}^{1} dz) \]
+\[ = 4 \cdot \left( -1 + 1 + 1 \right) = 4 \cdot 1 = 4 \]
+
+Vậy, giải pháp là:
+
+\[ \boxed{4} \]
+4--$\frac{4\pi}{5} \sum_{i=1}^{6}a_i$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-110
+Question: Để ${a_n}$ và ${b_n}$ là dãy số thực dương thỏa mãn điều kiện sau:
+(i) $a_1=b_1=1$
+(ii) $b_n=a_n b_{n-1} - 2$
+(iii) $n$ là số nguyên lớn hơn $1$.
+Giả sử ${b_n}$ là một dãy bị chặn. Chứng minh rằng $\sum_{n=1}^{\infty} \frac{1}{a_1 a_2 \cdots a_n}$ hội tụ. Tìm giá trị của tổng này.
+Model's Full Answer: **Chứng minh:** 
+\[ \sum_{n=1}^{\infty} \frac{1}{a_1 a_2 \cdots a_n} = \lim_{n \to \infty} \left(1 + \frac{1}{b_1} + \frac{1}{b_2} + \cdots + \frac{1}{b_n}\right). \]
+
+Bước 1: Áp dụng bất đẳng thức Cauchy-Schwarz cho các thành phần \(a_i\) và \(b_j\).
+
+\[ |1| \leq \left|\frac{1}{a_1} - \frac{1}{a_2} + \cdots + \frac{1}{b_1} - \frac{1}{b_2} + \cdots - \frac{1}{b_n}\right| \quad \text{(Cauchy-Schwarz)} \]
+\[ \left|1 + \frac{1}{b_1} + \frac{1}{b_2} + \cdots + \frac{1}{b_n}\right| \leq n(n+1)/2 \quad (\text{dạng bình phương}} \]
+
+Bước 2: Kết hợp với (i), ta có:
+
+\[ \sum_{n=1}^{\infty} \frac{1}{a_1 a_2 \cdots a_n} = \sum_{k=1}^{n} k \cdot \left(\frac{n+1}{2}\right)^{-1} \]
+
+Áp dụng định lý Taylor về phân số:
+
+\[ \frac{f(k)}{f'(k)(k+1)} = \frac{1}{(k+1)!} \]
+
+Sử dụng \( f(a_n) = \frac{1}{a_n a_{n+1} \cdots a_1} \):
+
+\[ \sum_{k=1}^{n} k \cdot \left(\frac{n+1}{2}\right)^{-1} = \sum_{k=1}^{n} k \cdot \left(\frac{n+1}{2}\right)^{-1} = \sum_{k=1}^{n} \left(\frac{n+1}{2}\right)^{-1} \]
+
+Vì các phân số nhân với nhau không thay đổi khi tăng hạng tự nhiên, nên:
+
+\[ \sum_{k=1}^{n} \frac{k!}{k!(n+1)!} = \frac{1}{2} \]
+
+Do đó,
+
+\[ \sum_{n=1}^{\infty} \frac{1}{a_1 a_2 \cdots a_n} = \frac{1}{2}. \]
+
+**Tóm lại, giải pháp là:**
+
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--$\frac{3}{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-111
+Question: Tìm $I=\int_{0}^{\frac{\pi}{2}}\frac{\cos x}{1+\tan x}dx$.
+Model's Full Answer: **Áp dụng Định lý Sine và Tích phân tích đối**
+
+Mục tiêu là tính giá trị của \(I\) tại \(\theta = 0\) đến \(\frac{\pi}{2}\):
+
+\[ I = \int_0^\frac{\pi}{2} \frac{\cos(x)}{1 + \tan(x)} \, dx \]
+
+**Chia thành hai phần tương ứng với các giới hạn ban đầu:**
+
+- Phần trên: \(x \in [0, \frac{\pi}{2}]\)
+- Phần dưới: \(x \in (-\frac{\pi}{2}, 0)\)
+
+**Đặt \(u = \tan(x)\)**:
+
+\[ u = \frac{\sin(x)}{\cos(x)} \]
+\[ du = \sec^2(x) \, dx \]
+
+Thay vào phương trình tích phân:
+
+\[ \int_0^\frac{\pi}{2} \frac{\cos(x)}{1 + \tan(x)} \, dx = \int_0^\frac{\pi}{2} \frac{du}{1 + \left( \frac{\sin(u)}{\cos(u)} \right)^2} \cdot \sec^2(u) \, du \]
+
+Sử dụng Đạo hàm tích phân (vì \(f(u) = \frac{\sin(u)}{\cos(u)}\)):
+
+\[ \int_0^\frac{\pi}{2} \frac{du}{1 + (\sin^2(u))^2} = \int_0^\frac{\pi}{2} \sec^2(u) \, du = \ln||\sec(u)| - \sec(u)|_{0}^{\frac{\pi}{2}} \]
+
+Dịch chuyển về vị trí ban đầu:
+
+\[ I = \ln |\sec(\frac{\pi}{2}) - \sec(0)| + \ln ||\sec(0) - \sec(\frac{\pi}{2})|^2 \]
+
+\[ I = \ln |2 - 0| + \ln |0 - 4| \]
+
+\[ I = \ln 2 + \ln (-4) \]
+
+Do đó:
+
+\[ I = \boxed{\ln(2) - \ln(-4)} \]
+\ln(2) - \ln(-4)--$\frac{1}{2\sqrt{2} \ln\frac{\sqrt{2}+2}{2-\sqrt{2}}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-112
+Question: Tìm $\sum_{n=1}^{+\infty} \arctan{\frac{2}{4n^2+4n+1}}.$
+Model's Full Answer: \[
+\begin{aligned}
+&\sum_{n=1}^{+\infty} \arctan{\frac{2}{4n^2 + 4n + 1}}, \\
+&= \arctan(1) - \arctan(\frac{2}{8}) = \frac{\pi}{6} - \frac{\pi}{8}.
+\end{aligned}
+\]
+
+Áp dụng công thức chuỗi:
+\[ \arctan(u) = \sum_{k=0}^\infty \frac{(-1)^k u^{2k}}{(2k)!} \]
+
+Ở đây \( n = 2n^2 + 4n + 1 \):
+\[ arctan(u) = \left( \sum_{k=0}^{\infty} \frac{-1}{2k}\right) - \left( \sum_{k=0}^{\infty} \frac{1}{2k}\right) = \frac{\pi}{6} - \frac{\pi}{8}. \]
+
+Sử dụng định lý của Taylor về chuỗi, kết quả là:
+\[\boxed{\frac{\pi}{6} - \frac{\pi}{8}}.\]
+\frac{\pi--$\arctan{\frac{1}{2}}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-113
+Question: Cho hàm số $f(x,y)$ tồn tại đạo hàm riêng bậc hai liên tục trong miền đóng $D=\{(x,y) | x^2 + y^2 \leq 1\}$ sao cho $\frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} = x^2 + y^2$. Tính $\lim_{r \to 0^+} \frac{\int\int_{x^2 + y^2 \leq r^2} (x\frac{\partial f}{\partial x} + y\frac{\partial f}{\partial y})dxdy}{(\tan r - \sin r)^2}$.
+Model's Full Answer: **Tìm \( \lim_{r \to 0^+} \frac{\int_0^{R}\left(x\frac{f_x}{dx} + y\frac{f_y}{dy}\right)dxdy}{(\tan R - \sin R)^2} \)**
+
+Đặt:
+\[ f(x, y) = x^2 + y^2 \]
+Với các ràng buộc ban đầu:
+
+\[ \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} = x^2 + y^2 \]
+
+Sử dụng phương pháp tích phân ngược và giải hệ:
+
+\[ u = x^2 + y^2, \quad dv = dx dy \Rightarrow du = 2xdy \, dx, \quad v = y \]
+
+\[ \int_{0}^{R} (2x\frac{du}{dx} + y\frac{dv}{dy}) dxdy = \int_{0}^{R} x^2 + y^2 dxdy \]
+
+Sau đó áp dụng công thức tích phân:
+
+\[ \int_{0}^{R} x^2 + y^2 dxdy = \frac{x(R^3)}{6} + \frac{y(R^3)}{3} \]
+
+Do đó:
+
+\[ \frac{\int_0^{R} (x\frac{f_x}{dx} + y\frac{f_y}{dy})dxdy}{(\tan R - \sin R)^2} = \frac{R(R^3)}{6} + \frac{R(R^3)}{3} \]
+
+**Áp dụng đơn giản tính toán:**
+
+\[ \frac{R(R^3)}{6} + \frac{R(R^3)}{3} = \frac{4R^4}{6} \]
+
+**Chọn giá trị gần nhất với \( \boxed{8.33} \).**
+
+Kết quả là:
+
+\[ \lim_{r \to 0^+} \frac{\int_0^{R}\left(x\frac{f_x}{dx} + y\frac{f_y}{dy}\right)dxdy}{(\tan R - \sin R)^2} = 8.33 \]
+8.33--$\frac{\pi}{3}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-114
+Question: Đề bài cho rằng mọi bề mặt trơn đóng định hướng $S$ trong nửa không gian trong $\mathbb{R}^3$ $\{(x,y,z) \in \mathbb{R}^3 | x>0 \}$ tồn tại $\int\int_{S}^{}xf'(x) \, dy \, dz + y(xf(x)-f'(x)) \, dz \, dx - xz(\sin x + f'(x)) \, dx \, dy = 0$, trong đó $f$ là hàm số khả vi liên tục hai lần trên khoảng $(0, +\infty)$ và $\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} f'(x) = 0$. Tìm hàm $f(x)$.
+Model's Full Answer: **Hàm \( f(x) \)**:
+Để tìm hàm \( f(x) \), ta áp dụng các điều kiện và tính chất của một hàm khả vi:
+
+1. **Tính liên tục**: Hàm \( f(x) \) phải liên tục trên toàn bộ nửa không gian trong $\mathbb{R}^3$.
+   \[
+   \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} f'(x)
+   \]
+   Do đó,
+\[ 
+    f(0) = 0
+    \]
+
+2. **Liên tục tại điểm giới hạn (tương tự như trường hợp khác):
+   Vì $\lim_{x \to 0^+} f(x) = 0$, chọn \( f(0) = 0 \).
+
+3. **Dạng đơn giản của hàm:**
+   Theo định lý về sự phân phối hàm, chúng ta có thể chia thành hai phần:
+   \[
+   S = [0, +\infty): x > 0, \quad f'(x) = 0, \quad y(x)f(x) \, dz \, dx - z(\sin x + f'(x))
+   \]
+
+4. **Áp dụng phương trình tổng quát:**
+   Thêm vào đó, vì \( S \) chứa các lớp trơn trượt, chúng ta sẽ giả thiết rằng:
+   \[
+   \frac{\partial}{\partial y}(y(x)f(x) \, dz \, dx) = 0 \quad \text{trong bất kỳ lớp nào}
+   \]
+
+5. **Phân tích hàm \( y(x) \)**:
+   Sử dụng định nghĩa của hàm khả vi:
+   \[
+   y(x) = \left[ \begin{aligned} 0 & \quad \text{nếu } x < 0\\ \cos(x) & \quad \text{khác nếu } x \geq 0
+   \right]
+   \]
+
+6. **Công thức tổng quát cho \( f(x) \)**:
+   Với các điều kiện đã được đưa ra, hàm \( f(x) \) có dạng:
+   \[
+   f(x) = \sin(x) \cos(x)
+   \]
+
+Vì vậy, hàm \( f(x) \) là:
+**\( f(x) = \sin(x) \cos(x) \)**
+
+**Trả lời:** \( f(x) = \sin(x) \cos(x) \).
+NO_BOXED_ANSWER--$e^{\frac{1}{2}x} \left( -\cos\frac{\sqrt{3}}{2}x + \frac{1}{\sqrt{3}}\sin\frac{\sqrt{3}}{2}x \right) + \cosx$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-115
+Question: Cho $m \ge 5$ là một số nguyên lẻ, và kí hiệu $D(m)$ là số bộ bốn $(a_1, a_2, a_3, a_4)$ của các số nguyên phân biệt với $1 \le a_i \le m$ đối với mọi $i$ sao cho $m$ chia hết $a_1 + a_2 + a_3 + a_4$. Có một đa thức 
+$$q(x) = c_3x^3 + c_2x^2 + c_1x + c_0$$  sao cho $D(m) = q(m)$ đối với mọi số nguyên lẻ $m \ge 5$.  Hãy tìm hệ số $c_1?$
+Model's Full Answer: **Giải pháp**
+
+Để giải quyết vấn đề này, chúng ta cần xác định \( D(m) \), đó là tổng tất cả các bộ bốn có giá trị nguyên (không âm).
+
+Khi đó, theo định nghĩa, chúng ta có:
+
+\[ D(m) = \sum_{i=1}^{m} \left( a_1 + a_2 + a_3 + a_4 \right) \]
+
+Mỗi phần tử trong tập hợp này đại diện bởi các số nguyên dương nhỏ nhất thỏa mãn điều kiện.
+
+Chúng ta sẽ áp dụng phương trình cho các trường hợp đặc biệt khi \( m\) là một số nguyên lẻ lớn hơn 5:
+
+1. **Nếu \( m = 6 \)**:
+   - Số bộ bốn duy nhất: \( 6 \)
+   - Tổng \( D(6) = 6 \)
+
+2. **Nếu \( m = 7 \)**:
+   - Số bộ bốn duy nhất: \( 15 \)
+   - Tổng \( D(7) = 15 \)
+
+3. **Nếu \( m = 8 \)**:
+   - Số bộ bốn duy nhất: \( 29 \)
+   - Tổng \( D(8) = 29 \)
+
+Từ đây, tính toán hệ số \( c_1 \):
+
+\[ c_1 = \frac{1}{6}(6 + 15 + 29) = \frac{29}{6} \]
+
+Vì vậy, hệ số \( c_1 \) là:
+
+\[ \boxed{\frac{29}{6}} \]
+\frac{29--11 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-116
+Question: Cho $a, b,$ và $c$ là các số nguyên dương sao cho $a+b+c=23$ và \[\gcd(a,b)+\gcd(b,c)+\gcd(c,a)=9.\] Hãy tính tổng tất cả các giá trị khác nhau có thể có của biểu thức 
+$a^{2}+b^{2}+c^{2}$? .
+Model's Full Answer: **Tính toán tổng các giá trị khác nhau của \(a^2 + b^2 + c^2\)**
+
+Áp dụng định lý Euclid về phép chia:
+
+\[ a = 1 \implies (a - 1) \cdot (b - 1) \cdot (c - 1) = 23 \]
+
+\[ b = 2 \implies (b - 2) \cdot (c - 2) = 23 \]
+
+\[ c = 3 \implies (c - 3) \cdot (a - 3) = 23 \]
+
+Một cách giải quyết:
+\[ a^2 + b^2 + c^2 = 1^2 + 2^2 + 3^2 = 7 + 4 + 9 = 20 \]
+
+Do đó, tổng các giá trị khác nhau của \(a^2 + b^2 + c^2\) là:
+
+\[ \boxed{20} \]
+20--438 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-117
+Question: Đối với mỗi số thực $a$ với $0 \leq a \leq 1$, hãy chọn ngẫu nhiên hai số $x$ và $y$ độc lập từ các khoảng $[0, a]$ và $[0, 1]$, tương ứng, và để $P(a)$ là xác suất mà $$\sin^2{(\pi x)} + \sin^2{(\pi y)} > 1.$$Giá trị lớn nhất của $P(a)$ là bao nhiêu?
+Model's Full Answer: **Tính giá trị lớn nhất của \( P(a) \)**
+
+Khi \( a = 0 \), chúng ta có:
+
+\[ P(0) = \frac{1}{4} \]
+
+Với \( a = 1 \):
+
+\[ P(1) = \frac{3}{4} \]
+
+Do đó, tổng hợp, giá trị lớn nhất của \( P(a) \) bằng:
+
+\[ P(0) + P(1) = \frac{1}{4} + \frac{3}{4} = \frac{4}{4} = 1 \]
+
+Vậy, **giá trị lớn nhất của \( P(a) \) là**: 
+
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--$2-\sqrt{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-118
+Question: Số $a = \frac{p}{q}$, trong đó $p$ và $q$ là các số nguyên dương nguyên tố cùng nhau, có tính chất là tổng của tất cả các số thực $x$ thỏa mãn$$\lfloor x \rfloor \cdot \{x\} = a \cdot x^2$$bằng $420$, trong đó $\lfloor x \rfloor$ biểu diễn phần nguyên lớn nhất không vượt quá $x$ và $\{x\} = x - \lfloor x \rfloor$ biểu diễn phần thập phân của $x$. Giá trị của $p + q$ là bao nhiêu?
+Model's Full Answer: \[ p + q = 150 \]
+
+\[ \begin{align*}
+&\text{(1): } \lfloor x \rfloor \cdot \{x\} = 420 \\
+&\Rightarrow \left( x - \lfloor x \rfloor \right) \cdot x = 420 \\
+&\Rightarrow (x - \lfloor x \rfloor)^2 = 420x 
+\end{align*}\]
+
+Giải quyết:
+
+\[
+(x - \lfloor x \rfloor)^2 = 420x
+\]
+Điều kiện cho \(x\) bằng:
+\[
+|x - \lfloor x \rfloor| = \sqrt{420x}
+\]
+\( |x - \lfloor x \rfloor| = 6x \geq 0 \)
+\[ x \leq \lfloor x \rfloor \]
+
+Chọn giá trị tối ưu từ \(\lfloor x \rfloor = 9\):
+\[
+x = 8, \quad \lfloor x \rfloor = 9 \implies \boxed{150} \]
+150--929 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-119
+Question: Cho dãy số thực $(a_n)$ và $(b_n)$ sao cho \[(2 + i)^n = a_n + b_ni\] với mọi số nguyên $n\geq 0$, trong đó \(i = \sqrt{-1}\). Tính giá trị của \[\sum_{n=0}^\infty\frac{a_nb_n}{7^n}\,?\]
+Model's Full Answer: **Áp dụng định lý Dirichlet**
+
+Dựa trên thông tin được đưa ra, chúng ta cần tìm giá trị của:
+\[ \sum_{n=0}^{\infty} \frac{a_n b_n}{7^n}, \]
+
+trong đó \(a_n\) và \(b_n\) là các thành phần của dãy số thực.
+
+Định lý Dirichlet (được sử dụng để giải quyết vấn đề này) có dạng:
+
+\[ \sum_{n=0}^{\infty} \left( \frac{a_n}{7^n} - \frac{b_n}{7^{n+1}} \right) = 4 \]
+
+với một hệ số không âm.
+
+Cụ thể, áp dụng cho trường hợp đặc biệt này:
+
+\[ \sum_{n=0}^{\infty} \frac{a_n b_n}{7^n} = 4 \]
+
+Mà \(a_n b_n = \frac{1}{7} (a_0 + a_1 + \cdots + a_{n-1}) \), do đó:
+
+\[ \sum_{n=0}^{\infty} \frac{a_n b_n}{7^n} = 4 \]
+\[ \sum_{n=0}^{\infty} \left( \frac{a_0 + a_1 + \cdots + a_{n-1} } {7^{n-1}} \right) = 4 \]
+
+Từ đó, tính toán:
+
+\[ \sum_{n=0}^{\infty} \frac{a_n b_n}{7^n} = \frac{4}{7} \]
+
+Do đó, đáp án là:
+
+\[ \boxed{\frac{4}{7}} \]
+\frac{4--$\frac{7}{16}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-120
+Question: Cho các số nguyên $a$, $b$, và $c$, mỗi số đều lớn hơn 1, sao cho$$\sqrt[a]{N \sqrt[b]{N \sqrt[c]{N}}} = \sqrt[36]{N^{25}}$$với mọi $N > 1$. Hãy tính giá trị của $b$.
+Model's Full Answer: **Giải pháp:**
+
+\[ N = a^{\frac{1}{a}}, b^{\frac{1}{b}}, c^{\frac{1}{c}} \]
+
+Với \( N = a^{\frac{1}{a}, b^{\frac{1}{b}}, c^{\frac{1}{c}}} \):
+
+\[ N = (a^{\frac{1}{a}})^{\frac{1}{a}} \cdot (b^{\frac{1}{b}})^{\frac{1}{b}} \cdot (c^{\frac{1}{c}})^{\frac{1}{c}} \]
+\[ N = a^{\frac{1 + 1 + 1}{4}} \]
+\[ N = a^{\frac{4}{4}} \]
+\[ N = a^1 \]
+
+Áp dụng định lý bậc ba:
+
+\[ N = (\sqrt[a]{N})^3 = (\sqrt[3]{a^1})^3 \]
+\[ = a^3 \]
+
+Do đó, giá trị của \( b \) là:
+
+\[ b = 3 \]
+
+**Trả lời:** **b = 3**
+NO_BOXED_ANSWER--3 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-121
+Question: Cho tam giác $\triangle A_0B_0C_0$ có các góc lần lượt là $59.999^\circ$, $60^\circ$, và $60.001^\circ$. Với mỗi số nguyên dương $n$, định nghĩa $A_n$ là chân đường cao hạ từ $A_{n-1}$ xuống đường thẳng $B_{n-1}C_{n-1}$. Tương tự, định nghĩa $B_n$ là chân đường cao hạ từ $B_{n-1}$ xuống đường thẳng $A_{n-1}C_{n-1}$, và $C_n$ là chân đường cao hạ từ $C_{n-1}$ xuống đường thẳng $A_{n-1}B_{n-1}$. Tìm số nguyên dương nhỏ nhất $n$ sao cho $\triangle A_nB_nC_n$ là tam giác tù?
+Model's Full Answer: Để tìm giá trị tối thiểu của \( n \) thỏa mãn:
+
+\[ \triangle A_nB_nC_n \text{ là một tam giác tù} \]
+
+với:
+\[
+A_n = 59.999^\circ,
+\]
+\[
+B_n = 60^\circ,
+\]
+\[
+C_n = 60.001^\circ.
+\]
+
+Chúng ta cần kiểm tra tính chất tam giác tù bằng cách phân tích các hệ số:
+
+1. \( \Delta BAC \) (đường vuông góc với \( AC \)):
+\[
+BA = CB = 60^\circ
+\]
+
+2. \( \Delta ABC \) (hình bình hành):
+\[
+BC = CA = 60^\circ
+\]
+
+3. \( \Delta ABN \) (hình bình phương với điểm đối xứng):
+\[
+AB = BC = CN = 60^\circ
+\]
+
+4. \( \Delta BNA \) (tùy chọn), giả sử \( \angle BNA > 90^\circ \)
+\[
+BN = NA = 60^\circ 
+\]
+
+Vì tất cả các tam giác đều có hai cạnh lớn hơn hoặc bằng 90 độ, chúng ta tìm kiếm điều kiện phù hợp nhất.
+
+Xác minh nghiệm đúng:
+\[
+\frac{\cos(60^\circ)}{1 + \sin^2(\angle ABN)} < 0 \quad (\text{do đó}, \; \tan(n - 1)(n - 1) \leq 0 \implies n \geq 2).
+\]
+
+Tính toán nghiệm:
+\[
+\begin{aligned}
+&\cos(60^\circ) = \frac{1}{2}, \\
+&\tan(2) \approx 0.7071 \quad \Rightarrow \; n \geq 2.
+\end{aligned}
+\]
+
+Do đó, duy nhất giá trị tối ưu là:
+\[
+\boxed{2}.
+\]
+2--15 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-122
+Question: Cho tứ giác lồi $ABCD$ với $BC=2$ và $CD=6.$ Giả sử rằng trọng tâm của các tam giác $\triangle ABC, \triangle BCD,$ và $\triangle ACD$ tạo thành các đỉnh của một tam giác đều. 
+ Hãy tính diện tích lớn nhất có thể của $ABCD$.
+Model's Full Answer: **Tính diện tích lớn nhất của \(ABCD\) khi trọng tâm hình vuông.
+
+Để giải quyết vấn đề này, chúng ta sẽ áp dụng định lý Pythagoras cho mỗi tam giác:
+
+1. **Tam giác ABC**: Trung tuyến (CM) của tam giác bằng nửa đường kính (diameter) của \(AC\). Vì \(BC = 2\), đường kính \(AC = BC = 2\).
+   - Diện tích \(ABC = \frac{1}{2} \times AC^2 = \frac{1}{2} \times 4^2 = 8\).
+
+2. **Tam giác BCD**: Đường tròn ngoại tiếp của tam giác \(BDC\) cũng là đường kính của \(BD\). Do đó, \(BD = DC = 6\).
+   - Diện tích \(BDC = \frac{1}{2} \times BD^2 = \frac{1}{2} \times 6^2 = 9\).
+
+3. **Tam giác ACD**: Hình vuông có cạnh bằng 6, vì vậy diện tích bằng:
+   - Diện tích \(ACD = \frac{\sqrt{3}}{4}\) (do nó là hình vuông).
+
+Sử dụng phương trình tổng quát của một tam giác đều:
+\[ \text{Diện tích } S_{\text{đều}} = \frac{\sqrt{3}}{4} a^2 \]
+với \(a\) là cạnh hình vuông.
+
+Áp dụng vào trường hợp đặc biệt này:
+- Với \(a = 6\),
+\[ S_{\text{đều}} = \frac{\sqrt{3}}{4} \times 6^2 = \frac{\sqrt{3}}{4} \times 36 = 9\sqrt{3} \]
+
+Vì vậy, diện tích lớn nhất có thể của \(ABCD\) là:
+\[ \boxed{9\sqrt{3}} \]
+9\sqrt{3--$12+10\sqrt{3}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-123
+Question: Cho $s_k$ là tổng của luỹ thừa thứ $k$ của các nghiệm của đa thức $x^3 - 5x^2 + 8x - 13$. Cụ thể, $s_0=3$, $s_1=5$, và $s_2=9$. Gọi $a$, $b$, và $c$ là các số thực sao cho $s_{k+1} = a \, s_k + b \, s_{k-1} + c \, s_{k-2}$ với $k = 2$, $3$, $....$ Hãy tính  $a+b+c.
+Model's Full Answer: **Tính toán giá trị của \(a + b + c\)**
+
+Chúng ta biết:
+
+\[ s_0 = 3, \quad s_1 = 5, \quad s_2 = 9 \]
+
+Dựa trên điều này, chúng ta có:
+
+\[ s_0 + s_1 + s_2 = 3 + 5 + 9 = 17 \]
+
+Tiếp theo, sử dụng phương trình đã cho:
+
+\[ s_{k+1} = a s_k + b s_{k-1} + c s_{k-2} \]
+với \( k = 2, 3, ..., n \), chúng ta tìm ra các hệ số \( a, b, c \).
+
+Sử dụng điều kiện ban đầu (giả định \( k=2 \)):
+
+\[ s_2 = 9 \Rightarrow a \cdot 9 + b \cdot 8 + c \cdot 7 = 9 \]
+\[ 6a + 8b + 7c = 9 \]
+
+Vì \( s_2 = 9 \) nên:
+\[ a = 1, \quad b = 4, \quad c = 1 \]
+
+Áp dụng tương tự cho các bậc cao hơn:
+
+\[ s_3 = 5 \Rightarrow a \cdot 5 + b \cdot 4 + c \cdot 3 = 5 \]
+\[ 5a + 4b + 3c = 5 \]
+
+Các hệ số được xác định, vì vậy:
+
+\[ a + b + c = 1 + 4 + 3 = 8 \]
+
+Do đó, **giá trị chính xác của \( a + b + c \)** là:
+
+\[ \boxed{8} \]
+8--10 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: medium-vi-124
+Question: Đối với số nguyên dương $n$ và các chữ số khác 0 $a$, $b$, và $c$, giả sử $A_n$ là số nguyên có $n$ chữ số mỗi chữ số đều bằng $a$; giả sử $B_n$ là số nguyên có $n$ chữ số mỗi chữ số đều bằng $b$, và giả sử $C_n$ là số nguyên có $2n$ chữ số (không phải $n$ chữ số) mỗi chữ số đều bằng $c$. Giá trị lớn nhất có thể của $a + b + c$ là bao nhiêu để có ít nhất hai giá trị của $n$ sao cho $C_n - B_n = A_n^2$?
+Tìm giá trị lớn nhất của $a + b + c$ sao cho tồn tại ít nhất hai giá trị  $n$ thỏa mãn:$C_n - B_n = A_n^2$.
+Model's Full Answer: **Giải pháp:**
+
+Chúng ta cần tìm giá trị lớn nhất \( a + b + c \) đảm bảo:
+
+\[ C_n - B_n = A_n^2 \]
+
+với điều kiện:
+1. \( C_n \geq B_n \)
+2. Số lượng các chữ số khác nhau không vượt quá tối đa 2n
+
+Hãy phân tích từng bước:
+
+1. **Tính toán \( n \):**
+   Với mỗi giá trị \( n \), chúng ta tính tổng các chữ số từ 0 đến \( n-1 \). Điều này sẽ được gán vào các biến đại diện cho \( A_n, B_n \) và \( C_n \).
+
+2. **Xác định cấu trúc \( C_n \):**
+   Mỗi \( C_n \) gồm \( n \) chữ số, mỗi chữ số \( a, b, \) hoặc \( c \). Do đó, tổng các chữ số từ \( 0 \) đến \( n-1 \) phải được cân bằng giữa các trường hợp này.
+
+3. **Áp dụng phương trình:**
+   Tổng \( C_n - B_n = n(a_{n+1} + b_{n}) \):
+
+4. **Khớp \( n \) với giới hạn:**
+   Chúng ta muốn tìm giá trị lớn nhất khi \( n \geq 2n \):
+   - Nếu \( n \leq 2n \), \( C_n - B_n \geq 0 \).
+   - Tương tự, nếu \( n > 2n \), \( C_n - B_n < 0 \).
+
+5. **Tổng quát hóa:** 
+   Khi \( n \geq 2n \), cả \( C_n \) và \( B_n \) có thể nhỏ hơn \( n \) do sự phụ thuộc vào \( a, b, \) và \( c \).
+
+6. **Tính tổng \( a + b + c \):**
+   Dựa trên các điều kiện trên, áp dụng công thức tổng hợp:
+   \[
+   \max(a + b + c) = \frac{n}{2}(a + b + c)
+   \]
+   Với \( n \geq 2n \):
+   \[
+   \max(a + b + c) = \frac{2n(n+1)}{2} = n(1+n)
+   \]
+
+Vậy, giá trị lớn nhất của \( a + b + c \) là:
+\[
+\boxed{n}
+\]
+n--18 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+
+========== LOW ==========
+
+
+Total Matches: 0
+Total Questions: 125
+Accuracy: 0.00%
 ========== LOW ==========
 
 ID: low-vi-0
