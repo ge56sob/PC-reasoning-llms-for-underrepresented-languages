@@ -3637,7 +3637,640 @@ Tổng cộng, số lượng các cặp như vậy là:
 3--$2^{n - 2} + 2^{\lfloor\frac{n}{2}\rfloor - 1}$ (❌)
 Matches: 0
 --------------------------------------------------------------------------------
+ID: high-vi-107
+Question: Đối với một dãy số, người ta có thể thực hiện phép toán sau: chọn ba số hạng liền kề $a, b, c,$ và đổi chúng thành $b, c, a.$ Hãy xác định tất cả các số nguyên dương $n \geq 3,$ sao cho sau một số hữu hạn lần thực hiện phép toán, dãy số $1, 2, \cdots, n$ có thể biến đổi thành $n, n-1, \cdots, 1$ cuối cùng.
+Model's Full Answer: **Xác định các số nguyên dương \( n \geq 3 \) để biến đổi dãy số từ \( 1, 2, \ldots, n \) sang \( n, n-1, \ldots, 1 \):
 
+Giả sử \( n = 3k + 1 \) (điều kiện tiên quyết), với \( k \) là một số nguyên dương không vượt quá giới hạn \( 3 \).
+
+\[ 
+1, 2, 3, \ldots, n \rightarrow 3, 4, 5, \ldots, 3k+1 
+\]
+
+Chúng ta cần tìm ra \( n \):
+\[ 
+3k+1 - 1 = 3k \]
+\[ 
+3k = 2 \]
+\[ 
+k = 0 \]
+
+Vậy, \( n = 3 \). Do đó, giải pháp chính xác là:
+\[ 
+n = 3
+\]
+
+**Trả lời:** 
+\[ \boxed{3} \]
+3--$n\equiv 0,1 \pmod{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-108
+Question: Cho $k \in \mathbb{N}^+$. Dãy các tập con của tập hợp số nguyên $\mathbb{Z} \supseteq  I_1 \supseteq  I_2 \supseteq \cdots \supseteq I_k$ được gọi là một $k-chain$ nếu với mỗi $1 \le i \le k$ ta có
+(i) $168 \in I_i$;
+(ii) $\forall x, y \in I_i$, ta có $x-y \in I_i$.
+Xác định tổng số lượng của các $k-chain$.
+Hy vọng bản dịch này giữ đúng các thuật ngữ toán học và câu văn mạch lạc.
+Model's Full Answer: **Dòng $k-Chain$ (K-chain):**
+
+Một $k-Chain$ của tập hợp các tập con của $\mathbb{Z}$ được xác định bởi:
+
+\[ I_k = \left\{ \begin{aligned}
+    & 168 \in I_k \\
+    & \forall x, y \in I_k, (x - y) \in I_k \\
+    \end{aligned} \right. \]
+
+Tổng số dòng $(k-Chain)$ là:
+
+\[ \text{(k-Chain)} = 1 + 2 + 3 + \cdots + k \]
+
+Vì đây là tổng vô hạn các chuỗi tuyến tính từ 1 đến \(k\) theo quy tắc Fibonacci:
+
+\[ \sum_{i=0}^{k} (i-1)(i+1) = \frac{k(k+1)}{2} \]
+
+Do đó, số lượng các $(k-Chain)$ là:
+
+\[ \boxed{\frac{k(k+1)}{2}} \]
+\frac{k(k+1)--$\frac{(k+1)^3(k+2)(k+3)}{6}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-109
+Question: Cho một bảng có kích thước $2018 \times 4$ và tô màu cho các ô bằng hai màu đỏ và xanh. Hãy tô màu sao cho mỗi hàng và mỗi cột đều có số ô màu đỏ và xanh bằng nhau. Giả sử có $M$ cách để tô màu thỏa điều kiện đã cho. Tìm $M \pmod {2018}$.
+Model's Full Answer: **Giải pháp**
+
+Để giải quyết vấn đề này, chúng ta cần tìm ra cách chia \(2018 \times 4\) thành các phần có số ô tương ứng là:
+
+- Mỗi hàng (dòng)
+- Mỗi cột
+
+Sử dụng nguyên tắc phân tích chẵn-lẻ của số lớn nhất chung nhỏ nhất (GCD):
+
+\[ 2018 \div 4 = 504 \text{ với dư } 67 \]
+
+Vậy:
+- Số ô trong mỗi hàng là \(504 \div 4 = 126\)
+- Số ô trong mỗi cột là \(126 \div 4 = 31.5\)
+
+Do đó, tổng số ô trên cả hai hàng và cột phải được giữ nguyên không thay đổi.
+
+Cụ thể, \(504 + 31.5 = 535.5\).
+
+Chúng ta sẽ xác định giá trị tối ưu cho \(M\):
+\[ M = \left\lfloor \frac{535.5}{2} \right\rfloor = 269 \]
+
+Bây giờ, kiểm tra hiệu quả của việc chọn các phương án khác nhau:
+
+* **Phương án A**: Chọn các ô riêng biệt.
+   - Có \(2^2 = 4\) phương án (đỏ, xanh, đỏ, xanh).
+   - Tổng cộng: \(4 \times 269 = 1116\).
+  
+**Phương án B**: Tô màu theo cặp cạnh (hàng-x) và (cột-y).
+   - Có \(2^{(2/4)} = 2\) phương án (đỏ, xanh).
+   - Tổng cộng: \(2 \times 269 = 538\).
+
+**Tính toán sự thay đổi giữa hai phương án:**
+\[ 1116 - 538 = 578 \equiv 1 (\pmod{2018}) \]
+
+Vì vậy, giá trị chính xác của \(M\) là:
+\[ \boxed{1} \]
+1--6 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-110
+Question: Cho $n$ là một số nguyên dương cố định. Gọi $$A=\begin{bmatrix} a_{11} & a_{12} & \cdots &a_{1n}  \\ a_{21} & a_{22} & \cdots &a_{2n}  \\ \vdots & \vdots & \cdots & \vdots \\ a_{n1} & a_{n2} & \cdots &a_{nn} \end{bmatrix}\quad \text{và} \quad B=\begin{bmatrix} b_{11} & b_{12} & \cdots &b_{1n}  \\ b_{21} & b_{22} & \cdots &b_{2n}  \\ \vdots & \vdots & \cdots & \vdots \\ b_{n1} & b_{n2} & \cdots &b_{nn} \end{bmatrix}\quad$$là hai bảng $n\times n$ sao cho $\{a_{ij}|1\le i,j\le n\}=\{b_{ij}|1\le i,j\le n\}=\{k\in N^*|1\le k\le n^2\}$. Ta có thể thực hiện phép toán sau trên bảng $A$: Chọn $2$ số trong cùng một hàng hoặc trong cùng một cột của $A$, hoán vị hai số này, và giữ nguyên $n^2-2$ số còn lại. Phép toán này được gọi là phép hoán vị của $A$. Hãy tìm, với chứng minh, số nguyên dương nhỏ nhất $m$ sao cho với bất kỳ bảng nào $A$ và $B$, người ta có thể thực hiện nhiều nhất $m$ phép hoán vị để bảng $A$ trở thành bảng $B$.
+Model's Full Answer: **Để giải quyết vấn đề này, chúng ta cần xác định giá trị tối thiểu \( m \) đáp ứng điều kiện:
+
+\[ A \leftrightarrow B \rightarrow (\text{hoán vị các số}) \]
+
+Trong đó:
+- \( A \) là bảng ban đầu.
+- \( B \) là bảng kết quả sau khi hoán vị.
+\[ (i, j) \in A \Rightarrow (j, i) \in B \]
+
+Phép hoán vị giữa hai tập hợp \( \{a_{ij}\} \) và \( \{b_{ij}\} \) có thể đạt được bằng cách chọn \( (i, j) \) từ cả hai cặp liên tiếp. Do đó, ta có:
+
+\[ \min(m) = O(n^3) \]
+\[ m = \frac{n^3}{3} \]
+
+Vì vậy, số nguyên dương nhỏ nhất \( m \) là:
+
+\[ \boxed{m=6} \]
+m=6--$2n(n-1)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-111
+Question: Hãy để $\mathbb{Q}$ là tập hợp các số hữu tỉ, $\mathbb{Z}$ là tập hợp các số nguyên. Trên mặt phẳng tọa độ, cho số nguyên dương $m$, định nghĩa$$A_m = \left\{ (x,y) \mid x, y \in \mathbb{Q}, xy \neq 0, \frac{xy}{m} \in \mathbb{Z} \right\}.$$Đối với đoạn thẳng $MN$, định nghĩa $f_m(MN)$ là số điểm trên đoạn thẳng $MN$ thuộc tập hợp $A_m$. Hãy tìm số thực nhỏ nhất $\lambda$, sao cho với bất kỳ đường thẳng $l$ nào trên mặt phẳng tọa độ, tồn tại một hằng số $\beta(l)$ liên quan đến $l$, thỏa mãn: với bất kỳ hai điểm $M, N$ trên $l$,$$f_{2016}(MN) \le \lambda f_{2015}(MN) + \beta(l).$$
+Model's Full Answer: Để giải quyết vấn đề này, ta xác định và tính toán:
+
+1. **Danh sách tập hợp**: 
+   - \( A_m = \{(x,y) | x, y \in \mathbb{Q}, xy \neq 0, \frac{xy}{m} \in \mathbb{Z} \}\)
+   - \( f_m(MN) = \text{number of points on MN where } f_{2015}(MN) \le \lambda f_{2014}(MN) + \beta(l)\)
+
+2. **Xác lập điều kiện ban đầu**:
+   - Cho \( M \) và \( N \): Hai điểm trên \( l \).
+   - \( f_{2015}(MN) \le \lambda f_{2014}(MN) + \beta(l) \).
+
+3. **Phân tích hàm \( f_l \)**:
+   - Với mỗi \( l \), ta có thể biểu diễn \( l \) bằng tổng các hệ số của \( m \) trong \( A_m \):
+     \[
+     l = m_1 + m_2 + \cdots + m_k
+     \]
+     Trong đó, \( m_i \) đại diện cho các hệ số \( m \) trong \( A_m \).
+
+4. **Áp dụng điều kiện đối với \( f_{2014}(MN) \)**:
+   - Theo giả thuyết, chúng ta cần chứng minh:
+     \[
+     f_{2015}(MN) \le \lambda f_{2014}(MN) + \beta(l)
+     \]
+
+5. **Tính toán \( \beta(l) \)**:
+   - Chọn \( \beta_l \) như giá trị tham số duy nhất làm cho \( \lambda f_{2014}(MN) \le f_{2015}(MN) + b_l \):
+     \[
+     \beta_l = \frac{\lambda f_{2014}(MN)}{b_l}
+     \]
+
+6. **Giải pháp cho \( \lambda \)**:
+   - Tìm giá trị tối giản của \( \lambda \) bằng cách kiểm tra sự phụ thuộc của \( \beta_l \) vào \( \lambda \) và hệ số \( b_l \).
+
+7. **Chứng minh kết quả**:
+   - Xác nhận rằng khi chọn \( \beta_l \) thích hợp, \( \lambda \) sẽ được đảm bảo.
+
+Với các bước này, chúng ta có thể xác định số thực nhỏ nhất \(\lambda\) đáp ứng điều kiện:
+
+\[ \boxed{\lambda} \]
+\lambda--$\frac{2015}{6}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-112
+Question: Cho một tập hợp hữu hạn và không rỗng $X$ các giá trị thực, cho $f(X) = \frac{1}{|X|} \displaystyle\sum\limits_{a\in X} a$, trong đó $\left\lvert X \right\rvert$ là lực lượng (cỡ) của $X$. Với các cặp tập hợp có thứ tự $(A,B)$ sao cho $A\cup B = \{1, 2, \dots , 100\}$ và $A\cap B = \emptyset$ với $1 \leq |A| \leq 98$, chọn một phần tử $p\in B$, và gọi $A_{p} = A\cup \{p\}$ và $B_{p} = B - \{p\}.$ Trong tất cả các $(A, B)$ và $p\in B$ như vậy, hãy xác định giá trị lớn nhất có thể của $(f(A_{p})-f(A))(f(B_{p})-f(B)).$
+Model's Full Answer: Để giải quyết vấn đề này, chúng ta sẽ phân tích từng bước:
+
+**Chọn ** \( p \): Từ thông tin được đưa ra, biết rằng:
+\[ A \cup B = \{1, 2, \ldots, 100\}, \quad A \cap B = \emptyset \]
+và \( 1 \leq |A| \leq 98 \).
+
+**Gán các bộ \( A \) và \( B \)**:
+\[ A = \{a_1, a_2, \ldots, a_{97}\} \quad \text{(được gán bằng } 1, 2, \ldots, 96\) )
+\[ B = \{b_1, b_2, \ldots, b_{98}\} \quad \text{(được gán bởi } \emptyset) \]
+
+**Phân chia \( X \) thành hai nhóm riêng biệt:**
+\[ X = A \cup B \]
+
+**Tính toán tổng quát hóa hàm f:**
+\[ f(X) = \frac{1}{|X|} \sum_{a\in X} a = \frac{1}{|A|} + \frac{1}{|B|} \]
+
+**Thiết lập biểu thức liên kết:**
+\[ f(A_p) - f(A) = \left( \frac{1}{|A|} + \frac{1}{|B|} \right) (f(B_p) - f(B)) \]
+
+**Áp dụng điều kiện trên:**
+\[ A_{p} = A \cup \{p\} \quad \text{và} \quad B_{p} = B - \{p\} \]
+Do đó,
+\[ f(A_{p}) - f(A) = \left( \frac{1}{|A|} + \frac{1}{|B|} \right)(f(B_{p}) - f(B)) \]
+
+**Giá trị tối đa có thể:**
+\[ \max(f(A_{p}) - f(A)) \]
+
+**Dựa vào bảng giá trị số nguyên:**
+Sử dụng hệ thống tính toán, chúng ta tìm thấy giá trị cực đại khi:
+\[ f(A_{p}) = f(A) = \frac{1}{|A|} \]
+\[ f(B_{p}) = f(B) = \frac{1}{|B|} \]
+\[ f(B_{p}) - f(B) = \frac{1}{|B|} \cdot \frac{1}{|B|} = \frac{1}{|B|^2} \]
+
+Vì \( |B| = 98 \), giá trị tối đa là:
+\[ \boxed{\frac{1}{3}} \]
+\frac{1--$\frac{625}{196}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-113
+Question: Cho $S$ là một tập con của $\{0,1,2,\ldots,98 \}$ có chính xác $m \geq 3$ phần tử (khác biệt), sao cho với mọi $x,y \in S$ luôn tồn tại $z \in S$ thỏa mãn $x + y \equiv 2z \pmod{99}$. Hãy xác định tất cả các giá trị có thể của $m$.
+Model's Full Answer: Trong điều kiện được đưa ra:
+\[ S = \{0,1,2,3,4,5,6,7,8,9\} \]
+
+Chọn \( m \) bằng số nguyên dương lớn nhất để tránh trùng lặp:
+
+\[
+m = 99.
+\]
+
+Áp dụng phương trình \( x+y \equiv 2z \pmod{99} \):
+
+1. Chia tổng thành các bộ số từ 1 đến 98 và kiểm tra tương ứng:
+
+- Bộ \(1+2=3\) đối với \( z = 2 \).
+- Bộ \(1+3=4\) không hợp lệ vì \(z = 5\) làm khác nhau.
+
+Do đó, duy trì phân tích:
+
+2. Tính toán các giá trị tối ưu liên tiếp (từ 2 đến 99):
+\[ m = 99 - 2 = 97 \]
+
+Hợp lý hóa tìm kiếm:
+\[ \boxed{97} \]
+97--${3, 9, 11, 33, 99}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-114
+Question: Tìm số lượng số nguyên $k$ trong tập hợp $\{0, 1, 2, \dots, 2012\}$ sao cho $\binom{2012}{k}$ là bội của $2012$.
+Model's Full Answer: Số nguyên \( k \) cần tìm là:
+
+\[ \binom{2012}{k} = (2012! \div (k!)) \times 2012 \]
+
+Áp dụng quy tắc phân chia:
+\[ \boxed{364} \]
+364--1498 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-115
+Question: Xác định số lẻ nhỏ nhất $a > 5$ thỏa mãn các điều kiện sau: Tồn tại các số nguyên dương $m_1, m_2, n_1, n_2$ sao cho $a = m_1^2 + n_1^2$, $a^2 = m_2^2 + n_2^2$, và $m_1 - n_1 = m_2 - n_2.$
+Model's Full Answer: Số lẻ nhỏ nhất thỏa mãn các điều kiện trên là:
+
+\[ a = (3)^2 + (4)^2 \]
+
+\[
+= 9 + 16 \\
+= 25
+\]
+
+Vậy,
+\(\boxed{25}\) là đáp án chính xác.
+25--261 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-116
+Question: Chúng ta xem xét các giải đấu thể thao với $n \ge 4$ đội tham gia và mỗi cặp đội chơi với nhau nhiều nhất một lần. Chúng ta gọi một giải đấu như vậy là cân bằng nếu bất kỳ bốn đội tham gia nào cũng chơi đúng ba trận giữa chính họ. Như vậy, không phải tất cả các đội đều chơi với nhau.
+Hãy xác định giá trị lớn nhất của $n$ sao cho tồn tại một giải đấu cân bằng với $n$ đội.
+Model's Full Answer: Để tìm giá trị tối đa của \( n \) đáp ứng điều kiện cân bằng:
+
+1. Xác định số lượng đồng đội (tối thiểu):
+   - Có ít nhất 3 đội để tạo thành một bộ đôi đầy đủ, đảm bảo sự tương thích về chiến thuật.
+
+2. Kiểm tra khả năng tối ưu:
+   - Mỗi đội có ít nhất hai đối tác (cặp), nên tối đa 6 đội cần thiết (không giới hạn).
+
+3. Áp dụng nguyên tắc cân bằng:
+   - Hai nhóm đồng nghiệp từ các đội khác nhau phải chơi một lượt (ba trận).
+   - Tính tổng số trận tối đa giữa 6 đội này mà vẫn cân bằng: 
+     \[
+     6 + 6 = 12 \text{ trận}
+     \]
+
+Vậy, giá trị lớn nhất của \( n \) sao cho một giải đấu cân bằng với \( n \geq 4 \) đội là:
+\[ \boxed{12} \]
+12--5 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-117
+Question: Đối với một số nguyên dương $n$, hãy để $g(n) = \left[ \displaystyle \frac{2024}{n} \right]$. Tìm giá trị của $$\sum_{n = 1}^{2024}\left(1 - (-1)^{g(n)}\right)\phi(n).$$
+Model's Full Answer: **Giải pháp:**
+
+Chúng ta cần tính tổng:
+
+\[ S = \sum_{n=1}^{2024} \left(1 - (-1)^{g(n)}\right) \cdot \phi(n) \]
+
+Trước tiên, chúng ta sẽ tìm \( g(n) \).
+
+Một cách đơn giản là sử dụng hàm phân bố Fermat cho các số nguyên tố.
+
+\[ g(n) = \text{Mod}(2024, n) \]
+
+Với mỗi \( n \), ta có:
+
+- \( g(1) = 0 \)
+- \( g(k) = k + 1 \)
+
+Từ đây, suy ra:
+
+\[ g(n) = (k+1) \mod 2024 \]
+
+Bây giờ, áp dụng điều này vào biểu thức ban đầu:
+
+\[ S = \sum_{n=1}^{2024} \left(1 - \left(\frac{2024}{n}\right)^{g(n)}\right) \cdot \phi(n) \]
+
+Sử dụng phương trình đã được chứng minh trước đó:
+
+\[ g(n) = (k+1) \mod 2024 \]
+
+Áp dụng modulo:
+
+\[ \phi(n) = \prod_{j=1}^{2023} \left| j - \frac{2024}{n} \right| \]
+
+Do đó, tổng trở thành:
+
+\[ S = \sum_{n=1}^{2024} \left(1 - \left( \frac{2024}{n} \right)^{g(n)} \right) \cdot \prod_{j=1}^{2023} \left| j - \frac{2024}{n} \right| \]
+
+Cuối cùng, kết hợp các biến số và nhân tử:
+
+\[ S = \sum_{n=1}^{2024} \left(1 - \left( \frac{2024}{n} \right)^{g(n)} \right) \prod_{j=1}^{2023} \left| j - \frac{2024}{n} \right| \]
+
+Hãy lưu ý rằng giải quyết tổng này theo từng bước thực sự phức tạp bằng máy tính hoặc công cụ thống kê, nhưng việc tích lũy các kết quả nhỏ hơn và so sánh chúng cung cấp một đại diện chính xác.
+
+Vậy, **giá trị của**: 
+
+\[ \boxed{\frac{5689713325290800000}{100}} \]
+\frac{5689713325290800000--$2 \cdot 1012^2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-118
+Question: Tập hợp $A_0, A_1, \dots, A_{2023}$ thỏa mãn các điều kiện sau:
+$A_0 = \{ 3 \}$
+$A_n = \{ x + 2 \mid x \in A_{n - 1} \} \cup \{x(x+1) / 2 \mid x \in A_{n - 1} \}$ với mỗi $n = 1, 2, \dots, 2023$.
+Tìm $|A_{2023}|$.
+Model's Full Answer: **Giải pháp:**
+
+Để tìm giá trị của \( |A_{2023}| \), ta áp dụng định lý về tập hợp:
+
+\[ A = \{ a_i : i=0, 1, ..., 2023 \} \]
+
+Với \( n = 2023 \):
+- Tập hợp \( A_0 \) có dạng: \(\{ 3 \}\).
+- Các phần tử của \( A_n \) là kết quả của việc thêm và trừ từ \( A_{n-1} \).
+
+Cụ thể:
+\[
+A_0 = \{ 3 \}
+\]
+\[
+A_1 = (3 + 2) = 5
+\]
+\[
+A_2 = (3 + 4) = 7
+\]
+\[
+A_3 = (3 + 5) = 8
+\]
+...
+\[
+A_{2023} = (3 + 2^{2022}) = 6^2022
+\]
+
+Do đó, tổng tất cả các thành phần của \( A_{2023} \) bằng:
+\[
+6^2022
+\]
+
+Ta thấy rằng:
+\[
+|A_{2023}| = 6^{2022}
+\]
+
+Vì vậy, giá trị cần tìm là:
+\[ 
+\boxed{6^{2022}}
+\]
+6^{2022--$2^{2023}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-119
+Question: $n(\geq 4)$ đảo được kết nối bằng các cây cầu để thỏa mãn các điều kiện sau:
+Mỗi cây cầu chỉ kết nối hai đảo và không đi qua các đảo khác.
+Tại đa chỉ có một cây cầu nối bất kỳ hai đảo khác nhau.
+Không tồn tại một danh sách $A_1, A_2, \ldots, A_{2k}(k \geq 2)$ các đảo khác nhau sao cho:
+Với mỗi $i=1, 2, \ldots, 2k$, hai đảo $A_i$ và $A_{i+1}$ được kết nối bằng một cây cầu. (Để $A_{2k+1}=A_1$)
+Tìm số lượng lớn nhất các cây cầu.
+Model's Full Answer: **Điều kiện tổng quát của các cây cầu trên đảo \(n\) là:
+
+\[
+|A_i - A_j| = 1 \quad \text{cho mọi } i, j \in [1, n]
+\]
+
+Trong đó, \(A_i\) và \(A_j\) lần lượt đại diện cho hai đảo khác nhau. Do đó, ta có thể biểu diễn:
+
+\[
+|A_i - A_j| \leq 2^n
+\]
+
+Áp dụng nguyên tắc này vào trường hợp đặc biệt khi \(n = k + 1\):
+
+- Với \(k = 2\), ta cần kiểm tra nếu có tối thiểu hai cây cầu giữa hai đảo liên tiếp \(A_{2k} \) và \(A_{2k+1}\).
+
+Chúng ta chứng minh:
+
+\[
+|A_{2k} - A_{2k+1}| \leq 3^k
+\]
+
+Hãy phân tích từng bước:
+
+1. **Các điểm chính**: Mỗi cây cầu phải bắc qua ít nhất hai đảo khác nhau.
+2. **Phân tích từ trái sang phải**:
+   - Nếu chúng ta bắt đầu từ \(A_0\) đến \(A_{2k}\):
+     \[
+     |A_k - A_{k+1}| \leq 2^{k+1}
+     \]
+     Vì \(k \geq 2\), đây là đúng với tất cả các giá trị của \(k\).
+   - Tiếp tục cho đến đỉnh của danh sách, duy trì cấu trúc tương tự như trên:
+
+\[ 
+|A_{2k+1} - A_{2k}| \leq 3^k 
+\]
+
+Do đó, ta tìm thấy:
+
+\[
+\max(|A_i - A_j|) = 3^k 
+\]
+
+**Kết quả:** Số lượng lớn nhất các cây cầu là:
+
+\[
+\boxed{3^k}
+\]
+3^k--$\frac{3(n-1)}{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-120
+Question: Trong một bảng có $88$ hàng và $253$ cột, mỗi ô được tô màu tím hoặc vàng. Giả sử rằng đối với mỗi ô màu vàng $c$, $$x(c)y(c)\geq184.$$ 
+
+Ở đây, $x(c)$ là số ô màu tím nằm cùng hàng với $c$, và $y(c)$ là số ô màu tím nằm cùng cột với $c$.
+Hãy tìm số ô màu tím ít nhất có thể có.
+Model's Full Answer: Để giải quyết vấn đề này:
+
+1. Xác định các điều kiện cho \( x \) (số ô màu tím):
+   - Số ô màu tím trong một hàng là \( 88-253 + 1 = 67 \).
+   - Tương tự, số ô màu tím trong một cột là \( 253 - 88 + 1 = 90 \).
+
+2. Sử dụng phương trình tổng quát cho \( y \), do đó:
+\[ y(x+1) \leq 184 \]
+
+3. Đặt \( y(253-k) \): 
+\[ y(k+1) \leq 184 \]
+\[ k \leq \frac{184}{253} \approx 0.71 \text{(giá trị thực tế tùy chọn)} \]
+
+Từ đó, xác định giá trị tối thiểu của \( k \):
+
+\[
+k = \left\lfloor \frac{184}{253} \right\rfloor = 0 \quad (\text{trả về } 0)
+\]
+
+Do đó, số lượng tối thiểu ô màu tím là:
+
+\[
+\boxed{0}
+\]
+0--2024 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-121
+Question: Cho $\ell$ là một đường thẳng trong mặt phẳng và $90^\circ<\theta<180^\circ$. Xét ba điểm phân biệt $P,Q,R$ thoả mãn các điều kiện sau:
+(i) $P$ nằm trên $\ell$ và $PQ$ vuông góc với $\ell$
+(ii) $R$ nằm cùng phía của $\ell$ với $Q$, và $R$ không nằm trên $\ell$
+(iii) với mọi điểm $A,B$ nằm trên $\ell$, nếu $\angle ARB=\theta$ thì $\angle AQB \geq \theta$.
+Tìm giá trị nhỏ nhất của $\angle PQR$.
+Model's Full Answer: **Giải pháp cho bài toán:**
+
+Để tìm giá trị nhỏ nhất của \(\angle PQR\) khi:
+
+(i) \(P\) nằm trên \(\ell\) và \(PQ\) vuông góc với \(\ell\)
+(ii) \(R\) nằm cùng phía với \(Q\) và không nằm trên \(\ell\)
+(iii) Với bất kỳ điểm \(A\) hoặc \(B\) nào trên \(\ell\), ta có \(\angle ARB = \theta\)
+
+Chúng ta sẽ sử dụng các định lý hình học và tính chất để giải quyết vấn đề này.
+
+**Phương pháp:**
+
+1. **Tính độ dài đoạn \(AR\):**
+   - Vì \(P\) nằm trên \(\ell\) nên \(PR\) là cạnh đối diện với \(\angle PRQ\).
+   - Do đó, \(PR = 90^\circ\) (vì \(90^\circ < \theta < 180^\circ\)).
+   - Độ dài \(AR\) bằng khoảng cách từ \(P\) đến trung trực của \(\ell\) (điểm giữa).
+
+2. **Xác định mối quan hệ giữa \(\angle ARB\) và \(\angle AQB\):**
+   - Khi \(AR = AB\) (\(AB \perp \ell\)), \(\angle ARB = \angle AQB\). Do đó, chúng ta có:
+
+\[ \angle AQB = \angle ARB = 45^\circ \]
+
+3. **Áp dụng công thức về góc trong tam giác:**
+   - Góc trong tam giác cân bằng được xác định bởi tổng hai góc bên trong tương ứng.
+
+4. **Sử dụng công thức Euclidean:**
+   - Trong trường hợp đặc biệt của tam giác đều, do các cạnh tỉ lệ thành 1, ta có:
+
+\[ \angle PQR = \frac{\text{hình dạng}}{2} = \frac{45^\circ}{2} = 22.5^\circ \]
+
+Vậy, giá trị nhỏ nhất của \(\angle PQR\) là:
+
+**\[ \boxed{22.5^\circ} \]**
+22.5^\circ--$270-\theta$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-122
+Question: Cho $a$, $b$, và $c$ là các số thực dương thỏa mãn $ab+bc+ca=abc$. Tìm giá trị nhỏ nhất của $$a^{abc} + b^{abc} + c^{abc}.$$
+Model's Full Answer: Để tìm giá trị nhỏ nhất \([a^{\text{abc}}; b^{\text{abc}}}; \, c^{\text{abc}}\) cho \(a, b, c \geq 0\) với điều kiện:
+
+\[
+ab + bc + ca = abc.
+\]
+
+Ta tập trung vào việc giải phương trình sau:
+\[ 
+a^{\text{abc}} + b^{\text{abc}} + c^{\text{abc}} - abc = 0,
+\]
+
+do đó:
+
+\[
+a^{\text{abc}} + b^{\text{abc}} + c^{\text{abc}} = \left( a + b + c \right)^{\text{abc}} - abc.
+\]
+
+Từ đây, tính chất của nhị thức bậc hai (đặc biệt) áp dụng:
+
+\[
+(a+b+c)(a^2 + ab + bc + ca) = abc^2.
+\]
+
+Do \(abc = abc\), ta có:
+
+\[
+(a+b+c)(a^2 + ab + bc + ca) = (\sqrt{abc})^2 = abc.
+\]
+
+Kết hợp lại:
+
+\[
+a^{\text{abc}} + b^{\text{abc}} + c^{\text{abc}} = abc - abc = 0.
+\]
+
+Vì vậy, giá trị tối thiểu của biểu thức được đưa ra bằng:
+
+\[
+\boxed{0}.
+\]
+0--729 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-123
+Question: Tìm tất cả các đa thức $P(x)$ với hệ số nguyên thỏa mãn $P(n) \mid n! + 2$ với mọi số nguyên dương $n$.
+Model's Full Answer: Để tìm các đa thức $P(x)$ thỏa mãn điều kiện cho mỗi \( n \):
+
+\[ P(n) \mid (n!) + 2 \]
+
+với bất kỳ số nguyên nào:
+
+1. **Giả sử \( P(0) = 0 \)**:
+   - Do đó, \( P(1) \mid 5! + 2 \)
+   - \( P(2) \mid 4! + 2 \)
+   - ... 
+   - \( P(k) \mid k!(k+1)! + 2 \)
+
+2. **Công thức tổng quát**:
+   - Nếu không có giới hạn trên \( k \), ta cần giải phương trình bậc nhất về một biến.
+   - Viết lại như sau:
+     \[
+     P(x) = x^n + c_1x^{n-1} + \cdots + c_n + b
+     \]
+   - Đặt:
+     \[
+     P(x) = a_n(x-1)^{n-1} + b
+     \]
+   - Thỏa mãn: \( P(0) = b \)
+   - Dựa vào tính chất của đa thức và hệ số nguyên:
+
+\[
+(a_n)(0) = 0 \quad \text{(điều kiện)} \\
+(b) \quad \forall x \in \mathbb{R}, \quad \left|a_n \cdot (-1)^n \right|\leq 1 \quad \text{(do nghiệm thực)}
+\]
+
+3. **Chọn hệ số nguyên**: Chọn giá trị đơn vị \( c_1 = 1 \):
+   \[
+   P(x) = x^1 + x^0 + x^{-1} + 1
+   \]
+
+Vậy, các đa thức được tìm là:
+\[ P(x) = x^1 + x^0 + x^{-1} + 1 \]
+
+Sử dụng định nghĩa hệ số nguyên:
+\[
+P(x) = 1 + 1 + \frac{1}{2} + \frac{1}{8}
+\]
+
+Tóm tắt, tất cả các đa thức hợp lệ đáp ứng điều kiện là:
+\[
+\boxed{\boxed{x^1 + x^0 + x^{-1} + 1}}
+\]
+\boxed{x^1 + x^0 + x^{-1--$P(x)=-1,1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-124
+Question: Cho $a, b, c$ là các số thực khác 0 sao cho $a + b + c = 0$. Hãy xác định giá trị lớn nhất có thể của $\frac{a^2b^2c^2}{ (a^2 + ab + b^2)(b^2 + bc + c^2)(c^2 + ca + a^2)}$.
+Model's Full Answer: **Giải pháp:**
+
+Chọn \(a = b = c\), ta có:
+
+\[ \frac{a^2b^2c^2}{(a^2 + ab + b^2)(b^2 + bc + c^2)(c^2 + ca + a^2)} = \frac{a^3}{(a^2 + a^2)(b^2 + b^2)(c^2 + c^2)} = \frac{1}{4} \]
+
+Vì \(a + b + c = 0\) và chọn \(a = b = c\):
+
+\[ \frac{1}{4} = \frac{\sqrt{2}}{4} \implies \frac{1}{4} = \frac{\sqrt{2}}{4} \]
+
+Do đó, giá trị lớn nhất bằng:
+
+\[ \boxed{\frac{\sqrt{2}}{4}} \]
+\frac{\sqrt{2--$\frac{4}{27}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+
+Total Matches: 0
+Total Questions: 125
+Accuracy: 0.00%
 
 ========== MEDIUM ==========
 ID: medium-vi-0
