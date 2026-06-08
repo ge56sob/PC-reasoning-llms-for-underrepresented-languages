@@ -3929,7 +3929,140 @@ Do đó, số nguyên dương nhỏ nhất để \( \triangle A_nB_nC_n \) là m
 12--15 (❌)
 Matches: 2
 --------------------------------------------------------------------------------
+ID: medium-vi-122
+Question: Cho tứ giác lồi $ABCD$ với $BC=2$ và $CD=6.$ Giả sử rằng trọng tâm của các tam giác $\triangle ABC, \triangle BCD,$ và $\triangle ACD$ tạo thành các đỉnh của một tam giác đều. 
+ Hãy tính diện tích lớn nhất có thể của $ABCD$.
+Model's Full Answer: **Tính diện tích lớn nhất của tứ giác \(ABCD\) khi biết trung điểm của các tam giác \(ABC\), \(BDC\), và \(ACD\)**
 
+**Điều kiện cần và đủ:**
+
+1. **Trọng tâm của ba tam giác**: Các trọng tâm của các tam giác \(ABC\), \(BDC\), và \(ACD\) sẽ trùng nhau.
+2. **Tam giác đều**: Vì chúng là các cạnh của hình vuông (đã cho),
+   - Diện tích tam giác đều bằng \(\frac{\sqrt{3}}{4}\) lần bán kính đường tròn ngoại tiếp của hình vuông đó.
+
+**Giải pháp:**
+
+Áp dụng định lý Pythagoras trên mỗi tam giác:
+
+- Tam giác \(ABC\) có:
+  \[
+  AC = BC = 2 \quad \text{(trọng tâm)}
+  \]
+  \[
+  AB = BD = 6 \quad (\text{các cạnh còn lại}
+  \]
+
+- Tam giác \(BDC\) cũng có:
+  \[
+  BD = DC = 6 \quad (\text{trọng tâm})
+  \]
+  \[
+  DB = CD = 2 \quad (\text{các cạnh còn lại} = 6)
+  \]
+
+- Tam giác \(ACD\) có:
+  \[
+  AD = AC = 2 \quad (\text{trọng tâm})
+  \]
+  \[
+  AC = AD = 2 \quad (\text{các cạnh còn lại} = 6)
+  \]
+
+Với những thông tin này, ta xác định độ dài các cạnh tương ứng của tam giác đều:
+
+\[ AD^2 + BC^2 = 6^2 + 2^2 = 38 \]
+\[ AB^2 + CD^2 = 6^2 + 6^2 = 54 \]
+\[ BD^2 + CA^2 = 6^2 + 2^2 = 40 \]
+
+Dựa vào công thức diện tích tam giác đều:
+\[ S_{\text{đều}} = \frac{\sqrt{3}}{4} \times \frac{AD}{\sqrt{3}} \times \frac{BD}{\sqrt{3}} \times \frac{BC}{\sqrt{3}} \times \frac{CA}{\sqrt{3}} \]
+
+Ta có:
+\[ S_{\text{đều}} = \frac{\sqrt{3}}{4} \times \frac{2}{\sqrt{3}} \times \frac{6}{\sqrt{3}} \times \frac{2}{\sqrt{3}} \times \frac{2}{\sqrt{3}} = \frac{12\sqrt{3}}{36} = \frac{\sqrt{3}}{3} \]
+
+**Do đó, diện tích lớn nhất của \(ABCD\) là:**
+\[ \boxed{\frac{\sqrt{3}}{3}} \]
+\frac{\sqrt{3--$12+10\sqrt{3}$ (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: medium-vi-123
+Question: Cho $s_k$ là tổng của luỹ thừa thứ $k$ của các nghiệm của đa thức $x^3 - 5x^2 + 8x - 13$. Cụ thể, $s_0=3$, $s_1=5$, và $s_2=9$. Gọi $a$, $b$, và $c$ là các số thực sao cho $s_{k+1} = a \, s_k + b \, s_{k-1} + c \, s_{k-2}$ với $k = 2$, $3$, $....$ Hãy tính  $a+b+c.
+Model's Full Answer: \[ s_0 = 3 \]
+\[ s_1 = 5 \]
+\[ s_2 = 9 \]
+
+Ta have:
+\[ s_{k+1} = (a \cdot s_k) + (b \cdot s_{k-1}) + c \cdot s_{k-2}, \quad k = 2, 3, ... \]
+
+Substitute the values:
+\[ s_4 = (3 \cdot s_2) + (5 \cdot s_{3}) + (9 \cdot s_{2-1}) \]
+
+Calculating step-by-step:
+
+1. \( s_3 = 5 \)
+2. \( s_2 = 9 \)
+
+Thus:
+\[ s_4 = 3(5) + 5(5) + 9(2) = 15 + 25 + 18 = 58 \]
+
+Therefore,
+\[ a + b + c = 3 + 5 + 9 = 17 \]
+
+Hence, the final result is:
+\[
+\boxed{17}
+\]
+17--10 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: medium-vi-124
+Question: Đối với số nguyên dương $n$ và các chữ số khác 0 $a$, $b$, và $c$, giả sử $A_n$ là số nguyên có $n$ chữ số mỗi chữ số đều bằng $a$; giả sử $B_n$ là số nguyên có $n$ chữ số mỗi chữ số đều bằng $b$, và giả sử $C_n$ là số nguyên có $2n$ chữ số (không phải $n$ chữ số) mỗi chữ số đều bằng $c$. Giá trị lớn nhất có thể của $a + b + c$ là bao nhiêu để có ít nhất hai giá trị của $n$ sao cho $C_n - B_n = A_n^2$?
+Tìm giá trị lớn nhất của $a + b + c$ sao cho tồn tại ít nhất hai giá trị  $n$ thỏa mãn:$C_n - B_n = A_n^2$.
+Model's Full Answer: **Giá trị lớn nhất của \( a + b + c \)**:
+
+Chúng ta cần tìm giá trị tối đa của:
+\[ a + b + c \]
+để duy trì sự liên quan giữa chúng khi \( n \geq 2 \). Điều này đòi hỏi kiểm tra tính bất biến của điều kiện \( C_n - B_n = A_n^2 \).
+
+1. **Khái niệm về tích của một tập hợp**: Khi cộng hoặc trừ hai phần tử từ một tập hợp, tổng và hiệu vẫn giữ được nếu không bị ảnh hưởng bởi việc thêm hoặc loại bỏ các thành viên.
+   
+2. **Tập hợp chứa tất cả các chữ số từ \( a \), \( b \), và \( c \)**:
+   - Tập hợp này chỉ có 3 thành viên: \( [a, b, c] \).
+   - Do đó, tổng của nó sẽ là \( a + b + c \).
+
+3. **Sử dụng phương trình ban đầu**:
+   - Theo định lý Vieta, tích của ba số \( a + b + c \) bằng \( A_n^2 \):
+     \[
+     A_n^2 = (a+b+c)^2
+     \]
+
+4. **Xác định điều kiện đối với \( C_n \)**:
+   - Để đạt được điều kiện \( C_n - B_n = A_n^2 \), hãy so sánh \( C_n \) với \( B_n \):
+     \[
+     C_n - B_n = (a + b + c) - (a + b)
+     \]
+     Vì \( a + b + c = a + b \), đơn giản hóa thành:
+     \[
+     C_n - B_n = (a + b) - (a + b) = 0
+     \]
+
+5. **Áp dụng vào điều kiện xác định**: 
+   - Với \( n > 2 \), \( C_n \) luôn nhỏ hơn \( B_n \). Do đó, \( C_n - B_n \) cũng phải nhỏ hơn \( A_n^2 \).
+
+6. **Giá trị tối đa**: 
+   - Từ khái niệm trên, chúng ta thấy rằng giá trị lớn nhất của \( a + b + c \) là:
+   \[
+   \boxed{2}
+   \]
+
+Vì vậy, giá trị lớn nhất của \( a + b + c \) mà duy trì sự tương ứng với điều kiện được đưa ra là \( \boxed{2} \).
+2--18 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+
+Total Matches: 2
+Total Questions: 125
+Accuracy: 1.60%
 ========== LOW ==========
 
 ID: low-vi-0
