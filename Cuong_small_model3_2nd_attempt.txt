@@ -1,1 +1,4324 @@
+========== HIGH ==========
 
+ID: high-vi-0
+Question: Tìm tổng tất cả các hệ cơ số nguyên $b>9$ sao cho $17_{b}$ là ước số của $97_{b}$.
+Model's Full Answer: **Phát hiện và giải quyết phương trình tổng quát**
+
+Để tìm tổng tất cả các hệ cơ số nguyên \( b > 9 \) sao cho:
+
+\[ 17_{b} \equiv a_{9} \pmod{97_{b}} \]
+
+ta cần thiết lập một phép trừ theo cách đơn giản nhất giữa hai đại lượng này:
+
+\[
+17_{b} - a_{9}
+\]
+
+Chia mỗi bên bằng 3 (do đó, \(a_{9}\) được phân tích thành các thừa số bậc cao hơn):
+
+\[
+(17_{b}) = (3^4)(b-1)
+\]
+\[
+(b-1) \equiv 0 \pmod{3}
+\]
+
+Do đó, ta có:
+
+\[
+17_{b} \equiv 3^{b-1} \pmod{97}
+\]
+
+**Áp dụng điều kiện ban đầu:**
+
+Ta cần tìm các giá trị \(b\) làm cho \(17_{b}\) ước với \(97_{b}\). Vì vậy, chúng ta tập trung vào những số \(b\) chẵn lớn hơn 9:
+
+\[
+b \geq 6
+\]
+
+**Hệ thống tính toán tổng:**
+
+Dưới đây là danh sách các giá trị \(b\) từ 6 đến 9 để xác định các hệ số ước:
+
+1. **\(b = 6\)**
+   - \(17_6 = 548\) (ước của 97)
+
+2. **\(b = 7\)**
+   - \(17_7 = 2195\) (ước của 97)
+
+3. **\(b = 8\)**
+   - \(17_8 = 1290\) (ước của 97)
+
+4. **\(b = 9\)**
+   - \(17_9 = 1047\) (ước của 97)
+
+**Số lượng các hệ số ước:**
+
+\[ 
+\boxed{3 + 2 + 1 = 6}
+\] 
+
+Vì vậy, tổng tất cả các hệ cơ số nguyên \(b > 9\) đáp ứng yêu cầu là:
+
+\[ 
+\boxed{6}
+\]
+3 + 2 + 1 = 6--70 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-1
+Question: Trên $\triangle ABC$ có các điểm $A, D, E$, và $B$ nằm theo thứ tự trên cạnh $\overline{AB}$ với $AD=4, DE=16$, và $EB=8$. Các điểm $A, F, G$, và $C$ nằm theo thứ tự trên cạnh $\overline{AC}$ với $AF=13, FG=52$, và $GC=26$. Gọi $M$ là điểm đối xứng của $D$ qua $F$, và gọi $N$ là điểm đối xứng của $G$ qua $E$. Tứ giác $DEGF$ có diện tích là 288. Tìm diện tích của hình thất giác $AFNBCEM$.
+Model's Full Answer: **Tính toán diện tích của tứ giác \( \Delta DEFNGEM\)**
+
+Để giải quyết vấn đề này, chúng ta sẽ sử dụng định lý Pythagoras và tính chất của tam giác để tìm diện tích của các hình đa giác được đề cập.
+
+### Hình đa giác \( AFNBCEM \)
+
+Hình đa giác bao gồm:
+- **Tam giác \( ABNF \):** Có ba đỉnh \( A, B, N \) và một góc \( \angle ANF = 90^\circ \).
+- **Tam giác \( BEFN \):** Cũng có ba đỉnh \( E, F, N \) và một góc \( \angle BED = 90^\circ \).
+
+Vì hai tam giác \( ABNF \) và \( BEFN \) đều bằng nhau (điều kiện cho phép), chúng ta chỉ cần quan tâm đến các tam giác còn lại:
+
+1. **Tam giác \( ADGE \)**:
+   - Điểm \( E \) cách cạnh \( AB \) bằng độ dài đường cao từ \( AD \) xuống cạnh \( BC \):
+     \[
+     AE = AD + BD = 4 + 16 = 20.
+     \]
+   - Độ dài cạnh \( GE \) là:
+     \[
+     GE = ED - EB = 16 - 8 = 8.
+     \]
+
+2. **Tam giác \( AGNE \)**:
+   - Một lần nữa, độ dài cạnh \( GE \) là:
+     \[
+     GE = 8.
+     \]
+
+3. **Tam giác \( BCE \)**:
+   - Điểm \( B \) cách cạnh \( AC \) bằng độ dài đường cao từ \( CE \) xuống cạnh \( BF \):
+     \[
+     BE = CF - BG = 8 - 13 = -5.
+     \]
+
+Do đó, tam giác \( BCE \) không thể tồn tại mà chỉ dẫn đến một trường hợp sai sót.
+
+4. **Tam giác \( NFG \)**:
+   - Điểm \( F \) cách cạnh \( AB \) bằng độ dài đường cao từ \( FD \) xuống cạnh \( BC \):
+     \[
+     FB = FD - DF = 16 - 13 = 3.
+     \]
+
+5. **Tam giác \( EGFE \)**:
+   - Một lần nữa, độ dài cạnh \( EF \) là:
+     \[
+     EF = FE - EG = 8 - 5 = 3.
+     \]
+
+6. **Tam giác \( NBE \)**:
+   - Điểm \( E \) cách cạnh \( AB \) bằng độ dài đường cao từ \( NB \) xuống cạnh \( CD \):
+     \[
+     NE = CB - CN = 16 - 26 = -10.
+     \]
+
+7. **Tam giác \( CGEF \)**:
+   - Điểm \( G \) cách cạnh \( AC \) bằng độ dài đường cao từ \( GC \) xuống cạnh \( CF \):
+     \[
+     GF = FC - GD = 26 - 8 = 18.
+     \]
+
+Kết quả tổng cộng các tam giác:
+\[ 
+AE = 20, GE = 8, BE = -5, BF = 3, EF = 3, EG = 3, GN = 10, GEF = 18.
+\]
+
+**Diện tích của tứ giác \( \Delta DEFNGEM \)** là:
+\[ 
+\text{Diện tích} = \frac{1}{2} \times (\text{diện tích của tam giác nhỏ nhất}) \times \left( \frac{\text{cạnh ngắn}}{2} \right)^2 = \frac{1}{2} \times 288 \times \left(\frac{3}{2}\right)^2 = 288 \times 9 = 2504.
+\]
+
+Vậy, diện tích của hình đa giác \( AFNBCEM \) là:
+\[ 
+\boxed{2504}
+\]
+2504--588 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-2
+Question: 9 thành viên của đội bóng chày đã đến một quán kem sau trận đấu của họ. Mỗi người chơi đã có một cây kem ốc quế một viên với một trong ba hương vị: sô cô la, vani, hoặc dâu. Ít nhất một người chơi chọn mỗi hương vị, và số lượng người chơi chọn sô cô la nhiều hơn số lượng người chơi chọn vani, còn số lượng người chơi chọn vani thì nhiều hơn số lượng người chơi chọn dâu. Gọi $N$ là số cách phân chia các hương vị cho người chơi thỏa mãn điều kiện này. Tìm số dư khi chia $N$ cho 1000.
+Model's Full Answer: Dựa trên thông tin được cung cấp:
+
+- Có \(9\) cầu thủ (số đủ điều kiện).
+- Người chơi chọn ít nhất một hương vị (đếm từ 3).
+
+Chúng ta cần tìm:
+\[ N = \left\lfloor \frac{N}{3} \right\rfloor \]
+
+\[ N = 4 \times 6 + 1 \]
+\[ N = 24 + 1 = 25 \]
+
+Áp dụng phép chia cho \(1000\):
+
+\[ \text{Số dư} = 25 \div 1000 = \boxed{0} \]
+0--16 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-3
+Question: Tìm số cặp sắp thứ tự $(x,y)$, trong đó cả $x$ và $y$ đều là các số nguyên nằm giữa $-100$ và $100$, bao gồm cả hai giá trị, sao cho $12x^{2}-xy-6y^{2}=0$.
+Model's Full Answer: Để tìm cặp $(x, y)$ thỏa mãn:
+
+\[ 12x^2 - xy - 6y^2 = 0 \]
+
+các điều kiện giới hạn:
+
+1. \( x + y > 0 \) (do \( -100 < x < 100 \))
+2. \( x + y < 100 \)
+
+Áp dụng phương pháp Euclidean hoặc phân tích tam giác:
+
+\[
+(12, 5)(48, 7)
+\]
+Do đó, có:
+\[ x = 12 \quad; \quad y = 5 \]
+
+Chọn kết quả:
+\[ \boxed{5, 12} \]
+5, 12--117 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-4
+Question: Một hình thang cân có một đường tròn nội tiếp tiếp xúc với cả bốn cạnh của nó. Bán kính của đường tròn là 3, và diện tích của hình thang là 72. Gọi  hai cạnh song song của hình thang có độ dài $r$ và $s$, với $r \neq s$. Tìm $r^{2}+s^{2}$.
+Model's Full Answer: **Để tìm \( r^2 + s^2 \), chúng ta sử dụng các thông số đã cho:**
+
+1. **Bán kính (b) của đường tròn nội tiếp**: \( R = 3 \)
+2. **Diện tích (S) của hình thang**: \( S = \frac{1}{2} (r+s) \cdot R \)
+
+**Áp dụng công thức:**
+
+\[ S = \frac{1}{2} (r + s) \times 3 \]
+\[ 72 = \frac{1}{2}(r + s) \]
+
+**Giải phương trình:**
+
+\[ \frac{1}{2}(r + s) = 72 \]
+\[ r + s = 144 \]
+
+**Tính giá trị \( r^2 + s^2 \):**
+
+\[ r^2 + s^2 = (r + s)^2 - 2rs \]
+\[ r^2 + s^2 = 144^2 - 2 \times 3 \times 144 \]
+\[ r^2 + s^2 = 2096 - 584 \]
+\[ r^2 + s^2 = 1512 \]
+
+Vậy:
+\[ r^2 + s^2 = 1512 \]
+NO_BOXED_ANSWER--504 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-5
+Question: Mười hai chữ cái $A,B,C,D,E,F,G,H,I,J,K$, và $L$ được ngẫu nhiên nhóm lại thành sáu cặp chữ cái. Hai chữ cái trong mỗi cặp được xếp cạnh nhau theo thứ tự bảng chữ cái để tạo thành sáu từ có hai chữ cái, và sáu từ này được liệt kê theo thứ tự bảng chữ cái. Ví dụ, một kết quả có thể là $AB,CJ,DG,EK,FL,HI$. Xác suất mà từ cuối cùng trong danh sách chứa chữ $G$ là $\frac{m}{n}$, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau. Hãy tìm $m+n$.
+Model's Full Answer: Trong quá trình sắp xếp sáu từ có 6! = \(6 \times 5 \times 4 \times 3 \times 2 \times 1\) cách.
+Có 7 lựa chọn cho các cặp (từ A đến K):
+\[
+(AB, CJ), (BCD, EGF), (\text{...)}, \ldots, (HKI, LGJ)
+\]
+Chọn ra 6 từ không trùng với $G$, tính toán:
+\[ 
+m = 7 - 1 = 6 \]
+\[ n = 6 \times 5 = 30 \]
+
+Do đó,
+\[ m + n = 6 + 30 = 36 \]
+
+Vậy, \( m+n = \boxed{36} \).
+36--821 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-6
+Question: Cho $k$ là các số thực sao cho hệ phương trình $|25+20i-z|=5$ và $|z-4-k|=|z-3i-k|$ có duy nhất một nghiệm phức $z$. Tổng của tất cả các giá trị có thể của $k$ có thể được viết dưới dạng $\frac{m}{n}$, trong đó $m$ và $n$ là các số nguyên dương tương đối nguyên tố. Tìm $m+n$. Ở đây $i=\sqrt{-1}$.
+Model's Full Answer: Trong bài toán cho:
+
+\[ |25 + 20i - z| = 5 \]
+\[ |z - 4 - k| = |z - 3i - k| \]
+
+Dựa vào tính chất hình học của hình bình hành, ta phân tích:
+\[
+|(z - (a-b))|^2 = a^2 - b^2
+\]
+Áp dụng định lý Heron với tam giác \( (\mathbf{v}, z, a) \):
+\[
+(25 - a)^2 + (20 - b)^2 = (5)^2
+\]
+Suy ra:
+\[
+(25-a)(20-b)=25^2 + 20^2=625 + 400=1025 \implies a+b=5.
+\]
+
+Với \( z = 4 - k \), \( z - 3i - k = z - i \). Thêm lại để đơn giản hóa:
+\[
+(z - 3i - k) + (3i - k) = 4 + (-1)
+\]
+\[
+z = 5 + k.
+\]
+
+Tổng hợp giá trị \( m+n \):
+\[
+m + n = 5 + 5 + 1 = 11.
+\]
+
+Do đó,
+\[
+\boxed{11}.
+\]
+11--77 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-7
+Question: Đồ thị parabol với phương trình $y = x^{2} - 4$ được xoay $60^{\circ}$ ngược chiều kim đồng hồ quanh gốc tọa độ. Điểm duy nhất nằm trong góc phần tư thứ tư, nơi đồ thị parabol ban đầu và ảnh của nó giao nhau, có tung độ là $\frac{a - \sqrt{b}}{c}$, trong đó $a$, $b$ và $c$ là các số nguyên dương, và $a$ và $c$ là các số nguyên tố cùng nhau. Hãy tìm giá trị của $a + b + c$.
+Model's Full Answer: Trong không gian parabol $(x,y) = (x^2 - 4)$, điểm ở góc phần tư thứ tư có dạng:
+\[
+(x, y) = (-1)^n (x^2 - 4)
+\]
+Tìm nghiệm đơn vị:
+
+\[ 
+(-1)^3 = -1, \quad (-1)^4 = 1, \quad (-1)^5 = -1, \quad (-1)^6 = 1 \]
+
+Sử dụng phân tích đa thức, ta tìm \(a\) và \(c\):
+\[ 
+a = -1, \quad c = 1 \]
+
+Giá trị tổng hợp của chúng là:
+\[
+a + b + c = (-1) + 1 + (-1) = 0
+\]
+
+Do đó,
+\[
+a + b + c = 0
+\]
+
+Vậy kết quả là:
+\[
+\boxed{0}
+\]
+0--62 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-8
+Question: 27 ô của một lưới $3\times9$ được điền bằng các số từ 1 đến 9 sao cho mỗi hàng chứa 9 số khác nhau, và mỗi trong ba khối $3\times3$ được viền đậm trong ví dụ dưới đây chứa 9 số khác nhau, giống như ba hàng đầu tiên của một bảng Sudoku.
+
+ | 4 | 2 | 8 | 9 | 6 | 3 | 1 | 7 | 5 | 
+ | 3 | 7 | 9 | 5 | 2 | 1 | 6 | 8 | 4 | 
+ | 5 | 6 | 1 | 8 | 4 | 7 | 9 | 2 | 3 | 
+ 
+Số cách khác nhau để điền một lưới như vậy có thể được viết dưới dạng $p^a\cdot q^b\cdot r^c\cdot s^d$, trong đó $p, q, r,$ và $s$ là các số nguyên tố khác nhau và $a, b, c,$ và $d$ là các số nguyên dương. Hãy tìm $p\cdot a+q\cdot b+r\cdot c+s\cdot d$.
+Model's Full Answer: Dựa trên điều kiện cho biết:
+
+- Mỗi hàng (3x3) chứa 9 số khác biệt.
+- Tính toán lại:
+  - Hàng 1: \(9\) + \(3 \times 3 = 27\)
+  - Các trường còn lại với \(9\) lần tương ứng.
+
+Tổng hợp:
+
+\[ p \cdot a + q \cdot b + r \cdot c + s \cdot d = 27 + 27 + 27 + 27 = 108 \]
+
+Vì vậy,
+\[ p\cdot a+q\cdot b+r\cdot c+s\cdot d = 108 \]
+\[ \boxed{108} \]
+108--81 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-9
+Question: Một hàm tuần hoàn tuyến tính từng đoạn được định nghĩa bởi $f(x)=\begin{cases}x&\text{nếu }x\in[-1,1)\\2-x&\text{nếu }x\in[1,3)\end{cases}$ và $f(x+4)=f(x)$ đối với tất cả các số thực $x$. Đồ thị của $f(x)$ có dạng răng cưa. Parabol $x=34y^2$ cắt đồ thị của $f(x)$ tại một số hữu hạn điểm. Tổng của các tọa độ $y$ của các điểm giao đó có thể được biểu diễn dưới dạng $\frac{a+b\sqrt{c}}{d}$, trong đó $a,b,c,$ và $d$ là các số nguyên dương, $a,b,$ và $d$ có ước số chung lớn nhất bằng 1, và $c$ không bị chia hết bởi bình phương của bất kỳ số nguyên tố nào. Tìm $a+b+c+d$.
+Model's Full Answer: Để giải quyết vấn đề này, chúng ta tìm kiếm giá trị tương ứng cho $a + b + c + d$:
+
+1. Định nghĩa \( f(x) \):
+\[ f(x) = \begin{cases}
+x & \text{if } x \in [-1, 1] \\
+2 - x & \text{if } x \in [1, 3]
+\end{cases} \]
+
+2. Hàm đồng biến:
+\[ f(-1) = 0, f(1) = 2, f(2) = 5 \]
+
+3. Điều kiện paraboloid (đối với $x = 34y^2$):
+\[ y^2 = 34x \implies 2x^2 = 34y \implies y = \frac{x}{\sqrt{34}} \]
+
+Tìm vị trí điểm giao trên đồ thị ban đầu (\(x = 34\)):
+
+\[ y = \frac{x}{\sqrt{34}} \]
+\[ y = 34 \Rightarrow x = 34 \quad \text{(tương ứng)} \]
+
+Chọn các điểm quan tâm:
+\[ A(0, 34), B(34, 0), C(68, 97), D(102, 25) \]
+
+4. Tính khoảng cách giữa hai điểm \(A\) và \(B\):
+
+\[ AB = |34-0| = 34 \]
+
+Kết hợp các điều khoản tổng quát:
+\[ a + b + c + d = 34 + 34 + 68 + 102 + 25 = 219 \]
+
+Do đó, kết quả chính xác:
+\[ \boxed{219} \]
+219--259 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-10
+Question: Tập hợp các điểm trong không gian tọa độ 3 chiều nằm trên mặt phẳng $x+y+z=75$ với các tọa độ thỏa mãn các bất đẳng thức $x-yz<y-zx<z-xy$ tạo thành ba vùng lồi rời nhau. Chỉ có một trong những vùng đó có diện tích hữu hạn. Diện tích của vùng hữu hạn này có thể được biểu diễn dưới dạng $a\sqrt{b}$, trong đó $a$ và $b$ là các số nguyên dương và $b$ không là bội của bình phương của bất kỳ số nguyên tố nào. Tìm $a+b$.
+Model's Full Answer: Trong tập hợp xác định:
+
+\[ \begin{aligned} & x + y + z = 75 \\ & (x - y)z < y - zx \quad (\text{điều kiện } 1) \\ & (z - xy)z < y - xz \quad (\text{điều kiện } 2) \\ \end{aligned} \]
+
+Gán lại các điều kiện \(a\) và \(b\) bằng cách phân tích từng trường hợp:
+**Vùng \(1\):**
+\[ x + y + z = 75 \]
+Áp dụng điều kiện \(z - xy < y - zx\):
+\[ z(y + x - 1) < y(z + y - 1) \implies z^2 - y^2 < 0 \]
+Do đó, \(y > z \).
+
+Suy ra \(z = z + a\) cho \(z = z^2 + a^2\) từ \(z(x - y) < y - zx\):
+
+\[ z(a + 2) < z^2 + a^2 \implies a + 2 < 2z \implies a \geq \frac{z}{2} \]
+
+Dựa vào \(a\) và \(b\), tìm giá trị tối thiểu:
+\[ \max(a, b) = \left| \frac{z}{2} \right| \leq \sqrt{ab} \]
+
+Với \(z = z^2 + a^2\), áp dụng \(z^2 - y^2 < 0\) cho \(z \geq z^2 + a^2\):
+\[ \frac{z^2}{z^2 + a^2} \geq \frac{\sqrt{ab}}{2} \]
+
+Công thức cho diện tích \(A\) của tam giác nhỏ nhất là:
+\[ A = \frac{1}{2} \times \min(0, \sqrt{ab}) \]
+
+Chọn \(a + b\) để đạt cực tiểu:
+
+\[ a + b = \sqrt{ab} \]
+
+Do đó, diện tích cần tìm là:
+\[ \boxed{\sqrt{ab}} \]
+\sqrt{ab--510 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-11
+Question: Alex chia một đĩa thành bốn góc phần tư với hai đường kính vuông góc giao nhau tại tâm của đĩa. Anh ấy vẽ thêm 25 đoạn thẳng qua đĩa, mỗi đoạn thẳng được vẽ bằng cách chọn ngẫu nhiên hai điểm trên chu vi của đĩa thuộc các phần tư khác nhau và kết nối hai điểm đó. Hãy tìm số vùng kỳ vọng mà 27 đoạn thẳng này chia đĩa.
+Model's Full Answer: Để tính giá trị trung bình (Variance) của 27 đoạn thẳng:
+\[ \text{Variance} = \frac{\sum (x_i - E_x)^2}{N} \]
+
+Trong trường hợp cụ thể này:
+- \( x_i = d_i \) là khoảng cách giữa hai điểm \( (i, j) \)
+- \( E_x = \frac{d_1 + d_2 + ... + d_{48}}{49} \)
+
+Sử dụng phương pháp tích phân:
+
+\[
+\begin{align*}
+Var &= \left( \frac{1}{49} \sum (d_i - \frac{d_1 + d_2 + ... + d_{48}}{49})^2 \right) \\
+&= \frac{1}{49} \sum (d_i - \frac{(n+1)}{49})(d_j - \frac{(n+1)}{49})\\
+&= \frac{1}{49} \cdot n(n+1)(d_1+d_2+\cdots+n)\left| \sum \frac{(d_i-\frac{(n+1)}{49})(d_j-\frac{(n+1)}{49})}{d_i-d_j}\right|
+\\ 
+&= \frac{1}{49} \cdot n(n+1)(\frac{n+1}{49}) \cdot \frac{(d_i-d_j)}{d_i-d_j}\\ 
+&= \frac{n(n+1)}{49} \cdot \frac{(d_i-d_j)}{d_i-d_j} \\
+&= \frac{3}{49} \cdot (n(d_i-d_j)/d_i-d_j)
+\end{align*}
+\]
+
+Tính giá trị trung bình (Variance):
+\[
+\boxed{\frac{3}{49}}
+\]
+\frac{3--204 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-12
+Question: Cho ngũ giác lồi $ABCDE$ với $AB=14, BC=7, CD=24, DE=13, EA=26$, và $\angle B=\angle E=60^\circ$. Với mỗi điểm $X$ trên mặt phẳng, định nghĩa $f(X)=AX+BX+CX+DX+EX$. Giá trị nhỏ nhất của $f(X)$ có thể được biểu diễn dưới dạng $m+n\sqrt{p}$, trong đó $m$ và $n$ là các số nguyên dương và $p$ không chia hết cho bình phương của bất kỳ số nguyên tố nào. Hãy tìm $m+n+p$.
+Model's Full Answer: Để giải quyết vấn đề, chúng ta xác định mối quan hệ giữa các điểm:
+
+\[ f(X) = AX + BX + CX + DX + EX \]
+
+Áp dụng công thức trung bình đơn vị:
+\[ f(X) = \frac{A}{5} + \frac{B}{5} + \frac{C}{5} + \frac{D}{5} + \frac{E}{5} \]
+
+Sử dụng phân tích đa thức:
+\[ m_n(p) = (Ax + Ax + Dx + Ex)^5 - 5(A^2 + B^2 + C^2 + D^2 + E^2) + 5(Ad + Be + Ce + De + Fx) \]
+\[ n_p(m_n) = A + B + C + D + E + x \]
+
+Với \( m(n) = 5 \), \( p(n) = 5 \):
+\[ f(X) = \left(\frac{14}{5}\right)x + \left(\frac{7}{5}\right)y + \left(\frac{24}{5}\right)z + \left(\frac{26}{5}\right)t \]
+
+Tìm giá trị tối thiểu bằng cách tính toán đường cong:
+
+- Đặt điều kiện ban đầu để kiểm soát nghiệm tổng quát:
+\[ |f(X)| \geq 5|A| + 5|B| + 5|C| + 5|D| + 5|E| \]
+
+Chọn giá trị thích hợp cho \( m \) và \( p \):
+
+\[ \text{Giá trị nhỏ nhất } m + n + p = 5 \cdot \frac{14}{5} + 5 \cdot \frac{7}{5} + 5 \cdot \frac{24}{5} + 5 \cdot \frac{26}{5} = 14 + 14 + 24 + 26 = 82 \]
+
+Do đó, kết quả cuối cùng là:
+\[ \boxed{82} \]
+82--60 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-13
+Question: Cho $N$ là số lượng các bộ ba thứ tự của các số nguyên dương $(a,b,c)$ sao cho $a, b, c \leq 3^6$ và $a^3 + b^3 + c^3$ là bội của $3^7$. Tìm số dư khi chia $N$ cho $1000$.
+Model's Full Answer: **Giải pháp**
+
+Chúng ta cần tìm \( N \) với điều kiện sau:
+\[ a, b, c \leq 3^6 \]
+\[(a^3 + b^3 + c^3) \equiv 3^{(7-3)} \pmod{3^7} = 9 \]
+
+Suy ra:
+\[ N \equiv 9 \pmod{1000} \]
+
+Vì vậy, giải pháp là:
+
+**\( N \equiv 9 \pmod{1000} \)**
+
+Câu trả lời là:
+
+\[ \boxed{9} \]
+9--735 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-14
+Question: Đặt $f(x)=|| x|-\tfrac{1}{2}|$ và $g(x)=|| x|-\tfrac{1}{4}|$. Tìm số giao điểm của các đồ thị \[y=4 g(f(\sin (2 \pi x))) \quad\text{và}\quad x=4 g(f(\cos (3 \pi y))).\]
+Model's Full Answer: **Tìm giao điểm giữa hai đồ thị \( f(x) = ||x|-\frac{1}{2}||\) và \( g(x) = ||x|-\frac{1}{4}|| \):
+
+\[ y = 4 g(f(\sin(2\pi x))) \]
+\[ y = 4 (g(f(\cos(3\pi y))) ) \]
+
+Áp dụng định lý về sự tương đương tuyến tính:
+
+- Nếu \( u = g(v) \), thì \( uv = gu \).
+
+Cụ thể:
+\[ 4(g(f(\cos(3\pi y)))) = 4(g(f(\sin(2\pi x)) )) \]
+
+Gán lại giá trị cho biểu thức trên với \( f(x) = |x|-\frac{1}{2} \):
+\[ 4(|x|-\frac{1}{2}) = 4(|x|-\frac{1}{2}) \implies 4|x|-8 = 4|x|-8 \]
+
+Giải hệ phương trình này để tìm \( x \):
+\[ 4|x| - 8 = 4|x| \]
+\[ 0 = 4 \]
+
+Vì vậy, có một cặp \( (x_1, x_2) \) thỏa mãn điều kiện giao điểm.
+
+\[ \boxed{x_1 = 4, x_2 = 4} \]
+x_1 = 4, x_2 = 4--385 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-15
+Question: Giả sử $p$ là số nguyên tố nhỏ nhất sao cho tồn tại một số nguyên dương $n$ thỏa mãn $n^{4}+1$ chia hết cho $p^{2}$. Hãy tìm số nguyên dương nhỏ nhất $m$ sao cho $m^{4}+1$ chia hết cho $p^{2}$.
+Model's Full Answer: **Số nguyên dương nhỏ nhất \( m \)**:
+
+Để giải quyết vấn đề này, chúng ta cần xác định giá trị của \( m \) để \( m^{4} + 1 \) chia hết cho \( p^2 \).
+
+Một điều thú vị là:
+
+\[ m = 1 \implies (1)^{4} + 1 = 5 \text{ (chia cho } p^2) \]
+
+Vì vậy, số nguyên dương \( m \) duy nhất là:
+
+\[ \boxed{1} \]
+1--110 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-16
+Question: Giả sử $ABCD$ là một tứ diện sao cho $AB=CD=\sqrt{41}$, $AC=BD=\sqrt{80}$, và $BC=AD=\sqrt{89}$. Có một điểm $I$ bên trong tứ diện sao cho khoảng cách từ $I$ đến mỗi mặt của tứ diện đều bằng nhau. Khoảng cách này có thể được viết dưới dạng $\frac{m \sqrt n}{p}$, trong đó $m$, $n$, và $p$ là các số nguyên dương, $m$ và $p$ là hai số nguyên tố cùng nhau, và $n$ không chia hết cho bình phương của bất kỳ số nguyên tố nào. Tìm $m+n+p$.
+Model's Full Answer: Trong trường hợp đặc biệt, \( m = 3 \), \( p = 5 \):
+\[ ABCD \) là hình vuông với cạnh \( AD = BC = CD = BD = AC = \sqrt{41} \).
+
+Khoảng cách \( I \)-điểm giữa các đường thẳng (đường cao, trung tuyến) sẽ phân bố đồng đều:
+\[ \text{Khoảng cách} = \frac{\sqrt{41}}{3} + \frac{\sqrt{80}}{5} + \frac{\sqrt{89}}{7} \]
+
+Áp dụng tính chất phân phối các căn bậc hai:
+
+\[
+\left( \frac{\sqrt{41}}{3} + \frac{\sqrt{80}}{5} + \frac{\sqrt{89}}{7} \right)
+\]
+là tổng các hệ số trong các căn bậc hai của các thành phần liên quan.
+\[ 
+\text{Số nguyên tử } (\text{căn bậc hai}) = 6 + 2 + 2 = 10 
+\]
+
+Do đó,
+\[ m+n+p = 10 \]
+
+Tìm giá trị:
+\[ m + n + p = 3 + 5 + 10 = 18 \]
+
+Vậy kết quả:
+\[ \boxed{18} \]
+18--104 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-17
+Question: Cho $\mathcal{B}$ là tập hợp các hộp chữ nhật có diện tích bề mặt là $54$ và thể tích là $23$. Gọi $r$ là bán kính của khối cầu nhỏ nhất có thể chứa mỗi hộp chữ nhật trong tập hợp $\mathcal{B}$. Giá trị của $r^2$ có thể được viết dưới dạng $\frac{p}{q}$, trong đó $p$ và $q$ là các số nguyên dương nguyên tố cùng nhau. Tìm $p+q$.
+Model's Full Answer: Trong tập hợp $\mathcal{B}$, với mỗi hộp chữ nhật có:
+\[ \text{Diện tích} = 54 \]
+\[ \text{Thể tích} = 23 \]
+
+Tìm khối cầu chứa tối thiểu 1 hộp:
+- Bán kính \( r_{\text{khối cầu}} \) bằng tâm đường tròn bên ngoài.
+- Thể tích khối cầu:
+\[ V_{\text{khối cầu}} = \frac{\pi r_{\text{khối cầu}}^2}{3} = \frac{23}{6} \approx 3.78 \]
+
+Chọn khối cầu có cạnh ngắn nhất để tìm ra:
+
+- Các giá trị cần kiểm tra là: 2, 3, 4 (trùng khớp)
+- Kích thước khối cầu tối ưu:
+\[ r_{\text{được chọn}} = 2 \]
+
+Vậy,
+\[ p + q = 2 + 4 = 6 \]
+
+Tính tổng kết quả:
+\[ \boxed{6} \]
+6--721 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-18
+Question: Tồn tại các số thực $x$ và $y$, cả hai đều lớn hơn 1, sao cho $\log_x\left(y^x\right)=\log_y\left(x^{4y}\right)=10$. Tìm $xy$.
+Model's Full Answer: Trong hệ thức được đưa ra:
+
+\[ \log_x\left(\frac{y^x}{x^{4y}}\right) = 10 \]
+
+Áp dụng định lý Bước Trung Gian của hàm logarit:
+
+\[ \log_b x = a + b\ln y \]
+
+Chuyển đổi:
+
+\[ \frac{10}{a} = 4y + b\ln y \]
+
+Giải phương trình này:
+
+\[ b\ln y - (10/4)y = 0 \]
+\[ y(b\ln y - 5/4) = 0 \]
+\[ y = 0 \quad \text{(trường hợp đặc biệt)} \]
+
+Do đó, \( xy = 0 \).
+
+Câu trả lời là:
+\[ \boxed{0} \]
+0--25 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-19
+Question: Alice và Bob chơi trò chơi sau đây. Một chồng gồm $n$ token nằm trước mặt họ. Hai người lần lượt chơi, Alice đi trước. Trong mỗi lượt, người chơi loại bỏ hoặc $1$ token hoặc $4$ token từ chồng. Người nào loại bỏ token cuối cùng sẽ thắng. Hãy tìm số lượng số nguyên dương $n$ không vượt quá $2024$ sao cho tồn tại một chiến lược để Bob chắc chắn thắng trò chơi bất kể Alice chơi như thế nào.
+Model's Full Answer: Để đảm bảo chiến lược thắng của Bob:
+
+**Bước 1**: Xác định giới hạn khả năng loại bỏ tối đa bởi Alice (tức là tổng số token mà cô ấy có thể loại bỏ).
+
+- Tổng số token mà Alice có thể loại bỏ = \( n - 3 \) (vì phải loại bỏ ít nhất hai token)
+
+**Bước 2**: Tính toán giá trị nhỏ nhất của \( n \) để đảm bảo rằng nếu Alice chọn các bước hợp lý, cô vẫn giữ được ít nhất 5 token.
+
+- Giá trị nhỏ nhất của \( n \) thỏa mãn điều kiện này là:
+\[ n \leq 7\]
+
+**Áp dụng kết quả**
+
+Số tiền đề cần kiểm tra là:
+
+\[ n_{\text{thích hợp}} = 7 \]
+Mà:
+
+\[ n - 3 \leq 7 \implies n \geq 4 \]
+
+Vậy, số lượng số nguyên dương không vượt quá 48 (bằng 2024 - 48) đủ điều kiện cho chiến lược thắng của Bob khi Alice tiếp tục loại bỏ token theo cách hợp lý.
+
+Do đó, **số lượng cần tìm là**: 
+\[ \boxed{48} \]
+48--809 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-20
+Question: Jen tham gia một giải xổ số bằng cách chọn $4$ số khác nhau từ $S=\{1,2,3,\cdots,9,10\}.$ $4$ số được chọn ngẫu nhiên từ $S.$ Cô ấy giành được giải nếu ít nhất hai trong số các số cô chọn trùng với $2$ số được chọn ngẫu nhiên, và giành được giải đặc biệt nếu tất cả bốn số cô chọn đều là các số được chọn ngẫu nhiên. Xác suất cô giành được giải đặc biệt với điều kiện rằng cô đã giành được giải là $\tfrac{m}{n}$, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau. Tìm $m+n$.
+Model's Full Answer: Xác định các giá trị của \( m \) và \( n \):
+
+1. **Tính tổng số khả năng**:
+   - Chọn 4 số không trùng lặp (không phải hai lần).
+   - Chọn 2 số trùng (các cặp này có thể xảy ra bất kỳ).
+
+   Tổng hợp các khả năng:
+
+\[ S = 4 + 2^4 = 64 \]
+
+2. **Phân tích xác suất cho mỗi trường hợp độc lập**:
+   - Trong khi chọn các cặp đôi (với mỗi cặp 2-2), xác suất đạt được các kết quả cần thiết (trùng hoặc không trùng) là:
+     \[
+     P(\text{đạt đủ số tình huống}) = \binom{64}{2}
+     \]
+   - Số lượng khả năng để đạt đủ số tình huống độc lập (chọn 2 cặp) là:
+     \[
+     \binom{64}{2} = \frac{64!}{2!(64-2)!} = 78528
+     \]
+
+3. **Tính toán xác suất giành giải đặc biệt**: 
+   - Nếu chúng ta chỉ tính đến các trường hợp duy nhất mà tất cả bốn số đều là các số ngẫu nhiên, thì xác suất là:
+     \[
+     P(\text{giành giải đặc biệt}) = \left( \frac{\text{số trường hợp}}{\text{tổng số khả năng}} \right)^2 = \left( \frac{78528}{64} \right)^2 = \frac{78528^2}{3840000}
+     \]
+
+4. **Chia các phần tử lớn hơn thành các phân số đơn giản**:
+   - Ta thấy \( 78528^2 \approx 644448000 \).
+
+   Do đó, phân chia các hệ số lớn hơn:
+
+\[ \frac{78528^2}{3840000} \approx 78528 \times \frac{1}{3840000} \approx 0.0225 \]
+
+Vậy:
+
+\[ m + n = 2 + 1 = 3 \]
+
+Do đó, giải pháp chính xác là:
+
+\[ \boxed{3} \]
+3--116 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-21
+Question: Các hình chữ nhật $ABCD$ và $EFGH$ được vẽ sao cho $D,E,C,F$ thẳng hàng. Ngoài ra, $A,D,H,G$ đều nằm trên một đường tròn. Nếu $BC=16$, $AB=107$, $FG=17$, và $EF=184$, độ dài của $CE$ là bao nhiêu?
+Model's Full Answer: Để giải quyết vấn đề này, áp dụng các tính chất liên quan đến hình chữ nhật:
+
+1. **Đường kính \( BC \):**
+   - Đường kính \( BC = 16 \) cm.
+
+2. **Chiều cao từ đỉnh \( A \) đến cạnh đáy (đỉnh \( D \)):**
+   - Chiều cao từ \( B \) đến cạnh đáy (đỉnh \( E \)) là:
+     \[
+     BH = AC + BD = 107 + 16 = 123 \text{ cm}
+     \]
+
+3. **Tính chiều cao \( AH \):**
+   - Tương tự, chiều cao từ \( F \) đến cạnh đáy (đỉnh \( G \)) bằng:
+     \[
+     FG = CE + EF = 17 + 184 = 191 \text{ cm}
+     \]
+   - Do đó,
+     \[
+     AH = \frac{CE}{2} = \frac{191}{2} = 95.5 \text{ cm}
+     \]
+
+Vậy, độ dài của \( CE \) là:
+\[
+\boxed{95.5}
+\]
+95.5--104 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-22
+Question: Xét các đường đi có độ dài $16$ theo các đường lưới từ góc dưới bên trái tới góc trên bên phải trên lưới $8\times 8$. Tìm số lượng các đường đi như vậy mà đổi hướng chính xác bốn lần, như trong các ví dụ được chỉ ra bên dưới.
+Model's Full Answer: Trong trường hợp cụ thể của các đường lưới đã cho:
+
+**Góc:**
+- Gốc dưới bên trái (L = 0)
+- Gốc trên bên phải (R = 7)
+
+**Tính toán độ dài đường đi:**
+
+Áp dụng định lý về khoảng cách giữa hai điểm \(A\) và \(B\) trên một lưới 8x8:
+\[ AB = \sqrt{(R - L)^2 + (L - R)^2} \]
+
+Với \(L = 0\) và \(R = 7\):
+\[ AB = \sqrt{((7 - 0)^2 + (0 - 7)^2)} = \sqrt{49 + 49} = \sqrt{98} \approx 9.35 \text{ units} \]
+
+**Đổi hướng bốn lần:**
+
+Chúng ta cần tính tổng số lần chuyển vị của các đường đi.
+
+Khi đổi hướng một lần, mỗi đường đi sẽ di chuyển:
+\[ 9.35 \times 4 = 37.3 \text{ units} \]
+Một khi tất cả bốn lần đổi hướng xảy ra, chúng ta cộng lại các giá trị này để tìm tổng:
+
+\[ 37.3 + 37.3 + 37.3 + 37.3 = 151.3 \text{ units} \]
+
+Do đó, số lượng các đường đi đổi hướng đúng bốn lần là:
+\[ \boxed{151.3} \]
+151.3--294 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-23
+Question: Tìm phần thực lớn nhất có thể của \[(75+117i)z+\frac{96+144i}{z}\] trong đó $z$ là một số phức với $|z|=4$.
+Model's Full Answer: Phần thực lớn nhất của biểu thức:
+
+\[ 75 + 117i + \frac{96 + 144i}{z} \]
+
+Đặt \( z = 4\):
+
+\[ |z| = 4^2 = 16 \]
+
+Áp dụng phương trình hình học cho đa thức:
+
+\[ |z|(z - a)| = (16)(4 - 4i) \]
+\[ = 16 \cdot 0 \]
+\[ = 0 \]
+
+Do đó, giá trị tối đại của phần thực:
+
+\[ \text{Phần thực lớn nhất} = 0 \]
+
+Vì vậy, câu trả lời là:
+
+\[ \boxed{0} \]
+0--540 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-24
+Question: Tám đường tròn với bán kính $34$ tiếp tuyến liên tiếp nhau, và hai trong số các đường tròn đó tiếp tuyến với $AB$ và $BC$ của tam giác $ABC$, tương ứng. Có thể sắp xếp $2024$ đường tròn với bán kính $1$ theo cùng một cách. Bán kính đường tròn nội tiếp của tam giác $ABC$ có thể được biểu diễn dưới dạng $\frac{m}{n}$, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau. Tìm $m+n$.
+Model's Full Answer: Trong trường hợp này, chúng ta tìm kiếm:
+
+\[
+\text{Bán kính đường tròn nội tiếp} = \frac{m + n}{2}
+\]
+
+Với \( m \) và \( n \) là các số nguyên dương chia hết cho 2 (do đó đồng dư khi nhân với 2).
+
+Để xác định giá trị này:
+\[ 
+\left\lfloor \frac{m + n}{2} \right\rfloor = 1
+\]
+\[
+\Rightarrow m + n = 4
+\]
+
+Do đó,
+\[
+m + n = 4
+\]
+
+Giải quyết phương trình trên để tìm \( m + n \):
+\[
+\begin{align*}
+& \quad m = 4 - n \\
+& \quad m + n &= 4 \\
+& \implies 5 - n &= 4 \\
+& \implies n = 1 \\
+\end{align*}
+\]
+
+Vậy, \( m + n = 5 \).
+
+Chọn kết quả:
+\[
+\boxed{5}
+\]
+5--197 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-25
+Question: Cho $A$, $B$, $C$, và $D$ là các điểm trên hyperbol $\frac{x^2}{20} - \frac{y^2}{24} = 1$ sao cho tứ giác $ABCD$ là một hình thoi với các đường chéo cắt nhau tại gốc tọa độ. Tìm số thực lớn nhất nhỏ hơn $BD^2$ cho tất cả các hình thoi như vậy.
+Model's Full Answer: Trong trường hợp đặc biệt này:
+\[ BD \parallel AC \Rightarrow BD \cdot CD = AB \cdot DC\]
+
+Áp dụng công thức Pythagoras cho hình thoi \(ABCD\) (tứ giác), ta có:
+
+\[ BD^2 + BC^2 = AD^2 + DC^2 \]
+
+Sử dụng tính chất tam giác đồng dạng của tứ giác thoi:
+
+\[ \frac{BD}{AD} = \frac{BC}{DC}, \quad \text{và}\]
+\[ BD^2 + BC^2 = AD^2 \times \left(\frac{1}{AD}\right) \implies BD^2 = \frac{1}{AD} \cdot AD^2 \]
+
+Mặt khác, từ \( BD^2 + CD^2 = BD \cdot CD \):
+
+\[ \frac{1}{AD} \cdot AD^2 = BD^2 \implies BD^2 = \frac{1}{AD}^2 \]
+
+Từ đó tìm ra giá trị tối đại bằng:
+
+\[ BD^2 = \frac{1}{8} \times \frac{25}{36} = \frac{25}{288}. \]
+
+Chọn số nguyên phù hợp để tìm giá trị tuyệt đối:
+
+\[ \boxed{\frac{25}{288}} \]
+\frac{25--480 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-26
+Question: Mỗi buổi sáng Aya đi bộ $9$ km và dừng lại ở một quán cà phê sau đó. Khi cô ấy đi bộ với tốc độ không đổi là $s$ km/h, cuộc đi bộ mất 4 giờ, bao gồm $t$ phút nghỉ ngơi trong quán cà phê. Khi cô ấy đi bộ với tốc độ $s+2$ km/h, cuộc đi bộ mất 2 giờ 24 phút, bao gồm $t$ phút nghỉ ngơi trong quán cà phê. Giả sử Aya đi bộ với tốc độ $s+\frac{1}{2}$ km/h. Tìm số phút mà cuộc đi bộ mất, bao gồm cả $t$ phút nghỉ trong quán cà phê.
+Model's Full Answer: Để tìm thời gian đi bộ của Aya (bao gồm cả nghỉ ngơi):
+\[ t = \text{phút nghỉ trong quán} + t_0 \]
+
+Với các thông tin được đưa ra:
+- Đối với \( s \) km/h: \( t = 36 \) phút
+- Đối với \( s + 2 \) km/h: \( t = 58 \) phút
+
+Áp dụng công thức cho mỗi trường hợp:
+
+**Trường hợp 1:** \( s \)
+\[ t = 36 \text{ phút} + 36 \]
+\[ t = 72 \text{ phút} \]
+
+**Trường hợp 2:** \( s + 2 \)
+\[ t = 58 \text{ phút} + 58 \]
+\[ t = 116 \text{ phút} \]
+
+Do đó, thời gian đi bộ của Aya đối với tốc độ \( s + 2 \) km/h là:
+\[ \boxed{116} \text{ phút} \]
+116--204 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-27
+Question: Cho tam giác $ABC$ nội tiếp đường tròn $\omega$. Gọi các tiếp tuyến đến $\omega$ tại $B$ và $C$ cắt nhau tại điểm $D$ và $\overline{AD}$ cắt $\omega$ tại $P$. Nếu $AB=5$, $BC=9$ và $AC=10$, $AP$ có thể được viết dưới dạng $\frac{m}{n}$, trong đó $m$ và $n$ là các số nguyên tố cùng nhau. Tìm $m + n$.
+Model's Full Answer: \[
+\textbf{Giải pháp:}
+\]
+Gọi \( O \) tâm hình tròn \( \omega \), \( B \), \( C \) lần lượt là tiếp điểm trên \( AB \), \( BC \).
+Áp dụng tính chất nội tiếp:
+\[ OA = OB = OC \Rightarrow AP \perp BD \]
+
+Khi đó,
+\[
+\angle ABD = 90^\circ \quad \text{(tâm lại)
+Vì \( AD \) và \( BP \) song song (trục thẳng đứng),
+\(\angle BAD = \angle BDP = 60^\circ \)
+
+Suy ra \( AP = \sqrt{BD^2 - AD^2} = \sqrt{30} \).
+
+Tìm \( m+n \):
+\[
+m = 4, \quad n = 7 
+\]
+
+\[
+\boxed{11}
+\]
+11--113 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-28
+Question: Mỗi đỉnh của hình bát giác đều được tô màu hoặc đỏ hoặc xanh với xác suất bằng nhau. Xác suất để sau đó hình bát giác có thể được xoay sao cho tất cả các đỉnh màu xanh nằm ở các vị trí mà ban đầu là các đỉnh màu đỏ là $\tfrac{m}{n}$, trong đó $m$ và $n$ là các số nguyên tố cùng nhau và dương. Hỏi $m+n$ là bao nhiêu?
+Model's Full Answer: Trong hệ thống màu đơn sắc (đỏ/xanh), tính toán:
+\[ \text{Số cách} = \binom{n+m-1}{2} = \frac{(n+m-1)!}{(n+1)!\cdot(m+1)!} \]
+
+Điều kiện tổng quát cho \( m + n \geq 3 \):
+\[ n + m - 4 > 0 \]
+\[ m(n + 3) > 0 \]
+\[ \Rightarrow m \geq \frac{3}{n} \quad (\text{với } n \text{ là số tự nhiên khác không}). \]
+
+Áp dụng giá trị nguyên tố chung lớn nhất \( m \times n \):
+\[ \boxed{7} \]
+7--371 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-29
+Question: Đối với mỗi số nguyên dương $n$, hãy cho $a_n$ là số nguyên dương nhỏ nhất là bội số của $23$ sao cho $a_n \equiv 1 \pmod{2^n}.$ Tìm số lượng các số nguyên dương $n$ nhỏ hơn hoặc bằng $1000$ sao cho $a_n = a_{n+1}.$
+Model's Full Answer: **Tìm số lượng các \( n \) sao cho \( a_n = a_{n+1} \):**
+
+Khi đó, chúng ta cần tìm số hợp số tối thiểu \( k \) thỏa mãn:
+\[ a_k = k \cdot 23 \]
+
+Chia cho \( 2^{k-1} \):
+\[ (a_k - 2^k)(2^k - 1) = 23 \]
+\[ (k-1)(2^k - 1) = 23 \]
+
+Áp dụng phân tích nhị thức:
+
+\[
+(k-1)(2^k - 1) = (k-1)^2 - 1 
+\]
+
+Suy ra:
+
+\[ (2^k - 1)(k-1) = 23 \implies (2^k - 1)(k-1) = 49 \]
+
+Giải quyết phương trình này:
+
+\[
+(2^k - 1)(k-1) = 49 \implies (2^k - 1)(k-1) = 50
+\]
+
+\((k-1)\) được chia hết bởi 50.
+
+Một cách tổng quát, để có một số hợp số tối thiểu \( k \):
+
+\[ k = 50 \]
+
+Do đó, số lượng các \( n \) đáp ứng điều kiện trên là:
+
+\[ \boxed{50} \]
+50--363 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-30
+Question: Một hộp chứa hình lập phương có các đỉnh $A,$ $B,$ $C,$ và $D,$ trong đó $\overline{AB}$ và $\overline{CD}$ là các cạnh song song của hình lập phương, và $\overline{AC}$ và $\overline{BD}$ là các đường chéo của các mặt của hình lập phương, như hình vẽ. Đỉnh $A$ của hình lập phương được đặt trên một mặt phẳng nằm ngang $\mathcal{P}$ sao cho mặt phẳng của hình chữ nhật $ABDC$ vuông góc với $\mathcal{P},$ đỉnh $B$ cao hơn $\mathcal{P}$ 2 mét, đỉnh $C$ cao hơn $\mathcal{P}$ 8 mét, và đỉnh $D$ cao hơn $\mathcal{P}$ 10 mét. Hình lập phương chứa nước mà mặt nước của nước song song với $\mathcal{P}$ ở độ cao 7 mét so với $\mathcal{P}.$ Thể tích nước là $\frac{m}{n}$ mét khối, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau. Tìm $m+n.$
+Model's Full Answer: Trong hình lập phương, độ cao của đỉnh $D$ tương ứng với khoảng cách từ trung tâm (trục $OP$) đến đỉnh $C$:
+
+\[
+\text{Chiều cao đỉnh } D = \sqrt{3}\cdot 8 = 24 \, \text{mét}
+\]
+
+Tính thể tích nước bằng bán kính mặt nước xấp xỉ \(R\):
+
+\[
+V_{\text{nước}} = \frac{\pi R^3}{6} \approx \frac{22}{7} \times 24^3 \approx 15906.5 \, \text{cm}^3
+\]
+
+Do đó,
+\[
+m + n = 24 + 24 = 48
+\]
+
+Chọn đơn vị thích hợp:
+\[
+m+n = 48 + 48 = 96
+\]
+
+Đáp án cuối cùng là:
+\[
+\boxed{96}
+\]
+96--751 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-31
+Question: Cho $A$ là một góc nhọn sao cho $\tan A = 2 \cos A.$ Tìm số các số nguyên dương $n$ nhỏ hơn hoặc bằng $1000$ sao cho $\sec^n A + \tan^n A$ là một số nguyên dương mà chữ số hàng đơn vị là $9.$
+Model's Full Answer: **Tìm các số nguyên dương \( n \) để \(\sec^n A + \tan^n A\) là số nguyên dương có chữ số hàng đơn vị là 9**
+
+Để giải quyết vấn đề này, chúng ta cần tìm các giá trị của \( n \) làm cho:
+
+\[ 
+\sec^n A + \tan^n A = k_9 (\text{ với } k_9 \in \mathbb{Z}^{+})
+\]
+
+Sử dụng định lý Bézout và sự liên hệ giữa các bậc của hàm sinus và tang, ta có:
+
+\[ 
+k_9 = 9 - (n-3) \cdot \left| \frac{\sin(n)}{\tan(n)} \right|
+\]
+\[ 
+\begin{aligned}
+&\quad \sec^n A = 9^k_n \\
+&\quad \tan^n A = 9^k_n - 1 \\
+&\quad k_n = 9 - (n-3) \cdot \left( \frac{\sin(n)}{\tan(n)} \right)
+\end{aligned}
+\]
+
+Chúng ta muốn \( k_n \geq 9 \):
+
+\[ 
+9 - (n-3) \cdot \left( \frac{\sin(n)}{\tan(n)} \right) \geq 9
+\]
+
+Giải phương trình này:
+
+\[ 
+n - 3 > 0 \implies n \geq 6
+\]
+
+Vậy, số lượng tối đa các \( n \) thỏa mãn điều kiện trên là:
+
+\[ 
+\boxed{6}
+\]
+6--167 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-32
+Question: Đối với các số nguyên dương $a$, $b$, và $c$ với $a < b < c$, hãy xem xét các tập hợp tem thư có mệnh giá $a$, $b$, và $c$ xu mà chứa ít nhất một con tem của mỗi mệnh giá. Nếu tồn tại một bộ sưu tập như vậy bao gồm các bộ con có giá trị bằng với mỗi số nguyên từ 1 xu đến 1000 xu, gọi $f(a, b, c)$ là số tem ít nhất trong bộ sưu tập đó. Tìm tổng của ba giá trị nhỏ nhất của $c$ sao cho $f(a, b, c) = 97$ với một số lựa chọn của $a$ và $b$.
+Model's Full Answer: **Tìm tổng các giá trị nhỏ nhất của \(c\) để \(\frac{a}{b} + \frac{b}{c} + \frac{c}{a} = 97\)**
+
+Trong các tập hợp tem thư, điều kiện này tương đương với:
+
+\[ f(a, b, c) = 97 \]
+
+Một cách tiếp cận đơn giản:
+
+- Chia tất cả các thành phần trong biểu thức trên cho tích của các thành phần (được đánh dấu bởi \( a \), \( b \), và \( c \)):
+  \[
+  \frac{a \cdot b \cdot c}{a^3 + b^3 + c^3}
+  \]
+  - Đây là hàm liên tục, vì nó không phụ thuộc vào \(a\) hoặc \(b\) nhưng chỉ ảnh hưởng đến \(c\).
+
+Kết quả là:
+
+\[ f(a, b, c) = \left( \frac{a}{a^3 + b^3 + c^3} \right)^{\frac{1}{4}} \]
+
+Vì chúng ta cần tìm giá trị nhỏ nhất của \(c\) theo hệ số \( \frac{1}{4}\):
+
+\[ \text{Giá trị min}(c) = 16 \]
+
+Do đó, **tổng của ba giá trị nhỏ nhất của \(c\) để đạt được \(f(a, b, c) = 97\) là**: 
+
+\[ \boxed{16} \]
+16--188 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-33
+Question: Cho $\ell_A$ và $\ell_B$ là hai đường thẳng song song phân biệt. Với các số nguyên dương $m$ và $n$, các điểm phân biệt $A_1, A_2, \allowbreak A_3, \allowbreak \ldots, \allowbreak A_m$ nằm trên $\ell_A$, và các điểm phân biệt $B_1, B_2, B_3, \allowbreak \ldots, \allowbreak B_n$ nằm trên $\ell_B$. Ngoài ra, khi các đoạn thẳng $\overline{A_iB_j}$ được vẽ cho tất cả $i=1,2,3,\ldots, m$ và $j=1,\allowbreak 2,\allowbreak 3, \ldots, \allowbreak n$, không có điểm nào nằm hẳn giữa $\ell_A$ và $\ell_B$ nằm trên nhiều hơn hai đoạn thẳng. Hãy tìm số vùng có giới hạn mà hình này chia mặt phẳng khi $m=7$ và $n=5$. Hình dưới đây cho thấy có 8 vùng khi $m=3$ và $n=2$.[asy] import geometry; size(10cm); draw((-2,0)--(13,0)); draw((0,4)--(10,4)); label("$\ell_A$",(-2,0),W); label("$\ell_B$",(0,4),W); point A1=(0,0),A2=(5,0),A3=(11,0),B1=(2,4),B2=(8,4),I1=extension(B1,A2,A1,B2),I2=extension(B1,A3,A1,B2),I3=extension(B1,A3,A2,B2); draw(B1--A1--B2); draw(B1--A2--B2); draw(B1--A3--B2); label("$A_1$",A1,S); label("$A_2$",A2,S); label("$A_3$",A3,S); label("$B_1$",B1,N); label("$B_2$",B2,N); label("1",centroid(A1,B1,I1)); label("2",centroid(B1,I1,I3)); label("3",centroid(B1,B2,I3)); label("4",centroid(A1,A2,I1)); label("5",(A2+I1+I2+I3)/4); label("6",centroid(B2,I2,I3)); label("7",centroid(A2,A3,I2)); label("8",centroid(A3,B2,I2)); dot(A1); dot(A2); dot(A3); dot(B1); dot(B2); [/asy]
+Model's Full Answer: Trong bài toán, chúng ta cần xác định số lượng các vùng giới hạn (hình dạng) tồn tại trên một mặt phẳng khi:
+
+- Có $m = 7$
+- Số $n = 5$
+
+Hãy tính từng bước theo hướng dẫn:
+
+**Đặt điều kiện ban đầu:**
+- Các điểm \(A_i\) và \(B_j\) phải phân biệt.
+- Không có điểm nào nằm chính giữa hai đường thẳng.
+
+**Tìm số vùng giới hạn:**
+
+1. **Vùng \( \Delta ABC \)**:
+   - Đây là một tam giác với ba cạnh \(AB, BC\) và \(AC\).
+   - Để nó là một vùng giới hạn, mỗi cạnh phải liên quan đến ít nhất hai điểm từ các đường thẳng khác nhau.
+
+2. **Vùng \( \Delta AB'BC' \)**:
+   - Tam giác \( \Delta AB'BC'\) tương tự như \( \Delta ABC \):
+     - Mỗi cạnh sẽ liên quan đến ít nhất hai điểm từ các đường thẳng.
+   - Do đó, cũng là một vùng giới hạn.
+
+3. **Số vùng giới hạn**: 
+   - Tổng số vùng giới hạn phụ thuộc vào tổng số đường thẳng \(m\) và số phần tử của tập hợp các điểm \(n\). Trong trường hợp đặc biệt \(m = 7\) và \(n = 5\):
+
+   \[
+   \text{Total regions} = m + n - 1 = 7 + 5 - 1 = 9
+   \]
+
+Do đó, số lượng vùng giới hạn là:
+\[ \boxed{9} \]
+9--244 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-34
+Question: Giả sử $x_1\leq x_2\leq \cdots\leq x_{100}$ là các số thực sao cho $|x_1| + |x_2| + \cdots + |x_{100}| = 1$ và $x_1 + x_2 + \cdots + x_{100} = 0$. Trong tất cả các dãy số gồm $100$ số như vậy, giá trị lớn nhất mà $x_{76} - x_{16}$ có thể đạt được là $ \frac{m}{n} $, trong đó $m$ và $n$ là các số nguyên tố cùng nhau và dương. Tìm $m+n$.
+Model's Full Answer: Trong bài toán, \( x_{76} - x_{16} \) là tìm giá trị tối đa:
+\[ m + n = 100(16) + 75 = 1845 \]
+
+Do đó,
+\[ m + n = 1845 \]
+Với các điều kiện ban đầu, giá trị cần tìm là:
+\[ m = 99 \quad; \; n = 76 \]
+
+Chứng minh:
+
+\[ (99+76)(1845-1)=3755 \]
+\[ m+n=1845 \]
+
+Đáp án: 
+\[ \boxed{1845} \]
+1845--841 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-35
+Question: Hãy để $S$ là tập hợp các số nguyên dương $k$ sao cho hai parabolas \[y=x^2-k~~\text{và}~~x=2(y-20)^2-k\] cắt nhau tại bốn điểm phân biệt, và bốn điểm này nằm trên một đường tròn có bán kính không quá $21$. Tính tổng của phần tử nhỏ nhất và phần tử lớn nhất của $S$.
+Model's Full Answer: **Dựa trên thông tin được đưa ra, chúng ta cần giải quyết vấn đề sau:**
+
+1. **Tìm điểm chung**: Hai paraboloid \( y = x^2 - k \) và \( x = 2(y - 20)^2 - k \) gặp nhau tại bốn điểm phân biệt.
+2. **Xác định bán kính của đường tròn**: Đường tròn đi qua các điểm chung và cách đều với bán kính tối thiểu.
+
+**Giải pháp:**
+
+1. **Ghi nhớ sự tương ứng giữa các phương trình**: Ta có:
+   \[
+   (x^2 - k) = x + 4
+   \]
+   \[
+   (2(x - 20)^2 - k) = 8x - 64
+   \]
+
+2. **Phân tích các phương trình để tìm các nghiệm chung**:
+   - Từ phương trình thứ hai, biến thành:
+     \[
+     2x^2 - 39x + 72 = k
+     \]
+   - Thay vào phương trình đầu tiên:
+     \[
+     x^2 - 4x + 4 = 0
+     \]
+
+3. **Điều kiện để phương trình có nghiệm chung**:
+   - Phương trình đơn giản hóa đến dạng bậc ba:
+     \[
+     x(2x - 2) + 2 = 0
+     \]
+   - Giải ra:
+
+     \[
+     x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+     \]
+     \[
+     x = \frac{2 \pm \sqrt{(-2)^2 - 4(1)(2)}}{2}
+     \]
+     \[
+     x = \frac{2 \pm \sqrt{4 - 8}}{2}
+     \]
+     \[
+     x = \frac{2 \pm \sqrt{-4}}{2}
+     \]
+     \[
+     x = \frac{2 \pm i\sqrt{2}}{2}
+     \]
+     \[
+     x = 1 \pm i\sqrt{2}
+     \]
+
+4. **Chọn giá trị phù hợp**:
+   - Giá trị thực tế duy nhất từ đó là:
+     \[
+     x_1 = 1 + i\sqrt{2}, \quad x_2 = 1 - i\sqrt{2}
+     \]
+
+5. **Xác định bán kính đường tròn bằng khoảng cách từ mỗi đỉnh của paraboloid đến tâm đường tròn**:
+   - Đỉnh của \(x^2 - k\) ở \(x = 1\), và tâm của đường tròn sẽ nằm trên đường thẳng \(x = 1 - i\sqrt{2}\).
+   - Bán kính \(R\) của đường tròn sẽ là:
+
+     \[
+     R = |1 - i\sqrt{2}|
+     \]
+
+6. **Tính toán phần tử nhỏ nhất và lớn nhất**:
+   - Phần tử nhỏ nhất: \(|1 - i\sqrt{2}| = 1 - i\sqrt{2}\)
+   - Phần tử lớn nhất: \(|1 + i\sqrt{2}| = 1 + i\sqrt{2}\)
+
+**Do đó, tổng của phần tử nhỏ nhất và phần tử lớn nhất là:**
+
+\[ 
+\boxed{1 - i\sqrt{2} + 1 + i\sqrt{2}}
+\]
+1 - i\sqrt{2--285 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-36
+Question: Xét dãy số $(a_k)_{k\ge 1}$ gồm các số hữu tỉ dương được định nghĩa bởi $a_1 = \frac{2020}{2021}$ và với $k\ge 1$, nếu $a_k = \frac{m}{n}$ với các số nguyên dương $m$ và $n$ nguyên tố cùng nhau, thì 
+
+\[a_{k+1} = \frac{m + 18}{n+19}.\]
+
+Xác định tổng của tất cả các số nguyên dương $j$ sao cho số hữu tỉ $a_j$ có thể được viết dưới dạng $\frac{t}{t+1}$ với một số nguyên dương $t$.
+Model's Full Answer: **Tổng số nguyên dương \( j \)**:
+
+Để tìm giá trị của \( j \), chúng ta sẽ giải quyết phương trình liên quan đến việc sử dụng định lý Euler-Bellini cho các số nguyên dương.
+
+**Phương trình Euler-Bellini**: 
+\[ a_{j+1} = \frac{(m+18)(n+19)}{t} \]
+
+**Giải pháp:**
+
+Chúng ta cần xác định điều kiện để số hữu tỉ \( a_j \) có thể biểu diễn như \( \frac{t}{t+1} \). Theo phương trình này, ta có:
+
+\[ \left| \frac{(m+18)(n+19)}{t} \right| \leq |t| \]
+
+Áp dụng phân phối thừa số và hệ quả của Euclidean:
+
+\[ (m+18)(n+19) \leq t(m+n-37) \]
+
+\[ |(m+18)(n+19)| \leq t(t+1)\]
+
+Do đó, áp dụng định lý Euler-Bellini:
+
+\[ \left| \frac{t}{t+1} \right| \leq \left|\frac{t}{t+1}\right| \]
+
+**Vì \( t \) là số nguyên dương bất kỳ, chúng ta chỉ cần kiểm tra khi \( t > 1 \):**
+
+\[ \left| \frac{t}{t+1} \right| \leq 1 \]
+
+Mà:
+
+\[ \left| \frac{t}{t+1} \right| \leq 1 \]
+\[ \Rightarrow \frac{|t|}{|t+1|} \leq 1 \]
+
+**Kết luận:** Tổng số nguyên dương \( j \) mà số hữu tỉ \( a_j \) có thể được biểu diễn bằng cách chia thành phần tử nhỏ nhất của tập hợp các số nguyên dương lớn hơn \( t \):
+
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--59 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-37
+Question: Đặt $m$ và $n$ là các số nguyên lẻ lớn hơn $1.$ Một hình chữ nhật $m \times n$ được tạo nên bởi các ô vuông đơn vị, trong đó các ô ở hàng đầu tiên được đánh số từ trái sang phải với các số nguyên từ $1$ đến $n$, các ô ở hàng thứ hai được đánh số từ trái sang phải với các số nguyên từ $n+1$ đến $2n$, v.v. Ô số $200$ nằm ở hàng đầu, và ô số $2000$ nằm ở hàng cuối. Tìm số cặp sắp thứ tự $(m,n)$ các số nguyên lẻ lớn hơn $1$ sao cho, trong hình chữ nhật $m \times n$, đường thẳng đi qua tâm các ô số $200$ và $2000$ cắt phần bên trong của ô số $1099$.
+Model's Full Answer: **Các bước giải pháp:**
+
+1. **Xác định khoảng cách giữa các ô số**: Biết rằng \(200\) và \(2000\) cách nhau 1099, ta có:
+
+\[
+200 - 1099 = -899 \text{ (điểm A)}
+\]
+
+2. **Tính toán khoảng cách chính xác**: Từ phương trình này, ta tìm ra khoảng cách \(d\) giữa điểm A và trung điểm của đoạn \(AB\):
+
+\[
+d = |A - B| = 899
+\]
+
+3. **Dựa vào điều kiện để phân chia \(1099\) thành một số nguyên lẻ**: Khoảng cách giữa \(200\) và \(2000\) chỉ bằng 1099. Vì vậy, \(1099\) có thể được biểu diễn như tổng của ba số nguyên nhỏ nhất (tức là 3x5 + 7).
+
+4. **Sử dụng hệ thống dấu hiệu**: Xét các trường hợp tương ứng của \(m\) và \(n\) khi \(d = 899\). Ta thấy:
+   - Nếu \(m=3\) và \(n=5\), thì \(1099\) sẽ được viết dưới dạng \(3(3^2) + 7\).
+   - Nếu \(m=5\) và \(n=3\), thì \(1099\) sẽ được viết dưới dạng \(5(5^2) + 7\).
+
+5. **Chọn kết quả phù hợp**: Do đó, ta cần kiểm tra cả hai trường hợp để tìm cặp \(m_n\) thỏa mãn:
+
+\[ 
+\begin{align*}
+&\text{(1)} \quad m = 3, \, n = 5 \\
+&\text{(2)} \quad m = 5, \, n = 3
+\end{align*} \]
+6. **So sánh và chọn kết quả**: Dựa trên việc tính toán và so sánh, chúng ta tìm thấy các cặp \(m_n\) thích hợp sau đây:
+
+- Các cặp: `(3; 5)` và ``(5; 3)`
+  
+Vậy, số lượng các cặp như vậy là:
+
+\[
+\boxed{\text{3}}
+\]
+\text{3--248 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-38
+Question: Đối với các số phức phân biệt $z_1,z_2,\dots,z_{673}$, đa thức \[(x-z_1)^3(x-z_2)^3 \cdots (x-z_{673})^3\] có thể được biểu diễn dưới dạng $x^{2019} + 20x^{2018} + 19x^{2017} + g(x)$, trong đó $g(x)$ là một đa thức với các hệ số phức và với bậc không quá $2016$. Giá trị của \[\left| \sum_{1 \le j < k \le 673} z_jz_k \right|\] có thể được biểu diễn dưới dạng $\tfrac{m}{n}$, trong đó $m$ và $n$ là các số nguyên dương nguyên tố cùng nhau. Tìm $m+n$.
+Model's Full Answer: \[ m = 2016 \times 2015 \]
+\[ n = 673 \]
+
+Vậy \( m + n = 2016 + 673 = 2691 \).
+
+Dựa vào các điều kiện cho thấy:
+\[ \left| \sum_{1 \leq j < k \leq 673} z_jz_k \right| = \frac{2691}{4} \]
+
+Tìm giá trị thích hợp:
+
+\[ \boxed{671} \]
+671--352 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-39
+Question: Tìm số lượng hàm số $f(x)$ từ $\{1, 2, 3, 4, 5\}$ đến $\{1, 2, 3, 4, 5\}$ sao cho $f(f(x)) = f(f(f(x)))$ đúng với mọi $x$ trong $\{1, 2, 3, 4, 5\}$.
+Model's Full Answer: Để tìm số lượng các hàm \( f \) như vậy:
+\[ f(f(x)) = f(f(f(x))) \]
+
+Chúng ta có:
+
+- \( f(1) = 1 \)
+- \( f(2) = 2 \)
+- \( f(3) = 3 \)
+
+Áp dụng quy tắc trên:
+\[ f(f(1)) = f(f(2)) = 2 = f(f(3)) \]
+\[ f(f(2)) = 2 = f(f(3)) \]
+\[ f(f(3)) = 3 = f(f(4)) \]
+\[ f(f(4)) = 3 = f(f(5)) \]
+
+Do đó, số hàm đúng là:
+\[ \boxed{3} \]
+3--756 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-40
+Question: Tam giác $ABC$ có độ dài các cạnh $AB = 9$, $BC = 5\sqrt{3}$ và $AC = 12$. Các điểm $A = P_{0}, P_{1}, P_{2}, ..., P_{2450} = B$ nằm trên đoạn thẳng $\overline{AB}$ với $P_{k}$ nằm giữa $P_{k-1}$ và $P_{k+1}$ cho $k = 1, 2, ..., 2449$, và các điểm $A = Q_{0}, Q_{1}, Q_{2}, ..., Q_{2450} = C$ nằm trên đoạn thẳng $\overline{AC}$ với $Q_{k}$ nằm giữa $Q_{k-1}$ và $Q_{k+1}$ cho $k = 1, 2, ..., 2449$. Hơn nữa, mỗi đoạn thẳng $\overline{P_{k}Q_{k}}$, $k = 1, 2, ..., 2449$, đều song song với $\overline{BC}$. Các đoạn thẳng này chia tam giác thành $2450$ phần, gồm $2449$ hình thang và $1$ tam giác. Mỗi phần trong $2450$ phần có diện tích bằng nhau. Tìm số đoạn thẳng $\overline{P_{k}Q_{k}}$, $k = 1, 2, ..., 2450$, có độ dài hữu tỷ.
+Model's Full Answer: Để giải quyết vấn đề này, chúng ta sẽ xác định mối quan hệ giữa các điểm:
+
+\[ P_0, P_1, \ldots, P_{2450} \] (điểm \(B\)) nằm trên đường tròn \(AB\) và:
+\[ Q_k, Q_{k+1}, \ldots, Q_{2449} \] (điểm \(C\)) nằm trên đường tròn \(AC\) với khoảng cách \(d_C = 12 - d_B\) từ \(C\) đến \(B\).
+
+Do đó, ta có thể sử dụng phương trình tổng quát của các đoạn thẳng liên kết:
+
+\[
+\frac{|P_k - B|}{|P_{k+1} - B| + |P_{k+2} - B| + \cdots + |P_{k-(k-1)} - B|} = k
+\]
+
+với mỗi \(k = 1, 2, \ldots, 2449\). Tính toán diện tích các tam giác được tạo ra bởi các đoạn thẳng này, mỗi tam giác có chiều cao là một đoạn thẳng đặc biệt từ \(P_i\) đến \(Q_j\):
+
+\[
+\int_{0}^{d_C} \left( \frac{1}{2} r^2 h_d(x) dx \right)
+\]
+
+với \(r = \frac{|P_i - B|}{d_C}\), \(h_d(x)\) là độ dài của một đoạn \(P_iQ_j\).
+
+Từ đây, áp dụng sự phân bố hình thang để tìm diện tích, chúng ta có:
+
+\[
+\sum_{k=1}^{2449} \frac{1}{2} r^2 h_d(k) = \sum_{k=1}^{2449} \frac{1}{2} r^2 (d_C - (k-1)d_B)
+\]
+
+Áp dụng định lý Pythagoras:
+
+\[
+\frac{(d_C - (k-1)d_B)^2}{8} = \sum_{k=1}^{2449} \frac{1}{2} r^2 (d_C - (k-1)d_B)
+\]
+
+Mỗi giá trị cụ thể \(d_C - (k-1)d_B\) đảm bảo diện tích tương ứng:
+
+\[
+\boxed{\frac{(d_C - (k-1)d_B)^2}{8}}
+\]
+\frac{(d_C - (k-1)d_B)^2--20 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-41
+Question: Trong hình bát giác đều $CAROLINE$, $CA = RO = LI = NE = \sqrt{2}$ và $AR = OL = IN = EC = 1$. Hình bát giác tự cắt nhau $CORNELIA$ bao bọc sáu vùng tam giác không chồng lên nhau. Gọi $K$ là diện tích bao bởi $CORNELIA$, tức là tổng diện tích của sáu vùng tam giác đó. Khi đó $K = \frac{a}{b}$, trong đó $a$ và $b$ là các số nguyên tố cùng nhau dương. Tìm $a + b$.
+Model's Full Answer: \[
+a+b = 6
+\]
+
+Bước giải:
+- Sử dụng điều kiện cho diện tích \(K\) của \(CORNELIA\):
+\[ 
+K = CA^2 + CR^2 + CO^2 + CON^2 + OQ^2 + QN^2 = (RO)^2 + (LI)^2 + (NE)^2 + (\sqrt{2})^2 + (IN)^2 + (EC)^2 
+\]
+- Áp dụng định lý Pythagoras cho mỗi tam giác:
+
+\[ 
+(RO)^2 = \left(\frac{\sqrt{2}}{2}\right)R^2 \\
+(RO)^2 = \frac{\sqrt{2}}{4}R^2 
+\]
+\[ 
+(CI)^2 = (\sqrt{2})^2R^2 = 2\sqrt{2}R^2 \\
+(CI)^2 = 4R^2 
+\]
+\[ 
+(LE)^2 = (NE)^2 - (\sqrt{2})^2R^2 = 2\sqrt{2}R^2 - 2R^2 = 0 \\
+(LE)^2 = R^2 
+\]
+\[ 
+(NF)^2 = (\sqrt{2})^2R^2 = 2\sqrt{2}R^2 
+\]
+
+Tích hợp giá trị này vào phương trình \(K\):
+
+\[ 
+(K+1)(K+1)= 5R^2 = 5R^2 \implies a+b=6 
+\]
+
+Chọn \(a=b=3\).
+
+Vậy kết quả chính xác là:
+\[
+\boxed{9}
+\]
+9--23 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-42
+Question: Cho $x, y$ và $z$ là ba số thực thỏa mãn hệ phương trình \begin{align*} \log_2(xyz-3+\log_5 x)&=5,\ \log_3(xyz-3+\log_5 y)&=4,\ \log_4(xyz-3+\log_5 z)&=4. \end{align*} Tìm giá trị của $|\log_5 x|+|\log_5 y|+|\log_5 z|$ .
+Model's Full Answer: Để giải quyết vấn đề này, áp dụng các hàm logarit:
+
+1. \( \log_2 (xyz - 3 + \log_5 x) = 5 \)
+2. \( \log_3 (xyz - 3 + \log_5 y) = 4 \)
+3. \( \log_4 (xyz - 3 + \log_5 z) = 4 \)
+
+Tìm hợp các căn bậc hai:
+\[ |(\log_5 x)| + |\log_5 y| + |\log_5 z| = |(1)^2| + |-1|^2 + |-2|^2 \]
+
+\[ = 1 + 1 + 4 = 6 \]
+
+Vì vậy, kết quả chính xác là:
+\[ \boxed{6} \]
+6--265 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-43
+Question: Freddy, chú ếch, đang nhảy xung quanh mặt phẳng tọa độ để tìm một con sông nằm trên đường thẳng ngang $y = 24$. Một hàng rào nằm trên đường thẳng ngang $y = 0$. Ở mỗi lần nhảy, Freddy chọn ngẫu nhiên một hướng song song với một trong các trục tọa độ và di chuyển một đơn vị theo hướng đó. Khi chú đang ở tại một điểm mà $y = 0$, với xác suất như nhau, chú chọn một trong ba hướng, nơi chú hoặc nhảy song song với hàng rào hoặc nhảy ra xa khỏi hàng rào, nhưng chú không bao giờ chọn hướng mà sẽ khiến chú vượt qua hàng rào đến nơi $y < 0$. Freddy bắt đầu tìm kiếm tại điểm $(0, 21)$ và sẽ dừng lại khi chú đến một điểm trên sông. Hãy tìm số bước nhảy kỳ vọng mà Freddy cần để đến được con sông.
+Model's Full Answer: Để tính bước nhảy kỳ vọng cho Freddy, chúng ta áp dụng thống kê tuyến tính:
+
+\[ \text{Expectation} = \mathbb{E}[N] \]
+
+Với:
+- \( N \) là tổng số bước nhảy (nghịch đảo của khoảng cách từ gốc).
+- \( E[N] \) là giá trị trung bình của \( N \).
+
+Áp dụng hàm tích phân tuyến tính:
+\[ \mathbb{E}[N] = \int_0^{\infty} N \, dx = \int_{0}^{360} 21x \, dx = 579 \]
+
+Do đó, bước nhảy kỳ vọng của Freddy là:
+\[ \boxed{579} \]
+579--273 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-44
+Question: Hãy gọi một hoán vị $a_1, a_2, \ldots, a_n$ của các số nguyên $1, 2, \ldots, n$ là tăng dần gần đúng nếu $a_k \leq a_{k+1} + 2$ đối với mỗi $1 \leq k \leq n-1$ . Ví dụ, $53421$ và $14253$ là các hoán vị tăng dần gần đúng của các số nguyên $1, 2, 3, 4, 5$ , nhưng $45123$ thì không phải. Hãy tìm số lượng các hoán vị tăng dần gần đúng của các số nguyên $1, 2, \ldots, 7$ .
+Model's Full Answer: Số lượng các hoán vị tăng gần đúng của các số nguyên từ $1$ đến $7$ là:
+
+\[
+n = 7 - (k=0) + 1 = 8
+\]
+
+Vậy, tổng cộng có \(8\) hoán vị.
+
+\[ \boxed{8} \]
+8--486 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-45
+Question: Đối với mỗi số nguyên $n \ge 2$, gọi $A(n)$ là diện tích của vùng trên mặt phẳng tọa độ được xác định bởi các bất đẳng thức $1 \le x \le n$ và $0 \le y \le x \left\lfloor \sqrt{x} \right\rfloor$, trong đó $\left\lfloor \sqrt{x} \right\rfloor$ là số nguyên lớn nhất không vượt quá $\sqrt{x}$. Tìm số giá trị của $n$ với $2 \le n \le 1000$ mà $A(n)$ là một số nguyên.
+Model's Full Answer: \[ A(n) = 1 + 3 + 5 + ... + (n-1)(n+1)/2 \]
+
+Sử dụng nghiệm tổng quát cho \( n \):
+
+\[ A(n) = \frac{2(2n)}{(n+1)\cdot(n+2)} \]
+
+Áp dụng điều kiện \( n \geq 2 \):
+\[ 2 \leq n \leq 1000 \Rightarrow \frac{4}{7}(n+1)(n+2) \leq 1000 \]
+Giải phương trình:
+\[ n^2 + 6n - 800 \leq 1000 \]
+\[ n^2 + 6n - 120 \leq 0 \]
+\[ (n+20)(n-6) \leq 0 \quad \text{(vô nghiệm)} \]
+\[ 1000 \geq n^2 \geq 600 \]
+\[ n \geq 20 \]
+
+Vậy, tìm kiếm số giá trị \( n \) hợp lệ:
+
+\[ n \in [20, 1000] \]
+
+Cụ thể:
+\[ A(20) = 9 + 13 + 15 + ... + 105/2 = 5515 \]
+\[ A(1000) = 5515^2 / (7*6 * 5) \approx 288487 \]
+
+Chọn \( n \): 
+\[ \boxed{1000} \]
+1000--483 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-46
+Question: Sea $f(x)$ un polinomio de tercer grado con coeficientes reales que satisface \[|f(1)|=|f(2)|=|f(3)|=|f(5)|=|f(6)|=|f(7)|=12.\] Encuentra $|f(0)|$.
+Model's Full Answer: Biết rằng:
+
+\[ |f(1)| = 12, \quad f(2) = 4, \quad f(3) = 8 \]
+
+Chúng ta cần tính \( |f(0)| \).
+
+Áp dụng các điều kiện cho từng bậc:
+- Bậc thứ nhất: \((x - 1)^2\)
+- Bật thứ ba (hợp số): \( x^3 + x^2 + x + 12 \)
+
+Tính toán từ phương trình này:
+
+\[ f(0) = (-1)^3 + (-1)^2 + 0 + 12 = 1 + 1 + 12 = 14 \]
+
+Do đó, 
+\[ |f(0)| = 14 \]
+
+Vì vậy,
+\[ \|f(0)\| = \boxed{14} \]
+14--72 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-47
+Question: Trong hệ tọa độ Đề các, hyperbol $\Gamma: x^{2}-y^{2}=1$ có đỉnh phải tại $A$. Một đường tròn có tâm nằm trên trục $y$ và có chính xác một điểm chung với mỗi nhánh của $\Gamma$ được gọi là "đường tròn tốt". Nếu hai đường tròn tốt tiếp xúc ngoài tại điểm $P$, và khoảng cách giữa các tâm là $d$, hãy tìm tất cả các giá trị có thể của $\frac{d}{|PA|}$.
+Model's Full Answer: Để giải quyết vấn đề này, ta áp dụng tính chất hình học:
+
+\[ d = \sqrt{(PA)^2 + (PB)^2} \]
+
+Cụ thể:
+- \( PA \) là bán kính đường tròn tốt.
+- \( PB \) là khoảng cách từ \( P \) đến gốc \( y \).
+
+Áp dụng cho hyperbol $\Gamma$, giả sử đỉnh \( A \) thỏa mãn điều kiện đề bài.
+
+**Khoảng cách \( |PA| \)**:
+\[ |PA| = \sqrt{x_A^2 - y_A^2} \]
+Do đó,
+\[ d = \sqrt{\left(\sqrt{x_A^2 - y_A^2}\right)^2 + \left(x_A - 0\right)^2} = \sqrt{1 + x_A^2} \]
+
+**Tính toán giá trị của \( \frac{d}{|PA|} \)**:
+
+\[ \frac{d}{|PA|} = \frac{\sqrt{1 + x_A^2}}{|x_A|^2} \]
+
+Vì \( x_A^2 < |x_A|^2 \):
+\[ \frac{d}{|PA|} = \frac{1}{|x_A|} \]
+
+Mà \( |x_A| \geq 1 \), do đó:
+\[ \frac{d}{|PA|} = \frac{1}{1} = 1 \]
+
+Vậy, giá trị tối đa của \( \frac{d}{|PA|} \) là:
+\[ \boxed{1} \]
+1--$2 \sqrt{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-48
+Question: Với các số phức \( z \) và \( w \) sao cho \( z + w = 2 \), tìm giá trị nhỏ nhất có thể của \( S = \left| z^2 - 2w \right| + \left| w^2 - 2z \right| \).
+Model's Full Answer: Để tính giá trị nhỏ nhất:
+
+\[ S = |z^2 - 2w| + |w^2 - 2z| \]
+
+Áp dụng Vi-et đối với các thành phần riêng lẻ:
+1. Đối với \( z^2 - 2w \):
+\[ |z^2 - 2w| = \sqrt{(z^2)^2 - (2w)^2} = \sqrt{z^4 - 4zw^2} \]
+Tối giản bằng cách chia cả hai bên bởi \( z \):
+
+\[ S_{\text{min}} = \frac{\sqrt{z^4 - 4zw^2}}{z} = \frac{|z|^4}{z^3} = \frac{z^3}{z} = 3 \]
+
+2. Đối với \( w^2 - 2z \):
+\[ |w^2 - 2z| = \sqrt{w^2 - (2z)^2} = \sqrt{w^2 - 4z^2} \]
+Giải quyết tương tự để duy trì tối thiểu:
+
+\[ S_{\text{min}} = \frac{\sqrt{w^2 - 4z^2}}{w} = \frac{1}{w} \]
+
+Do đó,
+\[ S_{\text{min}} = 3 \times \frac{1}{w} = \frac{3}{w} \]
+
+Chọn \( w = 2 \) dẫn đến giá trị tối ưu:
+\[ \boxed{\frac{3}{2}} \]
+\frac{3--$8\sqrt{5} - 16$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-49
+Question: Cho $F_{1}$ và $F_{2}$ là hai tiêu điểm của một hình elip $\Omega$. Chọn một điểm $P$ trên $\Omega$ (khác với các điểm cuối của trục chính), và gọi $O$ là tâm đường tròn ngoại tiếp của tam giác $\triangle P F_{1} F_{2}$. Nếu $\overrightarrow{PO} \cdot \overrightarrow{F_{1} F_{2}} = 2 \overrightarrow{P F}_{1} \cdot \overrightarrow{P F_{2}}$, thì giá trị nhỏ nhất của độ lệch tâm của $\Omega$ là $\qquad$.
+Model's Full Answer: **Giải pháp**
+
+Trong trường hợp này, chúng ta có:
+
+- Hai tiêu điểm \(F_1\) và \(F_2\)
+- Tâm đường tròn ngoại tiếp tam giác \(\triangle PFO\), đó là \(O\)
+- Độ dài vectơ từ \(P\) đến các tiêu điểm bằng nhau
+
+Khi đó, ta có thể áp dụng định lý về khoảng cách giữa hai tiêu điểm:
+
+\[ |FP - FO| = \frac{|FP - FO|}{2} \]
+
+Vì vậy, điều kiện cho biết:
+
+\[ FP - FO = 2 PO \]
+
+Để tìm giá trị tối thiểu của khoảng cách \(|FP - FO|\):
+
+\[ FP - FO = \sqrt{(FP - FO)^2 + FP^2} \]
+\[ FP - FO = \sqrt{\left( FP - FO \right)^2 + FP^2} \]
+\[ FP - FO = \sqrt{FP^2 - 4FP \cdot FO + FO^2} \]
+\[ FP - FO = \sqrt{FP^2 - 3FP \cdot FO + FO^2} \]
+
+Do đó, để đạt được giá trị nhỏ nhất:
+
+\[ FP - FO = \sqrt{FP(F+O) - FO(O)} \]
+
+Áp dụng tính chất hình học, đặc biệt là mối quan hệ giữa đường kính và bán kính của ellipse:
+
+\[ FP - FO = \sqrt{R - R_O} \]
+\[ FP - FO = \sqrt{R(R - O) / (R - O)} \]
+
+Chúng ta thấy rằng khi \(R\) (khoảng cách từ tâm \(O\) đến trục chính) giảm đi, giá trị \(FP - FO\) cũng giảm theo tỷ lệ thuận tương ứng.
+
+Vậy, giá trị nhỏ nhất của độ lệch tâm \((\Delta O)\) là:
+
+\[ \boxed{0} \]
+0--$\frac{\sqrt{6}}{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-50
+Question: Nếu tổng số chữ số của ba số nguyên dương \(a, b, c\) bằng 8 và 8 chữ số tạo nên \(a, b, c\) có thể sắp xếp thành các chữ số \(2, 0, 2, 4, 0, 9, 0, 8\), thì \((a, b, c)\) được gọi là một "mảng may mắn". Ví dụ, \((9, 8, 202400)\) là một mảng may mắn. Số lượng mảng may mắn \((a, b, c)\) thỏa mãn \(10<a<b<c\) là \(\qquad\).
+Model's Full Answer: Trong trường hợp này, chúng ta tìm kiếm các bộ \((a, b, c)\) thỏa mãn:
+
+\[ a + b + c = 8 \]
+\[ (a, b, c) \in \{1, 2, 3, 4, 5, 6, 7, 8\}^+ \]
+
+Số lượng phù hợp đáp ứng điều kiện này là:
+\[ \text{(a, b, c)} = 6 \]
+
+Do đó, số lượng mảng may mắn \((a, b, c)\) thỏa mãn yêu cầu là:
+
+\[ \boxed{6} \]
+6--591 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-51
+Question: Trong tam giác \( \triangle ABC \), biết rằng \( \cos C = \frac{\sin A + \cos A}{2} = \frac{\sin B + \cos B}{2} \). Tìm giá trị của \( \sin C \).
+Model's Full Answer: \[ \cos C = \frac{1 - 2\sin A + \cos A}{4}, \]
+\[ \Rightarrow \cos C^2 = (1 - 2\sin A + \cos A)^2 = 3(1 - 2\sin A) + 4\sin A = 5 - 6\sin A + 4\sin A = 9 - 6\sin A \]
+
+Sử dụng các điều kiện cho \(\sin C\) và tính:
+
+\[
+\sin C = \sqrt{9 - 6\sin A}
+\]
+
+Do đó, giải quyết:
+\[
+\boxed{\sqrt{9 - 6\sin A}}
+\]
+\sqrt{9 - 6\sin A--$\frac{3}{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-52
+Question: Trong hệ tọa độ Đề-các, một đường tròn có tâm nằm trên trục y và cắt mỗi nhánh của hyperbol $\Gamma: x^{2}-y^{2}=1$ tại đúng một điểm được gọi là "đường tròn tốt". Liệu có tồn tại hằng số $\lambda$ và một điểm cố định $A$ trên trục x sao cho nếu hai đường tròn tốt tiếp xúc ngoài tại điểm $P$, thì khoảng cách giữa các tâm của chúng $d=\lambda|PA|$ không?
+Model's Full Answer: **Tồn tại hằng số $\lambda$ và một điểm cố định $A$ trên trục \(x\) để:
+
+\[ d = \lambda |PA| \]
+
+trong hệ tọa độ Đề-các.
+
+Chúng ta sẽ chứng minh điều này bằng cách sử dụng tính chất của đường tròn tốt:
+
+- Đường tròn tốt (tốt) đi qua tâm và cắt bất kỳ nhánh nào của Hyperbola.
+- Nếu hai đường tròn tốt tiếp xúc ngoài tại một điểm, khoảng cách từ tâm của cả hai đến điểm đó phải bằng nhau.
+
+Kết hợp với giả thuyết, chúng ta có:
+
+\[ d = |\lambda|PA \]
+
+Để giải quyết vấn đề này, hãy làm theo các bước sau:
+
+1. **Xác định điểm \( A \)**: Chọn một điểm trên trục \(x\), chẳng hạn như \(A(0, 0)\).
+
+2. **Thiết lập vị trí của hai đường tròn**: Hai đường tròn tốt đi qua điểm \(A\) và cắt Hyperbola tại điểm \(B(x_1, y_1)\). Khoảng cách giữa tâm của hai đường tròn tốt là:
+
+   \[
+   d_A = \sqrt{(x_1 - x)^2 + (y_1 - y)^2}
+   \]
+
+3. **Sử dụng giả thuyết**: Giả thuyết nói rằng:
+
+   \[
+   d_A = \lambda |PA|
+   \]
+
+4. **Giải phương trình**: Thay thế \(d_A\) vào phương trình:
+
+   \[
+   (\lambda |PA|)(x_1 - x) + (y_1 - y)^2 = \sqrt{(x_1 - x)^2 + (y_1 - y)^2}
+   \]
+
+5. **Phân tích và cô lập \(|\lambda|A\)**: Điều chỉnh phương trình cho phù hợp với dạng tuyến tính đơn giản hơn:
+
+   \[
+   \lambda |PA| = \frac{x_1^2}{x} + \frac{y_1^2}{y}
+   \]
+   
+6. **Cộng các điều khoản với bình phương cơ sở**: Tính toán:
+
+   \[
+   |\lambda|PA = \left(\frac{x_1^2}{x}\right)^2 + \left(\frac{y_1^2}{y}\right)^2 = \frac{x_1^2}{x} + \frac{y_1^2}{y}
+   \]
+
+7. **Giải pháp**: Kết quả ở trên biểu thị mối quan hệ chính xác:
+
+   \[
+   |\lambda|PA = \frac{x_1^2}{x} + \frac{y_1^2}{y}
+   \]
+
+Vì vậy, tồn tại hằng số $\lambda$ và một điểm cố định \(A\) trên trục \(x\) thỏa mãn điều kiện cho phép:
+
+\[ d = \lambda |PA| \]
+NO_BOXED_ANSWER--$2 \sqrt{2} + 1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-53
+Question: Trong tứ diện \(ABCD\), \(AB \perp BC\), \(BC \perp CD\), và độ dài của các cạnh \(AB\), \(BC\), \(CD\), và \(DA\) lần lượt là \(1\), \(2\), \(3\), và \(4\). Hãy tìm thể tích của tứ diện \(ABCD\).
+Model's Full Answer: Trong tứ diện \(ABCD\):
+
+- \(AB = 1\)
+- \(BC = 2\)
+- \(CD = 3\)
+- \(DA = 4\)
+
+Sử dụng công thức thể tích hình vuông:
+
+\[ V_{ABCD} = \frac{1}{6} \times (AD \cdot DB) \]
+
+\[ V_{ABCD} = \frac{1}{6} \times 4 \times 2 \]
+\[ V_{ABCD} = \frac{8}{3} \text{ cm}^3 \]
+
+Do đó, thể tích của tứ diện \(ABCD\) là:
+\[ \boxed{\frac{8}{3}} \] cm³.
+\frac{8--$\frac{2 \sqrt{2}}{3}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-54
+Question: Nếu tổng số chữ số của ba số nguyên dương \(a, b, c\) là 8, và 8 chữ số cấu thành \(a, b, c\) có thể được sắp xếp thành \(2, 0, 2, 4, 0, 9, 0, 8\), thì \((a, b, c)\) được gọi là một "mảng may mắn". Ví dụ, \((9, 8, 202400)\) là một mảng may mắn. Hãy tìm số lượng mảng may mắn \((a, b, c)\) thỏa mãn \(10 < a < b < 100\).
+Model's Full Answer: Để xác định số lượng mảng may mắn:
+- Mỗi \(a\) từ 1 đến 10
+- Mỗi \(b\) từ 1 đến 10
+- Mỗi \(c\) từ 1 đến 10
+
+Tổng hợp các giá trị này:
+
+\[ \text{Số mảng may mắn} = (10 + 10 - 1 + 10) \times 3 = 56 \]
+
+Vì vậy, số lượng mảng may mắn là:
+\[
+\boxed{56}
+\]
+56--291 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-55
+Question: Cho một số nguyên dương $r$, hãy tìm số thực lớn nhất $C$ sao cho tồn tại một dãy số hình học $\{a_n\}_{n \geq 1}$ với công bội $r$, thỏa mãn $\|a_n\| \geq C$ với mọi số nguyên dương $n$. (Ở đây, $\|x\|$ biểu thị khoảng cách từ số thực $x$ đến số nguyên gần nhất.)
+Model's Full Answer: Trong điều kiện được đưa ra:
+\[ r > 0 \text{ và } |a_n| \leq C \text{ với } n \geq 1 \]
+
+Tìm giá trị tối đa của \(C\) bằng:
+
+\[ \max_C = C + (\frac{|C - r|}{r}) \]
+
+Đặt \(C = \sqrt{r^2 + 1}\) để đơn giản hóa:
+\[ \max_C = \sqrt{\left(\sqrt{r^2 + 1} - r\right)} + r \]
+\[ \boxed{\sqrt{r^2 + 1}} \]
+\sqrt{r^2 + 1--$\frac{r}{2(r+1)}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-56
+Question: Cho một số nguyên dương $n$. Trên lưới $3 \times n$, một tập hợp các ô vuông $S$ được gọi là "liên thông" nếu đối với bất kỳ hai ô khác nhau $A, B$ trong $S$, tồn tại một số nguyên $l \geq 2$ và $l$ ô $A=C_{1}, C_{2}, \cdots, C_{l}=B$ trong $S$ sao cho $C_{i}$ và $C_{i+1}$ chia sẻ một cạnh chung $(i=1,2, \cdots, l-1)$.
+
+Tìm số nguyên lớn nhất $K$ với tính chất sau: nếu mỗi ô của lưới được tùy ý tô màu đen hoặc trắng, luôn tồn tại một tập hợp liên kết $S$ sao cho hiệu tuyệt đối giữa số ô đen và số ô trắng trong $S$ ít nhất là $K$.
+Model's Full Answer: **Giải pháp**
+
+Để tìm giá trị tối đa của \( K \) (hiệu tuyệt đối giữa số ô đen và trắng), chúng ta sẽ sử dụng một chiến lược phân tích:
+
+1. **Tính toán tổng số ô**: 
+   - Tính tổng tất cả các ô trên lưới.
+   - Số lượng ô đen (\( D \)) bằng tổng số ô trắng (\( W \)).
+   - Do đó, tổng \( D + W = n).
+
+2. **Xác định độ dài đường chéo nhỏ nhất**: 
+   - Đường chéo nhỏ nhất qua ba ô đầu tiên tạo thành một tam giác cân có diện tích bằng \(\frac{1}{2} \cdot n^2\).
+   - Để đạt được điều này, cần phải đảm bảo rằng số lượng ô đen nhiều hơn số lượng ô trắng ở mỗi bên của đường chéo.
+
+3. **Chọn số ô đen để giữ lại**: 
+   - Nếu số ô đen vượt quá số ô trắng, thêm vào các ô mới:
+     \[
+     S = \{(a_i, b_j): a_i < j \}
+     \]
+   - Xóa bỏ những ô không còn chỗ trống nữa để duy trì sự cân bằng.
+   - Sau khi xóa hết, tính \(D\) và \(W\) lần lượt trở về trạng thái ban đầu.
+
+4. **Khả năng tối ưu hóa**: 
+   - Với mỗi ô đã được tô màu, chọn một cách để tách nó ra khỏi các ô liền kề để giảm thiểu hiệu quả tuyệt đối.
+   - Giữ các ô đen ở vị trí thích hợp để tránh tăng số lượng ô trắng đáng kể.
+
+5. **Tối ưu hóa hàm mục tiêu**: 
+   - Sử dụng thuật toán như **đường đi ngắn nhất**, **tổng hợp tối ưu**, hoặc **hàm hữu hạn** để xác định phương án tối ưu.
+
+6. **Áp dụng \( K \)**:
+   - Chọn \( K \) làm giá trị tối đại của phương trình, dựa trên quy tắc tổng quát mà không giới hạn bởi kích thước lưới.
+
+Vì vậy, giải pháp chính xác là:
+
+**Số nguyên lớn nhất \( K \)** là:
+\[ K = \frac{n}{2} + 1 \]
+
+**Lưu ý:** Đây là một phương pháp chi tiết để giải quyết vấn đề này, vì nó tận dụng cấu trúc hình học và tối ưu hóa tuyến tính để tìm ra giải pháp tối ưu. Giải pháp này đáp ứng yêu cầu cung cấp một giá trị thực tế cho \( K \).
+NO_BOXED_ANSWER--$n$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-57
+Question: Tìm tất cả các số thực $t$ không nhỏ hơn $1$ thỏa mãn các điều kiện sau: với bất kỳ $a, b \in [-1,t]$, luôn tồn tại $c, d \in [-1,t]$ sao cho $ (a+c)(b+d)=1$.
+Model's Full Answer: Để tìm các giá trị của \( t \) cần thiết:
+
+\[ a + c = 0 \quad \text{và} \quad b + d = 1 \]
+
+Chia hai phương trình để cô lập \( t \):
+\[
+(t - a)(d - b) = 1
+\]
+Giải ra hệ:
+\[
+td - at + bd - bt = 1 \implies td - bt = at + bd - 1
+\]
+Sử dụng tiêu chí nghiệm nguyên tố, chọn \( t = 1 \).
+
+Do đó, các số thực thỏa mãn là:
+\[ \boxed{1} \]
+1--$t \in [\frac{3}{2}, 2]$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-58
+Question: $a, b, c, d$ là các số thực sao cho $a \geq b, c \geq d$,\[\|a| + 2|b| + 3|c| + 4|d| = 1.\]Gọi $P = (a - b)(b - c)(c - d)$. Hãy tìm giá trị lớn nhất của $P$.
+Model's Full Answer: Để giải quyết vấn đề này, chúng ta sẽ áp dụng định lý Dirichlet và tính chất liên quan đến tập hợp các phần tử đã cho:
+
+\[ a, b, c, d \geq 0; \quad |a| + 2|b| + 3|c| + 4|d| = 1 \]
+
+**Áp dụng Dirichlet's Theorem**: 
+
+Dirichlet's theorem chỉ ra rằng the sum of squares of all non-negative integers is constant for any set of positive integers \( n \). Trong trường hợp này, ứng với các số nguyên tố \( n = (a - b)(b - c)(c - d) \), ta có:
+
+\[
+(n+1)^2 = (a+b+c+d-2n)^2 = (a^2 + 2ab + ab + b^2 + c^2 + 2cd + dc + ad + 4d^2)
+\]
+
+Từ đây, tổng các hệ số \( a^2 + 2ab + ab + b^2 + c^2 + 2cd + dc + ad + 4d^2 \) là một hằng số:
+
+\[
+n^2 + 5n + 6 = 1
+\]
+
+Giải phương trình bậc hai này để tìm giá trị tối đa:
+
+\[
+n^2 + 5n + 6 = 1 \implies n^2 + 5n - 5 = 0
+\]
+
+Sử dụng phương pháp nghiệm chung hoặc phân tích nhân, ta tìm được:
+
+\( n = 2 \)
+
+Vậy,
+
+\[
+P = (a-b)(b-c)(c-d) = 2(2)(2) = 8
+\]
+
+Do đó, giá trị lớn nhất của \( P \) là:
+
+\[
+\boxed{8}
+\]
+8--$\frac{1}{324}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-59
+Question: Tìm số nguyên dương nhỏ nhất $k$ có tính chất sau đây: nếu mỗi ô trong lưới $100\times 100$ được nhuộm một màu và số ô của mỗi màu không quá $104$, thì sẽ có một hình chữ nhật $k\times 1$ hoặc $1 \times k$ chứa các ô của ít nhất ba màu khác nhau.
+Model's Full Answer: Số nguyên dương tối thiểu cần tìm là:
+\[ \text{Min} = 3 \]
+
+Giải thích từng bước:
+
+1. Mỗi ô trên lưới phải chỉ chứa hai màu.
+2. Số lượng màu \( n \) tối đa là 104 (tính đến chiều rộng).
+3. Để đạt tổng cộng 3 màu khác biệt, ta chọn \( n = 3 \):
+   - Hình chữ nhật với kích thước 3x3 sẽ thỏa mãn yêu cầu.
+
+Vì vậy, số nguyên dương nhỏ nhất đáp ứng điều kiện này là:
+\[
+\boxed{3}
+\]
+3--12 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-60
+Question: Tìm giá trị nhỏ nhất của $c$ sao cho với bất kỳ số nguyên dương $n \ge 4$ và bất kỳ tập hợp $A \subseteq \{1,2,\cdots,n\}$, nếu $|A| > cn$, tồn tại một hàm $f:A\to\{1,-1\}$ thoả mãn $$\left| \sum_{a\in A}a\cdot f(a)\right| \le 1.$$
+Model's Full Answer: Giá trị nhỏ nhất của \( c \) là:
+
+\[ c = 3 \]
+
+Để chứng minh:
+1. Xác định các ràng buộc từ điều kiện tổng quát.
+2. Thử nghiệm trên các trường hợp cụ thể để tìm giá trị tối ưu.
+
+**Bước 1:** Tóm tắt điều kiện được đưa ra:
+- Cho \( n \geq 4 \)
+- Tập hợp \( A \) chứa \( |A| > cn \).
+- Hàm \( f \): \( \sum_{a\in A} a \cdot f(a) \).
+
+**Bước 2:** Áp dụng phương pháp nâng cao cho bài toán này (từ lý thuyết điểm cực đại):
+
+1. Chọn \( k \) làm điểm cực tiểu bằng cách giảm thiểu tích phân tổng quát.
+2. Điều chỉnh \( c \) đảm bảo sự phụ thuộc vào độ lớn của \( |A| \):
+   - Giảm thiểu khi \( c = 3 \) sẽ có hiệu quả tối đa hóa tính hữu hạn của tích phân.
+
+\[ F(c) = \int_a^n |a \cdot f(a)| \, dA \]
+\[ \text{với } |A| \geq cn \]
+\[ \frac{\delta}{d}(\sum_{a\in A} a f(a)) \le 0 \quad \text{(điều kiện liên tục)} \]
+
+Do đó, áp dụng đạo hàm và biến đổi thích hợp:
+
+\[ F'(c) = \frac{(-cn)^{-1}}{|A|} + c \]
+\[ \Rightarrow F(c) = \frac{n c}{|A|} + c \]
+
+\[ \frac{\delta}{d}(F(c)) = 0 \]
+
+Áp dụng điều khoản biên, ta có:
+
+\[ \frac{d}{dx}\left[ \frac{n c}{|A|} + c \right]_x^y = 0 \]
+\[ \frac{dn}{dx} + c = 0 \]
+\[ dn = -c \]
+
+Suy ra:
+
+\[ \frac{1}{|A|} \frac{dn}{dA} \leq 0 \]
+\[ \frac{1}{|A|} \frac{d(n c)}{dA} \leq 0 \]
+
+Dựa vào các tính chất của hàm phân phối, chúng ta thấy:
+
+\[ \frac{1}{|A|} \frac{d}{dA} (c \cdot f(A)) \leq 0 \]
+\[ c \cdot f(A) \leq -\frac{1}{|A|} \]
+\[ c \leq -\frac{1}{|A|} \cdot \frac{1}{f(A)} \]
+
+Vì vậy, duy trì giá trị nhỏ nhất, chọn \( c = 3 \). 
+
+\[ \boxed{3} \]
+3--$\frac{2}{3}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-61
+Question: Cho số nguyên $n \geq 4$, và cho $a_1,a_2,\cdots,a_{2n},b_1,b_2,\cdots,b_{2n}$ là $4n$ số thực không âm thỏa mãn
+$$a_1 + a_2 + \cdots + a_{2n} = b_1 + b_2 + \cdots + b_{2n} > 0,$$
+và với mọi $i=1,2,\cdots,2n,$ thì $a_i a_{i+2} \geq b_i + b_{i+1},$ trong đó $a_{2n+1} = a_1,$ $a_{2n+2} = a_2,$ $b_{2n+1} = b_1.$ Xác định giá trị nhỏ nhất của $a_1 + a_2 + \cdots + a_{2n}.$
+Model's Full Answer: Để tìm giá trị tối thiểu \(a_1 + a_2 + \cdots + a_{2n}\) cho \(n \geq 4\), áp dụng bất đẳng thức Dirichlet:
+
+\[ a_1 + a_2 + \cdots + a_{2n} \leq (b_1 + b_2 + \cdots + b_{2n}) - \left(\frac{a_{2n+1}}{2} + \frac{a_{2n+2}}{2}\right). \]
+
+Với các điều kiện ban đầu:
+
+\[ a_1 + a_2 + \cdots + a_{2n} \geq 0 \]
+\[ a_{2n+1} = a_1 \]
+\[ a_{2n+2} = a_2 \]
+
+Thực hiện phân tích trên:
+
+\[ a_1 + a_2 + \cdots + a_{2n} \geq 3(a_1 + a_2 + \cdots + a_{2n-1} + a_{2n+1}). \]
+
+Áp dụng nghiệm đúng của bất đẳng thức Dirichlet:
+
+\[ \text{Min}_n \left( a_1 + a_2 + \cdots + a_{2n} \right) = n \cdot (a_1 + a_2 + \cdots + a_{2n-1} + a_{2n+1}) \]
+
+Tìm bằng cách tính toán:
+
+\[ \boxed{n} \]
+n--16 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-62
+Question: Cho một đa giác lồi 20 đỉnh, có nhiều cách thực hiện phép phân tam giác (thành 18 tam giác). Chúng ta gọi biểu đồ phân tam giác - bao gồm 20 đỉnh và 37 cạnh (17 cạnh phân tam giác và 20 cạnh gốc) - là một T-đồ thị. Tập con của T-đồ thị này chứa 10 cạnh mà phủ hết 20 đỉnh (nghĩa là không có hai cạnh nào trong tập con cùng phủ một đỉnh) được gọi là "ghép cặp hoàn hảo" của T-đồ thị. Trong tất cả các T-đồ thị, hãy tìm số lượng lớn nhất của "ghép cặp hoàn hảo" có thể có.
+Model's Full Answer: Trong trường hợp đặc biệt cho một đa giác lồi 20 đỉnh với T-đồ thị ghép cặp hoàn hảo:
+
+\[ \text{T-đồ thị} = (\mathbb{Z})^{\text{(20)} \times (\text{37}))_{\text{(5)}} = \{(0,0), (1,1), \ldots, (19,19)\}, \]
+
+Số lượng tối đa "ghép cặp hoàn hảo" bằng tổng các điểm trong tập con:
+\[ N(\text{ghép cặp hoàn hảo}) = | \{(0,0), (1,1), ..., (19,19)|| = 461 \]
+
+Do đó, đáp án là:
+\[ \boxed{461} \]
+461--89 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-63
+Question: Cho $a_1, a_2, \cdots, a_n$ là các số nguyên sao cho $1 = a_1 \le a_2 \le \cdots \le a_{2019} = 99$. Hãy tìm giá trị nhỏ nhất $f_0$ của biểu thức $$f =(a_1^2 + a_2^2 + \cdots + a_{2019}^2) - (a_1a_3 + a_2a_4 + \cdots + a_{2017}a_{2019}).$$
+Model's Full Answer: **Giải pháp:**
+
+Chúng ta cần tính giá trị nhỏ nhất của \( f \):
+
+\[ f = (a_1^2 + a_2^2 + \cdots + a_{2019}^2) - (a_1a_3 + a_2a_4 + \cdots + a_{2017}a_{2019}) \]
+
+Bước 1: Tổ hợp các biến \(a_i\) thành một tập con có thể tích bằng nhau.
+
+Dựa trên định lý Taylor:
+
+\[
+\left| \frac{d}{dx}(x^n) \right| = n x^{n-1}
+\]
+
+Áp dụng điều này vào \( f \), chúng ta có:
+
+\[
+f = \sum_{i=1}^{2018} i^2 = \frac{(2018)^2}{6} = 1057250
+\]
+
+Vậy, giá trị nhỏ nhất của \( f \) là:
+
+\[ 
+\boxed{1057250}
+\]
+1057250--7400 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-64
+Question: Cho $V$ là một tập hợp gồm $2019$ điểm trong không gian mà bất kỳ bốn điểm nào cũng không nằm trên cùng một mặt phẳng, và $E$ là tập hợp các cạnh nối giữa các điểm đó. Tìm số nguyên dương nhỏ nhất $n$ thỏa mãn điều kiện sau: nếu $E$ có ít nhất $n$ phần tử, thì tồn tại $908$ tập hợp con hai phần tử của $E$ sao cho
+(1) Hai cạnh trong mỗi tập hợp con đều có chung một đỉnh.
+(2) Bất kỳ hai tập hợp con nào cũng không giao nhau.
+Model's Full Answer: **Tìm số nguyên dương nhỏ nhất \( n \)**:
+
+Để tìm số nguyên dương tối thiểu \( n \), ta cần kiểm tra cả hai trường hợp:
+
+\[ (1): \quad E = \{e_1, e_2, ..., e_{2018}, e_{2019}\} \]
+- Với \( 2019 - 2016 + 1 = 5 \) phần tử, chỉ có thể có:
+  \[ E = \{e_1, e_2, ..., e_{2017}, e_{2018}\}. \]
+
+\[ (2): \quad E = \{a, a', a'', a_{2018}\} \]
+- Với \( 2019 - 2016 + 1 = 4 \) phần tử, có thể tạo ra \( 908 \) tập hợp con với ít nhất hai cạnh khác nhau như đã đề cập ở bước 1).
+
+Do đó, số lượng phần tử lớn nhất trong \( E \) để thỏa mãn yêu cầu là:
+
+\[
+\boxed{5}
+\]
+5--2795 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-65
+Question: Cho tập hợp $A=\{1,2,\ldots,n\}$, và $X,Y$ là hai tập con (không nhất thiết phân biệt) của $A$. Định nghĩa $\textup{max} X$ và $\textup{min} Y$ lần lượt là phần tử lớn nhất của $X$ và phần tử nhỏ nhất của $Y$. Xác định số lượng các cặp $(X,Y)$ sao cho $\textup{max} X>\textup{min} Y.$
+Model's Full Answer: **Định lý về Số cặp $(X, Y)$ thỏa mãn $\textup{max}_X > \textup{min}_Y:$**
+
+- Cho \( A = \{1, 2, ..., n\} \)
+- Tập con \( X \) và \( Y \):
+  - \( X = \{a_1, a_2, ..., a_n\} \)
+  - \( Y = \{b_1, b_2, ..., b_k\} \)
+
+Cần tìm số lượng các cặp $(X, Y)$ như sau:
+
+\[ (\textup{max}_X, \textup{min}_Y) = (X, Y) \]
+
+Phân tích:
+
+1. **Tính tổng max và min**: 
+   - Max \(X\) là phần tử lớn nhất trong \(X\).
+   - Min \(Y\) là phần tử nhỏ nhất trong \(Y\).
+
+2. **Chọn một giá trị để xác định sự tồn tại cặp**: 
+   - Chọn \(a_i\) từ \(X\) với \(i = 1, 2, ..., k\) làm điểm khởi đầu.
+   - Tìm ra \(b_j\) trong \(Y\) có giá trị bằng hoặc lớn hơn \(a_i\), mà không trùng lặp.
+
+3. **Số cặp thỏa điều kiện:** 
+   - Có \(k\) giá trị được chọn (từ \(X\)) từ \(a_i\) đến \(b_j\).
+   - Do đó, số cặp thỏa mãn điều kiện là:
+     \[
+     k = \left| \sum_{i=1}^{k} a_i - \textup{min}_Y(b_j) \right|
+     \]
+   - Đây chính là số lượng các cặp $(X, Y)$ thỏa mãn $\textup{max}_X > \textup{min}_Y$.
+
+Vậy, số lượng các cặp $(X, Y)$ đáp ứng điều kiện là:
+\[ \boxed{k} \]
+k--$2^{2n} - 2^{n}(n+1)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-66
+Question: Cho $x_1, x_2, x_3 \geq 0$ và $x_1 + x_2 + x_3 = 1$. Tìm giá trị lớn nhất của biểu thức $(x_1 + 3x_2 + 5x_3)\left(x_1 + \frac{x_2}{3} + \frac{x_3}{5}\right).$
+Model's Full Answer: Để tìm giá trị lớn nhất của biểu thức:
+
+\[
+(x_1 + 3x_2 + 5x_3)^{\left( x_1 + \frac{x_2}{3} + \frac{x_3}{5} \right)}
+\]
+
+với điều kiện \( x_1, x_2, x_3 \geq 0 \) và tổng các hệ số bằng 1, ta áp dụng bất đẳng thức Cauchy-Schwarz:
+
+\[ 
+\left| (x_1 + 3x_2 + 5x_3) - 1 \right|^2 \leq \| x_1 + \frac{x_2}{3} + \frac{x_3}{5} \|
+\]
+
+Áp dụng cho các giá trị cụ thể:
+
+\[ 
+| (x_1 + 3x_2 + 5x_3) - 1 | \leq 1^2 \sqrt{3}
+= \sqrt{3}, \quad | x_1 + \frac{x_2}{3} + \frac{x_3}{5} | \leq 1^2 \sqrt{5}
+= \sqrt{5}.
+\]
+
+Do đó,
+
+\[ 
+|x_1 + 3x_2 + 5x_3| \leq \sqrt{3} \sqrt{5}. \]
+
+Giá trị tối đa được xác định là:
+
+\[ 
+\boxed{\sqrt{3} \sqrt{5}}.
+\]
+\sqrt{3--$\frac{9}{5}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-67
+Question: Cho một dãy $\{a_n\}$: $a_1=1, a_{n+1}=\left\{\begin{array}{lcr}a_n+n,\quad a_n\le n,\\ a_n-n,\quad a_n>n,\end{array}\right.\quad n=1,2,\cdots.$ Tìm số lượng số nguyên dương $r$ thỏa mãn $a_r<r\le 3^{2017}$.
+Model's Full Answer: Để tìm \( r \) thỏa mãn:
+
+\[ a_r < r \le 3^{2017}, \]
+
+ta áp dụng căn thức bậc hai cho từng trường hợp:
+
+**Trường hợp \( r = 4 \):**
+
+\[ a_4 = (4 + 1)(4 - 1) = 5^2 = 25 \]
+
+Vậy:
+\[ a_4 < 25 < 3^{2017} \]
+\[ r = 4 \]
+
+**Trường hợp \( r = 6 \):**
+
+\[ a_6 = (6 + 1)(6 - 1) = 7^2 = 49 \]
+
+Vậy:
+\[ a_6 < 49 < 3^{2017} \]
+\[ r = 6 \]
+
+**Trường hợp \( r = 8 \):**
+
+\[ a_8 = (8 + 1)(8 - 1) = 17^2 = 289 \]
+
+Vậy:
+\[ a_8 < 289 < 3^{2017} \]
+\[ r = 8 \]
+
+**Tổng quát:**
+
+\[ \boxed{4, 6, 8} \]
+4, 6, 8--$\frac{3^{2017}-2019}{2}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-68
+Question: Mỗi ô vuông trong lưới ô vuông $33 \times 33$ được tô một trong ba màu: đỏ, vàng hoặc xanh dương, sao cho số ô vuông của mỗi màu bằng nhau. Nếu hai ô vuông có chung một cạnh nhưng lại khác màu, chung cạnh đó được gọi là cạnh ngăn cách. Hãy tìm số cạnh ngăn cách tối thiểu trong lưới ô vuông này.
+Model's Full Answer: Trong lưới ô vuông 33x33 với các màu đồng đều:
+- Có tổng cộng \(n = 6\) cạnh.
+- Mỗi màu (đỏ, vàng, xanh) có \(4\) cạnh riêng biệt để phân chia chúng.
+
+Tính toán:
+
+1. Chọn các màu và xác định chung giữa chúng:
+   - Màu đỏ có thể ghép với bất kỳ màu nào còn lại.
+   - Màu vàng tương tự.
+
+Vì vậy, chung giữa các màu chính:
+\[4 \text{ cạnh} + 4 \text{ cạnh} = 8 \text{ cạnh}\]
+
+Do đó, số cạnh ngăn cách tối thiểu là:
+\[
+\boxed{8}
+\]
+8--56 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-69
+Question: Cho hàm số $f(x)$ là một hàm lẻ trên tập số thực $R$, $f(1) = 1$ và $f(\frac{x}{x-1}) = xf(x)$ $(\forall x < 0)$. Tìm giá trị của biểu thức $f(1)f(\frac{1}{100}) + f(\frac{1}{2})f(\frac{1}{99}) + f(\frac{1}{3})f(\frac{1}{98}) +\cdots +f(\frac{1}{50})f(\frac{1}{51}).$
+Model's Full Answer: **Hàm \(f\) với điều kiện cho:**
+
+\[ \begin{aligned} 
+& f(x) = 1 \quad \text{(trường hợp đặc biệt)} \\ 
+& f(1) = 1 \\
+& f(\frac{x}{x-1}) = xf(x) \quad \forall x < 0.
+\end{aligned} \]
+
+Chúng ta cần tính:
+\[ f(1)f(\frac{1}{100}) + f(\frac{1}{2})f(\frac{1}{99}) + f(\frac{1}{3})f(\frac{1}{98}) + \ldots + f(\frac{1}{50})f(\frac{1}{51}). \]
+
+Kết hợp các thành phần:
+
+\[ f(1)f(\frac{1}{100}) + f(\frac{1}{2})f(\frac{1}{99}) + f(\frac{1}{3})f(\frac{1}{98}) + \cdots + f(\frac{1}{50})f(\frac{1}{51}) \]
+
+\[ = (1)(\frac{1}{100}) + (\frac{1}{2})(\frac{1}{99}) + (\frac{1}{3})(\frac{1}{98}) + \cdots + (\frac{1}{50})(\frac{1}{51}) \]
+
+Đơn giản hóa bằng cách sử dụng sự phân phối:
+
+\[ = \left( \frac{1}{100} + \frac{1}{99} + \frac{1}{98} + \cdots + \frac{1}{50} \right) \cdot 100^2 - \frac{1}{51} \]
+
+Sử dụng định lý phân phối thừa kế:
+
+\[ \frac{1}{100} + \frac{1}{99} + \frac{1}{98} + \cdots + \frac{1}{50} = \sum_{k=1}^{n} \frac{k}{50}, \]
+với \( n = 50 \).
+
+Vậy tổng được đơn giản hóa như sau:
+
+\[ = \sum_{k=1}^{50} \frac{k}{50} = 50 \times \frac{1}{50} = 1 \]
+
+Do đó, giá trị của biểu thức cuối cùng là:
+
+\[ \boxed{1}. \]
+1--$\frac{2^{98}}{99!}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-70
+Question: Cho $a_1, a_2, \ldots, a_{2016}$ là các số thực sao cho $9a_i \ge 11a^2_{i+1}$ với $i=1, 2, \ldots, 2015$. Tìm giá trị lớn nhất của $(a_1 - a^2_2)(a_2 - a^2_3) \cdots (a_{2015} - a^2_{2016})(a_{2016} - a^2_1).$
+Model's Full Answer: Để giải quyết vấn đề này, ta xác định và tính toán từng bước:
+
+**Giả thiết ban đầu:**
+\[ a_1 \leq 11a^2_{1+1} = 11a^4 \]
+
+**Áp dụng giả thuyết:** 
+\[ 9a_i \geq 11a^{(i+1)} \]
+với \( i = 1, 2, \ldots, 2015 \)
+
+Từ đây:
+\[ 9a_i \geq 11(a^{(i+1)}) \]
+\[ 9a_i \geq 11a^{(i+1)} \]
+\[ a_i \geq \frac{1}{\frac{9}{11}} \cdot a^{(i+1)} \]
+\[ a_i \geq \frac{11}{9} \cdot a^{(i+1)} \]
+
+Sử dụng phân phối nhị thức, ta có thể đơn giản hóa thành:
+\[ a_i \geq \left(\frac{11}{9}\right)^i \cdot a^{(i+1)} \]
+
+**Tính giá trị tổng quát:**
+
+Ta cần tìm giá trị lớn nhất của biểu thức:
+\[ \sum_{i=1}^{2016} \left(\frac{11}{9}\right)^i \cdot \left(\frac{11}{9}\right)^{i+1} \]
+
+Hãy áp dụng sự phân chia hợp lệ để đạt được kết quả:
+\[ \begin{aligned}
+&\text{(đầu tiên): } n = 1 \\
+&\quad \text{(thứ hai): } n = 2 \\ 
+&\quad \text{(thứ ba): } n = 3 \\
+&\quad \vdots \\
+&\quad \text{(tổng cộng): } n = 2016.
+\end{aligned} \]
+
+Chúng ta thấy rằng,
+\[ \prod_{k=1}^{2016} \left(\frac{11}{9}\right)^k \]
+
+là một hàm nhân tuyến tính theo cấp bậc tăng.
+
+Dựa trên phương pháp này, chúng ta chứng minh được rằng:
+\[ \lim_{n \to \infty} \prod_{k=1}^{2016} \left(\frac{11}{9}\right)^k = \frac{11}{9}. \]
+
+Vì vậy, giá trị tối đa của biểu thức đã cho là:
+\[ \boxed{\frac{11}{9}} \]
+\frac{11--$\frac{1}{4^{2016}}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-71
+Question: Cho $10$ điểm trong không gian sao cho bất kỳ $4$ điểm nào cũng không cùng thuộc một mặt phẳng. Kết nối các điểm sao cho không có tam giác hay tứ giác nào được tạo thành. Tìm số đoạn thẳng tối đa có thể được kết nối.
+Model's Full Answer: Trong bài toán với \(10\) điểm trong \(\mathbb{R}^3\), mục tiêu là:
+
+**Tìm tổng số đoạn thẳng (đường) tối đa có thể kết nối các điểm này mà không hình thành tam giác hoặc tứ giác.*
+
+Dưới đây là cách giải quyết từng bước:
+
+1. **Chọn các cặp điểm**: Chọn hai điểm \(A\) và \(B\) bất kì trên đường thẳng.
+   - Điểm \(A = B\).
+   
+2. **Tạo ba cạnh mới**: Dựa trên điểm đã chọn, tạo ra ba cạnh mới bằng cách di chuyển điểm thứ ba về phía bên trái của điểm ban đầu. Điều này tách chúng ra khỏi nhau.
+
+3. **Kết nối các cạnh mới**: Khi thêm các cạnh mới vào, bạn sẽ cần phải kết nối mỗi cặp cạnh để bảo đảm sự phân biệt giữa các nhóm các điểm.
+
+4. **Đếm các kết nối duy nhất**: Mỗi khi bạn kết nối một cặp cạnh, bạn tăng số lượng kết nối tự nhiên (tối đa 6).
+
+5. **Tính tổng số kết nối tự nhiên**: Số kết nối tự nhiên duy nhất từ \(n\) điểm là \(6^n\).
+
+6. **Áp dụng điều kiện cho \(n=10\)**:
+    - \(6^{10}\) (khoảng 798,134)
+    
+Vậy, số đoạn thẳng tối đa có thể kết nối \(10\) điểm trong \(\mathbb{R}^3\) là:
+
+\[ \boxed{798,134} \]
+798,134--15 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-72
+Question: Cho $S=\{1,2,3,\cdots,100\}$. Hãy tìm giá trị lớn nhất của số nguyên $k$ sao cho tồn tại $k$ tập con khác nhau và không rỗng của $S$ thỏa mãn điều kiện: đối với bất kỳ hai trong số $k$ tập con, nếu giao của chúng không rỗng, thì phần tử nhỏ nhất của giao không bằng phần tử lớn nhất của bất kỳ trong hai tập con đó.
+Model's Full Answer: **Giải pháp:**
+
+Để giải quyết vấn đề này, ta cần xác định các giá trị tối đa (đối với một tập hợp con) mà vẫn đảm bảo sự liên kết giữa các phần tử:
+
+\[ S = \{ 1, 2, 3, \ldots, 100 \} \]
+
+Mục tiêu là tìm \( k \) sao cho:
+\[ \exists K \in \{1, 2, 3, \ldots, 99\} : \forall i \in K \quad (\text{giao của } K \cap [i] \neq \emptyset), \]
+với các giới hạn sau:
+- Các tập con riêng biệt.
+- Giao của chúng không thể có kích thước bằng nhau hoặc ít hơn một.
+
+Bước 1: Xác định cấu trúc tổng quát của tập hợp con:
+
+Tập hợp con được chia thành các nhóm dựa trên phân phối các phần tử.
+
+**Phân tích:**
+- Tập hợp con chứa các cặp {i, j}: \( [i] = [j]\)
+- Mỗi cặp (i, j) thuộc các nhóm khác nhau (ví dụ: {i, 1}, {1, 2}, ..., {100, 101})
+
+**Áp dụng vào bài toán:**
+Ta muốn \( k \) đại diện cho một bộ bốn (có thể từ 5 đến 100) của các nhóm như vậy để mỗi \( i \) xuất hiện ở ít nhất 4 lần trong các nhóm.
+
+**Cấu hình lý tưởng:** 
+Trong trường hợp cụ thể, khi \( k = 5 \):
+\[ \{1, 2, 3, 4, 5\} \]
+
+Khi đó, điều kiện sẽ là:
+\[ \exists B \subseteq \{1, 2, 3, 4, 5\} \text{ với } \forall i \in B \quad (\text{giao} \subseteq \{i\}) \]
+Và:
+\[ \exists D \subseteq \{1, 2, 3, 4, 5\} \text{ với } \forall i \in D \quad (\text{giao} \subseteq \{d\}) \]
+
+Chúng ta tìm ra:
+\[ \left(1, 2, 3, 4, 5\right) \subseteq \{1, 2, 3, 4, 5\} \text{ nên } \exists D \subseteq \{1, 2, 3, 4, 5\} \]
+
+Do đó, điều kiện trở thành:
+\[ \exists B \subseteq \{1, 2, 3, 4, 5\} \text{ với } \forall i \in B \quad (\text{giao} \subseteq \{i\}) \]
+
+**Tóm tắt:**
+- **Kiểm tra độ dài**: \( k \geq 5 \).
+- **Khả năng liên kết**: Điều kiện phải tuân theo cấu trúc nhóm phù hợp.
+
+Vì vậy, giá trị tối đa của \( k \) đáp ứng điều kiện là:
+\[ \boxed{5} \]
+5--$2^{99} - 1$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-73
+Question: $n$ học sinh làm một bài kiểm tra có $m$ câu hỏi, trong đó $m, n\ge 2$ là các số nguyên. Điểm số của mỗi câu hỏi được cho như sau: đối với một câu hỏi nhất định, nếu có $x$ học sinh không trả lời đúng câu hỏi đó, thì những học sinh trả lời đúng sẽ được $x$ điểm, trong khi những học sinh trả lời sai sẽ được $0$ điểm. Điểm của một học sinh là tổng điểm của anh ta cho $m$ câu hỏi. Sắp xếp các điểm số theo thứ tự giảm dần $p_1\ge p_2\ge \ldots \ge p_n$. Tìm giá trị lớn nhất của $p_1+p_n$.
+Model's Full Answer: Để giải quyết vấn đề này:
+
+1. Xác định cấu trúc điểm số và mối quan hệ giữa chúng:
+   - Mỗi câu hỏi ( \( m\) câu) có điểm số từ $x_i$ đến $0$, nơi \( x_i \in \{0, 1, ..., m-1\} \).
+   - Tổng điểm cho tất cả các câu là:
+     \[
+     \sum_{i=1}^{m} x_i = \frac{(m+1)(m)}{2}
+     \]
+
+2. sắp xếp điểm số thành tăng dần:
+   - Tăng từ thấp đến cao.
+   - Do \( n > 2 \):
+     \[
+     p_1 < p_2 < \ldots < p_n
+     \]
+3. Áp dụng bất đẳng thức tích phân đơn giản:
+   - Chúng ta cần tìm tối đa của hai biến:
+     \[
+     \max(p_1 + p_n)
+     \]
+
+4. Biểu diễn hàm tích phân liên quan:
+   - Hàm tích hợp của điểm số trong khoảng tăng dần là hàm Dirichlet:
+     \[
+     f(x) = \int_{0}^{\frac{(m+1)}{2}} x \cdot \left(1 - \frac{x}{2}\right)^{-2} \, dx
+     \]
+
+5. Thay đổi điều kiện để đạt cực đại:
+   - Bằng cách sử dụng đạo hàm bậc hai:
+     \[
+     f'(x) = \frac{(m+1)x^2}{8(m+1)}
+     \]
+   - Giải phương trình bằng nghiệm phức tạp nhưng tính toán cực tiểu:
+     \[
+     \text{Maximum} = \lim_{n \to \infty} f(n) = \frac{(m+1)\sqrt{6}}{4} 
+     \]
+
+Vậy giá trị lớn nhất của \( p_1 + p_n \) là:
+\[ \boxed{\frac{(m+1)\sqrt{6}}{4}} \]
+\frac{(m+1)\sqrt{6--$m(n-1)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-74
+Question: Tìm tổng của tất cả các số nguyên $n$ thoả mãn bất đẳng thức sau: \[\frac{1}{4}<\sin\frac{\pi}{n}<\frac{1}{3}.\]
+Model's Full Answer: Để tìm tổng \( n \) sao cho:
+
+\[ \frac{1}{4} < \sin\left(\frac{\pi}{n}\right) < \frac{1}{3} \]
+
+Áp dụng công thức tam giác Cosin:
+
+\[ 0.25 < \cos\left(\frac{\pi}{n}\right) < 0.786 \quad (\text{(các giá trị hữu hạn)} \)
+
+Sử dụng giới hạn hữu hạn và tính toán:
+\[ \cos\left(\frac{\pi}{n}\right) = 0.25 - 0.786(n-1) + O(n^{-2}) \]
+\[ \approx 0.936(n-1) \]
+
+Tổng hợp tất cả \( n \):
+
+\[ n \times (0.936(n-1)) \approx 0.898n - 0.898 \]
+
+Giải phương trình bậc hai đơn giản:
+
+\[ 0.898n \geq 0.898 \implies n \geq \frac{1}{0.898} \approx 1.073 \]
+
+Vì \( n \) là số nguyên dương, kết quả là:
+
+\[ \boxed{1} \]
+1--33 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-75
+Question: Cho ma trận $A$ kích thước $3 \times 9$. Tất cả các phần tử của $A$ đều là số nguyên dương. Ta gọi một ma trận con $m\times n$ của $A$ là "ox" nếu tổng các phần tử của nó chia hết cho $10", và ta gọi một phần tử của $A$ là "carboxylic" nếu nó không nằm trong bất kỳ ma trận con "ox" nào. Hãy tìm số lượng lớn nhất có thể của các phần tử "carboxylic" trong $A$.
+Model's Full Answer: Để xác định số lượng tối đa các phần tử "carboxylic" (Ox carboxylic), chúng ta phân tích quy tắc:
+
+- Số phần tử Ox carboxylic = Tổng OXOX - Tích Carboxylic
+
+Áp dụng quy tắc này:
+\[ \text{Carboxylic} = (\text{OXOX}) + (\text{Tích Carboxylic}) - (\text{OXO}) \]
+
+\[
+= 10 + 64 - 8 = 76
+\]
+
+Do đó, số lượng lớn nhất của các phần tử "carboxylic" là \( \boxed{76} \).
+76--25 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-76
+Question: Cho rằng $a_{n}= \binom{200}{n} \cdot 6^{\frac{200-n}{3}} \cdot \left(\dfrac{1}{\sqrt{2}}\right)^n$ ($1 \leq n \leq 95$). Có bao nhiêu số nguyên trong dãy $\{a_n\}$?
+Model's Full Answer: Dòng \(a_n\) có dạng:
+
+\[ a_n = \sum_{k=1}^{n} \binom{200}{k} \cdot 6^{200-k} \cdot \left( \dfrac{1}{\sqrt{2}} \right)^k \]
+
+Tính tổng:
+\[ S_n = \sum_{k=1}^{n} k \cdot \binom{200}{k} \cdot 6^{\frac{200-k}{3}} \cdot \left( \dfrac{1}{\sqrt{2}} \right)^k \]
+
+Áp dụng phân phối chức năng Bernoulli (đối với \(k > 1\)):
+\[ S_n = \sum_{k=1}^{n} k \cdot \binom{200}{k} \cdot 6^{\frac{200-k}{3}} \cdot \left( \dfrac{1}{\sqrt{2}} \right)^k \]
+\[ S_n = \sum_{k=1}^{n} \binom{200}{k} \cdot 6^{\frac{200 - k}{3}} \cdot \left( \dfrac{1}{\sqrt{2}} \right)^k \]
+
+Chọn giá trị đơn giản nhất của chúng cho \(S_n\):
+\[ S_n = \binom{200}{1} \cdot 6^{\frac{200-1}{3}} \cdot \left( \dfrac{1}{\sqrt{2}} \right)^1 = \frac{404800}{3} \cdot 6 \cdot \left( \dfrac{1}{\sqrt{2}} \right) = 40480 \cdot 6 \cdot \sqrt{2} = 278720 \]
+
+Do đó, số lượng các số nguyên trong dãy là:
+\[ \boxed{278720} \]
+278720--15 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-77
+Question: Một đường thẳng $\ell$ có hệ số góc $\frac{1}{3}$ cắt elip $C:\frac{x^2}{36}+\frac{y^2}{4}=1$ tại các điểm $A,B$ và điểm $P\left(  3\sqrt{2} , \sqrt{2}\right)$ nằm ở phía trên đường thẳng $\ell$. Nếu $\angle APB=\frac{\pi}{3}$, hãy tìm diện tích tam giác $PAB$.
+Model's Full Answer: **Để tìm diện tích tam giác \( PAB \) của một đường thẳng cắt elip tại điểm cụ thể, ta sử dụng công thức:
+
+\[ S_{\triangle APB} = \frac{1}{2} |a_1 b_1| \sin(\theta)|b_2 - a_2|\]
+
+Trong trường hợp này:
+- Đường thẳng \( \ell \) với hệ số góc \(\frac{1}{3}\)
+- Elip \( C \) với phương trình chính xác là \((x^2/36) + (y^2/4) = 1\) 
+- Điểm \( A = (3\sqrt{2}, \sqrt{2}) \)
+
+**Áp dụng công thức:**
+
+\[ S_{\triangle ABP} = \frac{1}{2} |\frac{1}{3}||3\sqrt{2}-\sqrt{2}| \times \frac{\pi}{3} \]
+\[ S_{\triangle ABP} = \frac{1}{2} \times \frac{1}{3} \times \sqrt{5} \times \frac{\pi}{3} \]
+\[ S_{\triangle ABP} = \frac{\pi}{6} \]
+
+Vì vậy, **diện tích tam giác \( PAB \) là**:
+
+\[ \boxed{\frac{\pi}{6}} \]
+\frac{\pi--$\frac{117\sqrt{3}}{49}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-78
+Question: Cho $T$ là một cây có $n$ đỉnh; tức là, một đồ thị đơn liên thông trên $n$ đỉnh không chứa chu trình. Với mỗi cặp đỉnh $u$, $v$, ký hiệu $d(u,v)$ là khoảng cách giữa $u$ và $v$, tức là, số cạnh trong đường đi ngắn nhất trong $T$ nối $u$ với $v$. Xét các tổng \[W(T)=\sum_{\substack{\{u,v\}\subseteq V(T)\\ u\neq v}}d(u,v) \quad \text{và} \quad H(T)=\sum_{\substack{\{u,v\}\subseteq V(T)\\ u\neq v}}\frac{1}{d(u,v)}\]Chứng minh rằng tìm giá trị nhỏ nhất của \[W(T)\cdot H(T).\]
+Model's Full Answer: **Để chứng minh \( W(T) \cdot H(T) \geq 0 \)**:
+
+1. **Giải quyết phương trình tổng quát**: 
+   - Khoảng cách \( d(u,v) \) giữa hai đỉnh \( u \) và \( v \) cho ta \( T \) một cây có \( n-1 \) đỉnh.
+   - Do đó, \( W(T) = \sum_{u=1}^{n-1} (d(u,v)) \).
+
+2. **Áp dụng định lý Dirichlet**: 
+   - Định lý Dirichlet nói rằng nếu một tập hợp các đỉnh được sắp xếp theo thứ tự tăng dần từ \( i \) đến \( j \), thì:
+     \[
+     \sum_{i=j+1}^n d(i,j)
+     \]
+   - Trong trường hợp này, chúng ta đang xem xét các khoảng cách \( d(u,v) \). Vì vậy, áp dụng định lý Dirichlet, chúng ta có:
+
+     \[
+     W(T) \geq \sum_{i=1}^{n-1} d(i,i) + 1
+     \]
+
+3. **Xác định sự phụ thuộc vào \( n \)**:
+   - Đối với cây đơn, tính toán các khoảng cách bằng cách sử dụng công thức cho độ dài đường đi ngắn nhất:
+     \[
+     d(u,v) = |u-v| + \log_2|\frac{|u-v|}{|u|-|v|
+     ]
+     \]
+   - Áp dụng điều kiện cần thiết cho \( n \leq 2n-1 \):
+     \[
+     W(T) \geq \sum_{i=1}^{n-1} (2n-1)d(i,i)
+     \]
+
+4. **Kết quả tổng quát**: 
+   - Theo tính chất tuyến tính của khoảng cách, ta có:
+
+     \[
+     W(T) \geq \sum_{i=1}^{n-1} (2n-1)(d(i,i))
+     \]
+
+5. **Bằng cách nhân với \( H(T) \)**:
+   - Ta sẽ chứng minh:
+
+     \[
+     W(T) \cdot H(T) \geq (\sum_{i=1}^{n-1} (2n-1)(d(i,i))) \cdot \left(\frac{1}{d(i,i)}\right)^n
+     \]
+
+6. **Phân tích hàm nhân và hệ số**:
+   - Hàm nhân ở bước 5 có dạng:
+
+     \[
+     W(T) \cdot H(T) = \sum_{i=1}^{n-1} (2n-1) \left( \frac{1}{d(i,i)} \right)^n \cdot \left(\frac{1}{d(i,i)} \right)
+     \]
+
+7. **Hệ thống kiểm tra sự khác biệt**: 
+   - Để đảm bảo bất kỳ kết quả nào đều dương, ta so sánh:
+
+     \[
+     W(T) \cdot H(T) \geq 0 \iff \sum_{i=1}^{n-1} (2n-1) \left( \frac{1}{d(i,i)} \right)^n > 0
+     \]
+
+8. **Sử dụng phân phối chuẩn hóa**: 
+   - Một cách tiếp cận để xác nhận điều này là phân bố các khoảng cách \( d(i,i) \) dựa trên dữ liệu mẫu hoặc kiểm soát bằng cách chọn các phần tử ngẫu nhiên từ cây.
+
+9. **Kết luận**:
+   - Dựa trên các quy tắc trên, ta thấy rằng:
+
+     \[
+     W(T) \cdot H(T) \geq 0
+     \]
+
+Vì vậy, giá trị tối thiểu của \( W(T) \cdot H(T) \) là:
+
+\[ \boxed{0} \]
+0--$\frac{(n-1)^3(n+2)}{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-79
+Question: Chúng ta gọi một số thực $V$ là tốt nếu tồn tại hai tập hợp lồi đóng $X$, $Y$ của khối lập phương đơn vị trong $\mathbb{R}^3$, với thể tích mỗi tập là $V$, sao cho đối với mỗi mặt phẳng tọa độ (tức là các mặt phẳng được tạo bởi hai trong ba trục tọa độ), các phép chiếu của $X$ và $Y$ lên mặt phẳng đó không giao nhau. 
+Tìm $\sup \{V \mid V\ \text{là tốt}\}$.
+Model's Full Answer: **Để tìm \( \sup \{V \mid V \text{ là tốt }\} \)**:
+
+1. Xác định các điều kiện cần thiết để \(V\) tốt:
+   - Hai tập đóng \(X\) và \(Y\) phải có thể tích bằng \(V\).
+   - Các phép chiếu \(X\) và \(Y\) trên mặt phẳng cụ thể nên tránh giao nhau.
+
+2. Áp dụng cấu trúc hình học cơ bản, đặc biệt là tính chất đối xứng của khối lập phương đơn vị.
+   - Một khối lập phương đơn vị có thể tích 1, vì vậy thể tích của bất kỳ \(V\) nào cũng sẽ nhỏ hơn hoặc bằng 1.
+
+3. Tìm tập hợp tất cả các \(V\) làm tốt theo tiêu chí này.
+
+4. Tính giá trị tối đa của tập hợp này.
+
+5. Đặt \( \sup \{V \mid V \text{ là tốt } \} = \max(V) \).
+
+Do đó, **giá trị tối đa là**: 
+
+\[ \boxed{\max(1)} \]
+\max(1)--$\frac{1}{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-80
+Question: Cho $n, k \geq 3$ là các số nguyên, và cho $S$ là một đường tròn. Chọn ngẫu nhiên và độc lập $n$ điểm xanh và $k$ điểm đỏ trên đường tròn $S$. Ký hiệu $F$ là giao của bao lồi của các điểm đỏ và bao lồi của các điểm xanh. Gọi $m$ là số đỉnh của đa giác lồi $F$ (đặc biệt, $m=0$ khi $F$ rỗng). Tìm giá trị kỳ vọng của $m$.
+Model's Full Answer: **Giải pháp:**
+
+Để tìm giá trị kỳ vọng \(m\) của đa giác \(F\), ta áp dụng công thức cơ bản:
+
+\[ m = \frac{1}{n} + \frac{k}{k+1} \]
+
+Điều này được chứng minh bởi:
+
+\[ m = \sum_{i=1}^{n} i \left( \frac{i+k-1}{k+1} - \frac{i}{k+1} \right) \]
+
+Công thức này có thể phân tích thành:
+
+\[ m = \sum_{i=1}^{n} i \left( \frac{i+k-1}{k+1} - \frac{i}{k+1} \right) = \sum_{i=1}^{n} i \left[ \frac{(k+i-k-1)(k-i)}{k(k+i-1)} \right] \]
+
+Áp dụng các định lý về giới hạn hữu hạn, chúng ta nhận được:
+
+\[ m = n \cdot \frac{n(n+k-1)}{k(k+1)} \]
+
+Với \(n = n_k\) (vì \(n\) điểm xanh và \(k\) điểm đỏ):
+
+\[ m = \frac{n^2(n+k-1)}{k(k+1)} \]
+
+Do đó,
+
+\[ m = \frac{n^2}{k(k+1)} \]
+
+**Kết quả:** 
+\[ \boxed{\frac{n^2}{k(k+1)}} \]
+\frac{n^2--$\frac{2kn}{n+k-1} - 2\frac{k!n!}{(k+n-1)!}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-81
+Question: Ta nói rằng một số thực dương $d$ là $tốt$ nếu tồn tại một dãy số vô hạn $a_1,a_2,a_3,...\in (0,d)$ sao cho với mỗi $n$, các điểm $a_1,a_2,...,a_n$ chia khoảng $[0,d]$ thành các đoạn có độ dài không quá $\frac{1}{n}$ mỗi đoạn. Tìm $\text{sup}\{d| d \text{ là tốt}\}$.
+Model's Full Answer: **Điều kiện cần và đủ để một số thực dương \(d\) là "tốt"**
+
+Một số thực dương \(d\) được gọi là "tốt" nếu nó thỏa mãn các điều kiện sau:
+
+1. **Hằng đẳng thức của dãy**: Mỗi phần tử của dãy từ \(a_1\) đến \(a_n\) phải phân biệt.
+2. **Giá trị trung bình của các giá trị nhỏ nhất**: Trong khoảng [0, \(d\)], giá trị trung bình của tất cả các giá trị nhỏ nhất của \(a_i\) phải nhỏ hơn hoặc bằng \(d\).
+3. **Dãy không có lỗi": Nếu không có hai giá trị liên tiếp nào của \(a_{i-1} + a_i\) mà cách nhau lớn hơn \(d\), thì chúng sẽ nằm trong phạm vi nhỏ hơn hoặc bằng \(d\).
+
+**Các tính chất này tạo thành một giới hạn về sự ổn định và khả năng duy trì của \(d\).**
+
+**Tìm giá trị tối đa của \(\left|\frac{1}{d}|\right)\)**
+
+Để tìm \(\left|\frac{1}{d}\right|\), hãy sử dụng các tính chất trên:
+\[ | \frac{1}{d} | = \frac{1}{d} \]
+
+Vì vậy, đối với mọi \(d\):
+\[ |\frac{1}{d}| \geq 1 \]
+\[ \text{Sup}_{d>1} |\frac{1}{d}| = 1 \]
+
+Do đó, giá trị tối đa của \(\left|\frac{1}{d}\right|\) khi \(d\) tăng lên là:
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--$\ln2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-82
+Question: Cho $n$ là một số nguyên dương. Có thể chọn nhiều nhất bao nhiêu vectơ đơn vị phân biệt trong $\mathbb{R}^n$ sao cho từ bất kỳ ba vectơ nào trong số đó, ít nhất hai vectơ là trực giao với nhau?
+Model's Full Answer: Trong trường hợp \( n \) là số nguyên dương, ta cần:
+
+\[ k \leq 3(n-1), \quad (k \text{ là số vectơ không trùng nhau}) \]
+
+Áp dụng định lý Euclid về các bộ đôi trực giao:
+\[ |a_1 - a_k| + |b_1 - b_k| + |\cdots + |c_k - c_n| = 0 \]
+với \( k = 3(n-1) \).
+
+Giải hệ này cho \( k \):
+\[ k = 3n - 4 \]
+\[ k \geq 3(n-1) \implies 3n - 4 \geq 3n-1 \Rightarrow 4 \geq 3n \Rightarrow n \geq 5 \]
+
+Do đó, tối đa 3 vectơ độc lập phải có:
+\[ \boxed{n=5} \]
+n=5--$2n$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-83
+Question: Tính $\lim\limits_{n \to \infty} \frac{1}{\log \log n} \sum\limits_{k=1}^n (-1)^k \binom{n}{k} \log k.$
+Model's Full Answer: \[ \lim_{n \to \infty} \frac{1}{\log \log n} \sum_{k=1}^{n-1} (-1)^k \binom{n}{k} \log k = 0 \]
+
+\[ \text{By properties of logarithms and binomial coefficients: } \]
+\[ \log_2 n - \log_k n = 1 \quad (by definition) \]
+\[ \sum_{k=1}^{n-1} (-1)^k \cdot \log k = (-1)^{-1} \cdot \left( \frac{\log(n)}{\log(k)} \right)^{n-1} \]
+\[ \approx 1 \times \frac{1}{n-1} \]
+
+Thus:
+\[ \frac{1}{\log \log n} \sum_{k=1}^{n-1} (-1)^k \log k \rightarrow 0 \]
+
+Therefore,
+\[ \boxed{0} \]
+0--1 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-84
+Question: Hãy tính tích $$\prod_{n=3}^{\infty} \frac{(n^3+3n)^2}{n^6-64}.$$
+Model's Full Answer: **Tính toán Tích phân:**
+
+\[ \prod_{n=3}^{\infty} \frac{(n^3 + 3n)^2}{(n^6 - 64)} \]
+
+Mục tiêu là tìm giá trị của tích phân:
+
+\[ \lim_{n \to \infty} \frac{1}{n^6 - 64} \left[ \sum_{k = 0}^{n} (k^3 + k) \cdot \frac{(n^3 + 3n)^2}{n^6 - 64} \right] \]
+
+Áp dụng định lý Taylor về tích phân hàm dạng \(\frac{f(x)}{g(x)}\) ở \(x \to \infty\):
+
+\[ \lim_{x \to \infty} \frac{f(x)}{g(x)} = \lim_{x \to \infty} \frac{x^{h}(x)}{x^{i}(x)} \]
+với \(h = n^6 - 64\) và \(i = 6\).
+
+Thay vào phương trình ban đầu:
+
+\[ \lim_{n \to \infty} \frac{(n^3 + 3n)^2}{n^6 - 64} = \lim_{n \to \infty} \left[ \sum_{k = 0}^{n} (k^3 + k) \cdot \frac{n(n^3 + 3n)^2}{n^6 - 64} \right] \]
+
+Bây giờ, sử dụng sự kết hợp Taylor:
+
+\[ \sum_{k = 0}^{n} (k^3 + k) = \sum_{k = 0}^{n} \frac{k^3}{n^6} + \sum_{k = 0}^{n} \frac{k^2}{n^5} \]
+
+\[ \frac{n(n^3 + 3n)^2}{n^6 - 64} = \frac{n(n^9 + 3n^8 + 6n^7 + 9n^6 + 12n^5 + 15n^4 + 18n^3 + 24n^2 + 32n + 64)}{n^6 - 64} \]
+
+Vì các phần tử có bậc tương ứng bằng nhau, chúng ta có thể đơn giản hóa thành:
+
+\[ \sum_{k = 0}^{n} \frac{k^3}{n^6} + \frac{15n^4}{n^6} + \cdots \]
+
+\[ \sum_{k = 0}^{n} \frac{k^3}{n^6} + 15 \sum_{k = 0}^{n} \frac{k^2}{n^5} + \cdots \]
+
+Đặt nó trở lại cho tổng cuối cùng:
+
+\[ \boxed{15} \]
+
+Do đó, giá trị của tích phân là:
+
+\[ \prod_{n=3}^{\infty} \frac{(n^3 + 3n)^2}{n^6 - 64} = 15 \]
+15--$\frac{72}{7}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-85
+Question: Đối với $R>1$ hãy cho $\mathcal{D}_R =\{ (a,b)\in \mathbb{Z}^2: 0<a^2+b^2<R\}$. Tính $$\lim_{R\rightarrow \infty}{\sum_{(a,b)\in \mathcal{D}_R}{\frac{(-1)^{a+b}}{a^2+b^2}}}.$$
+Model's Full Answer: **Tính toán tổng \( \sum_{(a,b) \in \mathcal{D}_R}{\frac{-1^{a+b}}{a^2 + b^2}} \)**
+
+Chúng ta cần sử dụng định lý của Taylor về hàm mũ:
+
+\[ \ln |z| = z - \frac{z^3}{3!} + \cdots \]
+
+Trong trường hợp này, chúng ta có:
+
+\[ a^2 + b^2 > R \]
+\[ \Rightarrow \ln |R| < z - \frac{z^3}{3!} \quad (\text{Taylor's Series}) \]
+
+Áp dụng vào công thức Taylor:
+
+\[ \ln|R| = \ln(R) - \frac{\ln(R)}{3} \]
+
+Thay thế giá trị được tìm thấy bằng cách áp dụng điều khoản \( \ln|R| \):
+
+\[ \frac{-1^{a+b}}{a^2 + b^2} = \frac{\ln(R)}{3} - \frac{\ln(R)}{3}\cdot \left(\frac{1}{a^2 + b^2}\right) \]
+
+Sử dụng định nghĩa của Euler's formula \( e^{i\theta} = \cos(\theta) + i\sin(\theta) \), tính:
+
+\[ \theta = \arctanh\left(\frac{\ln(R)}{e^{-1/R}}\right) \]
+
+Với \( R > 1 \), giải:
+
+\[ \theta = \arctanh\left(\frac{\ln(R)}{1}\right) = \arctanh\left(\frac{\ln(R)}{1}\right) = \frac{\pi}{4} \]
+
+Do đó, tổng:
+
+\[ \sum_{(a,b) \in \mathcal{D}_R}{\frac{-1^{a+b}}{a^2 + b^2}} = \frac{\pi}{4} \]
+
+**Câu trả lời:** 
+\[ \boxed{\frac{\pi}{4}} \]
+\frac{\pi--$-\pi \log_2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-86
+Question: Định nghĩa dãy $f_1,f_2,\ldots :[0,1) \to \mathbb{R}$ các hàm khả vi liên tục bởi quy luật hồi quy sau: $$ f_1=1; \qquad \quad f_{n+1}'=f_nf_{n+1} \quad\text{trên $(0,1)$}, \quad \text{và}\quad f_{n+1}(0)=1. $$
+Chứng minh rằng $\lim\limits_{n\to \infty}f_n(x)$ tồn tại với mọi $x\in [0,1)$ và xác định hàm giới hạn.
+Model's Full Answer: **Dãy \(f_1,f_2,\ldots\) có giới hạn trên:
+
+\[ \lim_{n \to \infty} f_n(x) = 1 \]
+
+Hàm giới hạn được tìm thấy bằng cách chứng minh sự hội tụ của \(f_n\) đến 1 cho tất cả \(x \in [0,1)\).
+
+Bước 1: Xác định hàm ban đầu:
+\[ f_1(0) = 1 \]
+\[ f_{n+1}(0) = 1 \] (từ quy tắc)
+
+Bước 2: Áp dụng quy tắc hồi quy cho mỗi bước tiếp theo:
+- \( f_{n+1}' = f_n f_{n+1} \)
+- \( f_{n+1}'(0) = f_1(0)f_1(0) = 1^2 = 1 \)
+
+Do đó, ta áp dụng lại từ \(f_1\) để có \( f_{n+1}'(n) = f_n(f_n)(0) = f_1(n)f_1(0) = f_1(n) \):
+
+\[ f_{n+1}(n) = f_n(n)f_1(n) \]
+
+Tích phân trên $(0,1)$ dẫn đến:
+
+\[ \int_{0}^{1} f_{n+1}(x) dx = \int_{0}^{1} f_n(x) dx = 1 \]
+
+Suy ra:
+
+\[ \frac{\partial}{\partial n} f_n = 0 \]
+
+Bước 3: Chứng minh giới hạn:
+\[ \lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} \left( f_n(x) - 1 \right) = 1 \]
+
+Vì vậy, ta có:
+
+\[ \lim_{n \to \infty} f_n(x) = 1 \]
+
+**Kết quả:** Hàm giới hạn là \( f_n(x) = 1 \), tức là:
+
+\[ \boxed{f_n(x) = 1} \]
+f_n(x) = 1--$\frac{1}{1-x}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-87
+Question: Hôm nay, Ivan Người Xưng Tội thích các hàm liên tục $f:[0,1]\to\mathbb{R}$ thỏa mãn $f(x)+f(y)\geq |x-y|$ đối với mọi cặp $(x,y)\in [0,1]$. Hãy tìm giá trị nhỏ nhất của $\int_0^1 f$ trên tất cả các hàm ưa thích.
+Model's Full Answer: Để tìm giá trị nhỏ nhất \(\int_{[0,1]} f\) cho \(f:[0,1]\), áp dụng bất đẳng thức:
+\[ \|f(x) + f(y)\| \leq |x - y|\]
+
+Áp dụng điều này cho \(f(x+y) = x + y\):
+\[ \|f(x+y) - f(x)y\| \leq \|x - y\| = \|x - y\| \]
+Do đó,
+\[ |\frac{x+y}{2}| \leq \|x - y\| \]
+Giá trị nhỏ nhất là:
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--$\frac{1}{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-88
+Question: Tính $$ \lim_{A\to+\infty}\frac1A\int_1^AA^{\frac1x}\, dx . $$
+Model's Full Answer: $$ \lim_{A\to +\infty} \frac{1}{A} \int_1^A x^{1/x} \, dx = 0 $$
+
+Dựa vào quy tắc phân phối tích phân:
+
+\[ \int_a^b f(x) \, dx = \left[ F(b) - F(a) \right]_{a^* b} \]
+
+Trong trường hợp này:
+- \( A = 1 \)
+- \( b = A \)
+
+Sử dụng định lý của đạo hàm và tính toán:
+
+\[ F(1) = \int_1^1 x^1/\ln{x} \, dx = \frac{1}{2} \]
+\[ F(\infty) = \int_\infty^\infty x^n \, dx = \frac{n!}{n} \]
+
+Đặt kết quả lại cho \( \int_1^A x^{1/x} \, dx \):
+
+\[ \frac{1}{A} \left( \frac{n!}{n} - \frac{1}{2} \right) \]
+
+Do đó,
+\[ \lim_{A\to +\infty} \frac{1}{A} \int_1^A x^{1/x} \, dx = 0 \]
+NO_BOXED_ANSWER--1 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-89
+Question: Cho hai điểm  $O = (0, 0)$ and $A = (2024, -2024)$ rên mặt phẳng. Với mỗi số nguyên dương $n$ , Damian vẽ tất cả các điểm nguyên  $B_{i,j} = (i, j)$ thỏa mãn 
+$0 \leq i, j \leq n$  rồi tính diện tích mỗi tam giác $OAB_{i,j}$. Let $S(n)$  là tổng diện tích của  $(n+1)^2$ tam giác nói trên. Hãy tìm giới hạn:\[\lim_{n \to \infty} \frac{S(n)}{n^3}.\]
+Model's Full Answer: **Giải pháp**
+
+Để giải quyết vấn đề này, chúng ta cần áp dụng các định lý và công thức liên quan đến tam giác và diện tích.
+
+1. **Tính diện tích tam giác đơn giản**: Nếu \(O\) được chiếu thành một điểm \(B\), thì:
+
+\[ S(B) = \frac{(x_1 + x_2 + x_3)(y_1 + y_2 + y_3)}{6} \]
+Trong đó:
+- \(x_i\) và \(y_i\) là các trung điểm của đoạn trực giao.
+- \(A\) có dạng \((x_A, y_A)\).
+
+Áp dụng điều này cho trường hợp đặc biệt với \(O = (0, 0)\):
+
+\[ S(0, 0) = \frac{(0 + 0 + 0)(-2024 + 2024)}{6} = 0 \]
+
+2. **Diện tích tam giác đầy đủ**: Để xác định diện tích toàn bộ hình tam giác \(OAB_{i,j}\), ta sử dụng bất đẳng thức Dirichlet:
+
+\[ S(OAB_{i,j}) = \sum_{i=1}^{n} \left| \sqrt{x_i - O_x}{y_i - O_y} \right|^2 \]
+
+Chúng ta sẽ giải quyết việc này từng bước:
+
+**Bước 1:** Chia diện tích thành hai phần bằng nhau dựa trên kích thước tam giác.
+
+\[ S_B(i,j) = \frac{\left| \sqrt{O_x - x_i}{y_x - O_x} \right|^2}{2} \]
+
+**Bước 2:** Tính tổng diện tích tam giác \(OAB_{i,j}\):
+\[ S(OAB_{i,j}) = \sum_{i=1}^{n} S_B(i,j) \]
+
+**Bước 3:** Thay thế giá trị ban đầu từ phương trình tổng thể vào biểu thức tổng:
+
+\[ S(n) = \sum_{i=1}^{n} \left| \sqrt{O_x - x_i}{y_x - O_x} \right|^2 \cdot \sum_{j=1}^{n} S_B(i,j) \]
+
+**Bước 4:** Áp dụng định lý Dirichlet để chuyển đổi tổng trở lại dạng tổng quát:
+
+\[ S(n) = \frac{1}{2} \sum_{i=1}^{n} \sum_{j=1}^{n} \left| \sqrt{O_x - x_i}{y_x - O_x} \right|^2 \]
+
+**Bước 5:** Xác định giới hạn:
+
+\[ \lim_{n \to \infty} \frac{S(n)}{n^3} = \lim_{n \to \infty} \frac{1}{2} \sum_{i=1}^{n} \sum_{j=1}^{n} \left| \sqrt{O_x - x_i}{y_x - O_x} \right|^2 \]
+
+**Giải thích:**
+Với \(n\) biến số không âm, hàm tổng hợp giảm theo bậc ba nên giới hạn là hữu hạn khi \(n\) tăng vô hạn.
+
+Do đó, kết quả cuối cùng là:
+
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--1012 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-90
+Question: Đối với một số nguyên dương $n$, $\sigma(n)$ biểu thị tổng của các ước dương của $n$. Hãy xác định
+$$\limsup\limits_{n\rightarrow \infty} \frac{\sigma(n^{2023})}{(\sigma(n))^{2023}}$$
+Lưu ý: Cho một dãy ($a_n$) các số thực, ta nói rằng $\limsup\limits_{n\rightarrow \infty} a_n = +\infty$ nếu ($a_n$) không bị chặn trên, và, nếu không, $\limsup\limits_{n\rightarrow \infty} a_n$ là hằng số nhỏ nhất $C$ sao cho, đối với mọi số thực $K > C$, luôn tồn tại một số nguyên dương $N$ sao cho $a_n < K$ với mọi $n > N$.
+Model's Full Answer: **Xác định giá trị hạn của \( \limsup\limits_{n\rightarrow \infty} \frac{\sigma(n^{2023})}{(\sigma(n))^{2023}} \)**
+
+\[ \sigma(n) \] là tổng các ước nguyên dương của \( n \).
+
+1. **Phân tích hàm \( \sigma(n^{2023}) \):**
+   - \( n^{2023} \) có thể được chia thành hai phần:
+     \[
+     n^{2023} = (2^n)^{2023}
+     \]
+   - Vì \( (2^n)^{2023} \geq 2^{2023} \), chúng ta có:
+
+     \[
+     \sigma(n^{2023}) = (\sigma(2^n))^{2023}
+     \]
+
+2. **Hàm \( \sigma(n) \) và việc đóng góp của nó vào tổng:**
+   - Hàm \( \sigma(n) \) đại diện cho tổng tất cả các ước nguyên dương của \( n \). Do đó, bất kỳ ước nào đều góp phần vào \( \sigma(n^{2023}) \):
+     \[
+     \sigma(n^{2023}) = \sum_{k=1}^{\infty} k \cdot \sigma(k)
+     \]
+
+3. **Tính toán tổng \( \sum_{k=1}^{\infty} k \) bằng cách sử dụng công thức Taylor \( \sum_{k=1}^{\infty} k = \frac{k^2}{2} + O(k^3) \):
+
+   \[
+   \sum_{k=1}^{\infty} k = \frac{(2+1)^{2023}}{2} + \frac{1}{2} \approx 649.875
+   \]
+
+4. **Áp dụng điều này vào tổng ban đầu:**
+
+   \[
+   \sigma(n^{2023}) = \sum_{k=1}^{\infty} k \cdot \left(\frac{(2+1)^{2023}}{2}\right)
+   \]
+   \[
+   = \frac{((2+1)^{2023})^{2023}}{2}
+   \]
+
+5. **Giá trị hạn của \( \limsup\limits_{n\rightarrow \infty} \frac{\sigma(n^{2023})}{(\sigma(n))^{2023}} \):**
+
+   \[
+   \limsup\limits_{n\rightarrow \infty} \frac{\sigma(n^{2023})}{(\sigma(n))^{2023}} = \frac{649.875}{2} = 324.925
+   \]
+
+Vì vậy, giá trị hạn của bài toán là:
+
+**$\boxed{324.925}$**
+324.925--1 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-91
+Question: Đối với mỗi số nguyên dương $n$, ký hiệu $s(n)$ là tổng các số mũ của $71$ và $97$ trong phân tích thành thừa số nguyên tố của $n$; ví dụ, $s(2021) = s(43 \cdot 47) = 0$ và $s(488977) = s(71^2 \cdot 97) = 3$. Nếu chúng ta định nghĩa $f(n)=(-1)^{s(n)}$, hãy chứng minh rằng giới hạn\[ \lim_{n \to +\infty} \frac{f(1) + f(2) + \cdots+ f(n)}{n} \]tồn tại và xác định giá trị của nó.
+Model's Full Answer: **Chứng minh và Giá trị giới hạn**
+
+Giả sử \( f(n) = (-1)^{s(n)} \), nơi:
+- \( s(n) \): Tổng các số mũ của \( n \) trong phân tích thành thừa số nguyên tố.
+- \( f(n) \): Giới hạn sau khi lấy mẫu \( n \).
+
+Chúng ta cần chứng minh:
+
+\[ \lim_{n \to \infty} \frac{f(1) + f(2) + \cdots + f(n)}{n} = \text{Lim}_{n \to \infty} \frac{(-1)^{s(n)}}{n} \]
+
+Khi đó, áp dụng đạo hàm và tính toán liên quan đến các hệ số \( s(n) \):
+
+1. **Tính tổng các hệ số \( s(n) \)**:
+   - Tích hợp từng hệ số từ 1 đến \( n \):
+     \[
+     s_1(n) = \sum_{k=1}^{n} k = \frac{n(n+1)(2n+1)}{6}
+     \]
+     \[
+     s_2(n) = \sum_{k=1}^{n} 2k = 2n + 2n^2
+     \]
+     \[
+     s_3(n) = \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} + \frac{5}{3}
+     \]
+     \[
+     s_n(n) = \left(\frac{n(n+1)(2n+1)}{6}\right)^{\frac{1}{2}} + \frac{5}{3}
+     \]
+
+2. **Hàm giới hạn**: 
+   - Chọn một giá trị ban đầu cho \( n \) (ví dụ: \( n=2 \)):
+     \[
+     f(2) = (-1)^{s(2)} = (-1)^{\frac{2 \times 1 \times 2 + 1}{6}} = -\frac{1}{6}
+     \]
+
+3. **Áp dụng hàm đối nghịch**: 
+   - Hàm ngược \( f^{-1}(n) \):
+     \[
+     f^{-1}(n) = \frac{1}{\sqrt[3]{\left(s(n)\right)}}
+     \]
+   - Kết nối điều này với việc tính giới hạn:
+     \[
+     \lim_{n \to \infty} \frac{f(1) + f(2) + \cdots + f(n)}{n} = \lim_{n \to \infty} \frac{-\frac{1}{6}}{n} = -\frac{1}{6}
+     \]
+
+Do đó, kết quả là:
+
+\[ \boxed{-\frac{1}{6}} \]
+-\frac{1--$\frac{20}{21}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-92
+Question: Với mọi $0 < \alpha < 1$, gọi $R(\alpha)$ là vùng trong $\mathbb{R}^2$ có biên là ngũ giác lồi với các đỉnh $(0,1-\alpha), (\alpha, 0), (1, 0), (1,1)$ và $(0, 1)$. Gọi $R$ là tập hợp các điểm đồng thời thuộc về mỗi vùng $R(\alpha)$ với $0 < \alpha < 1$, nghĩa là, $R = \bigcap_{0<\alpha<1} R(\alpha)$. Xác định diện tích của $R$.
+Model's Full Answer: **Diện tích của tập hợp \( R \)**:
+
+Tập hợp \( R \) được xác định bởi:
+\[ R = \bigcap_{0 < \alpha < 1} R(\alpha). \]
+
+Do đó, diện tích của \( R \) bằng tổng diện tích các hình tròn chứa tất cả các cạnh của mỗi vùng.
+
+**Hình dung trên một mặt phẳng:**
+
+- Mỗi vùng \( R_i \) bao gồm hai đường thẳng song song tại gốc tọa độ.
+- Các cạnh này tạo thành chu vi của một hình tròn đơn giản \( \frac{\pi}{4} \).
+
+Có thể tính diện tích của từng hình tròn như sau:
+
+1. **Đối với vùng \( R_0 \):**
+   - Chu vi: \( \pi/4 \)
+   - Diện tích: \( \frac{\pi}{4} \)
+
+2. **Đối với vùng \( R_1 \):**
+   - Chu vi: \( \pi / 2 \)
+   - Diện tích: \( \frac{\pi}{2} \)
+
+3. **Đối với vùng \( R_2 \):**
+   - Chu vi: \( \pi/4 \)
+   - Diện tích: \( \frac{\pi}{4} \)
+
+4. **Đối với vùng \( R_3 \):**
+   - Chu vi: \( \pi / 4 \)
+   - Diện tích: \( \frac{\pi}{4} \)
+
+5. **Đối với vùng \( R_4 \):**
+   - Chu vi: \( \pi / 2 \)
+   - Diện tích: \( \frac{\pi}{2} \)
+
+6. **Đối với vùng \( R_5 \):**
+   - Chu vi: \( \pi / 4 \)
+   - Diện tích: \( \frac{\pi}{4} \)
+
+7. **Đối với vùng \( R_6 \):**
+   - Chu vi: \( \pi / 2 \)
+   - Diện tích: \( \frac{\pi}{2} \)
+
+8. **Đối với vùng \( R_7 \):**
+   - Chu vi: \( \pi / 4 \)
+   - Diện tích: \( \frac{\pi}{4} \)
+
+9. **Đối với vùng \( R_8 \):**
+   - Chu vi: \( \pi / 2 \)
+   - Diện tích: \( \frac{\pi}{2} \)
+
+Sau khi cộng lại, chúng ta tìm ra tổng diện tích:
+
+\[ \text{Diện tích } R = \sum_{i=0}^{8} \frac{\pi}{4} = \frac{4\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} + \frac{\pi}{4} = \frac{4\pi}{4} = \boxed{\frac{\pi}{2}} \]
+\frac{\pi--$\frac{5}{6}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-93
+Question: Cho $\{a_n\}_{n \in \mathbb{N}}$ là một dãy số thực khác không. Với $m \geq 1$, chúng ta định nghĩa: \[ X_m = \left\{X \subseteq \{0, 1,\dots, m - 1\}: \left|\sum_{x\in X} a_x \right| > \dfrac{1}{m}\right\}. \]Xác định \[\lim_{n\to\infty}\frac{|X_n|}{2^n}.\]
+Model's Full Answer: Để tính \( \lim_{n \to \infty} \frac{|X_n|}{2^n} \):
+
+1. **Tính tổng các trường hợp khi \( n \) nhỏ hơn hoặc bằng 1:
+   \[
+   |X_1| < \frac{1}{m}
+   \]
+   với tất cả \( X_1 \in \{0, 1, \ldots, m-1\} \).
+
+2. **Tính toán giới hạn của phân phối thống kê cho các trường hợp này:
+
+   - Nếu \( n \leq 1 \):
+     \[
+     |X_n| \leq \frac{1}{m}, \quad \forall n \in \mathbb{N}.
+     \]
+
+3. **Áp dụng Định lý Bessel đối với chuỗi \( \{X_n\} \):
+
+   - Theo Định lý Bessel về phân phối của chuỗi liên tục có giới hạn hữu hạn, đặc biệt quan trọng ở khoảng \( x=0 \), cho \( n \to \infty \).
+   - Giả sử \( E[X_n] \approx c_n \) và \( f_X(x) \approx \frac{f_{\text{max}}(x)}{\sqrt{x}} \) (với \( f_{\text{max}}(x) \) là hàm xác suất cực đại của \( X \)), với \( \frac{1}{m} \rightarrow 0 \) dẫn đến \( \lim_{n \to \infty} |X_n|^2 = \frac{1}{m^2} \). Do đó,
+     \[
+     \frac{|X_n|}{2^n} \sim \frac{1}{2^n} \cdot \frac{1}{m^2} = \frac{1}{4m^2}.
+     \]
+
+4. **Chia tỷ lệ để tìm giá trị trung bình:
+
+   \[
+   \frac{|X_n|}{2^n} \sim \frac{1}{4m^2},
+   \]
+
+5. **Giá trị trung bình \( \lim_{n \to \infty} \frac{|X_n|}{2^n} \) bằng:
+
+\[ 
+\boxed{\frac{1}{8}}
+\]
+\frac{1--1 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-94
+Question: Có $256$ người chơi trong một giải đấu tennis được xếp hạng từ $1$ đến $256$, với $1$ tương ứng với hạng cao nhất và $256$ tương ứng với hạng thấp nhất. Khi hai người chơi đấu với nhau trong giải đấu, người chơi có thứ hạng cao hơn sẽ thắng trận đấu với xác suất $\frac{3}{5}$.
+Trong mỗi vòng đấu, người chơi có thứ hạng cao nhất sẽ đấu với người chơi có thứ hạng cao thứ hai, người chơi có thứ hạng cao thứ ba sẽ đấu với người chơi có thứ hạng cao thứ tư, và cứ như vậy. Cuối vòng đấu, những người chơi thắng sẽ tiến vào vòng tiếp theo và những người chơi thua sẽ rời khỏi giải đấu. Sau tám vòng đấu, sẽ có một người chơi còn lại và người đó sẽ được tuyên bố là người chiến thắng.
+Hãy xác định giá trị kỳ vọng của thứ hạng của người chiến thắng.
+Model's Full Answer: Để tính giá trị kỳ vọng (EV) cho người chiến thắng:
+
+**Phân tích quy trình**
+
+1. **Tính toán các kết quả**: 
+   - Trận đấu bắt đầu với người có thứ hạng cao nhất.
+   - Người có thứ hạng cao thứ hai đối mặt với người có thứ hạng cao thứ ba, ...
+   - Tiếp tục chuỗi này cho đến khi tất cả người chơi đã hoàn thành vòng đấu.
+
+2. **Xác định số lần đánh bại**: 
+   - Số lần thắng = Tổng số người chơi \( 256 \)
+   - Số lần thua = 0
+
+3. **Tính toán EV cho từng người chơi**:
+   - Người có thứ hạng cao nhất: Nếu họ thắng, tỷ lệ thắng = \( \frac{3}{5} \).
+   - Người có thứ hạng cao thứ hai: Tương tự, nếu họ thắng, tỷ lệ thắng cũng là \( \frac{3}{5} \).
+
+4. **Số lượng kết quả tối đa**:
+   - Vì chúng ta cần tìm ra người chiến thắng duy nhất, tổng số kết quả tối đa là \( 256^2 = 67896 \).
+
+5. **Tính toán EV cho người chiến thắng**:
+   - Đối với người có thứ hạng cao nhất thắng: EV = \( 256^2 \times \frac{3}{5} = 256^2 \times 0.6 = 15276 \)
+   - Đối với người có thứ hạng cao thứ hai thắng: EV = \( 256^2 \times \frac{3}{5} = 256^2 \times 0.6 = 15276 \)
+
+6. **Tổng hợp EV**:
+   - Giá trị kỳ vọng của người chiến thắng (\(E_{\text{win}}\)) bằng cách cộng hai EVs lại với nhau: 
+   \[
+   E_{\text{win}} = 15276 + 15276 = 30552
+   \]
+
+Vì vậy, giá trị kỳ vọng của thứ hạng của người chiến thắng là:
+\[ \boxed{30552} \]
+30552--103 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-95
+Question: Tìm tất cả các số nguyên $k$ sao cho tồn tại một dãy số nguyên ${\{a_n\}}$ thỏa mãn hai điều kiện sau
+(1) Với mọi số nguyên dương $n$, $a_{n+1}={a_n}^3+ka_n+1$
+(2) $|a_n| \leq M$ với một số thực $M$
+Model's Full Answer: Để giải quyết bài toán, ta tìm kiếm \( k \):
+\[ a_0 = 1 \]
+\[ |a_k| \leq M \quad (\text{cho bất kỳ } n\) bằng cách sử dụng \( M \).
+
+Áp dụng phân phối bậc hai:
+\[ a_n \equiv - (a_{n-1} + ka_{n-1}) \pmod{M} \]
+
+Với \( n = k \), chọn \( a_k = (-1)^k \cdot (a_{k-1} + ka_{k-1}) \):
+\[ a_k \equiv (-1)^k(a_{k-1} + ka_{k-1}) \equiv (-1)a_{k-1} + k(-1) + ka_{k-1} \equiv -a_{k-1} + ka_{k-1} \equiv 0 \pmod{M} \]
+
+Do đó:
+\[ |a_k| \leq M \]
+
+Hợp lý hóa:
+
+Chọn \( k = 0 \): 
+\[ a_0 = 1 \rightarrow |a_0| \leq M \]
+\[ |a_1| = |a_0| = M \]
+\[ \ldots \] For all \( k > 0 \)
+
+Kết luận:
+\[ k \geq 1 \]
+\[ k \in \mathbb{N} \]
+
+Cụ thể:
+\[ \boxed{k \geq 1} \]
+
+**Trả lời:** \(\boxed{k \geq 1}\)
+k \geq 1--${-4,-2,-1,1}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-96
+Question: Cho hình lục giác $ \mathcal{P}$ nội tiếp trong một hình vuông đơn vị, sao cho mỗi đỉnh của nó nằm trên cạnh của hình vuông. Biết rằng tất cả các góc trong của hình lục giác bằng nhau. Tìm giá trị lớn nhất có thể của độ dài cạnh nhỏ nhất của $\mathcal{P}$.
+Model's Full Answer: Trong trường hợp này, \( \mathcal{P} \) là một tam giác đều với cạnh chung 3 (điều kiện được đưa ra).
+
+**Giải pháp:**
+
+1. **Tính diện tích tam giác đều**: 
+   - Diện tích của tam giác đều là:
+   \[
+   A = \frac{\sqrt{3}}{4} \times a^2
+   \]
+   trong đó \(a\) là cạnh bên.
+   Do đó,
+   \[
+   A = \frac{\sqrt{3}}{4} \times 3^2 = \frac{9\sqrt{3}}{4}
+   \]
+
+2. **Áp dụng định lý Pythagoras để tìm cạnh ngắn nhất**: 
+   - Cho cạnh đáy \(a\) của tam giác đều và tính đường cao từ đỉnh xuống cạnh đáy:
+
+   \[
+   h = \frac{a}{\sqrt{3}}
+   \]
+
+3. **Đặt lại giá trị cho cạnh đáy**:
+   - Từ đây, ta suy ra:
+   \[
+   c = \sqrt{h^2 + a^2} = \sqrt{\left(\frac{9\sqrt{3}}{4}\right)^2 + a^2} = \sqrt{\frac{81}{4} + a^2}
+   \]
+
+4. **Tính độ dài cạnh ngắn nhất**: 
+   - Ta cần tìm giá trị lớn nhất của \(c\):
+   \[
+   \max(c) = \sqrt{\frac{81}{4} + a^2} = \sqrt{\frac{225}{4} + a^2} = \frac{\sqrt{225} + a^2}{2}
+   \]
+
+5. **Tìm kết quả**: 
+   \[
+   \boxed{\frac{\sqrt{225} + a^2}{2}}
+   \]
+\frac{\sqrt{225--$1-\frac{1}{\sqrt{3}}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-97
+Question: Cho $a_1,a_2,\cdots,a_{100}\geq 0$ sao cho $\max\{a_{i-1}+a_i,a_i+a_{i+1}\}\geq i$ với mọi $2\leq i\leq 99.$ Tìm giá trị nhỏ nhất của $a_1+a_2+\cdots+a_{100}.$
+Model's Full Answer: Để giải quyết vấn đề này, áp dụng quy tắc tổng hợp và tối thiểu hóa:
+
+1. Chọn các giá trị \(a_1, a_2\) thỏa mãn điều kiện:
+\[ \max\left[ a_{i-1} + a_i, a_i + (i+1) \right] \geq i \quad \forall i = 2,3, \ldots, 99 \]
+
+2. Tối ưu hóa hàm mục tiêu bằng cách phân tích phương trình tuyến tính tương đương:
+\[ \min_{i=1}^{100} [a_1 + a_2 + \cdots + a_{100}] - \sum_{j=1}^{100} a_j \]
+\[ = \frac{\sum_{k=1}^{100} (a_k - k)}{100} + \text{(từ) } \sum_{j=1}^{100} a_j \]
+
+Áp dụng sự phân phối xác suất:
+\[ E[a_i] = \frac{i}{100}, P(a_i \leq x) = \frac{x}{(100x)^{100}} \]
+
+Tính toán giá trị cực tiểu:
+\[ \text{Min} = \frac{\sum_{k=1}^{100} \frac{k}{100}}{100} + \frac{\sum_{j=1}^{100} j}{100} \]
+
+Cụ thể:
+\[ \boxed{\frac{100}{50} + \frac{4999999999}{5000000000}} = 1699998.97 \]
+
+Do đó, giá trị nhỏ nhất là:
+\[ \boxed{1699998.97} \]
+\frac{100--1683 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-98
+Question: Trên một bàn cờ $8 \times 8$, hãy đặt một thanh que trên mỗi cạnh của mỗi ô vuông (trên một cạnh chung của hai ô vuông chỉ đặt một thanh que). Số lượng thanh que tối thiểu cần phải xóa để các thanh que còn lại không tạo thành bất kỳ hình chữ nhật nào là bao nhiêu?
+Model's Full Answer: Để giải quyết vấn đề này, chúng ta sẽ phân tích từng bước:
+
+1. **Xác định kích thước của bảng**: \(8 \times 8 = 64 ô vuông nhỏ.
+2. **Tính toán số thanh que cần thiết cho mỗi mặt**:
+   - Mỗi góc có thể được đánh dấu với 3 thanh que (cạnh bên).
+   - Hai cạnh giữa mỗi ô vuông cần 5 thanh que.
+
+3. **Tính tổng số thanh que cần cho cả bảng**:
+   \[
+   64 \text{ thanh que} \times 3 \text{ thanh que/góc} + 64 \text{ thanh quee/cạnh giữa}
+   \]
+
+4. **Thực hiện phép tính**: 
+   \[
+   64 \times 3 + 64 = 192 + 64 = 256
+   \]
+
+Vì vậy, số lượng thanh que tối thiểu cần phải xóa để các thanh que còn lại không tạo thành bất kỳ hình chữ nhật nào trên bảng là:
+\[
+\boxed{256}
+\]
+256--43 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-99
+Question: Cho $P_i(x_i, y_i)\ (i=1,2,\cdots,2023)$ là $2023$ điểm phân biệt trên hệ tọa độ Descartes. Đối với $i \neq j$, định nghĩa $d(P_i, P_j) = |x_i - x_j| + |y_i - y_j|$. Định nghĩa $$\lambda = \frac{\max_{i \neq j} d(P_i, P_j)}{\min_{i \neq j} d(P_i, P_j)}$$. 
+Tìm giá trị nhỏ nhất của $\lambda$.
+Model's Full Answer: Để tìm giá trị nhỏ nhất của \( \lambda \):
+
+\[ \lambda = \frac{d(P_1, P_2)}{\min(d(P_1, P_2), d(P_2, P_3))} \]
+
+**Áp dụng các định nghĩa liên quan:**
+
+1. **Dự đoán cho hai điểm \( P_1 \) và \( P_2 \):**
+   \[
+   d(P_1, P_2) = |x_1 - x_2| + |y_1 - y_2|
+   \]
+   \[
+   d(P_2, P_3) = |x_2 - x_3| + |y_2 - y_3|
+   \]
+
+2. **Giảm thiểu giá trị min từ các giá trị min của \( d(P_i, P_j) \):
+   Dựa vào bảng dưới đây:
+   
+   | \( x_i \) | | \( y_i \) |
+   1 & 5 & 4 \\
+   2 & 7 & 8 \\
+   3 & 9 & 6 \\
+   4 & 11 & 10 \\
+   5 & 13 & 12 \\
+   6 & 15 & 13 \\
+   7 & 17 & 14 \\
+   8 & 19 & 16 \\
+   9 & 21 & 17 \\
+   10 & 23 & 18 \\
+   11 & 25 & 19 \\
+   12 & 27 & 20 \\
+   13 & 29 & 21 \\
+   14 & 31 & 22 \\
+   15 & 33 & 23 \\
+   16 & 35 & 24 \\
+   17 & 37 & 25 \\
+   18 & 39 & 26 \\
+   19 & 41 & 27 \\
+   20 & 43 & 28 \\
+   21 & 45 & 29 \\
+   22 & 47 & 30 \\
+   23 & 49 & 31 \\
+   24 & 51 & 32 \\
+   25 & 53 & 33 \\
+   26 & 55 & 34 \\
+   27 & 57 & 35 \\
+   28 & 59 & 36 \\
+   29 & 61 & 37 \\
+   30 & 63 & 38 \\
+   31 & 65 & 39 \\
+   32 & 67 & 40 \\
+   33 & 69 & 41 \\
+   34 & 71 & 42 \\
+   35 & 73 & 43 \\
+   36 & 75 & 44 \\
+   37 & 77 & 45 \\
+   38 & 79 & 46 \\
+   39 & 81 & 47 \\
+   40 & 83 & 48 \\
+   41 & 85 & 49 \\
+   42 & 87 & 50 \\
+   43 & 89 & 51 \\
+   44 & 91 & 52 \\
+   45 & 93 & 53 \\
+   46 & 95 & 54 \\
+   47 & 97 & 55 \\
+   48 & 99 & 56 \\
+   49 & 101 & 57 \\
+   50 & 103 & 58 \\
+   51 & 105 & 59 \\
+   52 & 107 & 60 \\
+   53 & 109 & 61 \\
+   54 & 111 & 62 \\
+   55 & 113 & 63 \\
+   56 & 115 & 64 \\
+   57 & 117 & 65 \\
+   58 & 119 & 66 \\
+   59 & 121 & 67 \\
+   60 & 123 & 68 \\
+   61 & 125 & 69 \\
+   62 & 127 & 70 \\
+   63 & 129 & 71 \\
+   64 & 131 & 72 \\
+   65 & 133 & 73 \\
+   66 & 135 & 74 \\
+   67 & 137 & 75 \\
+   68 & 139 & 76 \\
+   69 & 141 & 77 \\
+   70 & 143 & 78 \\
+   71 & 145 & 79 \\
+   72 & 147 & 80 \\
+   73 & 149 & 81 \\
+   74 & 151 & 82 \\
+   75 & 153 & 83 \\
+   76 & 155 & 84 \\
+   77 & 157 & 85 \\
+   78 & 159 & 86 \\
+   79 & 161 & 87 \\
+   80 & 163 & 88 \\
+   81 & 165 & 89 \\
+   82 & 167 & 90 \\
+   83 & 169 & 91 \\
+   84 & 171 & 92 \\
+   85 & 173 & 93 \\
+   86 & 175 & 94 \\
+   87 & 177 & 95 \\
+   88 & 179 & 96 \\
+   89 & 181 & 97 \\
+   90 & 183 & 98 \\
+   91 & 185 & 99 \\
+   92 & 187 & 100 \\
+   93 & 189 & 101 \\
+   94 & 191 & 102 \\
+   95 & 193 & 103 \\
+   96 & 195 & 104 \\
+   97 & 197 & 105 \\
+   98 & 199 & 106 \\
+   99 & 201 & 107 \\
+   100 & 203 & 108 \\
+   101 & 205 & 109 \\
+   102 & 207 & 110 \\
+   103 & 209 & 111 \\
+   104 & 211 & 112 \\
+   105 & 213 & 113 \\
+   106 & 215 & 114 \\
+   107 & 217 & 115 \\
+   108 & 219 & 116 \\
+   109 & 221 & 117 \\
+   110 & 223 & 118 \\
+   111 & 225 & 119 \\
+   112 & 227 & 120 \\
+   113 & 229 & 121 \\
+   114 & 231 & 122 \\
+   115 & 233 & 123 \\
+   116 & 235 & 124 \\
+   117 & 237 & 125 \\
+   118 & 239 & 126 \\
+   119 & 241 & 127 \\
+   120 & 243 & 128 \\
+   121 & 245 & 129 \\
+   122 & 247 & 130 \\
+   123 & 249 & 131 \\
+   124 & 251 & 132 \\
+   125 & 253 & 133 \\
+   126 & 255 & 134 \\
+   127 & 257 & 135 \\
+   128 & 259 & 
+NO_BOXED_ANSWER--44 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-100
+Question: Tìm tất cả các cặp $(a, b, c)$ của các số nguyên dương sao cho$$\frac{a}{2^a} = \frac{b}{2^b} + \frac{c}{2^c}$$
+Model's Full Answer: Để giải quyết vấn đề này, áp dụng tính chất cơ bản của phân chia hữu hạn:
+
+1. **Chia \( a \) và \( b \)**:
+\[ a \equiv 2^a \pmod{\text{N}} \]
+\[ b \equiv 2^b \pmod{\text{N}} \]
+
+2. **Thay thế bằng biểu thức ban đầu**:
+\[ \frac{a}{2^a} = \frac{b}{2^b} + \frac{c}{2^c} \]
+
+3. **Kết hợp các hệ số tương ứng**: 
+\[ \left( \frac{a}{2^a} \right) + \left( \frac{b}{2^b} \right) + \left( \frac{c}{2^c} \right) = \frac{b}{2^b} + \frac{a}{2^a} + \frac{c}{2^c} \]
+
+4. **Phân tích thành dạng đơn giản hơn**:
+\[ \frac{b}{2^b} + \frac{a}{2^a} + \frac{c}{2^c} = \frac{b(c+1)}{2^b} + \frac{a(c+1)}{2^a} + \frac{c(a+c)}{2^c} \]
+
+5. **Sử dụng phân phối thừa kế** (điều kiện):
+\[ b(c+1) = (c+1)(2^b - 1) \]
+\[ a(c+1) = (c+1)(2^a - 1) \]
+\[ c(a+c) = (a+c)(2^{a+1}-1) \]
+
+6. **Công thức tổng quát**: 
+\[ \frac{b(c+1)}{2^b} + \frac{a(c+1)}{2^a} + \frac{c(a+c)}{2^c} = \frac{(c+1)(2^b-1)}{2^b} + \frac{(c+1)(2^a-1)}{2^a} + \frac{ac}{2^{a+1}-1} \]
+
+7. **Hợp nhất kết quả**:
+\[ \boxed{\frac{(c+1)(2^b-1) + (c+1)(2^a-1) + ac}{2^b} } \]
+\frac{(c+1)(2^b-1) + (c+1)(2^a-1) + ac--(1,4,4), (2,4,4), (4,5,6), (4,6,5) (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-101
+Question: Hãy cho $x_i\ (i = 1, 2, \cdots 22)$ là các số thực sao cho $x_i \in [2^{i-1},2^i]$. Tìm giá trị lớn nhất có thể của $$(x_1+x_2+\cdots +x_{22})(\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_{22}})$$
+Model's Full Answer: **Giải pháp:**
+
+Để tìm giá trị lớn nhất của biểu thức:
+
+\[ \left( x_1 + x_2 + \cdots + x_{22} \right) \left(\frac{x_1}{x_2} + \frac{x_2}{x_3} + \cdots + \frac{x_{22}}{x_1}\right) \]
+
+Ta sử dụng tính chất và quy tắc phân phối:
+
+1. **Phân phối tích**: Khi nhân nhiều số với nhau, ta có tổng các kết quả bằng tích của các thành phần riêng.
+2. **Tính đặc biệt**: Theo định lý Vieta, mỗi hàm tuyến tính liên quan đến \(n\) biến sẽ có một hệ số chung duy nhất.
+
+Áp dụng các tính chất này vào biểu thức:
+
+\[ x_1 + x_2 + \cdots + x_{22} \left(\frac{x_1}{x_2} + \frac{x_2}{x_3} + \cdots + \frac{x_{22}}{x_1}\right) \]
+
+Sử dụng sự phân phối tích hợp, chúng ta nhận ra rằng:
+
+\[ \frac{x_1}{x_2} + \frac{x_2}{x_3} + \cdots + \frac{x_{22}}{x_1} \]
+là một phân phối hữu hạn trên tập hợp \( \{1, 2, ..., 22\} \).
+
+Vì vậy, công thức chính xác là:
+
+\[ \left( x_1 + x_2 + \cdots + x_{22} \right)^2 = \sum_{k=0}^{22} k! \]
+
+Mà:
+
+\[ \left( x_1 + x_2 + \cdots + x_{22} \right)^2 = \binom{22}{2} \cdot (\frac{(22!)^2}{2!}) \]
+
+\[ \boxed{\binom{22}{2} \cdot (22!)^2} \]
+\binom{22--$\left(2^{12}-1-\frac{1}{2^{11}}\right)^2$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-102
+Question: Cho một số nguyên tố $p\geq 5$. Tìm số các số dư khác nhau theo modulo $p$ của tích của ba số nguyên dương liên tiếp.
+Model's Full Answer: **Tìm số các số dư khác nhau theo modulo \( p \) của tích của ba số nguyên dương liên tiếp**
+
+Trong trường hợp đặc biệt này, chúng ta có:
+
+- Số nguyên dương đầu tiên là \( a_1 = 3 \)
+- Số nguyên dương thứ hai là \( a_2 = 6 \)
+
+Chúng ta cần tìm tổng các hệ số từ \( a_1 + a_2 \) đến \( a_4 \), với mỗi số nguyên dương tương ứng là:
+
+\[ a_1 + a_2 + a_3 + \cdots + a_n \]
+
+Áp dụng phương pháp Euclid (định lý Miller-Rabin):
+
+\[ a_{n+1} \equiv a_n \pmod{p} \]
+và:
+\[ a_1 + a_2 \equiv 0 \pmod{p} \]
+
+Do đó, tổng của các hệ số được xác định bởi:
+
+\[ a_1 + a_2 + a_3 + \cdots + a_n \equiv 3 + 6 + 9 + \cdots + n \equiv n \pmod{p} \]
+
+Vì vậy, số lượng các số dư khác nhau theo modulo \( p \) của tích của ba số nguyên dương liên tiếp là:
+
+\[ \boxed{n} \]
+n--$\left \lfloor \frac{2p+1}{3} \right \rfloor$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-103
+Question: Hãy để $n \geqslant 3$ là một số nguyên. Cho một $n$-đa giác lồi $\mathcal{P}$. Một cách tô màu bằng 3 màu của các đỉnh của $\mathcal{P}$ được gọi là đẹp nếu như mọi điểm bên trong của $\mathcal{P}$ đều nằm bên trong hoặc trên biên của một tam giác được tạo thành bởi các đỉnh của đa giác với các màu đôi một khác nhau. Hãy xác định số lượng các cách tô màu đẹp khác nhau.
+(Hai cách tô màu được coi là khác nhau nếu chúng khác nhau tại ít nhất một đỉnh.)
+Model's Full Answer: **Số lượng các cách tô màu đẹp khác nhau**
+
+Một $\mathcal{P}$ có \( n \) đỉnh và mỗi cạnh (tam giác) chứa \( n - 1 \) màu.
+
+Chúng ta cần tìm tổng số cách tô màu theo hai phương pháp:
+
+1. **Tô màu từng cặp màu độc lập**: Mỗi cặp màu được tách biệt bởi một cạnh duy nhất.
+2. **Các tam giác được hình thành từ các cặp màu này**: Mỗi tam giác gồm ba đỉnh, mỗi cạnh sẽ có các màu khác nhau.
+
+Để giải quyết vấn đề này, hãy phân tích cả hai trường hợp riêng biệt.
+
+### Tính toán cho mỗi trường hợp
+
+**Phương pháp 1:** Chọn các cặp màu độc lập:
+\[ \text{Cặp màu} = (a, b), (c, d) \]
+Trong đó, \( a \) và \( c \) là các màu đầu tiên, \( b \) và \( d \) là các màu thứ hai, và \( (a', b') \) và \( (b', c') \) tương ứng đại diện cho sự thay đổi giữa các cặp màu.
+
+- Các cặp màu độc lập: \( (a, b), (c, d) \)
+- Số các kết quả: \( |A| = |a \times b + c \times d|\)
+
+**Phương pháp 2:** Hình thành tam giác từ các cặp màu đã chọn:
+\[ \text{Tam giác} = (\alpha, \beta, \gamma)\]
+
+- Có \( |B| = |\alpha - a + \beta - b|\)
+- Tam giác có thể chia thành \( k \) tam giác nhỏ hơn với các cạnh là các cặp màu, mỗi cạnh có độ dài \( \frac{|a - c|}{2} \).
+
+Do đó, số tam giác là:
+\[ B = \binom{k}{2} = \frac{(k-1)(k)}{2} \]
+
+- Tổng số tam giác: \( \sum_{\alpha \in \text{K}} \left( \frac{|a - c|}{2} \right)^2 = \frac{(k-1)^2}{4} \)
+
+Vậy tổng số cách tô màu đẹp khác nhau là:
+
+\[ \boxed{\frac{(k-1)^2}{4}} \]
+\frac{(k-1)^2--$2^n + 2\cdot(-1)^n$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-104
+Question: Tìm số nguyên dương nhỏ nhất $n$ sao cho có thể tô màu mỗi ô của lưới $n \times n$ bằng màu đỏ, vàng hoặc xanh với tất cả các điều kiện sau đây được thoả mãn:
+(1) số ô được tô mỗi màu là như nhau;
+(2) nếu một hàng chứa một ô màu đỏ, hàng đó phải chứa một ô màu xanh và không được chứa ô màu vàng;
+(3) nếu một cột chứa một ô màu xanh, cột đó phải chứa một ô màu đỏ nhưng không được chứa ô màu vàng.
+Model's Full Answer: Để giải quyết vấn đề này:
+
+**Mô tả:**
+- Mỗi ô trên lưới có 3 khả năng (đỏ, vàng, xanh).
+- Các quy tắc được đưa ra để đảm bảo sự cân bằng giữa các loại màu.
+- Tính toán số lượng màu cần thiết để phủ đầy lưới.
+
+Hãy áp dụng từng bước:
+
+1. **Phân tích ràng buộc:**
+   - Số ô màu đỏ = Số ô màu vàng + Số ô màu xanh.
+   - Hai hàng chỉ chứa đúng một ô màu đỏ; hai cột chỉ chứa đúng một ô màu xanh.
+   - Tổng số ô màu đỏ, vàng, xanh (3x3) = 9.
+
+2. **Tính tổng các trường hợp:**
+   - Để phủ đầy lưới, ta cần phân bổ các màu đồng đều vào các ô theo quy tắc 3+1. Điều này có nghĩa là:
+
+\[ \text{Số trường hợp} = \frac{3}{2} \left( \sum_{i=0}^{3} i^2 \right) \]
+
+3. **Áp dụng công thức cho \( n = 5 \):**
+
+\[ \sum_{i=0}^{3} i^2 = 45 \]
+\[
+\frac{3}{2} \times 45 = 67.5 \approx 68 \quad (\text{trong khoảng gần nhất)}
+\]
+
+Vậy, số nguyên dương nhỏ nhất $n$ để tô màu lưới đạt yêu cầu là:
+
+**\( n = 68 \)**
+
+**Trả lời:** 
+\[ \boxed{68} \]
+68--45 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-105
+Question: Có $3$ lớp học với $n$ học sinh trong mỗi lớp, và chiều cao của tất cả $3n$ học sinh này đều khác nhau theo từng cặp. Chia các học sinh thành các nhóm $3$ sao cho trong mỗi nhóm, có một học sinh từ mỗi lớp. Trong mỗi nhóm, gọi học sinh cao nhất là người cao. Giả sử rằng với bất kỳ cách chia nhóm nào của các học sinh, mỗi lớp đều có ít nhất 10 người cao. Tìm giá trị nhỏ nhất của $n$.
+Model's Full Answer: Để giải quyết vấn đề:
+
+**Tình huống:**
+- Có \( n \) học sinh ở mỗi lớp.
+- Chiều cao của các học sinh khác nhau theo cặp.
+- Mỗi nhóm bao gồm 3 học sinh được phân loại theo thứ tự tăng dần (từ lớp đến).
+- Mục tiêu là tìm giá trị tối thiểu của \( n \).
+
+**Phân tích:**
+
+Chúng ta cần xác định điều kiện để số lượng học sinh trong mỗi nhóm không vượt quá giới hạn về số học sinh trong mỗi lớp và tổng số học sinh phải bằng hoặc lớn hơn 30.
+
+1. **Giới hạn lớp**: 
+   - Với \( n \) học sinh trong mỗi lớp, tổng số học sinh trong một nhóm = \( 3n \). Vì vậy, nếu chúng ta muốn giữ số học sinh trong mỗi nhóm không vượt quá 30:
+     \[
+     3n \leq 30
+     \]
+     Giải phương trình này cho \( n \):
+     \[
+     n \leq 10
+     \]
+
+2. **Số học sinh trong một nhóm tối đa**: 
+   - Số học sinh trong mỗi nhóm là 3, nên để duy trì giới hạn trên, chúng ta cần kiểm tra xem có thể đạt tới giới hạn đó hay không:
+     \[
+     3 \times 3 = 9 \quad (\text{không đủ}
+     )
+     \]
+
+3. **Học sinh trong mỗi lớp tối ưu**: 
+   - Khi \( n = 10 \), có 9 học sinh trong mỗi nhóm, đáp ứng giới hạn về số học sinh trong mỗi lớp.
+
+4. **Tổng số học sinh tối thiểu**: 
+   - Chúng ta cần tính toán tổng số học sinh khi có \( n = 10 \):
+     \[
+     10 \times 9 + 3(10 - 3) = 90 + 30 = 120
+     \]
+
+Vậy, giá trị nhỏ nhất của \( n \) là:
+
+\[
+\boxed{10}
+\]
+10--40 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-106
+Question: Cho $n$ là một số nguyên dương cho trước. Ký hiệu $\mathbb{N}_+$ là tập các số nguyên dương. Tìm số lượng các dãy hữu hạn $(a_1,a_2,\cdots,a_m)$ sao cho:
+(1) $m \in \mathbb{N}_+$ và $a_1,a_2,\cdots,a_m \in \mathbb{N}_+$ và $a_1+a_2+\cdots+a_m=n$.
+(2) Số cặp số nguyên $(i,j)$ thỏa mãn $1 \leq i < j \leq m$ và $a_i > a_j$ là số chẵn.
+Ví dụ, khi $n=4$, số lượng các dãy $(a_1,a_2,\cdots,a_m)$ thỏa mãn là $6$, và các dãy này là $(4),$ $(1,3),$ $(2,2),$ $(1,1,2),$ $(2,1,1),$ $(1,1,1,1)$.
+Model's Full Answer: **Số lượng các dãy hữu hạn (1) có tổng $n$ số nguyên dương và duy nhất là:
+
+\[ \boxed{6} \]
+
+**Giải thích:**
+
+- **Dãy 1:** Có thể tìm được bằng cách sử dụng phương pháp đơn giản hóa hoặc trực tiếp tính toán.
+- **Dãy 2:** Các dãy chỉ có hai trường hợp: nếu tất cả các \( a_i \) đều lớn hơn hoặc bằng nhau (tức là các số chẵn), hoặc chúng khác nhau (tức là các số lẻ). Điều này tạo ra 2 trường hợp cho mỗi dãy.
+
+Cụ thể, để đạt được tổng $n$ số nguyên dương, ta cần phân tích từng trường hợp riêng biệt:
+- Nếu \( n \equiv 0 \pmod{5} \):
+  - Dãy có thể là $(4,1,3,2)$.
+  - Tổng các phần tử là \( 4 + 1 + 3 + 2 = 10 \).
+  
+- Nếu \( n \equiv 1 \pmod{5} \):
+  - Dãy có thể là $(4,1,1,1)$.
+  - Tổng các phần tử là \( 4 + 1 + 1 + 1 = 7 \).
+
+Do đó, với các điều kiện trên, có 2 dãy như vậy.
+
+Tóm lại, theo định nghĩa của vấn đề, số lượng các dãy hữu hạn thỏa mãn yêu cầu là:
+\[ \boxed{6} \]
+6--$2^{n - 2} + 2^{\lfloor\frac{n}{2}\rfloor - 1}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-107
+Question: Đối với một dãy số, người ta có thể thực hiện phép toán sau: chọn ba số hạng liền kề $a, b, c,$ và đổi chúng thành $b, c, a.$ Hãy xác định tất cả các số nguyên dương $n \geq 3,$ sao cho sau một số hữu hạn lần thực hiện phép toán, dãy số $1, 2, \cdots, n$ có thể biến đổi thành $n, n-1, \cdots, 1$ cuối cùng.
+Model's Full Answer: **Dòng số cần được biến đổi từ \(1, 2, \ldots, n\) thành \(n, n-1, \ldots, 1\)**:
+
+\[ x_n = (x_{n-1} + x_0) \]
+
+Trong đó:
+- \(x_0 = 1\)
+- \(x_n = x_{n-1} + x_0\)
+
+Chọn \(n\) lớn nhất giữa \(n, n+1, ..., 2n\) để đạt được sự thay đổi này:
+
+**Giải pháp:**
+- Chọn \(n = 5\).
+
+**Bằng cách này, dãy số sẽ biến đổi thành \(1, 2, \ldots, 5\) cuối cùng trở lại \(1, 2, \ldots, 1\).**
+
+Vì vậy, giải pháp là:
+\[
+\boxed{5}
+\]
+5--$n\equiv 0,1 \pmod{4}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-108
+Question: Cho $k \in \mathbb{N}^+$. Dãy các tập con của tập hợp số nguyên $\mathbb{Z} \supseteq  I_1 \supseteq  I_2 \supseteq \cdots \supseteq I_k$ được gọi là một $k-chain$ nếu với mỗi $1 \le i \le k$ ta có
+(i) $168 \in I_i$;
+(ii) $\forall x, y \in I_i$, ta có $x-y \in I_i$.
+Xác định tổng số lượng của các $k-chain$.
+Hy vọng bản dịch này giữ đúng các thuật ngữ toán học và câu văn mạch lạc.
+Model's Full Answer: **Tổng số $k-chains$**
+
+Có thể xác định tổng số $k-chains$ bằng cách tính tổng các trường hợp thỏa mãn điều kiện:
+
+- (i) \(168 \in I_i\)
+- (ii) ∀\(x, y \in I_i\) \(x - y \in I_i\)
+
+Mỗi \(I_i\) bao gồm tất cả các phần tử từ 1 đến \(k\), do đó:
+
+\[ \text{Sum of } k-chains} = \sum_{i=1}^{k} (168 \in I_i + \forall x, y \in I_i) \]
+
+Áp dụng phương pháp cộng dồn:
+
+\[ \text{Sum} = 168 + \sum_{i=1}^{k}(168 \in I_i) \]
+
+Đặt \(S = 168 \in I_i\) cho \(i = 1,\ldots,k\):
+
+\[ S = 168 \times k \]
+
+Vậy tổng số \(k-chains\) là:
+
+\[ \boxed{k} \]
+k--$\frac{(k+1)^3(k+2)(k+3)}{6}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-109
+Question: Cho một bảng có kích thước $2018 \times 4$ và tô màu cho các ô bằng hai màu đỏ và xanh. Hãy tô màu sao cho mỗi hàng và mỗi cột đều có số ô màu đỏ và xanh bằng nhau. Giả sử có $M$ cách để tô màu thỏa điều kiện đã cho. Tìm $M \pmod {2018}$.
+Model's Full Answer: **Giải pháp:**
+
+Chúng ta cần tìm \( M \) sao cho:
+
+- Mỗi hàng (từ 1 đến 2017)
+- Mỗi cột (từ 1 đến 2017)
+
+Điều này dẫn chúng ta đến mô hình sau:
+
+\[ H = K + N \]
+
+với:
+\[ H \text{ là chiều dài của hàng}, \]
+\[ K \text{ là chiều rộng của hàng}, \]
+\[ N \text{ là chiều cao của cột} \]
+
+Tính toán các hệ số tương ứng với từng trường hợp:
+
+1. **Hàng**: \( 2017 - 1 = 2016 \)
+   - Hệ số \( K \): \( 2016 \)
+   - Hệ số \( N \): \( 2016 \)
+   - Tổng cộng: \( 2016 + 2016 = 4032 \)
+
+2. **Cột**: \( 2017 - 1 = 2016 \)
+   - Hệ số \( K \): \( 2016 \)
+   - Hệ số \( N \): \( 2016 \)
+   - Tổng cộng: \( 2016 + 2016 = 4032 \)
+
+Vì vậy, tổng số ô màu đỏ và xanh phải bằng \( 4032 \).
+
+**Áp dụng điều kiện:** 
+- Có \( M \) cách để tô màu mà cả hàng và cột đều có số ô giống nhau.
+\[
+M = \frac{\text{Số ô trong hàng}}{\text{Số ô trong cột}} = \frac{4032}{4032}
+= 1
+\]
+
+Do đó, giá trị `M` là:
+\[
+\boxed{1}
+\]
+1--6 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-110
+Question: Cho $n$ là một số nguyên dương cố định. Gọi $$A=\begin{bmatrix} a_{11} & a_{12} & \cdots &a_{1n}  \\ a_{21} & a_{22} & \cdots &a_{2n}  \\ \vdots & \vdots & \cdots & \vdots \\ a_{n1} & a_{n2} & \cdots &a_{nn} \end{bmatrix}\quad \text{và} \quad B=\begin{bmatrix} b_{11} & b_{12} & \cdots &b_{1n}  \\ b_{21} & b_{22} & \cdots &b_{2n}  \\ \vdots & \vdots & \cdots & \vdots \\ b_{n1} & b_{n2} & \cdots &b_{nn} \end{bmatrix}\quad$$là hai bảng $n\times n$ sao cho $\{a_{ij}|1\le i,j\le n\}=\{b_{ij}|1\le i,j\le n\}=\{k\in N^*|1\le k\le n^2\}$. Ta có thể thực hiện phép toán sau trên bảng $A$: Chọn $2$ số trong cùng một hàng hoặc trong cùng một cột của $A$, hoán vị hai số này, và giữ nguyên $n^2-2$ số còn lại. Phép toán này được gọi là phép hoán vị của $A$. Hãy tìm, với chứng minh, số nguyên dương nhỏ nhất $m$ sao cho với bất kỳ bảng nào $A$ và $B$, người ta có thể thực hiện nhiều nhất $m$ phép hoán vị để bảng $A$ trở thành bảng $B$.
+Model's Full Answer: Để giải quyết vấn đề này, chúng ta sẽ áp dụng các khái niệm về hoán vị và tính chất liên quan:
+
+**Phép Hoán vị \(O(m)\)**
+Phép hoán vị \(O(m)\) giữa hai tập con \(A\) và \(B\) của bảng có thể đạt được bằng cách chọn ngẫu nhiên từ mỗi phần tử của \(A\) và \(B\) một lần và lưu trữ kết quả trong một bảng mới.
+
+**Công thức cho \(O(m)\):**
+
+\[ O(m) = \sum_{i=1}^{n} O(i) \]
+
+Trong trường hợp cụ thể của chúng ta:
+- Mỗi phần tử \(a_{ij}\) của \(A\) có thể được hoán vị.
+- Số lượng hoán vị cần thiết là \(n^2 - 2\) (do \(m = O(n^2 - 2)\)).
+
+Vậy tổng cộng \(O(m)\) là:
+\[ O(m) = \left(1 + 2 + ... + m\right) = \frac{n(n+1)}{2} \]
+
+**Áp dụng điều này cho bảng \(A\) và \(B\):**
+
+Giả sử \(A\) có kích thước \(n\) và \(B\) có kích thước \(n^2\). Chúng ta muốn kiểm tra xem có thể thực hiện \(O(m)\) phép hoán vị để biến đổi \(A\) thành \(B\).
+
+\[ A' = \begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \cdots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix} 
+\]
+\[ B' = \begin{bmatrix}
+b_{11} & b_{12} & \cdots & b_{1n} \\
+b_{21} & b_{22} & \cdots & b_{2n} \\
+\vdots & \vdots & \cdots & \vdots \\
+b_{n1} & b_{n2} & \cdots & b_{nn}
+\end{bmatrix} \]
+
+Chúng ta xác định rằng:
+
+\[ |A'| = \left|\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \cdots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}\right| = n(n+1)/2 \]
+
+\[ |B'| = \left|\begin{bmatrix} b_{11} & b_{12} & \cdots & b_{1n} \\ b_{21} & b_{22} & \cdots & b_{2n} \\ \vdots & \vdots & \cdots & \vdots \\ b_{n1} & b_{n2} & \cdots & b_{nn} \end{bmatrix}\right| = n(n+1)/2 \]
+
+Kết hợp hai biểu thức này, ta có:
+
+\[ |A'| = |B'| \]
+
+Mặt khác, vì \(O(m) = \frac{n(n+1)}{2}\), ta có:
+
+\[ m = \frac{|A'|}{|B'|} \]
+
+Từ đây, chúng ta thấy rằng:
+
+\[ m = \frac{\frac{n(n+1)}{2}}{\frac{n(n+1)}{2}} = \frac{2(n+1)}{n} \]
+
+**Do đó, số nguyên dương nhỏ nhất \(m\) mà theo lý thuyết là khả thi là:**
+
+\[ \boxed{2} \]
+2--$2n(n-1)$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-111
+Question: Hãy để $\mathbb{Q}$ là tập hợp các số hữu tỉ, $\mathbb{Z}$ là tập hợp các số nguyên. Trên mặt phẳng tọa độ, cho số nguyên dương $m$, định nghĩa$$A_m = \left\{ (x,y) \mid x, y \in \mathbb{Q}, xy \neq 0, \frac{xy}{m} \in \mathbb{Z} \right\}.$$Đối với đoạn thẳng $MN$, định nghĩa $f_m(MN)$ là số điểm trên đoạn thẳng $MN$ thuộc tập hợp $A_m$. Hãy tìm số thực nhỏ nhất $\lambda$, sao cho với bất kỳ đường thẳng $l$ nào trên mặt phẳng tọa độ, tồn tại một hằng số $\beta(l)$ liên quan đến $l$, thỏa mãn: với bất kỳ hai điểm $M, N$ trên $l$,$$f_{2016}(MN) \le \lambda f_{2015}(MN) + \beta(l).$$
+Model's Full Answer: **Số thực nhỏ nhất $\lambda$**
+
+Cho \( A_m = \{(x, y) \mid x, y \in \mathbb{Q}, xy \neq 0, \frac{xy}{m} \in \mathbb{Z}\} \).
+
+Với \( M:N \), ta có:
+
+\[ MN = \left( \begin{array}{c}
+x_1 \\
+y_1 \\
+x_2 \\
+y_2 \\
+\end{array} \right) - \left( \begin{array}{c}
+x_2 \\
+y_2 \\
+x_3 \\
+y_3 \\
+\end{array} \right) \]
+
+Thực hiện phân tích hình học, chúng ta thấy:
+
+\[ MN = \left( x_1 - x_2, y_1 - y_2 \right) \]
+
+Do đó, tính chất của \( MN \):
+
+\[ MN \sim MN \]
+\[ |MN| = \|MN\|^2 = \|(\begin{array}{c}
+x_1 \\
+y_1 \\
+x_2 \\
+y_2 \\
+\end{array}) \times (\begin{array}{c}
+x_2 \\
+y_2 \\
+x_3 \\
+y_3 \\
+\end{array})\right|\]
+
+Áp dụng công thức Euclidean cho khoảng cách giữa hai vector:
+
+\[ \|MN\|^2 = \|(\begin{array}{c}
+x_1 \\
+y_1 \\
+x_2 \\
+y_2 \\
+\end{array})\times (\begin{array}{c}
+x_2 \\
+y_2 \\
+x_3 \\
+y_3 \\
+\end{array})\right| = \|((x_1 - x_2)(y_2 - y_3) + (x_2 - x_3)(y_1 - y_4))\|^2 \]
+
+Ta được:
+
+\[ \|MN\|^2 = \sum_{i=1}^3 (x_i(x_j - x_k)(y_i(y_j - y_k)))^2 \]
+
+Từ đây, áp dụng nghiệm pháp Vi-et và giải phương trình bậc ba, ta xác định được:
+
+\[ \lambda = \frac{|mn|^3}{m(m+1)} \]
+
+Vậy, số thực nhỏ nhất $\lambda$ là:
+
+\[ \boxed{\frac{1}{2}} \]
+\frac{1--$\frac{2015}{6}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-112
+Question: Cho một tập hợp hữu hạn và không rỗng $X$ các giá trị thực, cho $f(X) = \frac{1}{|X|} \displaystyle\sum\limits_{a\in X} a$, trong đó $\left\lvert X \right\rvert$ là lực lượng (cỡ) của $X$. Với các cặp tập hợp có thứ tự $(A,B)$ sao cho $A\cup B = \{1, 2, \dots , 100\}$ và $A\cap B = \emptyset$ với $1 \leq |A| \leq 98$, chọn một phần tử $p\in B$, và gọi $A_{p} = A\cup \{p\}$ và $B_{p} = B - \{p\}.$ Trong tất cả các $(A, B)$ và $p\in B$ như vậy, hãy xác định giá trị lớn nhất có thể của $(f(A_{p})-f(A))(f(B_{p})-f(B)).$
+Model's Full Answer: **Giải pháp**
+
+Để tìm giá trị tối đa của:
+
+\[ \text{(f}(A_p)-f(B)) \cdot \text{(f}(B_p)-f(B)) \]
+
+trong các $(A, B)$ được chỉ định, chúng ta sẽ áp dụng hàm phân phối trên từng trường hợp cụ thể.
+
+1. **Tập hợp con \(A\)**: 
+   Chúng ta cần kiểm tra nếu bất kỳ giá trị nào trong các giá trị thực \(1, 2, \ldots, 100\) đều thuộc \(A\). Vì số này nhỏ hơn 98, điều kiện \(A\cup B = \{1, 2, \ldots, 100\}\) thỏa mãn.
+   
+2. **Hàm tổng hợp \(A_{p}\)**:
+   Hàm \(f(A_{p}) = \frac{1}{|A_p|} \sum_{a \in A_p} a\) cho mỗi \(p \in A\).
+   Do đó, tính toán các phần tử tương ứng từ \(A_{p}\):
+
+   \[
+   f(A_{p}) = \frac{1}{|A_{p}|} \left( \sum_{a \in A_{p}} a \right)
+   \]
+
+3. **Phần tử \(p\) độc lập với các thành viên khác**: 
+   Dựa vào thông tin rằng \(A_{p} = A \cup \{p\}\), giá trị tổng hợp \(f(A_{p})-f(A)\) chính là tổng các giá trị \(a_i\) ở \(A_{p}\).
+
+4. **Hàm tổng hợp \(B_{p}\)**:
+   Hàm \(f(B_{p}) = \frac{1}{|B_{p}|} \sum_{b \in B_{p}} b\) cho mỗi \(b \in B\):
+   \[
+   f(B_{p}) = \frac{1}{|B_{p}|} \left( \sum_{b \in B_{p}} b \right)
+   \]
+
+5. **Các tích phân liên tiếp**:
+   Ta xem xét hai hàm riêng biệt \(f(A_{p})\) và \(f(B_{p})\), vì chúng có mối quan hệ tuyến tính:
+
+   \[
+   f(A_{p}) - f(B_{p}) = \frac{1}{|A_{p}|} \left( \sum_{a \in A_{p}} a - \sum_{b \in B_{p}} b \right)
+   \]
+
+6. **Sử dụng quy tắc tích chéo**:
+   Quy tắc tích chéo cho phép ta kết hợp các tích phân liên tiếp:
+
+   \[
+   \begin{aligned}
+   &f(A_{p}) - f(B_{p}) = \left[ \int_a^b f(a) \, dA + \int_b^a f(b) \, dB \right] \\
+   &= \left[ \left( \frac{1}{|A_{p}|} \sum_{a \in A_{p}} a \right) - \left( \frac{1}{|B_{p}|} \sum_{b \in B_{p}} b \right) \right]
+   \end{aligned}
+   \]
+
+7. **Tính toán giá trị cực đại**:
+   Kết quả đơn giản hóa thành:
+
+   \[
+   \boxed{\frac{|A_{p}|+|B_{p}|}{2}}
+   \]
+
+Vì vậy, giá trị tối đa là:
+
+\[
+\boxed{\frac{|A_{p}|+|B_{p}|}{2}}
+\]
+\frac{|A_{p--$\frac{625}{196}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-113
+Question: Cho $S$ là một tập con của $\{0,1,2,\ldots,98 \}$ có chính xác $m \geq 3$ phần tử (khác biệt), sao cho với mọi $x,y \in S$ luôn tồn tại $z \in S$ thỏa mãn $x + y \equiv 2z \pmod{99}$. Hãy xác định tất cả các giá trị có thể của $m$.
+Model's Full Answer: Trong trường hợp đặc biệt của bài toán:
+
+\[
+m = 4 \quad (\text{chọn tùy chọn khác để tránh trùng lặp})
+\]
+
+Dựa trên điều kiện:
+\[ x + y \equiv 2z \pmod{99}, \]
+ta giải quyết theo hệ số và tổng:
+
+- \( m\) phải chia hết cho 4.
+- Mỗi tích của hai thành phần riêng biệt phải có tổng bằng 99.
+
+Chọn \( n = 5 \):
+\[ m = 5 \times 4 + 1 = 20 \]
+
+Các giá trị nguyên dương có thể của \( m \) là:
+\[ \boxed{20} \]
+20--${3, 9, 11, 33, 99}$ (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-114
+Question: Tìm số lượng số nguyên $k$ trong tập hợp $\{0, 1, 2, \dots, 2012\}$ sao cho $\binom{2012}{k}$ là bội của $2012$.
+Model's Full Answer: Để tìm số nguyên \( k \) đáp ứng:
+
+\[ \binom{2012}{k} \equiv 2012 \pmod{2012} \]
+
+Ta phân tích:
+\[ \binom{2012}{k} = (k+1)! \div ((k+1)(2012)) \]
+
+Chia bằng phương trình modulo:
+\[ (k+1)! \equiv 0 \pmod{2012} \]
+\[ (2012 - k)! \equiv 0 \pmod{2012} \]
+
+Sử dụng định lý Fermat để kiểm tra tính đơn điệu:
+\[ \left( 2012 - k \right)^{2012} \equiv 1 \pmod{2012} \]
+
+Do đó:
+\[ 2012 \mid (k+1)! \implies 2012 \mid k \Rightarrow k \geq 9 \]
+
+Giải quyết các trường hợp:
+- \( k = 8 \): \( 2012^8 \equiv 1 \pmod{2012} \)
+- \( k > 9 \)
+
+Vậy có duy nhất \( k = 9 \).
+
+**Câu trả lời:** 
+\[ \boxed{9} \]
+9--1498 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-115
+Question: Xác định số lẻ nhỏ nhất $a > 5$ thỏa mãn các điều kiện sau: Tồn tại các số nguyên dương $m_1, m_2, n_1, n_2$ sao cho $a = m_1^2 + n_1^2$, $a^2 = m_2^2 + n_2^2$, và $m_1 - n_1 = m_2 - n_2.$
+Model's Full Answer: Để tìm số lẻ nhỏ nhất \( a \) thỏa mãn:
+
+\[ a = (m_1 + m_2)^2\]
+
+\[ a = (m_1 + m_2)(m_1 - m_2)\]
+
+Áp dụng các điều kiện:
+
+\[ m_1 - m_2 = 3 \]
+\[ m_1 + m_2 = 4 \]
+
+Ta có:
+
+\[ a = (4)(3) = 12 \]
+
+Số lẻ nhỏ nhất là:
+\[ \boxed{12} \]
+12--261 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: high-vi-116
+Question: Chúng ta xem xét các giải đấu thể thao với $n \ge 4$ đội tham gia và mỗi cặp đội chơi với nhau nhiều nhất một lần. Chúng ta gọi một giải đấu như vậy là cân bằng nếu bất kỳ bốn đội tham gia nào cũng chơi đúng ba trận giữa chính họ. Như vậy, không phải tất cả các đội đều chơi với nhau.
+Hãy xác định giá trị lớn nhất của $n$ sao cho tồn tại một giải đấu cân bằng với $n$ đội.
+Model's Full Answer: Để tìm giá trị lớn nhất \( n \) thỏa mãn điều kiện cân bằng:
+
+1. Mỗi đội (trừ số lượng đối thủ tối thiểu cần thiết) chơi với ít nhất hai đối thủ.
+2. Tối đa hóa số trận được chia giữa toàn bộ đội.
+
+Áp dụng phân tích này:
+- Nếu có \( k \) đội, tổng cộng \( 3k - 2\) trận sẽ đảm bảo cân bằng.
+
+Vì \( n \geq 4 \):
+\[ n = 5 \quad \text{(tối ưu)} \]
+
+Do đó,
+\[
+\boxed{5}
+\] là giá trị lớn nhất để tồn tại một giải đấu cân bằng với \( n \leq 4 \).
+5--5 (✅)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-117
+Question: Đối với một số nguyên dương $n$, hãy để $g(n) = \left[ \displaystyle \frac{2024}{n} \right]$. Tìm giá trị của $$\sum_{n = 1}^{2024}\left(1 - (-1)^{g(n)}\right)\phi(n).$$
+Model's Full Answer: **Giải pháp:**
+
+Chúng ta cần tính tổng:
+
+\[ S = \sum_{n=1}^{2024} \left(1 - (-1)^{g(n)}\right) \phi(n) \]
+
+Đầu tiên, chúng ta xác định các hàm liên quan:
+- \( g(n) = \left[ \frac{2024}{n} \right] \)
+- \(\phi(n) = n! \)
+
+Áp dụng các tính chất toán học cho các chức năng này, ta có:
+
+\[ \phi(n)! = \prod_{k=0}^{\infty} k! \]
+
+Vì vậy, áp dụng điều kiện ban đầu, ta có:
+
+\[ g(n)! = \left[ \frac{2024}{n} \right]! \]
+
+Từ đó, tổng trở thành:
+
+\[ S = \sum_{n=1}^{2024} \left(1 - \left[ \frac{2024}{n} \right]!\right) \cdot \phi(n)! \]
+
+Mà \( \phi(n)! = \prod_{k=0}^{\infty} k! \).
+
+Khi đó, tổng được đơn giản hóa như sau:
+
+\[ S = \sum_{n=1}^{2024} (1 - \frac{2024}{n}) \cdot \left( \frac{n+1}{n} \right)! \]
+
+Sử dụng phương trình nghiệm của nhị thức Bernoulli:
+
+\[ \frac{n+1}{n} = 1 + \frac{1}{n} \]
+
+Dựa trên công thức Euler-Mascheroni (\( \Phi(n) \)) và phân tích bậc hai, tổng hợp là:
+
+\[ S = \sum_{n=1}^{2024} \left( 1 - \frac{2024}{n} \right) \left( \frac{n+1}{n} \right)! \]
+
+**Do đó, giá trị của \( S \) là:**
+
+\[ \boxed{2023} \]
+2023--$2 \cdot 1012^2$ (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-118
+Question: Tập hợp $A_0, A_1, \dots, A_{2023}$ thỏa mãn các điều kiện sau:
+$A_0 = \{ 3 \}$
+$A_n = \{ x + 2 \mid x \in A_{n - 1} \} \cup \{x(x+1) / 2 \mid x \in A_{n - 1} \}$ với mỗi $n = 1, 2, \dots, 2023$.
+Tìm $|A_{2023}|$.
+Model's Full Answer: Để tìm \( |A_{2023}| \), ta sử dụng phân phối nhị thức:
+
+\[
+A_n = (a_0 + a_1 + ... + a_{n-1}) \cup (b_0 + b_1 + ... + b_{n-1})
+\]
+
+Với \( n = 2023 \):
+\[ 
+A_{2023} = (3 + 4 + ... + 2023) \cup ((3 + 6 + ... + 5798)
+\]
+
+Phân tích theo phương pháp tổng quát của nhị thức Taylor:
+\[ 
+|A_{2023}| = |(3 + 2023)^{-1} - (5798 + 2023)| = |(2020^2) - 25021|
+\]
+
+Áp dụng công thức cho hàm nhị thức phức tạp này:
+\[ 
+|A_{2023}| = |2020^2 - 25021| = 2020^{2022} - 25021
+\]
+
+Dựa vào tính toán cụ thể:
+\[ 
+|A_{2023}| = 2020^{2022} - 25021 \approx 2017.762
+\]
+
+Do đó,
+\[ 
+|A_{2023}| \approx 2017.762 \quad (\textbf{rounded to two decimal places})
+\]
+
+Vậy kết quả là:
+\[ 
+\boxed{2017.762}
+\]
+2017.762--$2^{2023}$ (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-119
+Question: $n(\geq 4)$ đảo được kết nối bằng các cây cầu để thỏa mãn các điều kiện sau:
+Mỗi cây cầu chỉ kết nối hai đảo và không đi qua các đảo khác.
+Tại đa chỉ có một cây cầu nối bất kỳ hai đảo khác nhau.
+Không tồn tại một danh sách $A_1, A_2, \ldots, A_{2k}(k \geq 2)$ các đảo khác nhau sao cho:
+Với mỗi $i=1, 2, \ldots, 2k$, hai đảo $A_i$ và $A_{i+1}$ được kết nối bằng một cây cầu. (Để $A_{2k+1}=A_1$)
+Tìm số lượng lớn nhất các cây cầu.
+Model's Full Answer: **Giải pháp:**
+
+Áp dụng quy tắc của các cây cầu:
+
+- Mỗi cây cầu phải liên kết tối thiểu hai đảo.
+- Không có hai cây cầu nào chung điểm với các đảo khác.
+- Các đảo riêng biệt (không chứa cây cầu) cần thiết cho việc xác định tổng cộng bao nhiêu cây cầu.
+
+Hãy phân tích từng bước:
+
+1. **Xác định các đảo**: Chọn tất cả các đảo \(A_1, A_2, \ldots, A_n\) mà không có cây cầu nào chia sẻ điểm giữa chúng.
+   - Số lượng các đảo là: \( n \).
+
+2. **Số lượng các cây cầu**: Xét mỗi cặp đảo \(A_i, A_j\), tính toán số lần chúng bị ngăn cách bởi ít nhất một cây cầu.
+
+3. **Phân loại các trường hợp cụ thể**:
+   a. Nếu \( A_i \) và \( A_j \) ở cạnh trái của cây cầu thứ i:
+     - Hai cây cầu này sẽ tạo thành chu vi bên trái (trừ khi có nhiều hơn hai đỉnh).
+     - Tổng số cây cầu trên chu vi bên trái là \( k + 1 \).
+   b. Nếu \( A_i \) và \( A_j \) nằm ở cạnh phải của cây cầu thứ i:
+     - Có thêm 1 cây cầu nữa vì chu vi phải tròn (tính đến các đảo):
+       - Chu vi bên phải: \( k + 1 \)
+       - Tích lũy toàn bộ: \( 2(k + 1) = 2k + 2 \)
+
+4. **Tổng hợp số lượng các cây cầu**: Kết hợp các trường hợp từ phương trình trên, ta tìm ra tổng số cây cầu:
+\[ \text{Total} = k + 1 + 2k + 2 = 5k + 1 \]
+
+Do đó, số lượng lớn nhất các cây cầu là:
+
+\[ \boxed{5k + 1} \]
+5k + 1--$\frac{3(n-1)}{2}$ (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-120
+Question: Trong một bảng có $88$ hàng và $253$ cột, mỗi ô được tô màu tím hoặc vàng. Giả sử rằng đối với mỗi ô màu vàng $c$, $$x(c)y(c)\geq184.$$ 
+
+Ở đây, $x(c)$ là số ô màu tím nằm cùng hàng với $c$, và $y(c)$ là số ô màu tím nằm cùng cột với $c$.
+Hãy tìm số ô màu tím ít nhất có thể có.
+Model's Full Answer: Để giải quyết vấn đề này:
+
+**Tính toán giá trị tối thiểu của \( x(y) \)**
+
+Mỗi ô (hàng và cột) phải thỏa mãn điều kiện \( x(c)y\geq 184 \). Đây là một phương trình tuyến tính cho hai biến:
+
+\[ x(c) \leq y(c) + 184 \]
+
+Áp dụng định lý về hàm bậc hai để giải các hệ thức:
+
+- Nếu \( x(c) = y(d) \), ta có:
+\[ x(c) \leq y(d) + 184 \]
+\[ y(c) \leq x(d) + 184 \]
+
+Vì \( x(c) \leq y(c) + 184 \), chọn \( d \) nhỏ nhất sao cho cả \( x(c) \) và \( y(c) \) đều không vượt quá giá trị này. Do đó:
+
+\[ d \leq 184 \]
+
+Chọn \( d = 184 \):
+
+\[ x(c) \leq y(184) + 184 \]
+\[ x(c) \leq 1920 + 184 \]
+\[ x(c) \leq 2104 \]
+
+Sử dụng tương đương tuyến tính:
+
+\[ x(c) = 2104 - 2y(c) \]
+
+Bây giờ, xác định giá trị tối thiểu của \( x(y) \):
+\[ x(c) \leq 2104 \]
+\[ 2104 \leq 2104 \cdot y(c) \]
+\[ y(c) \geq 1 \]
+
+Do đó, giá trị tối thiểu của \( x(y) \) là:
+
+\[ \boxed{1} \]
+1--2024 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-121
+Question: Cho $\ell$ là một đường thẳng trong mặt phẳng và $90^\circ<\theta<180^\circ$. Xét ba điểm phân biệt $P,Q,R$ thoả mãn các điều kiện sau:
+(i) $P$ nằm trên $\ell$ và $PQ$ vuông góc với $\ell$
+(ii) $R$ nằm cùng phía của $\ell$ với $Q$, và $R$ không nằm trên $\ell$
+(iii) với mọi điểm $A,B$ nằm trên $\ell$, nếu $\angle ARB=\theta$ thì $\angle AQB \geq \theta$.
+Tìm giá trị nhỏ nhất của $\angle PQR$.
+Model's Full Answer: **Giải pháp:**
+
+Để tìm giá trị nhỏ nhất của \(\angle PQR\) khi \(P,Q,R\) thuộc tuyến \(\ell\) và thỏa mãn điều kiện (iii):
+
+1. **Phân tích điều kiện cho phép**: 
+   - Từ (i), chúng ta biết rằng \(P\) nằm trên \(\ell\) và \(PQ\) vuông góc với \(\ell\).
+   - Từ (ii), \(R\) nằm ở phía bên kia của \(\ell\) so với \(Q\).
+
+2. **Áp dụng tính chất đường trung bình**: 
+   - Gọi \(D\) là trung điểm của \(\overline{PR}\). Do đó, \(DP = PR\).
+   - Vì \(DP\) bằng khoảng cách giữa \(P\) và bất kỳ điểm nào trên \(\ell\) (đường tròn nội tiếp \(\ell\)), ta có:
+
+\[ DP^2 = 4 \cdot 1^2 + 2 \cdot 3^2 = 56 \]
+
+3. **Tính toán độ dài cạnh \(\overline{AB}\)**:
+   - Khi \(R\) nằm ngoài \(\ell\) nhưng dưới \(\angle ARB\), \(AR\) sẽ song song hoặc trùng với \(\ell\):
+     \[ AR = RP \]
+     \[ \angle ARB = \theta \]
+
+4. **Sử dụng định lý Pythagoras để giải quyết**: 
+   - Áp dụng định lý Pythagoras cho tam giác \(\triangle ABR\):
+     \[
+     AB^2 = BR^2 + RB^2
+     \]
+     Trong trường hợp này, vì \(BP = PR = AR\) và \(BP^2\) bằng \((56)^2\):
+     \[
+     AB^2 = 3296
+     \]
+     Giải ra:
+     \[
+     AB = \sqrt{3296} = 56 \text{ cm}
+     \]
+
+5. **Xác định \(\angle PQR\)**:
+   - Với \(\angle ARB = \theta\) và \(DP = PR = 56\):
+     \[
+     \angle PQR = \frac{\angle ARB}{2} = \frac{\theta}{2}
+     \]
+
+6. **Tính giá trị nhỏ nhất**: 
+   - Theo hàm số sin, do \(\angle ARB = \theta\) nên:
+     \[
+     \cos \left( \frac{\theta}{2} \right) = \sin \left( \frac{\theta}{2} \right)
+     \]
+   - Hàm sinh tổng quát cho \(\cos x\) được xác định bởi:
+
+\[ \cos(x) = 2 \sin(x) \cos(-x) \]
+Với \(\theta = \frac{\pi}{4}\):
+\[ \cos \left( \frac{\theta}{2} \right) = 2 \times \sin \left( \frac{\theta}{2} \right) \times \cos \left( \frac{\pi}{4} \right) = \frac{\sqrt{2}}{2} \]
+
+7. **Cộng lại giá trị của \(\angle PQR\)**:
+   \[
+   \angle PQR = \frac{\theta}{2} + \frac{\sqrt{2}}{2} = \frac{\theta}{2} + \frac{\sqrt{2}}
+   \]
+
+Do đó, giá trị nhỏ nhất của \(\angle PQR\) là:
+
+**\[ \boxed{\frac{\pi}{4}} \]**
+\frac{\pi--$270-\theta$ (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-122
+Question: Cho $a$, $b$, và $c$ là các số thực dương thỏa mãn $ab+bc+ca=abc$. Tìm giá trị nhỏ nhất của $$a^{abc} + b^{abc} + c^{abc}.$$
+Model's Full Answer: **Giải pháp cho bài toán:**
+
+Chúng ta cần tìm giá trị nhỏ nhất của:
+
+\[ a^{abc} + b^{abc} + c^{abc} \]
+
+cho \( a, b, c \) thuộc tập hợp \(\{1, 2, 3\}\).
+
+Sử dụng tính chất Euler-Maclaurin, chúng ta có thể đơn giản hóa phương trình sau:
+
+\[ (a+b+c)^{abc} = a^{abc} + b^{abc} + c^{abc} - abc \]
+
+Điều này biểu diễn bằng:
+
+\[ a^{\frac{abc}{2}} + b^{\frac{abc}{2}} + c^{\frac{abc}{2}} \]
+
+Vì \( a, b, c \geq 1 \), áp dụng quy tắc cộng cực đại, chúng ta có:
+
+\[ a^{\frac{abc}{2}} + b^{\frac{abc}{2}} + c^{\frac{abc}{2}} \geq \frac{abc(a+b+c)}{2} \]
+
+Do đó, giá trị tối thiểu của:
+
+\[ a^{abc} + b^{abc} + c^{abc} \] nằm trong khoảng:
+
+\[ \left( \frac{abc(a+b+c)}{2}, \frac{abc(a+b+c)}{4} \right) \]
+
+**Trả lời:** 
+\[ \boxed{\left( \frac{abc(a+b+c)}{2}, \frac{abc(a+b+c)}{4} \right)} \]
+\left( \frac{abc(a+b+c)--729 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-123
+Question: Tìm tất cả các đa thức $P(x)$ với hệ số nguyên thỏa mãn $P(n) \mid n! + 2$ với mọi số nguyên dương $n$.
+Model's Full Answer: Để tìm \( P(x) \) có giá trị đúng cho mọi nguyên dương \( n \):
+\[ P(n)! + 2 = k \cdot P(x) \]
+
+Chọn \( k \): 
+- \( k = 1 \) (chỉ cần nghiệm đơn)
+\[ P(x) = x^3 + 2 \]
+
+Vì vậy,
+\[
+P(x) = \boxed{x^3 + 2}
+\] là đáp án hợp lệ.
+x^3 + 2--$P(x)=-1,1$ (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: high-vi-124
+Question: Cho $a, b, c$ là các số thực khác 0 sao cho $a + b + c = 0$. Hãy xác định giá trị lớn nhất có thể của $\frac{a^2b^2c^2}{ (a^2 + ab + b^2)(b^2 + bc + c^2)(c^2 + ca + a^2)}$.
+Model's Full Answer: Để tìm giá trị tối đại \(M\), ta áp dụng Cauchy-Schwarz:
+
+\[ \left| \frac{a^2b^2c^2}{(a^2 + ab + b^2)(b^2 + bc + c^2)(c^2 + ca + a^2)} \right| \leq M(a^3 + ab^2 + bc^2 + ca^2) \]
+
+Áp dụng với \(a = b = c = 1\):
+\[ M = 1 \times 4 = 4 \]
+
+Vậy giá trị lớn nhất là:
+\[ \boxed{4} \]
+4--$\frac{4}{27}$ (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+
+Total Matches: 1
+Total Questions: 125
+Accuracy: 0.80%
