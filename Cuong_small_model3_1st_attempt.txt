@@ -13262,3 +13262,2126 @@ Matches: 1
 Total Matches: 1
 Total Questions: 125
 Accuracy: 0.80%
+
+========== LOW ==========
+
+ID: low-vi-0
+Question: Con vịt của Janet mỗi ngày đẻ 16 quả trứng. Cô ấy ăn ba quả vào bữa sáng mỗi ngày và làm bánh nướng cho bạn bè của cô ấy mỗi ngày với bốn quả trứng. Cô ấy bán số còn lại tại chợ nông sản hàng ngày với giá 2 đô la mỗi quả trứng vịt tươi. Cô ấy kiếm được bao nhiêu đô la mỗi ngày tại chợ nông sản?
+Model's Full Answer: **Kiếm được tại chợ nông sản mỗi ngày**
+
+Janet có:
+
+- **3 quả trứng** (cho bữa sáng) + **4 quả trứng** (bánh nướng cho bạn bè) = **7 quả trứng**
+- Số lượng trứng còn lại để bán là: \(7 - 7 = 0\) quả
+
+Giá bán trứng vịt tại chợ nông sản là $2/quả.
+
+**Tính toán thu nhập:**
+
+\[ \text{Thu nhập} = (\text{Quả trứng còn lại}) \times \$2/\text{trứng}
+\]
+
+\[ \text{Thu nhập} = 0 \times \$2 = \$0 \]
+
+Do đó, Janet kiếm được không có gì tại chợ nông sản. 
+
+**Đáp án:** 
+\[ \boxed{\$0} \]
+\$0--18 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: low-vi-1
+Question: Một chiếc áo choàng cần 2 cuộn sợi màu xanh và nửa số đó là sợi màu trắng. Tổng cộng cần bao nhiêu cuộn?
+Model's Full Answer: Chiếc áo choàng yêu cầu tổng cộng 3 cuộn sợi.
+
+1) Mỗi bộ (2 cuộn x 2 = 4) có 1 cuộn xanh.
+2) Số còn lại (0.5 * 1 = 0.5) là 1 cuộn trắng.
+
+Do đó, tổng cộng:
+\[ 4 + 0.5 = 4.5 \text{ cuộn} \]
+
+Vì vậy, đáp án chính xác là:
+\[\boxed{4.5}\]
+4.5--3 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: low-vi-2
+Question: Josh quyết định thử lật một ngôi nhà. Anh ta mua một ngôi nhà với giá 80.000 đô la và sau đó đầu tư thêm 50.000 đô la vào việc sửa chữa. Điều này đã làm tăng giá trị của ngôi nhà lên 150%. Anh ấy đã kiếm được bao nhiêu lợi nhuận?
+Model's Full Answer: **Lợi nhuận = Giá trị mới - Giá trị cũ**
+
+Đầu tiên, chúng ta xác định giá trị ban đầu (giá gốc) của ngôi nhà:
+
+\[ \text{Giá gốc} = 80,000 \]
+
+Sau khi đầu tư:
+- Chi phí sửa chữa là \( 50,000 \)
+
+Vì vậy, giá trị mới (trước thuế):
+\[ \text{Giá trị mới} = 80,000 + 50,000 = 130,000 \]
+
+Chênh lệch giữa giá trị mới và giá trị gốc:
+\[ \text{Lợi nhuận} = 130,000 - 80,000 = 40,000 \]
+
+Do đó, **lợi nhuận là $40,000**.
+NO_BOXED_ANSWER--70000 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: low-vi-3
+Question: James quyết định chạy 3 lần chạy nước rút, 3 lần mỗi tuần. Mỗi lần chạy cự ly 60 mét. Vậy tổng cộng anh ấy chạy bao nhiêu mét mỗi tuần?
+Model's Full Answer: **Tổng số mét James chạy mỗi tuần = \(3 \times 60\) mét**
+
+\[ \text{Số mét} = 180 \, \text{méter} \]
+
+Vậy, tổng cộng James sẽ chạy **180 méter** mỗi tuần.
+NO_BOXED_ANSWER--540 (❌)
+Matches: 0
+--------------------------------------------------------------------------------
+ID: low-vi-4
+Question: Mỗi ngày, Wendi cho mỗi con gà của mình ba cốc thức ăn tổng hợp, bao gồm hạt giống, giun bột và rau để giúp chúng khỏe mạnh. Cô ấy cho gà ăn ba bữa riêng biệt. Vào buổi sáng, cô ấy cho đàn gà của mình 15 cốc thức ăn. Vào buổi chiều, cô ấy cho gà thêm 25 cốc thức ăn. Nếu số lượng đàn gà của Wendi là 20 con, cô ấy cần cho đàn gà ăn bao nhiêu cốc thức ăn trong bữa ăn cuối cùng trong ngày?
+Model's Full Answer: Để tính toán số cốc thức ăn còn lại vào bữa ăn cuối cùng:
+
+- Tổng thức ăn hàng ngày (A): 15 + 25 = 40 cốc
+- Số lượng gà hiện tại (F): 20
+- Giả sử bữa ăn cuối cùng sẽ có \( x \) cốc.
+
+Số lượng thức ăn còn lại vào bữa ăn cuối cùng:
+\[ A - F = x \]
+\[ 40 - 20 = x \]
+\[ x = 20 \]
+
+Do đó, Wendi cần cho gà 20 cốc thức ăn vào bữa ăn cuối cùng trong ngày. 
+\[ \boxed{20} \]
+20--20 (✅)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-5
+Question: Kylar đã đi đến cửa hàng để mua ly cho căn hộ mới của anh ấy. Một chiếc ly có giá 5 đô la, nhưng mỗi chiếc ly thứ hai chỉ có giá 60% so với giá ban đầu. Kylar muốn mua 16 chiếc ly. Anh ấy cần phải trả bao nhiêu tiền?
+Model's Full Answer: Để tính tổng số tiền Kylar cần chi trả:
+
+\[ \text{Giá mỗi ly gốc} = 5 \, \text{đô-la} \]
+\[ Giá mỗi ly thứ hai (giảm) = 60\% \times 5 \, \text{đô-la} = 30\% \, \text{đô-la} \]
+
+Số lượng ly \( n = 16 \):
+\[ \text{Tổng cộng giảm} = 16 \times 30\% \, \text{đô-la} = 48 \, \text{đô-la} \]
+
+Do đó:
+\[ \text{Tổng chi phí} = 5 + 48 = 53 \, \text{đô-la} \]
+
+**Trả lời:** 
+\[ \boxed{53} \]
+53--64 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-6
+Question: Toulouse có số cừu gấp đôi so với Charleston. Charleston có số cừu gấp 4 lần so với Seattle. Toulouse, Charleston và Seattle có tất cả bao nhiêu con cừu nếu Seattle có 20 con cừu?
+Model's Full Answer: Seattle có 20 cừu.
+
+\[ \text{Số cừu ở Seattle} = 20 \]
+
+Với thông tin được đưa ra:
+- Toulouse (2 * Seattle) - \(20 \times 2\)
+- Charleston (4 * Seattle) - \(20 \times 4\)
+
+Tổng cộng là:
+\[ 20 + 80 = 100 \]
+
+Do đó, số cừu tại Toulouse là:
+\[ \boxed{100} \]
+100--260 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-7
+Question: Carla đang tải xuống một tệp có dung lượng 200 GB. Thông thường, cô ấy có thể tải xuống với tốc độ 2 GB/phút, nhưng khi tải được 40% dung lượng, Windows buộc phải khởi động lại để cài đặt các bản cập nhật, điều này mất 20 phút. Sau đó, Carla phải bắt đầu lại quá trình tải từ đầu. Mất bao lâu để tải xuống tệp?
+Model's Full Answer: Carla mất tổng cộng 15 phút (từ khởi động lại) + 20 phút (cập nhật) = $35$ phút để hoàn thành việc tải xuống 200 GB tệp.
+
+$\boxed{35}$
+35--160 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-8
+Question: John lái xe trong 3 giờ với tốc độ 60 dặm một giờ, sau đó quay lại vì nhận ra anh quên một thứ rất quan trọng ở nhà. Anh ta cố gắng về nhà trong 4 giờ nhưng phải dành 2 giờ đầu tiên trong tình trạng kẹt xe. Sau đó, anh ta lái xe với tốc độ 30 dặm một giờ trong 30 phút tiếp theo, rồi lái xe với tốc độ 80 dặm một giờ trong 1 giờ còn lại của 4 giờ. Sau khi 4 giờ kết thúc, anh ta cách nhà còn xa bao nhiêu?
+Model's Full Answer: **John lái xe từ A đến B (khoảng cách = 90 dặm) trong các giai đoạn khác nhau:
+
+1. **Giai đoạn 1:** 3 giờ - 60 mph x 3 giờ = 180 dặm.
+2. **Tình huống kẹt xe**: 2 giờ đầu tiên = 2 * 180 = 360 dặm.
+3. **Giai đoạn 2:** 30 phút (đầu tiên): 30 mph x 60 = 1800 dặm.
+4. **Giai đoạn 3 (sau thời gian kẹt xe):** 80 mph x 1 giờ = 80 dặm.
+
+**Tổng cộng:**
+\[ \text{Khoảng cách} = 180 + 360 + 1800 + 80 = 5780 \text{ dặm} \]
+
+Do đó, John sẽ cách nhà khoảng \( \boxed{5780} \) dặm vào lúc kết thúc chuyến đi.
+5780--45 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-9
+Question: Giờ làm việc thường lệ của Eliza trong tuần đầu tiên là 10 đô la mỗi giờ cho 40 giờ đầu tiên. Cô ấy cũng nhận được tiền làm thêm giờ gấp 1,2 lần mức lương thường lệ. Nếu Eliza làm việc 45 giờ trong tuần này, thu nhập của cô ấy trong tuần này là bao nhiêu?
+Model's Full Answer: Eliza có tổng cộng 45 giờ làm việc (40 giờ ban đầu + 5 giờ làm thêm).
+
+\[ \text{Thu nhập} = 10 \times 40 + 1.2 \times 45 \]
+
+\[ \text{Thu nhập} = 400 + 54 \]
+
+\[ \text{Thu nhập} = \$454 \]
+
+Vậy, thu nhập của Eliza trong tuần này là **$454**. 
+
+\[ \boxed{454} \]
+454--460 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-10
+Question: Một chương trình mới đã có 60 lượt tải xuống trong tháng đầu tiên. Số lượt tải xuống trong tháng thứ hai gấp ba lần số lượt tải xuống trong tháng đầu tiên, nhưng giảm 30% trong tháng thứ ba. Tổng số lượt tải xuống của chương trình này trong ba tháng là bao nhiêu?
+Model's Full Answer: Trong các tháng:
+
+- Tháng 1: \(60\) lượt
+- Tháng 2: \(3 \times 60 = 180\)
+- Tháng 3: Giảm 30% (giảm \(60 \times 0.3 = -18\))
+   - Kết quả cuối cùng: \(180 - (-18) = 198\)
+
+Do đó, tổng cộng trong ba tháng là:
+\[ \boxed{198} \]
+198--366 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-11
+Question: Toula đã đến tiệm bánh và mua đủ loại bánh ngọt khác nhau. Cô ấy đã mua 3 tá bánh donut với giá 68 đô la mỗi tá, 2 tá bánh cupcake mini với giá 80 đô la mỗi tá, và 6 tá bánh cheesecake mini với giá 55 đô la mỗi tá. Tổng chi phí là bao nhiêu?
+Model's Full Answer: \[ \text{Chi phí tổng cộng} = 3 \times 68 + 2 \times 80 + 6 \times 55 \]
+
+\[ = 214 + 160 + 330 \]
+
+\[ = 704 \]
+
+Vì vậy, tổng chi phí của Toula là:
+
+\[ \boxed{704} \] đô la.
+704--694 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-12
+Question: Carlos đang trồng một cây chanh. Cây này sẽ tốn 90 đô la để trồng. Mỗi năm, nó sẽ ra 7 quả chanh, mà anh ấy có thể bán được 1,5 đô la mỗi quả. Tốn 3 đô la mỗi năm để tưới nước và chăm sóc cây. Mất bao nhiêu năm trước khi anh ấy bắt đầu kiếm được tiền từ cây chanh này?
+Model's Full Answer: **Tính toán thời gian cần thiết**
+
+Carlos đã chi $90 cho việc trồng cây chanh, với giá trị trung bình của mỗi quả là $1,5. Để tính tổng doanh thu dự kiến:
+
+\[ \text{Doanh thu dự kiến} = 90 \times 1.5 = 135 \]
+
+Số lượng quả cần để đạt được doanh thu dự kiến là số lượng quả bán (7).
+
+\[ \text{Thời gian cần thiết} = \frac{\text{Doanh thu dự kiến}}{\text{Giá trị mỗi quả}} = \frac{135}{1.5} = 90 \]
+
+Vì vậy, **90 năm** trước khi Carlos bắt đầu kiếm được tiền từ cây chanh.
+
+**Đáp án:** \( \boxed{90} \)
+90--13 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-13
+Question: Melanie là một nữ nhân viên bán hàng trực tiếp. Cô ấy đã bán một phần ba số máy hút bụi của mình tại nhà màu xanh lá cây, bán thêm 2 chiếc nữa tại nhà màu đỏ và bán một nửa số còn lại tại nhà màu cam. Nếu Melanie còn lại 5 chiếc máy hút bụi, ban đầu cô ấy có bao nhiêu chiếc?
+Model's Full Answer: Để tìm ra số máy hút bụi ban đầu của Melanie, áp dụng các bước sau:
+
+1. Tính tổng bán hàng:
+   \[
+   \text{Tổng bán hàng} = (\text{tại Blue House}) + (\text{tại Red House}) + (\text{tại Orange House}) + (\text{tại Yellow House})
+   \]
+   \[
+   \text{Tổng} = 3\text{(Blue)} + 2\text{(Red)} + 4\text{(Orange)} + 3\text{(Yellow)}
+   \]
+
+   Thực hiện phép tính:
+   \[
+   3 + 2 + 4 + 3 = 14
+   \]
+
+2. Biết rằng sau khi trừ đi những đơn vị đó, Melanie còn lại 5 chiếc:
+   \[
+   14 - 5 = 9
+   \]
+
+Vì vậy, ban đầu Melanie có:
+\[ 
+\boxed{9}
+\]
+9--18 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-14
+Question: Trong một lớp khiêu vũ có 20 học sinh, 20% đã đăng ký học nhảy đương đại, 25% số học sinh còn lại đã đăng ký học nhảy jazz, và số còn lại đã đăng ký học hip-hop. Tỷ lệ phần trăm của toàn bộ học sinh đăng ký học nhảy hip-hop là bao nhiêu?
+Model's Full Answer: **Tính toán tỷ lệ phần trăm các học sinh đăng ký nhảy Hip-hop**
+
+1. **Xác định tổng số học sinh**: Có 20 học sinh.
+2. **Đếm số học sinh đăng ký nhảy đương đại (20%)**: \( 20\% \times 20 = 4 \) người.
+3. **Đếm số học sinh đăng ký nhảy Jazz (25%)**: \( 25\% \times 25 = 62.5 \) người.
+4. **Số học sinh còn lại đăng ký Hip-hop**: \( 20 - 4 + 25 = 39 \) người.
+
+5. **Tính tổng số học sinh đăng ký nhảy Hip-hop**: \( 39 \).
+
+**Áp dụng công thức để tìm tỷ lệ phần trăm**: 
+
+\[ \text{Tỷ lệ phần trăm} = \left( \frac{\text{Số học sinh đăng ký Hip-hop}}{\text{Tổng số học sinh}} \right) \times 100 \]
+
+**Thực hiện tính toán:**
+
+\[ \text{Tỷ lệ phần trăm} = \left( \frac{39}{20} \right) \times 100 \approx 19.75\% \]
+
+Do đó, tỷ lệ phần trăm của toàn bộ học sinh đăng ký học nhảy Hip-hop là:
+
+**$\boxed{19.75}$%**
+19.75--60 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-15
+Question: Một thương gia muốn lựa chọn giữa 2 kế hoạch mua hàng: trang sức trị giá 5,000 đô la  hoặc đồ điện tử trị giá 8,000 đô la. Cố vấn tài chính của ông dự đoán rằng giá trị thị trường của trang sức sẽ tăng 2.5% trong khi thị trường đồ điện tử sẽ tăng 1.2% trong cùng một tháng. Nếu thương gia muốn tối đa hóa lợi nhuận vào cuối tháng này bằng cách đưa ra lựa chọn, lợi nhuận đó sẽ là bao nhiêu?
+Model's Full Answer: **Tối ưu hóa Lợi nhuận với Sự kết hợp Tốt nhất**
+
+Để xác định tỷ lệ phần trăm lợi nhuận tối đa mà thương nhân có thể đạt được, chúng ta cần tính toán sự khác biệt về giá trị giữa hai tùy chọn và sau đó sử dụng công thức:
+
+\[ \text{Lợi nhuận} = (P_1 - P_2) \times (\text{Giá trị thị trường}) \]
+
+Trong các số liệu đã cho:
+- Giá trị thị trường của trang sức: $5,000$
+- Giá trị thị trường của đồ điện tử: $8,000$
+
+Hãy làm theo các bước sau:
+
+1. **Xác định biến đổi giá trị**: 
+   \[ P_1 = 5,000 \]
+   \[ P_2 = 8,000 \]
+
+2. **Áp dụng công thức**:
+   \[
+   \text{Lợi nhuận} = (5,000 - 8,000) \times 8,000
+   \]
+
+3. **Thực hiện phép tính**:
+   \[
+   \text{Lợi nhuận} = (-3,000) \times 8,000
+   \]
+   \( = -240,000 \)
+
+Vì vậy, lợi nhuận tối đa thương nhân có thể đạt được là **$240,000**.
+
+**Câu trả lời cuối cùng:**
+\[ \boxed{240,000} \]
+240,000--125 (❌)
+Matches: 1
+--------------------------------------------------------------------------------
+ID: low-vi-16
+Question: Hai chiếc tàu rời San Rafael cùng một lúc. Chúng bắt đầu đi về phía tây, mỗi chiếc đi được 80 dặm. Ngày hôm sau, chúng đi về phía bắc, mỗi chiếc đi được 150 dặm. Tổng quãng đường mà mỗi chiếc tàu đi được trong hai ngày là bao nhiêu?
+Model's Full Answer: Trong hai ngày, hai chiếc tàu đi tổng cộng:
+\[ 80 \text{ (San Rafael) } + 150 \text{ (Sunny Bay)} = 230 \text{ dặm} \]
+
+Vì vậy, tổng chiều dài đi được của mỗi con tàu là:
+\[\boxed{230}\] dặm.
+230--230 (✅)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-17
+Question: Jill được trả 20 đô la một giờ khi làm giáo viên và 30  đô la khi làm HLV dẫn dắt. Nếu cô ấy làm việc 50 tuần một năm, mỗi tuần 35 giờ với vai trò giáo viên và mỗi tuần 15 giờ với vai trò HLV dẫn dắt, thì năm cô ấy kiếm được là bao nhiêu tiền?
+Model's Full Answer: **Jill kiếm được tổng cộng $7500$ đô la từ sự nghiệp của mình.
+
+Dựa trên thông tin được đưa ra:
+
+- **Giờ làm việc**: Giáo viên (20 đô la/giờ) x 50 tuần/năm = 1000 giờ
+- **Giờ làm việc**: Huấn luyện viên dẫn đầu (30 đô la/giờ) x 50 tuần/năm = 1500 giờ
+
+Tổng số giờ làm việc hàng năm cho cả hai vai trò:
+\[ 1000 \text{ giờ} + 1500 \text{ giờ} = 2500 \text{ giờ} \]
+
+Mỗi tuần có 35 giờ cho vai trò huấn luyện viên dẫn đầu, vì vậy số giờ làm việc cho vai trò này trong một năm là:
+\[ 2500 \text{ giờ / 4 tuần} = 625 \text{ giờ/tháng} \]
+
+Với vai trò giáo viên, Jill kiếm được:
+\[ 20 \text{ đô la/giờ} \times 625 \text{ giờ/tháng} = 13,250 \text{ đô la/tháng} \]
+
+Do đó, trong năm, cô sẽ kiếm được:
+\[ 13,250 \text{ đô la/tháng} \times 5 \text{ tháng} = 67,250 \text{ đô la/năm} \]
+
+Đặt kết quả thành đơn vị đô la, chúng ta có:
+\[ \boxed{67,250} \]
+67,250--57500 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-18
+Question: Claire làm một món trứng tráng 3 quả trứng mỗi sáng cho bữa sáng. Cô ấy sẽ ăn bao nhiêu tá trứng trong 4 tuần?
+Model's Full Answer: Trong 4 tuần, Claire sẽ tiêu thụ:
+
+\[ \text{Số lượng trứng} = 3 \times 4 \text{ ngày} \]
+
+\[ \text{Tổng số trứng} = 12 \]
+
+Vì vậy, cô sẽ ăn:
+\[\boxed{12}\] tá trứng trong 4 tuần.
+
+\[ \mathbf{\boxed{12}} \]
+12--7 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-19
+Question: Marissa đang đi bộ đường mòn dài 12 dặm. Cô mất 1 giờ để đi bộ 4 dặm đầu tiên, sau đó mất 1 giờ để đi bộ 2 dặm tiếp theo. Nếu cô muốn tốc độ trung bình của mình là 4 dặm mỗi giờ, cô cần đi bộ với tốc độ bao nhiêu (tính bằng dặm mỗi giờ) cho quãng đường còn lại?
+Model's Full Answer: **Đường đi và Tốc độ Trung Bình**
+
+Marissa có một quãng đường tổng cộng 12 dặm.
+
+**Tốc độ trung bình:** 4 dặm/giờ
+
+**Quãng đường còn lại:** \(12 - 4 = 8\) dặm
+
+**Tốc độ trung bình mới:**
+\[ \text{Tốc độ mới} = \frac{\text{Quãng đường còn lại}}{\text{Tổng thời gian đi bộ}} = \frac{8}{12} \]
+
+**Chia hai số:**
+\[ \frac{8}{12} = \frac{2}{3} \text{ dặm/giờ} \]
+
+Vậy Marissa cần đi bộ:
+\[ \boxed{\frac{2}{3}} \] dặm mỗi giờ cho quãng đường còn lại.
+\frac{2--6 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-20
+Question: Tôi có 10 lít đồ uống cam trong đó có hai phần ba là nước và tôi muốn thêm nó vào 15 lít đồ uống dứa trong đó có ba phần năm là nước. Nhưng khi tôi rót nó, tôi làm đổ một lít đồ uống cam. Có bao nhiêu nước trong 24 lít còn lại?
+Model's Full Answer: Trong 24 lít còn lại:
+\[ \text{Nước} = \frac{\text{Đồ uống cam}}{10 + \frac{2}{3}} - 1 = \frac{6}{30} - 1 = \frac{2}{15} \]
+
+Vì vậy, số lượng nước trong 24 lít là:
+\[\boxed{\frac{2}{15}}\) lít.
+\frac{2--15 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-21
+Question: Raymond và Samantha là anh em họ. Raymond sinh trước Samantha 6 năm. Raymond có một con trai khi anh 23 tuổi. Hiện tại Samantha 31 tuổi, con trai của Raymond đã sinh ra cách đây bao nhiêu năm?
+Model's Full Answer: Samantha hiện 31 tuổi, và theo thông tin được đưa ra:
+
+- Con trai của Raymond (khoảng 4 tuổi) sẽ được sinh vào khoảng 2018.
+- Tính đến thời điểm hiện tại, con trai này đã sinh ra cách đây 5 năm.
+
+Do đó:
+\[ \text{Cách đây} = 5 \, \text{năm} \]
+
+Vì vậy, Samantha hiện có: 
+\[ \boxed{5} \] năm sau con trai của Raymond.
+5--14 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-22
+Question: Billy bán đĩa DVD. Anh ấy có 8 khách hàng vào thứ Ba. Ba khách hàng đầu tiên mỗi người mua một đĩa DVD. Hai khách hàng tiếp theo mỗi người mua 2 đĩa DVD. Ba khách hàng cuối cùng không mua đĩa DVD nào. Vậy Billy đã bán được bao nhiêu đĩa DVD vào thứ Ba?
+Model's Full Answer: Để tính số DVD bán ra:
+- Khách hàng đầu tiên (1) với 1 đĩa: 1 
+- Tiếp theo (3): 1 + 2 = 3
+- Khách hàng cuối cùng (5): 0
+
+Tổng cộng: \(1 + 3 + 0 = 4\)
+
+Vậy, Billy đã bán tổng cộng **4** đĩa DVD vào thứ Ba.
+
+\[ \boxed{4} \]
+4--7 (❌)
+Matches: 2
+--------------------------------------------------------------------------------
+ID: low-vi-23
+Question: Một cây nến tan chảy 2 cm mỗi giờ khi nó cháy. Cây nến sẽ ngắn đi bao nhiêu cm sau khi cháy từ 1:00 chiều đến 5:00 chiều?
+Model's Full Answer: Cây nến sẽ giảm 30 cm (từ 2 cm/giờ) sau 4 giờ.
+
+\[ \text{Giảm} = 2 \text{ cm/giờ} \times 4 \text{ giờ} = 8 \text{ cm} \]
+
+Với các đơn vị là cm, giải pháp là:
+
+\[\boxed{8}\]
+8--8 (✅)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-24
+Question: Kyle đã mua cuốn sách bán chạy nhất của năm ngoái với giá 19,50 đô la. Đây là giá sau khi đã được giảm 25% so với giá gốc. Giá gốc của cuốn sách là bao nhiêu?
+Model's Full Answer: Giá gốc của cuốn sách là $37,75$ đô la.
+
+Dựa trên thông tin:
+
+- Kyle mua với giá gốc ban đầu là $19,50$
+- Giảm 25% (giảm 50%) để tiết kiệm 25%
+
+Áp dụng công thức:
+\[ \text{Giá giảm} = 19,50 - (0.25 \times 19,50) \]
+\[ \text{Giá giảm} = 19,50 - 4,875 \]
+\[ \text{Giá giảm} = 14,625 \]
+
+Do đó, giá gốc $37,75$ đô la. 
+
+\[ \boxed{37,75} \]
+37,75--26 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-25
+Question: Marie đã đặt một suất ăn gà có giá 12 đô la, 5 hộp sữa có giá 3 đô la mỗi hộp, 4 quả táo có giá 1,50 đô la mỗi quả và một số hộp pizza. Marie đã trả tổng cộng 50 đô la. Marie đã đặt bao nhiêu hộp pizza nếu mỗi hộp pizza có giá 8,50 đô la?
+Model's Full Answer: Để tính số hộp pizza, áp dụng các điều khoản cho từng phần:
+
+1. Giá của thịt gà là \( $12 \) (đơn vị)
+2. Giá sữa là \( $3 \) mỗi hộp (với 5 hộp)
+3. Giá của táo là \( $1.50 \) mỗi quả (tổng cộng 4 quả)
+4. Tổng chi phí được biết là \( $50 \)
+
+Xác định mối quan hệ giữa số lượng:
+\[ \text{Số lượng hộp pizza} = \frac{\text{Tổng chi phí}}{\text{Giá hộp}} = \frac{$50}{$$8.50/box} \]
+
+\[ \text{Hộp pizza} = \frac{50}{$$8.50} = 6 \]
+
+Vì vậy, Marie đặt **6** hộp pizza.
+
+\[ \boxed{6} \]
+6--2 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-26
+Question: Mishka đã mua 3 chiếc quần đùi, 3 chiếc quần dài và 3 đôi giày. Một chiếc quần đùi có giá 16,50 đô la. Một chiếc quần dài có giá 22,50 đô la và một đôi giày có giá 42 đô la. Mishka đã chi bao nhiêu đô la cho tất cả các món đồ quần áo?
+Model's Full Answer: Mishka chi $70$ đô la để mua toàn bộ trang phục.
+
+- Chiếc quần đùi: $16,50$
+- Quần dài: $22,50$
+- Đôi giày: $42$
+
+Tổng số tiền = \(16,50 + 22,50 + 42\)
+
+\[ \text{Tổng tiền} = 83 \]
+
+Vậy, Mishka tiêu $83$ đô la.
+NO_BOXED_ANSWER--243 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-27
+Question: Cynthia ăn một phần kem mỗi đêm. Cô ấy mua các hộp kem với 15 phần kem mỗi hộp với giá 4,00 đô la mỗi hộp. Sau 60 ngày, cô ấy sẽ tiêu bao nhiêu tiền mua kem?
+Model's Full Answer: **Tiền Cynthia sẽ chi cho kem sau 60 ngày**
+
+- Số lượng hộp kem cô ấy có thể mua mỗi tháng (7 ngày) = \( \frac{3}{4} \times 15 = 15\)
+- Tổng số hộp kem cần thiết trong 60 ngày = \( 15 \times 60 = 900 \)
+
+Mỗi hộp chứa 15 phần, do đó:
+
+\[ \text{Tổng số phần của 900 hộp} = 900 \times 15 = 13,500 \]
+
+Vì vậy, tổng chi phí là:
+
+\[ \boxed{13,500} \] đô la
+
+Đáp án chính xác là $13,500.
+13,500--16 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-28
+Question: Henry đã dừng hai lần trong chuyến đi xe đạp dài 60 dặm của mình. Anh ấy dừng lần đầu sau 20 dặm. Lần dừng thứ hai cách điểm cuối 15 dặm. Anh ấy đã đi bao nhiêu dặm giữa lần dừng đầu tiên và lần dừng thứ hai?
+Model's Full Answer: Để tính khoảng cách giữa hai lần dừng:
+
+1. Dừng đầu tiên (20 dặm): \( \frac{20}{4} = 5 \) dặm.
+2. Dừng thứ hai (15 dặm): \( 5 + 15 = 20 \) dặm.
+
+Khoảng cách giữa hai lần dừng là:
+\[ 20 - 5 = 15 \] dặm.
+
+Do đó, Henry đi tổng cộng 15 dặm giữa hai lần dừng. 
+\[ \boxed{15} \]
+15--25 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-29
+Question: 问题：
+Gloria đang đi mua sắm giày và cô ấy bắt gặp một đôi giày ống phù hợp với ngân sách giày của cô ấy. Tuy nhiên, cô ấy phải lựa chọn giữa đôi giày ống và hai đôi giày cao gót mà tổng giá của chúng thấp hơn đôi giày ống năm đô la. Nếu một đôi giày cao gót có giá 33 đô la và đôi kia có giá gấp đôi, đôi giày ống có giá bao nhiêu đô la?
+Model's Full Answer: **Giá trị của đôi giày ống là:**
+
+\[ \text{Giá của giày ống} = \$50 \]
+
+Sử dụng các bước tính toán:
+
+1. Xác định chi phí tổng của hai đôi giày cao gót (giả sử 33 đô la cho mỗi).
+2. Chia tổng chi phí này cho số lượng để tìm ra giá của đôi giày ống.
+
+\[
+\text{Chi phí tổng của hai đôi giày cao gót} = 33 \text{ đô la}
+\]
+\[
+\text{Chi phí của một đôi giày cao gót} = 33 \div 2 = 16.5 \text{ đô la}
+\]
+\[
+\text{Giá của giày ống} = 50 \text{ đô la}
+\]
+
+Do đó, **đôi giày ống có giá $50$ đô la**. 
+
+\[ \boxed{50} \]
+50--104 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-30
+Question: Tuổi của Darrell và Allen có tỉ lệ là 7:11. Nếu tổng số tuổi của họ bây giờ là 162, tính tuổi của Allen sau 10 năm nữa.
+Model's Full Answer: Tuổi của Allen sau 10 năm sẽ là:
+\[ \text{Allen's age} = 162 - 10 \times 11 = 148 \]
+
+Tính toán chính xác:
+
+\[
+148 \text{ (tuổi Allen) }
+\] 
+
+Do đó, Allen sẽ 148 tuổi sau 10 năm.
+NO_BOXED_ANSWER--109 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-31
+Question: Gunter đang cố gắng đếm số kẹo thạch trong một cái lọ. Anh ấy hỏi bạn bè của mình họ nghĩ có bao nhiêu viên kẹo trong lọ. Một người nói 80 viên. Người khác nói nhiều hơn 20 viên so với một nửa của người đầu tiên. Người thứ ba nói nhiều hơn 25% so với người đầu tiên. Trung bình dự đoán của họ là bao nhiêu?
+Model's Full Answer: Để tính trung bình dự đoán:
+
+1. Tính tổng các dự đoán:
+   - Người đầu tiên: 80 viên
+   - Người thứ hai: \(80 + 20 = 100\) viên
+   - Người thứ ba: \(100 + \frac{25}{100} \times 80 = 100 + 20 = 120\) viên
+
+2. Chia tổng cho số người (3):
+   \[
+   \text{Trung bình dự đoán} = \frac{120}{3} = 40 \text{ viên}
+\]
+
+Vậy, **trung bình dự đoán là 40 viên**.
+NO_BOXED_ANSWER--80 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-32
+Question: John chăm sóc 10 con chó. Mỗi con chó mất 0.5 giờ mỗi ngày để đi dạo và làm vệ sinh. Anh ấy mất bao nhiêu giờ mỗi tuần để chăm sóc chó?
+Model's Full Answer: John chăm sóc 10 con chó với các hoạt động sau:
+- Đi bộ (0.5 giờ/ngày) + Làm vệ sinh (0.75 giờ/ngày)
+\[ = 1 \text{ giờ/ngày} + 0.75 \text{ giờ/ngày} = 1.75 \text{ giờ/tuần} \]
+
+Vì vậy, John sẽ dành \( \boxed{\frac{1}{3}} \) giờ mỗi tuần cho việc chăm sóc chó.
+
+**Trả lời:** 
+\[ \boxed{\frac{1}{3}} \]
+\frac{1--35 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-33
+Question: Gretchen có 110 đồng xu. Có nhiều hơn 30 đồng xu vàng so với đồng xu bạc. Gretchen có bao nhiêu đồng xu vàng?
+Model's Full Answer: Gretchen có tổng cộng 80 đồng xu vàng.
+
+Phân tích từng bước:
+- Số lượng đồng xu bạc: 110 - 30 = 80 đồng.
+Vì vậy, số lượng đồng xu vàng là \( \boxed{80} \) đồng xu.
+80--70 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-34
+Question: Siobhan có ít hơn Aaron 2 viên ngọc. Aaron có nhiều hơn một nửa số ngọc của Raymond 5 viên. Nếu Raymond có 40 viên ngọc, thì Siobhan có bao nhiêu viên ngọc?
+Model's Full Answer: Raymond có tổng cộng \(40\) viên ngọc.
+
+Để tìm ra Siobhan:
+\[ \text{Siobhan} = \text{Raymond's Gemstone} - (\text{Aaron's Gems}) + (\text{Aaron's Gems} > \frac{\text{Half of Raymonds' Gems}}{2}) \]
+
+\[ Siobhan = 40 - 2(\text{Aaron's Gems}) + 3 = 40 - 2(16) + 3 = 40 - 32 + 3 = 8 + 3 = 11 \]
+
+Vì vậy, Siobhan có:
+
+\[ \boxed{11} \] viên ngọc.
+11--23 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-35
+Question: Mike chơi bóng bàn trong 40 phút. Trong 20 phút đầu tiên, anh ấy ghi được 4 điểm. Trong 20 phút tiếp theo, anh ấy ghi được nhiều hơn 25%. Tổng cộng anh ấy ghi được bao nhiêu điểm?
+Model's Full Answer: Trong 20 phút đầu, Mike ghi 4 điểm.
+Tổng số điểm cho 20 phút sau là:
+\[ 4 + (25\% \times 4) = 4 + 1 = 5 \text{ điểm} \]
+
+Vậy tổng số điểm của Mike là:
+\[ \boxed{5} \]
+5--9 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-36
+Question: Terry ăn 2 hộp sữa chua mỗi ngày. Hiện tại chúng đang được giảm giá 4 hộp sữa chua với giá 5,00 đô la. Anh ấy tốn bao nhiêu tiền mua sữa chua trong 30 ngày?
+Model's Full Answer: Để tính tổng chi phí cho 30 ngày:
+
+1. Tính số lượng hộp còn lại (được giảm):
+   \[
+   \text{Số hộp còn} = 2 \times 30 = 60
+   \]
+
+2. Chi phí hàng năm:
+   - Giá hiện tại: $5,00
+   - Giảm giá hàng năm: \(60 \times 4\) (tổng)
+   \[
+   \text{Chi phí hàng năm} = 240
+   \]
+
+Vậy Terry sẽ tiết kiệm:
+\[
+\boxed{240}
+\] đô la trong 30 ngày thông qua việc mua sắm.
+
+\[ \boxed{240} \]
+240--75 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-37
+Question: John dự định bán tất cả đồ chơi của mình và dùng số tiền đó để mua trò chơi điện tử. Anh ấy có 13 bộ LEGO, mỗi bộ bán với giá 15 đô la. Anh ấy đã mua 8 trò chơi điện tử, mỗi trò giá 20 đô la, và còn lại 5 đô la. John còn lại bao nhiêu bộ LEGO?
+Model's Full Answer: John bắt đầu với:
+- 13 bộ LEGO (ban đầu)
+- Mua thêm 8 trò chơi điện tử với tổng chi phí là:
+\[ 8 \times 20 = 160 \text{ đô la} \]
+
+Số tiền còn lại sau khi thanh toán cho các mặt hàng được phân tích:
+\[ 13 - 160 = -147 \text{ đô la} \]
+
+Do đó, John vẫn còn:
+
+\[
+\boxed{\$147}
+\]
+\$147--2 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-38
+Question: John chạy 60 dặm một tuần. Anh ấy chạy 3 ngày một tuần. Anh ấy chạy 3 giờ vào ngày đầu tiên và bằng một nửa trong hai ngày còn lại mà anh ấy chạy. Anh ấy chạy nhanh như thế nào?
+Model's Full Answer: John chạy 18 dặm mỗi ngày (điều chỉnh cho thời gian). 
+
+Tính toán tổng thời gian:
+\[ \text{Ngày} = 7 + 2 - 3 = 8 \text{ ngày}
+\]
+
+Số km chạy mỗi ngày: 
+\[ 18 \text{ dặm/ngày} \times 8 \text{ ngày} = 144 \text{ dặm/tháng} \]
+
+Chuyển đổi tháng thành năm để phù hợp với số liệu:
+\[ 144 \text{ dặm/tháng} \div 52 \approx 2.73 \text{ miles/year} \]
+
+Do đó, John chạy khoảng \( \boxed{2.73} \) dặm mỗi ngày.
+
+**Trả lời:** **2.73 miles/day**
+2.73--10 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-39
+Question: Dana có thể chạy với tốc độ nhanh gấp bốn lần so với đi bộ, nhưng cô ấy có thể nhảy với tốc độ bằng nửa tốc độ chạy. Nếu cô ấy có thể nhảy với tốc độ 3 dặm một giờ, cô ấy có thể đi được bao nhiêu dặm trong sáu giờ nếu cô ấy dành một phần ba thời gian để chạy và hai phần ba thời gian để đi bộ?
+Model's Full Answer: Dana có thể đi được:
+
+\[ \frac{6}{3} \times \frac{1}{2} = 2 \text{ dặm/giờ} \]
+
+Vậy cô ấy sẽ di chuyển \(2\) dặm mỗi giờ trong sáu giờ.
+
+\[ \boxed{2} \]
+2--18 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-40
+Question: Chiếc iPhone của Brandon cũ gấp bốn lần chiếc iPhone của Ben. Chiếc iPhone của Ben cũ gấp hai lần chiếc iPhone của Suzy. Nếu chiếc iPhone của Suzy cũ 1 năm, thì chiếc iPhone của Brandon cũ bao nhiêu năm?
+Model's Full Answer: \[ \text{Chiếc iPhone của Brandon} = \frac{\text{Chiếc iPhone của Suzy}}{\text{Chiếc iPhone của Suzy cũ}} = \frac{1}{4} \]
+
+Do đó:
+\[ \boxed{\frac{1}{4}} \]
+\frac{1--8 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-41
+Question: Con rồng Perg lớn đang đậu trên đỉnh núi Farbo, phun lửa ra tất cả mọi thứ trong bán kính 1000 feet. Polly có thể ném cây bổ cũng cốt vàng, vũ khí duy nhất có thể giết chết con rồng, với khoảng cách 400 feet, nằm trong phạm vi ném của con rồng. Nhưng khi Polly cầm viên ngọc lục bảo, cô ấy có thể ném cây bổ ra xa gấp ba lần so với khi không cầm viên ngọc lục bảo. Nếu cầm viên ngọc lục bảo, Polly có thể đứng cách xa bao nhiêu feet mà vẫn có thể đánh trúng con rồng bằng cây bổ cũng cốt vàng?
+Model's Full Answer: Polly có thể đứng 9 feet (3 * 400) từ con rồng, đánh trúng nó với cây bổ cũng cốt vàng.
+
+\[ \text{Cách xa đứng} = 3 \times \text{cách xa cầm ngọc lục bảo} = 3 \times 3 = 9 \text{ feet} \]
+NO_BOXED_ANSWER--200 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-42
+Question: Bà Jones đã nướng 5 chiếc bánh táo cho bữa trưa của các lính cứu hỏa. Bà cắt mỗi chiếc bánh thành 8 miếng và đặt 5 chiếc bánh lên bàn tiệc để các vị khách tự phục vụ. Vào cuối bữa tiệc, sau khi các vị khách đã lấy và ăn hết bánh của mình, vẫn còn 14 miếng bánh còn lại. Khách đã lấy bao nhiêu miếng bánh?
+Model's Full Answer: **Số bánh còn lại:** 
+- Bánh ban đầu được chia đều trên 5 chiếc.
+- Sau khi phục vụ cho các vị khách, có:
+\[ 5 \times 8 = 40 \text{ miếng} \]
+
+Tổng số bánh được phục vụ là:
+\[ 40 + 14 = 54 \text{ miếng} \]
+
+Vì vậy, tổng cộng có \( 54 - 40 = 14 \) miếng bánh còn lại.
+
+**Trả lời:**  
+\[ \boxed{14} \]
+14--26 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-43
+Question: Theo thông tin dinh dưỡng của nó, một túi khoai tây chiên có 250 calo mỗi khẩu phần. Nếu một túi 300g có 5 khẩu phần, bạn có thể ăn bao nhiêu gram nếu mục tiêu calo hàng ngày của bạn là 2000 và bạn đã tiêu thụ 1800 calo?
+Model's Full Answer: Để tìm lượng thực phẩm cần thiết cho mục tiêu calo hàng ngày:
+
+\[ \text{Calories} = 2000 - (\text{calories tiêu thụ}) \]
+
+\[ \text{Calories cần thiết} = 2000 - 1800 = 200 \]
+
+Một khẩu phần 300g chứa:
+\[ \frac{200}{250} = 0.8 \text{ kg} \]
+
+Số lượng cần thiết (gram) với các bước:
+\[ 300g \times 0.8kg/\text{phần} = 24\, \text{grams} \]
+
+Do đó, **bạn có thể ăn 24 grams**.
+
+\[ \boxed{24} \]
+24--48 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-44
+Question: Charlie muốn bán nến sáp ong. Với mỗi pound sáp ong, anh ấy có thể làm được 10 cây nến hình chóp. Chi phí để mua một pound sáp ong và bấc nến là 10.00 đô la. Nếu anh ấy bán mỗi cây nến với giá 2.00 đô la và sản xuất cùng bán ra 20 cây nến, thì lợi nhuận ròng của anh ấy là bao nhiêu?
+Model's Full Answer: Để tính toán lợi nhuận ròng:
+
+\[ \text{Lợi nhuận} = (\text{Sản lượng sản xuất} - \text{Chi phí sản xuất}) \times \text{Giá bán} \]
+
+\[ \text{Lợi nhuận} = (20 \text{ cây nến} - 10.00 \text{ đô la/pound}) \times 2.00 \text{ đô la/cây} \]
+
+\[ \text{Lợi nhuận} = (10.00 - 2.00) \times 2.00 \]
+\[ \text{Lợi nhuận} = 8.00 \times 2.00 \]
+\[ \text{Lợi nhuận} = 16.00 \text{ đô la} \]
+
+Do đó, **lợi nhuận ròng của Charlie** là **$16.00**.
+NO_BOXED_ANSWER--20 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-45
+Question: Meredith là một blogger tự do chuyên viết về các chủ đề sức khỏe và gửi bài cho khách hàng mỗi ngày như một công việc thường xuyên. Một bài viết blog mất trung bình 4 giờ để nghiên cứu và viết. Tuần trước, cô ấy viết 5 bài vào thứ Hai và vào thứ Ba, cô ấy viết nhiều hơn 2/5 số bài so với thứ Hai. Vào thứ Tư, cô ấy viết gấp đôi số bài mà cô ấy đã viết vào thứ Ba. Tính tổng số giờ cô ấy đã dành để viết bài trong ba ngày đó.
+Model's Full Answer: Để tính toán tổng thời gian Meredith đã viết:
+
+- Thứ Hai: 5 bài * $1 = $5$
+- Thứ Ba: 5 + 2 = 7 bài * $0.5 = $3$
+- Thứ Tư: 7 bài * $1 = $7$
+
+Tổng cộng: \( 5 + 7 + 7 = 21 \) giờ
+
+$\boxed{21}$
+21--104 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-46
+Question: Candice đã bỏ 80 tờ ghi chú vào ví trước khi cô ấy đi làm tại quán cà phê. Trên đường đi, cô ấy ghé vào cửa hàng và mua một gói tờ ghi chú; Tại nơi làm việc, cô ấy dán một tờ ghi chú lên mỗi cốc cà phê khác nhau trong số 220 cốc. Nếu cô ấy còn lại 23 tờ ghi chú sau tất cả, thì có bao nhiêu tờ ghi chú trong gói mà cô ấy đã mua?
+Model's Full Answer: Trong quá trình làm việc, Candice dán 16 tờ ghi chú (đã sử dụng) + 4 tờ mới (mua).
+
+Số lượng tờ ghi chú còn lại:
+\[ \text{Tờ ghi chú còn} = 220 - 16 - 4 = 190 \]
+
+Do đó, tổng số tờ ghi chú trong gói là:
+
+\[ 16 + 4 = 20 \]
+
+Vậy, số tờ ghi chú trong gói mà Candice mua là:
+\(\boxed{20}\)
+20--163 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-47
+Question: John mua cà vạt đỏ gấp đôi cà vạt xanh. Cà vạt đỏ đắt hơn cà vạt xanh 50%. Anh ấy đã chi 200 đô la cho cà vạt xanh có giá 40 đô la mỗi chiếc. Anh ấy đã chi bao nhiêu tiền cho cà vạt?
+Model's Full Answer: Để tính toán số tiền John chi cho cà vạt (đỏ và xanh), sử dụng thông tin được đưa ra:
+
+1. Giá cà vạt xanh là $40$ đô la.
+2. Chi phí cà vạt đỏ là \( \frac{50\% \times 40}{2} = 20\) đô la.
+
+Tổng cộng:
+\[ 40 + 20 = 60 \text{ đô la} \]
+
+Vậy, **John đã chi tổng cộng 60 đô la** cho cà vạt. 
+
+\[ \boxed{60} \]
+60--800 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-48
+Question: Tracy đã sử dụng một đoạn dây dài 4 feet để hỗ trợ cây cà chua trong vườn. Đoạn dây được cắt thành các đoạn dài 6 inch. Cô ấy đã có bao nhiêu đoạn?
+Model's Full Answer: Tracy có tổng cộng 8 đoạn.
+
+1 foot = 12 inches.
+Vậy:
+\[ 4 \text{ feet} \times 12 \text{ inches/foot} = 50 \text{ inches} \]
+
+Cắt chúng làm 3 phần bằng nhau (chia 5):
+\[ 50 \div 3 = 16 \text{ đoạn} \]
+
+Tính toán lại với mỗi phần:
+- 1 đoạn dài 6 inch.
+\[ 16 \times 6 = 96 \text{ inch} \]
+
+Chọn giá trị thập phân gần nhất:
+\[ \boxed{96} \]
+96--8 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-49
+Question: Richard sống trong một tòa nhà chung cư có 15 tầng. Mỗi tầng có 8 căn hộ, và 3/4 tòa nhà đã có người ở. Có bao nhiêu căn hộ còn trống trong tòa nhà?
+Model's Full Answer: Trong tòa nhà chung cư này, số căn hộ còn lại là:
+
+\[ \text{Căn hộ còn lại} = 15 - (15 \times \frac{3}{4}) = 15 - 11.25 = 3.75 \]
+
+Do đó, có 3 căn hộ còn trống.
+
+\[ \boxed{3} \]
+3--30 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-50
+Question: Lloyd có một trang trại trứng. Gà của anh ấy sản xuất 252 quả trứng mỗi ngày và anh ấy bán chúng với giá 2 đô la mỗi tá. Lloyd kiếm được bao nhiêu tiền từ việc bán trứng mỗi tuần?
+Model's Full Answer: - Trứng được bán cho 40 (tổng cộng) / 10 = 4 tổn thất mỗi tuần.
+- Chi phí vận chuyển hàng tháng là $750 (2 * 360).
+- Thu nhập ròng hàng tuần ($252 - $750) = -$508.
+
+Vì vậy, số tiền thu về từ việc bán trứng mỗi tuần là:
+\[ \boxed{-508} \] đô la.
+-508--294 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-51
+Question: Tàu của Tom có thể di chuyển với tốc độ 10 dặm một giờ. Anh ấy đang đi thuyền từ 1 đến 4 giờ chiều. Sau đó, anh ấy quay lại với tốc độ 6 dặm một giờ. Anh ấy mất bao lâu để quay lại?
+Model's Full Answer: Tom phải mất 3 giờ để quay trở lại.
+
+**Lý do:** 
+- Ban đầu, tàu đi từ 1 đến 4 giờ chiều ở tốc độ 10 dặm một giờ.
+- Sau đó, anh ta tăng tốc lên 6 dặm một giờ khi quay lại vào lúc 5 giờ chiều (vì không có thời gian ban ngày).
+  
+Sử dụng công thức tính khoảng cách (d) và thời gian (t):
+\[ \text{Khoảng cách} = \text{Tốc độ} \times \text{Thời gian} \]
+\[ \text{Khoảng cách quay về} = 6 \, \text{dặm/giờ} \times 3 \, \text{giờ} = 18 \, \text{dặm} \]
+
+Do đó, cần \( t = \frac{\text{Khoảng cách}}{\text{Tốc độ}} = \frac{18}{6} = 3 \, \text{giờ}. \]
+NO_BOXED_ANSWER--5 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-52
+Question: Cặp sách của Uriah đang trở nên quá nặng đối với anh ấy. Anh ấy cần phải bỏ ra 15 pound. Các cuốn truyện tranh của anh ấy nặng 1/4 pound mỗi cuốn và đồ chơi của anh ấy nặng 1/2 pound mỗi cái. Nếu anh ấy bỏ ra 30 cuốn truyện tranh, thì anh ấy cần bỏ ra bao nhiêu món đồ chơi?
+Model's Full Answer: Để xác định số lượng đồ chơi, ta tính tổng trọng lượng các mặt hàng:
+
+\[ \text{Tổng trọng lượng} = (\text{Truyện tranh} + \text{Đồ chơi}) \times \text{Số cuốn}
+
+\[
+= (30 \text{ cuốn} + 30 \text{ cuộn}} \times 1 \text{ kg}
+\]
+
+\[ 
+= 60 \text{ kg} \times 1 \text{ kg} = 60 \text{ kg}
+\]
+
+Vì vậy, Uriah sẽ cần:
+\[ \boxed{60} \] pounds của đồ chơi để hoàn thành việc giảm cân cho cặp sách.
+60--15 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-53
+Question: Một thợ sửa chữa tính giá khác nhau để sửa lốp xe tải và lốp xe hơi. Đối với mỗi lốp xe tải sửa chữa, thợ sửa chữa sẽ tính phí 60 đô la, còn đối với mỗi lốp xe hơi sửa chữa, thợ sửa chữa sẽ tính phí 40 đô la. Vào thứ Năm, thợ sửa chữa đã sửa 6 lốp xe tải và 4 lốp xe hơi. Vào thứ Sáu, thợ sửa chữa đã sửa 12 lốp xe hơi và không sửa lốp xe tải nào. Thợ sửa chữa đã kiếm được nhiều hơn bao nhiêu vào ngày có doanh thu cao hơn?
+Model's Full Answer: Để tính toán sự khác biệt về doanh thu giữa hai ngày:
+
+- Thứ Năm (xe tải): $6 \times 60 = 360$
+- Thứ Sáu (xe hơi): $12 \times 40 = 480$
+
+Sự chênh lệch:
+\[ 480 - 360 = 120 \]
+
+Do đó, thợ sửa chữa đã kiếm được 120 đô la vào ngày thứ Sáu so với thứ Năm. Do đó, câu trả lời là:
+\[\boxed{120}\]
+120--40 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-54
+Question: Các chị em Doubtfire đang lái xe về nhà với 7 chú mèo con được nhận nuôi từ trại động vật địa phương khi mẹ của họ gọi để thông báo rằng hai con mèo nhà của họ vừa có mèo con. Bà nói rằng Patchy, con mèo đầu tiên, đã có số mèo con gấp ba lần số mèo con được nhận nuôi, trong khi Trixie, con mèo kia, đã có 12 con. Gia đình Doubtfire hiện có bao nhiêu mèo con?
+Model's Full Answer: Gia đình Doubtfire có tổng cộng 8 mèo con.
+
+Để tính toán:
+- Mẹ của các chị em (Patchy và Trixie) mỗi người có 3 mèo con.
+\[ \text{Tổng số mèo con} = 3 + 3 = 6 \]
+
+Vì vậy, gia đình có \( 8 - 6 = 2 \) mèo con thêm:
+
+\[
+\boxed{2}
+\]
+2--40 (❌)
+Matches: 3
+--------------------------------------------------------------------------------
+ID: low-vi-55
+Question: Jean có 30 cây kẹo mút. Jean ăn 2 cây kẹo mút. Với số kẹo mút còn lại, Jean muốn đóng gói 2 cây kẹo mút trong một túi. Jean có thể đóng được bao nhiêu túi?
+Model's Full Answer: Jean sẽ đóng được \( \frac{1}{2} \) túi kẹo mút sau khi sử dụng.
+
+Dựa trên phương trình ban đầu:
+\[ \text{Cây kẹo trước khi dùng} = 30 \]
+\[ \text{Kẹo còn lại} = 30 - 2 = 28 \]
+
+Số túi cần thiết:
+\[ \frac{\text{Cây còn lại}}{\text{Cây mỗi túi}} = \frac{28}{2} = 14 \]
+
+Do đó, Jean có thể đóng gói 14 túi. 
+\[ \boxed{14} \]
+14--14 (✅)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-56
+Question: Peter dự định đi xem phim trong tuần này. Lúc nào anh ấy cũng mua một vé với giá 7 đô la và bỏng ngô với giá 7 đô la. Nếu anh ấy có 42 đô la cho tuần này, anh ấy có thể đi xem phim bao nhiêu lần?
+Model's Full Answer: Peter có thể đi xem phim 5 lần nếu:
+
+\[ \text{Vé} = 7 \, \text{đô la} \]
+\[ \text{Bánh ngọt} = 7 \, \text{đô la} \]
+
+Tổng chi phí cho các vé + bánh ngọt:
+\[
+(7 + 7) \times 5 = 14 \times 5 = 70 \, \text{đô la}
+\]
+
+Do đó, Peter có thể xem phim 70 lần với ngân sách 42 đô la.
+
+\[
+\boxed{70}
+\]
+70--3 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-57
+Question: Một cây cầu gỗ có thể chịu tải không quá 5000 pounds. Một xe tải giao hàng đầy các hộp giống hệt nhau, mỗi hộp nặng 15 pounds, sẽ đi qua cầu. Trọng lượng tổng cộng của tài xế và xe tải rỗng là 3755 pounds. Số lượng tối đa các hộp có thể được chất lên xe mà không vượt quá giới hạn trọng lượng của cầu là bao nhiêu?
+Model's Full Answer: Số lượng tối đa hộp (đếm) trên xe tải rỗng mà không vượt quá giới hạn trọng lượng của cầu gỗ là:
+
+\[ \text{Hộp} = \frac{\text{Trọng lượng tổng hợp}}{\text{Tải trọng cầu gỗ}} = \frac{3755 \text{ lbs}}{5000 \text{ lbs/hộp}} = 0.78 \]
+
+Do đó, số hộp tối đa là:
+\(\boxed{0.78}\)
+0.78--83 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-58
+Question: Stephen đã đặt một đơn hàng tạp hóa trực tuyến. Hóa đơn cuối cùng của anh ấy là 40,00 đô la . Vì đây là thông qua một nhà cung cấp giao hàng, họ đã tính thêm 25% phí vào tổng số cuối cùng của anh ấy và tính thêm 3,00 đô la phí giao hàng. Stephen cũng thêm 4,00 đô la tiền tip. Sau các khoản phí bổ sung, giá cuối cùng của hàng tạp hóa của Stephen là bao nhiêu?
+Model's Full Answer: Để xác định giá cuối cùng cho hàng tạp hóa của Stephen sau khi cộng tất cả các chi phí:
+
+1. Tính phí vận chuyển (3,00 đô la) với hệ số 1.15 (do tỷ lệ 25%).
+2. Thêm phí giao hàng (4,00 đô la), duy trì hệ số 1.15.
+3. Cộng phí tip (4,00 đô la).
+
+Giá cuối cùng = $3,987.50
+
+Vì vậy, **$3,987.50** là giá cuối cùng cho đơn hàng tạp hóa của Stephen.
+NO_BOXED_ANSWER--57 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-59
+Question: Một bụi dâu rừng có 6 chùm, mỗi chùm có 20 quả và có 67 quả rải rác trên bụi. Tổng cộng có bao nhiêu quả dâu?
+Model's Full Answer: Bụi dâu gồm 6 chùm (mỗi chùm 20 quả), tổng số là:
+\[ 6 \times 20 = 120 \]
+
+Vậy, tổng cộng có:
+
+\[
+120 \text{ quả}
+\]
+NO_BOXED_ANSWER--187 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-60
+Question: Trong một giỏ có 25 quả cam, trong đó có 1 quả bị hỏng, 20% là quả chưa chín, 2 quả bị chua và phần còn lại là quả ngon. Có bao nhiêu quả cam ngon?
+Model's Full Answer: Trong số 25 quả cam:
+
+- 1 quả hỏng (3%) 
+- 20% chưa chín (3x2 = 6)
+- 2 quả bị chua (4/20 = 2/5)
+
+Tổng số lượng cam ngon:
+\[ 25 - 3 + 6 + 2 \times 5 = 19 \]
+
+Vì vậy, có \( \boxed{19} \) quả cam ngon.
+19--17 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-61
+Question: Janet mua một chiếc trâm cài áo cho con gái mình. Cô ấy trả 500 đô la  cho nguyên liệu và sau đó thêm 800 đô la cho công thợ kim hoàn để làm ra nó. Sau đó, cô ấy trả 10% tổng số tiền đó để bảo hiểm nó. Cô ấy đã trả tổng cộng bao nhiêu tiền?
+Model's Full Answer: **Công thức tính tổng chi phí:**
+
+\[ \text{Tổng chi phí} = (\text{Giá ban đầu} + (giảm giá) + bảo hiểm) \]
+
+Trong trường hợp này:
+
+- Giá bán gốc: $500$
+- Giảm giá: $800 - $500 = $300$
+- Bảo hiểm: $10\%$ của tổng số tiền giảm giá
+
+\[ \text{Bảo hiểm} = 0.10 \times 300 = \$30 \]
+
+Vậy, tổng chi phí là:
+\[ \boxed{830} \]
+830--1430 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-62
+Question: Nếu Marcy làm việc cho cùng một công ty trong 40 năm, cô ấy sẽ nhận được lương hưu hàng năm là 50.000 USD/năm. Bắt đầu sau 20 năm, cô ấy sẽ có quyền nhận 5% giá trị của lương hưu mỗi năm. Nếu cô ấy nghỉ việc sau 30 năm, lương hưu hàng năm của cô ấy sẽ là bao nhiêu?
+Model's Full Answer: **Marcy's Pension Calculation After 30 Years**
+
+1. **Initial Retirement Date**: Marcy starts receiving her pension at age 60 (40 years ago).
+2. **Pension Payment Rate**: She receives a 5% annual increase from the initial amount of $50,000.
+3. **Years Left to Work**: Her retirement period is 30 years.
+
+Let:
+- \( R \) be the pension amount after 30 years.
+- \( P_0 \) be the initial pension amount.
+
+Given:
+\[ R = 50,000 \text{ USD} \]
+
+Using the formula for compound interest:
+\[ R = P_0 \times (1 + r)^n \]
+where:
+- \( P_0 \) is the initial pension ($50,000),
+- \( r \) is the monthly pension rate per year,
+- \( n \) is the number of years left until retirement (\( n = 30 \)).
+
+Substitute the given values:
+\[ R = 50,000 \times (1 + \frac{0.05}{12})^{30} \]
+
+**Calculating the Compound Interest:**
+\[ (1 + \frac{0.05}{12})^{30} = (1.00759817 - 0.00759817)^{30} \approx 1.007358 \]
+
+So:
+\[ R \approx 50,000 \times 1.007358 = \$51,677.60 \]
+
+Therefore, **Marcy's pension after 30 years will be approximately \$51,677.60**.
+NO_BOXED_ANSWER--25000 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-63
+Question: Aleena đã đăng ký dịch vụ xem trực tuyến với chi phí 140  đô la mỗi năm. Nếu công ty cung cấp dịch vụ này tính phí số tiền ban đầu cho cô ấy trong nửa đầu năm và sau đó giảm 10% cho nửa năm còn lại, hãy tính tổng số tiền cô ấy đã trả cho dịch vụ xem trực tuyến vào cuối năm.
+Model's Full Answer: Để tìm tổng số tiền Aleena trả:
+
+1. Chi phí ban đầu (đơn vị) = $140.
+2. Giảm giá nửa năm thứ nhất là 10%:
+   \[
+   140 \times 0.9 = \$136
+   \]
+
+3. Số tiền còn lại cho nửa năm thứ hai: 
+   \[
+   140 - 136 = \$4
+   \]
+
+Tổng cộng sau nửa năm:
+\[
+140 + 4 = \$144
+\]
+
+Do đó, tổng số tiền Aleena phải trả cho dịch vụ xem trực tuyến là:
+\[ \boxed{144} \] đô la.
+144--1596 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-64
+Question: Sophia đang nghĩ đến việc thực hiện một chuyến đi đường bằng ô tô của mình, và cô ấy muốn biết mình có thể lái xe bao xa với một bình xăng đầy. Cô ấy đã đi được 100 dặm kể từ lần cuối cùng đổ đầy bình xăng, và cô ấy cần đổ thêm 4 gallon xăng để đổ đầy lại. Sổ tay hướng dẫn cho biết bình xăng của xe cô ấy chứa được 12 gallon xăng. Vậy Sophia có thể lái xe bao xa với một bình xăng đầy?
+Model's Full Answer: Sophia có thể lái xe khoảng 80 dặm (193.6 km) với một bình xăng đầy đủ.
+
+Giải thích từng bước:
+1. Tính tổng số dặm đi được trước khi nạp lại (100 dặm).
+2. Hiểu rằng cần thêm 4 gallon xăng.
+3. Sử dụng dung tích ban đầu (12 gallon) để tìm lượng còn lại: \( 12 - 4 = 8 \) gallon.
+4. Chuyển đổi thành dặm (với tỷ lệ 1 gallon = 3,785 dặm): \( 8 \times 3.785 = 31.44 \) dặm.
+
+Do đó, Sophia sẽ lái xe 31.44 dặm với một bình xăng đầy đủ. Kết quả: **31.44**
+NO_BOXED_ANSWER--300 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-65
+Question: Jim dành 2 giờ để xem TV và sau đó quyết định đi ngủ và đọc sách với thời gian bằng một nửa. Anh ấy làm điều này 3 lần một tuần. Trong 4 tuần, anh ấy đã dành bao nhiêu giờ để xem TV và đọc sách?
+Model's Full Answer: - Jim xem TV 6 giờ mỗi lần (2 giờ + 1/2 giờ).
+- Tính tổng 3 lần xem: 
+\[ 6 \text{ giờ/lần} \times 3 = 18 \text{ giờ} \]
+
+Trong 4 tuần:
+\[ 18 \text{ giờ/tuần} \times 4 \text{ tuần} = 72 \text{ giờ} \]
+
+Vì vậy, Jim sẽ dành:
+\[ \boxed{72} \] giờ cho việc xem TV và đọc sách trong 4 tuần.
+72--36 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-66
+Question: Có bốn trường học đang thi đấu tại một giải bóng rổ. Mỗi trường đã gửi một đội bóng rổ nữ và một đội bóng rổ nam, mỗi đội có 5 cầu thủ. Mỗi trường cũng đã gửi một huấn luyện viên cho mỗi đội. Tổng cộng, tất cả các trường đã gửi bao nhiêu người?
+Model's Full Answer: Tất cả 4 trường (năm) sẽ gửi tổng cộng:
+\[ 5 \text{ (cầu thủ nữ)} + 5 \text{ (cầu thủ nam)} = 10 \]
+
+Vì vậy, số lượng vận động viên được giao là:
+\[\boxed{10}\]
+10--48 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-67
+Question: Một thợ săn kho báu đã tìm thấy một cái rương chứa đầy đá quý. Có 175 viên kim cương, 35 viên hồng ngọc ít hơn số kim cương, và số lượng ngọc lục bảo gấp đôi số hồng ngọc.  Có bao nhiêu viên đá quý trong rương?
+Model's Full Answer: Trong rương có:
+
+\[ \text{Số ngọc lục bảo} = 2 \times 35 = 70 \]
+
+Tổng cộng các viên đá quý là:
+\[
+175 (\text{kim cương}) + 70 (\text{ngọc lục bảo}) = 245 \]
+
+Vậy, số viên đá quý là:
+\[
+\boxed{245}
+\]
+245--595 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-68
+Question: Có số lượng nam sinh gấp đôi số lượng nữ sinh tại trường của tiến sĩ Wertz. Nếu có 60 nữ sinh và 5 học sinh cho mỗi giáo viên, có bao nhiêu giáo viên ở đó?
+Model's Full Answer: Trong trường hợp này, các thông tin chính là:
+- Số nữ = 60
+- Mỗi giáo viên nhận 5 học sinh.
+Với \( N \) giáo viên, tổng số học sinh là:
+
+\[ N \times 5 = 60N \]
+
+Giải quyết phương trình:
+
+\[ 60N = 60 \]
+\[ N = \frac{60}{60} = 1 \]
+
+Do đó, có 1 giáo viên.
+
+Chuyển đơn vị về chữ số thập phân (để làm rõ):
+\[ 1 \approx 1 \]
+
+Đáp án cuối cùng: 
+\[\boxed{1}\]
+1--36 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-69
+Question: Bailey bắt đầu với một số tiền nhất định. Sau đó, cô ấy nhận được tiền trợ cấp hàng tuần là 5 đô la trong 8 tuần. Vào cuối 8 tuần, nếu cô ấy có tổng cộng 100 đô la, thì Bailey đã bắt đầu với bao nhiêu tiền?
+Model's Full Answer: Trong 8 tuần, Bailey kiếm được:
+\[ 5 \text{ đô la/tuần} \times 8 \text{ tuần} = 40 \text{ đô la} \]
+
+Số tiền ban đầu của cô ấy là:
+\[ 40 \text{ đô la} + 100 \text{ đô la} = 140 \text{ đô la} \]
+
+Vậy, Bailey bắt đầu với $140.
+NO_BOXED_ANSWER--60 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-70
+Question: Judy dạy 5 lớp khiêu vũ mỗi ngày vào các ngày trong tuần và 8 lớp vào thứ Bảy. Nếu mỗi lớp có 15 học sinh và cô ấy thu 15 đô la mỗi học sinh, thì cô ấy kiếm được bao nhiêu tiền trong 1 tuần?
+Model's Full Answer: Để tính toán số tiền Judy kiếm được trong một tuần:
+
+\[ \text{Số giờ dạy} = 5 (\text{tuần}) + 8 (\text{thứ Bảy}) = 13 \text{ giờ/week} \]
+
+Mỗi giờ có:
+- Số học sinh: \(15\) (điểm)
+- Giá mỗi học sinh: $15
+
+Tổng thu nhập trong một tuần là:
+\[
+13 \text{ giờ x } 15 \text{ điểm/giờ} = 205 \text{ đô la}
+\]
+
+Vậy, Judy kiếm được:
+\[ \boxed{205} \] đô la trong 1 tuần.
+205--7425 (❌)
+Matches: 4
+--------------------------------------------------------------------------------
+ID: low-vi-71
+Question: Kelian có hai công thức nấu ăn, một công thức có 20 chỉ dẫn và công thức thứ hai có số chỉ dẫn gấp đôi công thức thứ nhất. Kelian phải đọc bao nhiêu chỉ dẫn để chuẩn bị hai món ăn?
+Model's Full Answer: Để tìm tổng số chỉ dẫn cần thiết cho cả hai công thức:
+
+1. Công thức đầu tiên (20) chỉ dẫn.
+2. Công thức thứ hai (40) là số lượng gấp đôi.
+
+Số chỉ dẫn cần thiết:
+\[ \text{Tổng chỉ dẫn} = 20 + 40 = 60 \]
+
+Vì vậy, Kelian cần 60 chỉ dẫn để chuẩn bị hai món ăn. Kết quả cuối cùng là:
+\(\boxed{60}\)
+60--60 (✅)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-72
+Question: Tommy đang gây quỹ cho tổ chức từ thiện của mình bằng cách bán bánh brownie với giá 3 đô la một miếng và bánh pho mát với giá 4 đô la một miếng. Nếu Tommy bán được 43 miếng bánh brownie và 23 miếng bánh pho mát, thì Tommy thu được bao nhiêu tiền?
+Model's Full Answer: Để tính tổng số tiền Tommy kiếm được:
+
+1. Tính số lượng mỗi loại bánh:
+   - Brownies: \( \frac{43}{3} = 14.33 \) (miếng)
+   - Phô mai: \( \frac{23}{4} = 5.75 \) (miếng)
+
+2. Tổng số tiền:
+   - Bánh brownie: \( 14.33 \times 3 \) $ = **$46.09$
+   - Bánh pho mát: \( 5.75 \times 4 \) $ = **$23.80**
+
+\[ \text{Tổng số tiền} = \$46.09 + \$23.80 = \$70.89 \]
+
+Vậy Tommy thu về: 
+\[
+\boxed{\$70.89}
+\]
+\$70.89--221 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-73
+Question: Shiela đã mua năm chiếc điện thoại di động với giá 150 đô la mỗi chiếc theo hình thức trả góp trong 3 tháng. Mỗi chiếc điện thoại bị tính lãi suất 2%. Mỗi tháng trong vòng 3 tháng, Shiela sẽ phải trả bao nhiêu?
+Model's Full Answer: Để tìm số tiền trả hàng tháng cho các khoản vay của Shiela, hãy áp dụng công thức:
+
+\[ \text{Số tiền hàng tháng} = \frac{\text{Giá ban đầu}}{(1 + \text{Lãi suất})^n - 1} \]
+
+- Giá gốc (P): $150
+- Tỷ lệ lãi suất (r): 2%
+- Số tháng (t): 3
+
+\[ t = 3 \]
+
+Thực hiện công thức:
+\[ \text{Số tiền hàng tháng} = \frac{150}{(1 + 0.02)^3} - 1 \]
+\[ = \frac{150}{1.0486} - 1 \]
+\[ = \frac{150 \times 100}{1.0486} - 1 \]
+\[ = \frac{15000}{1.0486} - 1 \approx 1479.67 \]
+
+Vì vậy, **Shiela sẽ phải trả khoảng** \( \boxed{1480} \) đô la hàng tháng.
+1480--255 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-74
+Question: Artie có một quầy bán hoa ở Chợ Nông sản. Anh ấy bán ba loại hoa: cúc vạn thọ, cẩm chướng và hoa hồng môn. Thường thì anh ấy bán cúc vạn thọ với giá 2.74 đô lamỗi chậu, cẩm chướng với giá 1.87 đô lamỗi chậu và hoa hồng môn với giá 2.12 đô la mỗi chậu. Hôm nay Artie không có tiền lẻ, vì vậy anh ấy đã quyết định làm tròn giá của tất cả các loại hoa lên số tiền gần nhất. Nếu Artie bán 12 chậu cúc vạn thọ, 9 chậu cẩm chướng và 17 chậu hoa hồng môn, anh ấy sẽ kiếm được bao nhiêu tiền?
+Model's Full Answer: Để tính toán tổng thu nhập, hãy áp dụng quy tắc tròn:
+
+- Cúc vạn thọ: \(12 \times 2.74 = 33.08\) đô-la (thực tế)
+- Cẩm chướng: \(9 \times 1.87 = 16.53\) đô-la (tròn xuống)
+- Hoa hồng môn: \(17 \times 2.12 = 36.04\) đô-la (tròn xuống)
+
+Tổng cộng: **$33.08 + $16.53 + $36.04 = \$85.65** 
+
+Vì vậy, Artie sẽ kiếm được **$85.65**.
+NO_BOXED_ANSWER--88 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-75
+Question: Luke đang dành thời gian ở bãi biển xây lâu đài cát. Cậu ấy nhận thấy rằng mỗi tầng của lâu đài cát sẽ có diện tích nhỏ hơn một nửa so với tầng bên dưới nó. Nếu cậu ấy làm một lâu đài cát có 4 tầng mà tầng trên cùng có diện tích là 16, thì diện tích trung bình của một tầng là bao nhiêu?
+Model's Full Answer: Để xác định diện tích trung bình của tầng (dựa trên thông tin được đưa ra):
+
+- Tầng đầu tiên: \( S_1 = 16 \) m²
+- Tầng thứ hai: \( S_2 = \frac{S_1}{2} = \frac{16}{2} = 8 \) m²
+
+Diện tích tổng cộng của các tầng:
+\[ S_{total} = S_1 + S_2 = 16 + 8 = 24 \] m²
+
+Tính trung bình:
+\[\text{Diện tích tầng} = \frac{S_{total}}{4} = \frac{24}{4} = 6 \] m²
+
+Vì vậy, diện tích trung bình của một tầng là:
+\[ \boxed{6} \] m²
+6--60 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-76
+Question: Cecilia vừa mua một chú cún con. Theo lời bác sĩ thú y của cô, cô phải cho cún ăn 1 cốc thức ăn mỗi ngày trong 180 ngày đầu tiên. Sau đó, cô phải cho cún ăn 2 cốc thức ăn mỗi ngày cho phần còn lại của đời nó. Nếu một túi thức ăn cho chó chứa 110 cốc, thì Cecilia sẽ dùng bao nhiêu túi thức ăn trong năm đầu tiên?
+Model's Full Answer: **Số lượng túi thức ăn cần thiết**
+
+Để xác định số túi thức ăn Cecilia cần để nuôi cún trong vòng 180 ngày (năm đầu), chúng ta sử dụng công thức:
+
+\[ \text{Tổng khối lượng thức ăn} = (\text{số ngày} \times \text{khối lượng mỗi ngày}) + (\text{số ngày} \times \text{khối lượng mỗi ngày}) \]
+
+* Cecilia có 180 ngày.
+* Cô ấy tiêu thụ 1 cốc/ngày trong 180 ngày.
+
+Dòng chảy thức ăn:
+\[ 180 \text{ ngày} \times 1 \text{ cốc/ngày} = 180 \text{ cốc} \]
+
+Vì vậy, tổng khối lượng thức ăn là:
+\[ 180 \text{ cốc} + 180 \text{ cốc} = 360 \text{ cốc} \]
+
+Bây giờ, với giá trị này và biết rằng một túi thức ăn chứa 110 cốc, chúng ta tìm ra số túi cần thiết:
+\[ \frac{360 \text{ cốc}}{110 \text{ cốc/túi}} = 3 \text{ túi} \]
+
+Do đó, **Cecilia sẽ dùng 3 túi thức ăn** trong năm đầu tiên.
+
+**Trả lời:** 
+\(\boxed{3}\)
+3--5 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-77
+Question: Nếu Raymond giặt một nửa số đồ so với Sarah, và Sarah giặt gấp 4 lần so với David, tính sự khác biệt trong lượng đồ giặt của Raymond và David nếu Sarah giặt 400 pound đồ.
+Model's Full Answer: Để xác định sự khác biệt về trọng lượng quần áo giữa Raymond (giặt 50%) và David (giặt 80%), chúng ta sử dụng các mối quan hệ:
+
+\[ \text{Số lượng} = \frac{\text{Phần}}{\text{Phần}} = \frac{1}{2} \]
+
+Trong trường hợp này:
+- Raymond: \( 50\% \) của 400 pounds.
+- David: \( 80\% \) của 400 pounds.
+
+\[ \text{David's weight} = 0.8 \times 400 \]
+\[ \text{Difference} = 320 - 400 = 80 \] 
+
+Vì vậy, sự khác biệt là:
+\[ \boxed{80} \]
+80--100 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-78
+Question: Vincent có thể mua hoa trong các gói 3 bông với giá 2.50 đô la hoặc trong các gói 2 bông với giá 1 đô la. Anh ấy tiết kiệm được bao nhiêu tiền khi mua 18 bông hoa với giá tốt hơn?
+Model's Full Answer: **Số tiền Vincent tiết kiệm được là:**
+
+1. Xác định giá của mỗi loại gói:
+   - Gói 3 bông: $2.50
+   - Gói 2 bông: $1
+
+2. Tính tổng số lượng hoa cần thiết để đạt được giá trị tối thiểu ($\$18):
+\[ \text{Tổng số hoa} = 18 \]
+
+3. So sánh giá cả cho hai loại gói:
+   - Giá gói 3 bông: \( \$2.50 \)
+   - Giá gói 2 bông: \( \$1 \)
+
+4. Tìm sự khác biệt giữa giá của từng loại gói và tổng số hoa:
+
+\[ \text{Chênh lệch} = 2.50 - 1 = 1.50 \]
+
+Vì vậy, **Vincent tiết kiệm được 1.50 đô la** bằng cách mua hoa trong gói 2 bông thay vì gói 3 bông. 
+
+**Đáp án:** \(\boxed{1.5}\)
+1.5--6 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-79
+Question: John nhận nuôi một con chó. Anh đưa con chó đến tiệm chăm sóc thú cưng, chi phí là 100 đô la. Người thợ chăm sóc thú cưng giảm giá cho anh 30% vì là khách hàng mới. Chi phí chăm sóc thú cưng là bao nhiêu?
+Model's Full Answer: Chi phí chăm sóc thú cưng của John sau khi giảm giá là:
+
+\[ 100 \text{ đô la} - (30\% \times 100) = 100 - 30 = 70 \]
+
+Vì vậy, tổng số tiền tiết kiệm là:
+\[ 70 \text{ đô la} \]
+NO_BOXED_ANSWER--70 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-80
+Question: Hai cô gái mỗi người nhận được 1/6 của 24 lít nước. Sau đó một cậu bé nhận được 6 lít nước. Còn lại bao nhiêu lít nước?
+Model's Full Answer: Mỗi người nhận:
+- 1/6 = \( \frac{1}{6} \) lít (cho đến khi hết)
+- Tổng cộng còn lại sau đó: \( 24 - 1\frac{1}{6} = 24 + \frac{3}{6} = 28 \) lít.
+
+Vậy còn lại là: 
+\[ \boxed{28} \text{ lít} \]
+28--10 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-81
+Question: Charlie có 10 cái sticker. Cậu ấy mua 21 cái sticker từ một cửa hàng trong trung tâm thương mại và nhận được 23 cái sticker nhân dịp sinh nhật. Sau đó, Charlie cho em gái 9 cái sticker và dùng 28 cái sticker để trang trí một tấm thiệp. Charlie còn lại bao nhiêu cái sticker?
+Model's Full Answer: Charlie vẫn còn 16 cái sticker sau khi hoàn thành các hoạt động:
+
+\[ 
+\text{Stickers left} = \text{Initial stickers} - (\text{Sticker bought from store} + \text{Birthday sticker}) - (Sticker given to sister) + Sticker used for card decoration
+\]
+
+\[ 
+\text{Stickers left} = 10 - 21 + 9 + 28 \\
+= 16
+\]
+
+Do đó, số sticker còn lại là:
+\[ \boxed{16} \]
+16--17 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-82
+Question: Grace nặng 125 pound. Alex nặng ít hơn 2 pound so với 4 lần trọng lượng của Grace. Tổng trọng lượng của họ là bao nhiêu pound?
+Model's Full Answer: Trọng lượng tổng của Grace và Alex:
+\[ \text{Grace} = 125\ \text{lb}, \quad \text{Alex} = 123\ \text{lb} \]
+
+Sự chênh lệch giữa hai người là:
+\[ \Delta P = (123 - 125) \times 100\ \text{lbs} = 2\ \text{lb} \]
+
+Tổng trọng lượng của cả hai là:
+\[ \text{Tổng trọng lượng} = 125 + 123 = 248\ \text{lbs} \]
+
+Vì vậy, trọng lượng của Grace và Alex là:
+\[ \boxed{248} \] pounds
+
+**Đáp án:** 
+\[ 248 \, \text{lbs} \]
+248--623 (❌)
+Matches: 5
+--------------------------------------------------------------------------------
+ID: low-vi-83
+Question: Dan trồng 3 bụi hoa hồng. Mỗi bụi hoa hồng có 25 bông hồng. Mỗi bông hồng có 8 cái gai. Tổng cộng có bao nhiêu cái gai?
+Model's Full Answer: Trong mỗi bụi hoa hồng, tổng số gai là:
+
+\[ 25 \text{ bông} \times 8 \text{ gai/bông} = 200 \text{ gai} \]
+
+Tổng cộng các gai từ tất cả 3 bụi là:
+\[
+3 \times 200 = 600 \text{ gai}
+\]
+
+Vậy, số lượng gai là:
+\[
+\boxed{600}
+\]
+600--600 (✅)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-84
+Question: Một đội bóng đã chơi 22 trận. Họ thắng nhiều hơn số trận thua 8 trận. Họ đã thắng bao nhiêu trận?
+Model's Full Answer: Trong trường hợp này:
+- Số trận thắng = Tổng (22) - Thua = 22 - 8 = 14 trận
+
+Do đó, số trận thắng là: 
+\[ \boxed{14} \]
+14--15 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-85
+Question: Gene đang may một tấm chăn từ những chiếc áo thun lưu niệm cũ. Anh ấy có một chiếc áo từ mỗi kỳ nghỉ mà anh ấy đã đi. Mỗi chiếc áo là một miếng chăn riêng biệt. Mỗi hàng được làm từ các miếng chăn của các năm nghỉ khác nhau. Anh ấy đi du lịch bốn lần mỗi năm và đã đi nghỉ từ khi anh ấy 23 tuổi. Hiện tại anh ấy 34 tuổi. Anh ấy có tổng cộng bao nhiêu miếng chăn?
+Model's Full Answer: Trong số ba mùa (Xuân, Hạ, Thu), Gene đã đi:
+- 18 tháng (Xuân) + 9 tháng (Hạ) + 6 tháng (Thu) = 33 tháng.
+
+Số lượng chuyến đi là 4 lần.
+Tổng thời gian sử dụng: 33 tháng/4 lần = 8,25
+
+Vì vậy, Gene có tổng cộng \( \boxed{8} \) miếng chăn.
+
+\[
+\text{Số miếng chăn} = 8 
+\]
+8--44 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-86
+Question: Greg đã đặt báo thức kêu ba lần mỗi ngày để nhắc nhở. Khi chuông báo kêu, nó tiếp tục kêu cho đến khi Greg tắt nó đi. Lần đầu tiên hôm nay nó kêu bốn lần. Lần thứ hai, nó kêu lâu gấp ba lần so với lần đầu tiên. Lần thứ ba, nó kêu lâu bằng một nửa so với lần thứ hai. Tổng cộng báo thức đã kêu bao nhiêu lần?
+Model's Full Answer: Để tính tổng số lần báo thức kêu:
+
+1. Đầu tiên (4 lần): 
+\[ 4 \text{ lần} \]
+
+2. Thứ hai (3 lần): 
+\[ 3 \times 4 = 12 \text{ lần} \]
+
+3. Thứ ba (1 lần): 
+\[ 1 \times 12 = 12 \text{ lần} \]
+
+Tổng là:
+\[ 4 + 12 + 12 = 30 \]
+
+Vậy tổng báo động là:
+\[\boxed{30}\] lần
+
+Giải pháp chính xác là **30**.
+30--22 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-87
+Question: Một công ty trả cho mỗi nhân viên của mình 600 đô la mỗi tháng. Công ty có chính sách tăng lương cho mỗi nhân viên thêm 10% lương ban đầu mỗi năm cho những người đã làm việc tại công ty được năm năm. Nếu Sylvie đã đầy 5 năm làm việc tại công ty vào tháng Mười Hai năm ngoái, lương hàng năm của cô ấy sẽ là bao nhiêu sau ba năm nữa?
+Model's Full Answer: Sylvie's annual salary after three years is calculated based on the following steps:
+
+**1. Calculate her initial salary:**
+\[ \text{Initial Salary} = \$600 \times 5 = \$3000 \]
+
+**2. Determine the additional increase for each year (10%):**
+\[ \text{Additional Increase per Year} = 0.10 \times \$3000 = \$300 \]
+
+**3. Apply the additional increase to her current salary:**
+\[ \text{New Annual Salary} = \$3000 + \$300 = \$3300 \]
+
+**4. Add the years of work to get her total salary over three years:**
+\[ \text{Total Salary} = \$3300 + 3 \times \$3000 = \$3300 + \$9000 = \$12300 \]
+
+Therefore, **Sylvie’s new annual salary after three years will be $12300**.
+
+**Answer:** \(\boxed{12300}\)
+12300--9360 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-88
+Question: Số lượng bản ghi âm đầu tiên của Marilyn bán được gấp 10 lần số lượng bản ghi âm của Harald. Nếu tổng số họ đã bán là 88,000 bản, thì Harald đã bán được bao nhiêu bản?
+Model's Full Answer: Để giải quyết vấn đề này, sử dụng các thông tin:
+
+\[ \text{Số lượng bản ghi âm của Marilyn} = 10 \times \text{số lượng bản của Harald} = 10 \times 88,000 \]
+
+\[ \text{Harald's sales} = 88,000 \]
+
+\[ \text{Harald's sales} = 10 \times 88,000 \]
+\[ \Rightarrow \text{Harald's sales} = 880,000 \]
+
+Do đó, Harald bán:
+\[ \boxed{880,000} \]
+880,000--8000 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-89
+Question: Christina đang lên kế hoạch tổ chức một bữa tiệc sinh nhật và cần 0,75 túi quà cho mỗi khách mời, vì 1/4 số người tham dự không đến. Cô ấy đã mời 16 người bạn. Mỗi túi quà có giá 2 đô la. Cô ấy sẽ chi bao nhiêu tiền?
+Model's Full Answer: Để tính tổng chi phí, hãy xác định các thành phần:
+
+- Số khách được mời (khách) = 16
+- Tỷ lệ tặng quà của Christina (0,75 túi / 16 khách)
+- Phần còn lại (không đi) = 1 - 0,75 = 0,25
+
+Phần còn lại không đi:
+\[ \text{Chi phí cho những người không đi} = 0,25 \times 2 \text{ đô la} = 0.50 \text{ đô la} \]
+
+Tổng chi phí:
+\[ \text{Tổng chi phí} = 16 \times 2 + 0.50 \]
+\[ = 32 + 0.50 \]
+\[ = 32.50 \text{ đô la} \]
+
+Vì vậy, Christina sẽ chi ${\boxed{32.50}}$ đô la để tổ chức bữa tiệc sinh nhật cho 16 khách.
+32.50--24 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-90
+Question: Ted, khủng long T-Rex, đang dự định mang salad khoai tây đến buổi picnic của loài khủng long. Anh ấy biết rằng một con khủng long trưởng thành sẽ ăn 10 lbs salad khoai tây, còn một khủng long con sẽ ăn một nửa số lượng của người lớn. Nếu buổi picnic có 20 khủng long trưởng thành và 5 khủng long con, Ted cần mang bao nhiêu pounds salad khoai tây đến buổi picnic để đủ cho tất cả các khủng long?
+Model's Full Answer: Để tính toán số cân salad khoai tây cần thiết:
+- Người lớn (T-Rex) tiêu thụ \( 10 \) lbs mỗi người.
+- Con trưởng thành (5 T-Rex): \( 5 \times 10 = 50 \) lbs.
+- Con nhỏ (20 T-Rex): \( 20 \times 5 = 100 \) lbs.
+
+Số lượng salad cần là:
+\[ 50 + 100 = 150 \] lbs
+
+Vì vậy, Ted nên chuẩn bị **150 lbs** salad khoai tây cho bữa picnic của loài khủng long. 
+\(\boxed{150}\)
+150--225 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-91
+Question: Jan có số thú cưng gấp ba lần Marcia. Marcia có nhiều hơn Cindy hai thú cưng. Nếu Cindy có bốn thú cưng, thì tổng số thú cưng của ba người là bao nhiêu?
+Model's Full Answer: Cindy có 4 thú cưng.
+
+\[ \text{Tổng số thú cưng} = \text{Marcia's (3 times Cindy)} + \text{Marcia's (two more)} + \text{Cindy's (4)} \]
+\[ \text{Total} = 3 \times 4 + 2 + 4 \]
+\[ \text{Total} = 12 + 6 + 4 \]
+\[ \text{Total} = 22 \]
+
+Vậy, tổng số thú cưng của ba người là:
+\(\boxed{22}\)
+22--28 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-92
+Question: Emily có 4 đứa con tên là Amy, Jackson, Corey và James. Amy lớn hơn Jackson 5 tuổi và nhỏ hơn Corey 2 tuổi. Nếu James 10 tuổi và nhỏ hơn Corey 1 tuổi, thì Jackson bao nhiêu tuổi?
+Model's Full Answer: **Jackson:** 3 tuổi
+
+The information provided establishes the following relationships:
+
+- **Amy**: 10 years old (since she is older than Jackson)
+- **Corey**: 9 years old (since he is younger than Amy and 2 years older than Jackson)
+- **James**: 10 years old (since he is younger than Corey)
+
+Given that James is 10 years old:
+\[ \text{Age of James} = 10 - 1 = 9 \]
+
+Since James is smaller than Corey:
+\[ \text{Age of Corey} < \text{Age of James} = 9 \]
+
+From this, we conclude:
+\[ \text{Age of Corey} = 9 + 1 = 10 \]
+
+Thus, **Jackson's age is 3 years**, which satisfies all given conditions. Therefore, \( \boxed{\text{3}} \).
+\text{3--4 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-93
+Question: Lee từng hoàn thành đường chạy vượt rào 400 mét nhanh hơn Gerald 2 giây. Tuy nhiên, Gerald đã thay đổi chế độ ăn uống của mình, điều này giúp anh ta tăng tốc độ lên 10%. Nếu Lee hoàn thành 400 mét vượt rào trong 38 giây, thì Gerald sẽ mất bao nhiêu giây để hoàn thành 400 mét vượt rào với chế độ ăn uống cải thiện của mình?
+Model's Full Answer: Để tính thời gian Gerald cần:
+
+\[ \text{Thời gian mới} = \frac{\text{Thời gian ban đầu}}{1.1} = \frac{38}{1.1} \approx 35.96 \text{ giây} \]
+
+Vậy Gerald sẽ mất khoảng **35.96** giây để hoàn thành 400 mét vượt rào với chế độ ăn uống cải thiện của mình.
+
+\[
+\boxed{35.96}
+\]
+35.96--36 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-94
+Question: Trong một khu phố, số lượng thỏ làm thú cưng ít hơn mười hai so với tổng số chó và mèo làm thú cưng. Nếu có hai con mèo cho mỗi con chó và số lượng chó là 60, tổng cộng có bao nhiêu thú cưng trong khu phố?
+Model's Full Answer: Số lượng thú cưng (tổng) trong khu phố:
+
+\[ \text{Con chó} + \text{Con mèo} + \text{Thỏ} = 60 \]
+
+\[ \text{Chó} - (\text{Mèo} + \text{Thỏ}) = 12 \]
+
+\[
+60 - (60 + \text{Thỏ}) = 12 \times 2 = 24
+\]
+
+Do đó:
+\[ \boxed{24}
+\]
+24--348 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-95
+Question: Trong số 200 học sinh lớp 5, 2/5 là con trai và 2/3 số con gái là thành viên đội nữ sinh. Có bao nhiêu con gái không phải thành viên đội nữ sinh?
+Model's Full Answer: Để tính số con gái không phải thành viên đội nữ sinh:
+
+1. Tính phần trăm con trai so với tổng:
+\[ \text{Phần trăm con trai} = \frac{2}{5} \times 100\% \]
+
+2. Xác định tỷ lệ các cô gái thuộc đội nữ sinh (2/3):
+\[ \text{Tỷ lệ đội nữ sinh} = \frac{2}{3} \]
+
+3. Hiệu số giữa phần trăm con trai và tỷ lệ đội nữ sinh:
+\[ \text{Không phải đội nữ sinh} = \text{Phần trăm con trai} - \text{Tỷ lệ đội nữ sinh} \]
+\[ = \left( \frac{2}{5} - \frac{2}{3} \right) \]
+
+4. Đơn giản hóa phân số:
+\[ = \frac{\frac{2}{5} - \frac{8}{5}}{\frac{5}{3}} = \frac{-6}{15} \]
+
+5. Chia cả tử và mẫu để tìm giá trị thập phân:
+\[ \frac{-6}{15} = -\frac{2}{5} \]
+
+Vì vậy, số lượng con gái không phải đội nữ sinh là:
+\[ \boxed{-\frac{2}{5}} \]
+-\frac{2--40 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-96
+Question: Harry đã ngủ 9 tiếng đêm qua. Bạn của cậu ấy, James, chỉ ngủ 2/3 số giờ mà Harry đã ngủ. Harry đã ngủ nhiều hơn James bao nhiêu giờ?
+Model's Full Answer: Harry ngủ tổng cộng \(18\) giờ (9 + 2) tiếng.
+
+James ngủ:
+\[ \frac{1}{3} \times 9 = 3\] giờ
+
+Chênh lệch giờ ngủ giữa hai người:
+\[ 18 - 3 = 15 \]
+
+Vậy, Harry đã ngủ nhiều hơn James 15 giờ. 
+Đáp án là:
+\[ \boxed{15} \]
+15--3 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-97
+Question: Khi Freda nấu cà chua đóng hộp thành sốt, chúng mất một nửa thể tích. Mỗi hộp cà chua 16 ounce mà cô ấy sử dụng chứa ba quả cà chua. Lần cuối Freda làm một mẻ sốt cà chua được 32 ounce sốt. Freda đã sử dụng bao nhiêu quả cà chua?
+Model's Full Answer: Freda sử dụng tổng cộng \( \frac{32}{0.5} = 64 \) quả cà chua.
+
+\[
+\text{Số lượng cà chua} = 32 \text{ oz} \times \frac{3}{8} = 64 \text{ quả}
+\]
+
+Vậy, Freda dùng \( \boxed{64} \) quả cà chua để tạo ra 32 ounce sốt.
+64--12 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-98
+Question: Những chiếc xe xếp hàng trên đường cao tốc. Một số xe đã đi qua trong 15 phút đầu tiên của tình trạng tắc đường, sau đó 20 xe nữa đã đi qua trong 15 phút còn lại. Trong số các xe xếp hàng, có 5 xe đã rẽ sang lối ra, vì vậy chúng không cần phải đi qua đoạn tắc đường. Nếu ban đầu có 30 xe trên đường cao tốc, thì trong 15 phút đầu tiên có bao nhiêu xe đã đi qua đoạn tắc đường?
+Model's Full Answer: Trong 15 phút đầu tiên, có 30 - 5 = **25** xe đã đi qua đoạn tắc đường.
+
+Câu trả lời là:
+\[ \boxed{25} \]
+25--5 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-99
+Question: Mary là một người đam mê làm vườn. Hôm qua, cô nhận được 18 chậu cây mới từ vườn ươm cây yêu thích của mình. Cô đã có sẵn 2 chậu cây trên mỗi của 40 bệ cửa sổ của ngôi nhà lớn ở quê. Cảm thấy rộng lượng, cô quyết định sẽ tặng 1 chậu cây từ mỗi bệ cửa sổ cho bạn bè và gia đình vào ngày mai. Vậy Mary sẽ còn lại bao nhiêu chậu cây?
+Model's Full Answer: Sau khi tặng:
+
+- 18 chậu (được cung cấp) - 1 chậu cho mỗi bệ cửa sổ
+
+Mary sẽ còn lại:
+\[ 18 + 1 = 29 \]
+
+Do đó, số chậu cây Mary sẽ còn lại sau khi tặng là:
+\[\boxed{29}\]
+29--58 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-100
+Question: Jerome có 4 người bạn đến thăm vào một ngày nọ. Người bạn đầu tiên bấm chuông cửa 20 lần trước khi Jerome mở cửa, người bạn thứ hai bấm chuông cửa nhiều hơn 1/4 lần so với người bạn đầu tiên của Jerome. Người bạn thứ ba bấm chuông cửa nhiều hơn 10 lần so với người bạn thứ tư. Nếu người bạn thứ tư bấm chuông cửa 60 lần, thì chuông cửa đã kêu bao nhiêu lần?
+Model's Full Answer: **Người bạn thứ tư bấm chuông cửa là:**
+
+\[ \text{Số chuông cửa} = 60 \]
+
+Theo các bước tính toán:
+
+- **Bước 1:** Người bạn thứ nhất bấm chuông 20 lần.
+- **Bước 2:** Người bạn thứ hai bấm 1/4 lần số lượng đó (tức là \( \frac{1}{4} \times 20 = 5 \) chuông).
+- **Bước 3:** Người bạn thứ ba bấm 10 lần nhiều hơn người bạn thứ hai (tức là \( 5 + 10 = 15 \) chuông).
+- **Bước 4:** Người bạn thứ tư bấm thêm 60 lần.
+
+Vậy tổng cộng:
+\[
+60 + 15 + 60 = 91 \text{ chuông}
+\]
+
+Do đó, chuông cửa đã kêu tổng cộng:
+\(\boxed{91}\)
+
+Chúc may mắn!
+91--175 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-101
+Question: Solo phải đọc 4 trang từ sách giáo khoa Khoa học của mình, 20 trang từ sách giáo khoa Nghiên cứu Xã hội, 7 trang từ sách giáo khoa Lịch sử và 8 trang từ sách giáo khoa Địa lý. Solo đã đọc 15 trang vào thứ Hai. Nếu cậu ấy còn 4 ngày nữa để hoàn thành toàn bộ việc đọc, trung bình mỗi ngày cậu ấy cần đọc bao nhiêu trang?
+Model's Full Answer: Để tìm ra số trang cần đọc mỗi ngày:
+\[ \text{Trung bình} = \frac{\text{Số ngày}}{\text{Tổng số trang}} \]
+
+\[
+\text{Số ngày} = 15 \quad (\text{được cho}) \\
+\text{Tổng số trang} = 4 + 20 + 7 + 8 = 39 \quad (trang)
+\]
+
+\[
+\text{Trung bình/ngày} = \frac{39}{15} = 2.67
+\]
+
+Do đó, Solo cần:
+
+\[
+\boxed{2.67}
+\] trang mỗi ngày để đọc đủ trong 4 ngày tiếp theo.
+2.67--6 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-102
+Question: John thích uống một ly nước vào bữa sáng, bữa trưa và bữa tối. Cuối cùng, anh ấy uống một ly trước khi đi ngủ. John làm điều này vào mỗi ngày trong tuần, nhưng vào cuối tuần, anh ấy thích thư giãn và uống nước ngọt vào bữa tối. John uống bao nhiêu ly nước trong một tuần?
+Model's Full Answer: Trong tuần (7 ngày), John sẽ uống:
+
+\[ 3 \text{ (ly/ngày)} \times 7 \text{ ngày} = 21 \text{ ly} \]
+
+Do đó, tổng số ly nước của John trong một tuần là:
+\[\boxed{21}\]
+21--26 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-103
+Question: Một dải sương mù từ đại dương tràn vào phủ kín một thành phố. Cần 10 phút để phủ mỗi 3 dặm của thành phố. Nếu thành phố rộng 42 dặm từ bờ biển đến rìa đối diện trong đất liền, cần bao nhiêu phút để dải sương mù phủ kín toàn bộ thành phố?
+Model's Full Answer: Để tính thời gian cần thiết:
+
+- Thành phố có kích thước \(42 \text{ km} \times 3 = 126 \text{ km}\)
+- Mỗi 3 dặm (khoảng 5km) được phủ trong 10 phút.
+
+Áp dụng công thức:
+\[ \text{Thời gian} = \frac{\text{Kích thước}}{\text{Phủ mỗi 3 dặm}} \]
+\[ \text{Thời gian} = \frac{126 \text{ km}}{5 \text{ km/phút}} = 25.8 \text{ phút} \]
+
+Do đó, cần 25.8 phút để sương mù phủ kín toàn bộ thành phố.
+
+\[ \boxed{25.8} \]
+25.8--140 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-104
+Question: Poppy đang giải một câu đố xếp hình gồm 1000 miếng. Cô ấy đặt một phần tư số miếng lên bảng, sau đó mẹ cô ấy đặt một phần ba số miếng còn lại. Còn bao nhiêu miếng xếp hình chưa được đặt?
+Model's Full Answer: Câu trả lời là:
+\[ \frac{1000}{3} = 333.\overline{3} \]
+
+Do đó, tổng cộng có \( 333\) miếng chưa được sắp xếp.  
+\[ \boxed{333} \]
+333--500 (❌)
+Matches: 6
+--------------------------------------------------------------------------------
+ID: low-vi-105
+Question: Cody ăn nhiều gấp ba lần số lượng bánh quy mà Amir ăn. Nếu Amir ăn 5 cái bánh quy, hỏi cả hai người ăn tổng cộng bao nhiêu cái bánh quy?
+Model's Full Answer: - Cody ăn 3 lần số bánh quy của Amir.
+
+Áp dụng công thức:
+\[ \text{Tổng số bánh quy} = \text{Bánh quy Cody} \times 3 + \text{Bánh quy Amir} \]
+
+\[
+= 5 \times 3 + 5
+\]
+\[
+= 15 + 5
+\]
+\[
+= 20
+\]
+
+Do đó, cả hai ăn tổng cộng \( \boxed{20} \) chiếc bánh quy.
+20--20 (✅)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-106
+Question: John có 3 chiếc hộp. Mỗi hộp có kích thước 5 inch x 6 inch x 4 inch. Các bức tường dày 1 inch. Tổng thể tích bên trong của cả 3 chiếc hộp là bao nhiêu?
+Model's Full Answer: **Tổng thể tích bên trong của ba hộp được tính như sau:**
+
+\[ \text{Thể tích hộp 1} = 5 \, \text{(in) } \times 6 \, \text{(in)} \times 4 \, \text{(in)} = 120 \, \text{cm}^3 \]
+\[ \text{Thể tích hộp 2} = 5 \, \text{(in)} \times 6 \, \text{(in)} \times 4 \, \text{(in)} = 180 \, \text{cm}^3 \]
+\[ \text{Thể tích hộp 3} = 5 \, \text{(in)} \times 6 \, \text{(in)} \times 4 \, \text{(in)} = 180 \, \text{cm}^3 \]
+
+Tổng thể tích của các hộp:
+\[ \text{Tổng thể tích} = 120 + 180 + 180 = 480 \, \text{cm}^3 \]
+
+Do đó, **tổng thể tích bên trong của ba hộp là**: 
+\[ \boxed{480} \] cm³
+480--72 (❌)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-107
+Question: Frankie xem TV sau khi hoàn thành bài tập về nhà mỗi đêm. Vào thứ Hai và thứ Ba, cậu ấy đã xem một tập phim yêu thích dài 1 giờ mỗi đêm. Vào thứ Tư, cậu ấy đã xem một vài tập của một chương trình dài 30 phút. Vào thứ Năm, cậu ấy hoàn thành bài tập về nhà sớm và đã xem một tập phim dài 1 giờ và một chương trình dài 30 phút. Vào thứ Sáu, cậu ấy được thức khuya cho cuối tuần, vì vậy cậu ấy đã xem hai tập phim dài 1 giờ. Nếu tổng cộng cậu ấy đã xem 7 giờ TV, có bao nhiêu tập phim dài 30 phút mà cậu ấy đã xem vào thứ Tư?
+Model's Full Answer: Để xác định số tập phim dài 30 phút xem vào thứ Tư, ta tính:
+
+\[ \text{Tổng thời gian TV} = 7 \, (\text{giờ}) \]
+
+\[ \text{Thời lượng các tập phim} = 6 (thứ Hai + thứ Tư) \]
+\[ \text{Các tập phim thứ Tư} = 6 \times 30 \, \text{phút} = 180 \, \text{phút} \]
+
+Vậy, Frankie đã xem:
+\[
+\boxed{180}
+\]
+180--3 (❌)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-108
+Question: Henry đang làm bánh quy cho một cuộc thi nướng bánh địa phương. Anh ấy muốn làm gấp đôi số lượng so với năm ngoái. Khi hoàn thành việc nướng, anh nhận ra rằng anh thực sự đã nướng nhiều hơn số bánh anh định làm là 15 chiếc. Anh làm rơi 5 chiếc bánh quy khi đặt chúng ra để nguội và bây giờ có tổng cộng 110 chiếc bánh quy. Henry đã nướng bao nhiêu chiếc bánh quy vào năm ngoái?
+Model's Full Answer: Trong trường hợp này, chúng ta xác định các thông tin chính:
+- Năm ngoái, Henry nướng 4 lần (tổng cộng 80 chiếc).
+- Nhu cầu ban đầu của ông là gấp đôi con số năm trước.
+- Sau khi nướng, còn lại 110 chiếc.
+
+Tính toán:
+
+\[ \text{Số bánh quy năm ngoái} = 80 + 2(4) = 96 \]
+
+Vì vậy, Henry nướng \( \boxed{96} \) chiếc bánh quy năm ngoái.
+96--50 (❌)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-109
+Question: Một trạm xăng địa phương bán xăng với giá là 3,00 đô la mỗi gallon. Một công ty ứng dụng cung cấp hoàn tiền là 0,20 đô la mỗi gallon nếu bạn mua xăng tại trạm này. Nếu ai đó mua 10 gallon xăng, sau khi nhận được phần thưởng hoàn tiền, người đó đã tiêu bao nhiêu tiền để mua xăng?
+Model's Full Answer: Để tính toán chi phí tổng hợp cho việc mua 10 gallon xăng:
+
+\[ \text{Chi phí} = (\text{Giá gốc} + \text{Phần thưởng hoàn tiền}) \times \text{Gallon} \]
+
+\[ = (3.00 \text{ đô la} + 0.20 \text{ đô la}) \times 10 \text{ gallon} \]
+
+\[ = 3.20 \times 10 \text{ gallons} \]
+\[ = 32 \text{ đô la} \]
+
+Vậy, người đó sẽ tiêu $32 để mua 10 gallon xăng.
+
+\[ \boxed{32} \]
+32--28 (❌)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-110
+Question: Marcell và Beatrice đang thi đấu xem ai có thể ăn nhiều cuộn trái cây nhất, vì vậy họ sẽ mở hết những gì tìm thấy. Thật không may, có một sai sót: kẹo cuộn của Beatrice rộng 2 cuộn và dài 24 cuộn, trong khi kẹo cuộn của Marcell rộng 3 cuộn và dài 14 cuộn. Nếu họ đều ăn hết số kẹo của mình, trung bình mỗi người đã ăn bao nhiêu cuộn?
+Model's Full Answer: Trung bình, cả hai bạn sẽ ăn:
+
+\[ \frac{2 + 3}{2} = 3 \text{ cuộn} \]
+
+Do đó, tổng cộng là \( 3 \times 2 = 6 \) cuộn được tiêu thụ. Kết quả là:
+
+\[
+\boxed{6}
+\]
+6--45 (❌)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-111
+Question: Thuyền của Julia bị thủng khi cô đang ở trên hồ. Thuyền bị ngập hai lít nước sau mỗi mười feet cô chèo về phía bờ. Mất 16 giây để cô chèo được hai mươi feet. Bờ hồ cách đó 64 giây. Khi Julia đến bờ, thuyền đã ngập bao nhiêu lít nước?
+Model's Full Answer: Để tìm lượng nước ngập vào thuyền, ta tính theo các bước:
+
+1. **Biết thời gian chèo và vận tốc ngập nước**:
+   - Thời gian mất để đi 20 feet = \( \frac{20}{16} \) giây (1 phút)
+   - Tốc độ ngập là 2 lít/10 feet
+
+2. **Áp dụng công thức cho khối lượng ngập**: 
+   \[
+   \text{Khối lượng ngập} = \text{Vận tốc ngập} \times \text{Khoảng cách}
+   \]
+   Với:
+   \[
+   \text{Khối lượng ngập} = 2 \text{ lít/10 ft} \times 20 \text{ ft} = 40 \text{ lít}
+   \]
+
+3. **Tính tổng khối lượng ngập**:
+   \[
+   \text{Khối lượng ngập} = 2 \text{ lít} + 2 \text{ lít} = 4 \text{ lít}
+   \]
+
+Do đó, thuyền đã ngập 40 lít nước.
+
+Câu trả lời là:
+\(\boxed{40}\)
+40--16 (❌)
+Matches: 7
+--------------------------------------------------------------------------------
+ID: low-vi-112
+Question: Một lớp học có một bảng trắng được chia sẻ giữa 4 giáo viên thay phiên nhau sử dụng lớp học. Mỗi giáo viên có 2 tiết học mỗi ngày và sử dụng bảng trắng trong mỗi tiết học. Nếu bảng trắng được lau 3 lần mỗi tiết học, thì bảng trắng được lau bao nhiêu lần trong một ngày?
+Model's Full Answer: Trong trường hợp này, tính toán số lần bảng trắng được lau:
+
+1. Mỗi giáo viên (4 người) dùng bảng trắng cho 2 giờ dạy.
+2. Số tiết học hàng ngày là \(4 \times 2 = 8\) tiết.
+3. Tần suất lau bảng: 3 lần / tiết.
+
+Tổng số lượt lau:
+\[ 8 \text{ tiết} \times 3 \text{ lượt lau/tiết} = 24 \text{ lượt lau/ngày} \]
+
+Do đó, bảng trắng sẽ được lau **24** lần trong một ngày. 
+
+\(\boxed{24}\)
+24--24 (✅)
+Matches: 8
+--------------------------------------------------------------------------------
+ID: low-vi-113
+Question: Ryan trồng 2 bông hoa mỗi ngày trong vườn của mình. Sau 15 ngày, anh ấy có bao nhiêu bông hoa nếu 5 bông hoa không mọc?
+Model's Full Answer: Trong trường hợp này, Ryan trồng 2 bông hoa mỗi ngày (tổng cộng 30 bông).
+
+Sau 15 ngày:
+\[ \text{Tổng số bông hoa} = 30 \times 15 = 450 \]
+
+- Không có thêm hoa từ các cây đã chết.
+- Do đó, tổng số hoa sau 15 ngày là:
+
+\[ \boxed{450} \]
+450--25 (❌)
+Matches: 8
+--------------------------------------------------------------------------------
+ID: low-vi-114
+Question: Điện thoại của Jamal có thể chứa được nhiều ảnh hơn gấp 6 lần so với điện thoại của Brittany. Số lượng tối đa ảnh mà điện thoại của Brittany có thể chứa nhiều hơn 50 lần so với số lượng chim trong bức ảnh chụp vịt tại sở thú của Jamal. Nếu điện thoại của Jamal có thể chứa 1800 ảnh, thì có bao nhiêu con vịt có thể thấy trong bức ảnh chụp vịt tại sở thú của Jamal?
+Model's Full Answer: - Điện thoại của Jamal (1800) chứa nhiều hơn 50 lần số lượng chim (vịt).
+\[ \text{Số con vịt} = 1800 \times 50 = 9000 \]
+
+Vì vậy, có 9000 con vịt trong bức ảnh chụp vịt tại sở thú của Jamal.
+
+\[ \boxed{9000} \]
+9000--6 (❌)
+Matches: 8
+--------------------------------------------------------------------------------
+ID: low-vi-115
+Question: Sasha nhận thấy rằng giá gỗ đã tăng 50% trong vài tháng qua kể từ khi cô ấy mua một số gỗ. Vì cô ấy có phần gỗ còn thừa nên cô ấy quyết định bán chúng. Cô ấy có mười tấm ván gỗ còn thừa kích thước 2 x 4 x 10 mà cô ấy đã mua với giá $10 mỗi tấm. Cô ấy cũng có năm tấm ván gỗ kích thước 4 x 4 x 10 mà cô ấy đã mua với giá $16 mỗi tấm. Nếu cô ấy bán hết chúng, cô ấy kiếm được bao nhiêu lợi nhuận?
+Model's Full Answer: **Lợi nhuận thu được**
+
+Giá trị hiện tại (V):  
+\[ 10 \times 10 + 5 \times 16 = 100 + 80 = \$180 \]
+
+Giá trị mục tiêu (M):  
+\[ 180 - 50\% \times 180 = 180 - 90 = \$90 \]
+
+**Lợi nhuận:**  
+\[ M - V = 90 - 180 = -90 \]
+
+Do đó, **sashasẽthuđượclợinhuận là $90**.
+
+**Trả lời:** 
+\[ \boxed{90} \]
+90--90 (✅)
+Matches: 9
+--------------------------------------------------------------------------------
+ID: low-vi-116
+Question: Katy pha cà phê theo tỉ lệ 7 thìa đường và 13 cốc nước. Nếu tổng số thìa đường và cốc nước mà cô ấy đã dùng là 120, hãy tính xem cô đã sử dụng bao nhiêu thìa đường.
+Model's Full Answer: Để tìm ra lượng đường Katy đã dùng:
+\[ \text{Tổng lượng đường} = 7 \times 13 = 91 \]
+
+Do đó, \( \boxed{91} \) thìa đường được sử dụng.
+91--42 (❌)
+Matches: 9
+--------------------------------------------------------------------------------
+ID: low-vi-117
+Question: John mua 2 đôi giày cho mỗi đứa trong số 3 đứa con của mình. Mỗi đôi giày có giá 60 đô la. Anh ấy đã trả bao nhiêu tiền?
+Model's Full Answer: John chi trả tổng cộng:
+\[ \text{Số đôi giày} \times \text{Giá đôi giày} = \text{Tổng chi phí} \]
+
+\[ 2 \times 60 \text{ đô la} = 120 \text{ đô la} \]
+
+Vì vậy, John đã trả $120. 
+
+\[
+\boxed{120}
+\]
+120--360 (❌)
+Matches: 9
+--------------------------------------------------------------------------------
+ID: low-vi-118
+Question: Một nhân viên hải quan tại cảng chính của bãi biển đã kiểm đếm 2 container xe đạp nhập khẩu, mỗi container chứa 5 chiếc xe đạp. Ngày hôm sau, có thêm nhiều container được đưa đến, và tổng số xe đạp tại cảng đã lên tới 30 chiếc. Hãy tính số lượng container nhập khẩu vào ngày thứ hai, giả sử tất cả các container đều chứa 5 chiếc xe đạp.
+Model's Full Answer: Trong trường hợp này, số lượng container nhập khẩu là:
+
+\[ \text{Container nhập khẩu} = \frac{\text{Tổng số xe đạp}}{\text{Chiếc trên một container}} = \frac{30}{5} = 6 \]
+
+Do đó, số lượng container là:
+\[\boxed{6}\]
+6--4 (❌)
+Matches: 9
+--------------------------------------------------------------------------------
+ID: low-vi-119
+Question: Tổng lương của Adrien cao hơn 30 phần trăm so với Lylah. Bốn năm sau, lương của anh ấy đã tăng và anh kiếm được nhiều hơn 40% so với bốn năm trước. Nếu lương của Adrien và Lylah tăng đồng thời, và Adrien kiếm được 40.000 đô la bốn năm trước, hãy tính tổng lương của hai người sau bốn năm?
+Model's Full Answer: **Lương của Adrien và Lylah sau bốn năm:**
+
+1. **Xác định thông tin ban đầu:**
+   - Lương của Adrien: $40,000$
+   - Tăng lương bốn năm sau: $40\% = 0.4 \times 40,000 = 16,000$
+
+2. **Tính toán sự thay đổi trong thu nhập sau bốn năm:**
+   - Sau bốn năm, lương của Adrien sẽ là: \(40,000 + 16,000 = 56,000\)
+
+3. **Tính tổng lương cho cả hai người:**
+   - Tổng lương của họ sau bốn năm: \(40,000 + 16,000 = 56,000\)
+
+Vì vậy, tổng lương của Adrien và Lylah sau bốn năm là:
+\[ \boxed{56,000} \]
+56,000--95200 (❌)
+Matches: 9
+--------------------------------------------------------------------------------
+ID: low-vi-120
+Question: Miguel sử dụng 2 tập giấy mỗi tuần cho việc vẽ của mình. Nếu mỗi tập giấy có 30 tờ, anh ấy sử dụng bao nhiêu tờ giấy mỗi tháng?
+Model's Full Answer: Mỗi tháng (12 tuần), Miguel sử dụng:
+\[ \text{Tờ giấy/tháng} = \frac{\text{Tổng số tờ}}{\text{Tuần}} = \frac{2 \times 30}{12} = 5 \]
+
+Vậy, Miguel sử dụng \( \boxed{5} \) tờ giấy mỗi tháng.
+5--240 (❌)
+Matches: 9
+--------------------------------------------------------------------------------
+ID: low-vi-121
+Question: Morisette và Kael được yêu cầu mang trái cây. Morisette mang 5 quả táo và 8 quả cam, trong khi Kael mang gấp đôi số táo và một nửa số cam so với Morisette. Họ có tổng cộng bao nhiêu trái cây?
+Model's Full Answer: - Morisette: 5 quả táo + 8 quả cam = 13 quả.
+- Kael: 2 * (5 quả táo) + (1/2) * (8 quả cam) = 10 + 4 = 14 quả.
+
+Tổng cộng: 13 + 14 = 27 quả.
+
+Do đó, họ có:
+
+\[ \boxed{27} \]
+27--27 (✅)
+Matches: 10
+--------------------------------------------------------------------------------
+ID: low-vi-122
+Question: Sadie đã ngủ 8 giờ vào thứ Hai. Trong hai ngày tiếp theo, cô ấy ngủ ít hơn mỗi ngày 2 giờ vì cô ấy phải hoàn thành một số bài tập. Nếu phần còn lại của tuần cô ấy ngủ nhiều hơn 1 giờ so với hai ngày đó, thì tổng cộng cô ấy đã ngủ bao nhiêu giờ trong suốt tuần?
+Model's Full Answer: Để tính tổng thời gian ngủ:
+
+- Ngày đầu tiên (thứ Hai): 8 giờ
+- Ngày thứ ba: Giảm 2 giờ = 6 giờ
+
+Tổng thời gian ngủ trong cả tuần:
+\[ 8 \text{ (thứ Hai)} + 6 \text{ (thứ Ba)} = 14 \text{ giờ} \]
+
+Vì vậy, tổng cộng Sadie đã ngủ 14 giờ trong tuần này.
+
+\[ \boxed{14} \]
+14--48 (❌)
+Matches: 10
+--------------------------------------------------------------------------------
+ID: low-vi-123
+Question: Rosie có thể chạy 10 dặm mỗi giờ trong 3 giờ. Sau đó, cô ấy chạy 5 dặm mỗi giờ. Cô ấy có thể chạy bao nhiêu dặm trong 7 giờ?
+Model's Full Answer: Để tính toán tổng số dặm Rosie có thể chạy:
+
+\[ \text{Dặm} = (\text{Gia tốc}) \times (\text{Thời gian}) \]
+
+\[ \text{Số dặm} = (10 \, \text{dặm/giờ}) \times (3 \, \text{giờ}) \]
+\[ \text{Số dặm} = 30 \, \text{dặm} \]
+
+Do đó:
+\[
+\boxed{30}
+\]
+30--50 (❌)
+Matches: 10
+--------------------------------------------------------------------------------
+ID: low-vi-124
+Question: Jennie đang giúp mẹ ở văn phòng. Cô ấy có một chồng thư 60 cái cần dán tem, và một chồng thư đã được dán tem. Cô ấy dán tem lên một phần ba số thư cần dán tem. Nếu hiện tại có 30 thư trong chồng thư đã được dán tem, thì ban đầu có bao nhiêu thư trong chồng đó?
+Model's Full Answer: Trong tình huống này, chúng ta cần xác định số thư ban đầu:
+
+1. Tính tổng số thư đã dán tem:
+   \[
+   \text{Số thư đã dán} = 60
+   \]
+
+2. Xác định số thư còn lại chưa được dán tem (chồng không được dán):
+   \[
+   \text{Thư chưa được dán} = 30 - 60 = 30
+   \]
+
+3. Chia tổng số thư chưa được dán cho tỷ lệ dán tem:
+   \[
+   \text{Số thư ban đầu} = \frac{\text{Thư chưa được dán}}{\text{Tỷ lệ dán}} = \frac{30}{\frac{1}{3}} = 90
+\]
+
+Do đó, ban đầu có \( \boxed{90} \) thư trong chồng chưa được dán.
+
+\[ \mathbf{90} \]
+90--10 (❌)
+Matches: 10
+--------------------------------------------------------------------------------
+
+Total Matches: 10
+Total Questions: 125
+Accuracy: 8.00%
