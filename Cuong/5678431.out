@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/PC-reasoning-llms-for-underrepresented-languages/Cuong/cuong_small_model_3_v2.py", line 14, in <module>
+    from datasets import load_dataset, get_dataset_config_names
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/datasets/__init__.py", line 17, in <module>
+    from .arrow_dataset import Column, Dataset
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 64, in <module>
+    from huggingface_hub import (
+ModuleNotFoundError: No module named 'huggingface_hub'
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'go35wit2@lrz-hgx-h100-009.(none)')
