@@ -5,3 +5,7 @@
 #SBATCH --output %j.out
 
 python cuong_small_model_3.py
+
+git add -A && \
+git commit -m "automated push" && \
+git push
