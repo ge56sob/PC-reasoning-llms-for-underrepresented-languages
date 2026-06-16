@@ -61,13 +61,13 @@ model = AutoModelForCausalLM.from_pretrained("sail/Sailor2-1B-Chat")
 model.to(device)
 
 
-for level in ds_vi.keys():
+for level in ds_en.keys():
     match_count = 0
     print(f"\n========== {level.upper()} ==========\n")
 
     if level != "random":
 
-        dataset = ds_vi[level]
+        dataset = ds_en[level]
 
         for i in range(len(dataset)):
             if i >= 0:
