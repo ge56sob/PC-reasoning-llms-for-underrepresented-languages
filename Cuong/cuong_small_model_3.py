@@ -35,7 +35,7 @@ class Tee:
 
 
 log_file = open(
-    "Cuong_small_model3_3rd_attempt_vn.txt",
+    "Cuong_small_model3_1st_attempt_en.txt",
     "a",
     encoding="utf-8"
 )
@@ -141,7 +141,7 @@ for level in ds_en.keys():
 # Final statistics
 # =========================================
 
-        total_questions = len(ds_vi[level])
+        total_questions = len(ds_en[level])
 
         accuracy = match_count / total_questions
 
