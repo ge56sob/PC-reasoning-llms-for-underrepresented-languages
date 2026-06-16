@@ -17,7 +17,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 import torch
 import re
-
+import os
 import sys
 
 class Tee:
@@ -43,7 +43,7 @@ log_file = open(
 sys.stdout = Tee(sys.stdout, log_file)
 
 # Login
-login(token="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")
+login(token=os.environ["HF_TOKEN"])
 
 
 # Check available configs
