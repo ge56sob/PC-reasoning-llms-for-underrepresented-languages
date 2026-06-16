@@ -43,7 +43,7 @@ log_file = open(
 sys.stdout = Tee(sys.stdout, log_file)
 
 # Login
-login(token="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")
+login(token="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")
 
 
 # Check available configs
