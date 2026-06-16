@@ -4,6 +4,7 @@
 #SBATCH --time=12:00:00
 #SBATCH --output %j.out
 
+export HF_TOKEN="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"
 python -m pip install --user huggingface_hub
 python -m pip install --user datasets
 python -m pip install --user transformers==4.52.4
