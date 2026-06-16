@@ -35,7 +35,7 @@ class Tee:
 
 
 log_file = open(
-    "Cuong_small_model3_2nd_attempt_vn.txt",
+    "Cuong_small_model3_2nd_attempt_en.txt",
     "a",
     encoding="utf-8"
 )
