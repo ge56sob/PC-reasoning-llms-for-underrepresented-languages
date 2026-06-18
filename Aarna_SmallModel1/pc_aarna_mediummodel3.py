@@ -16,7 +16,7 @@ MODEL_ID = "XueZhang-bjtu/M-Thinker-7B-Iter2"
 
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
-MAX_EXAMPLES_PER_SPLIT = 1
+MAX_EXAMPLES_PER_SPLIT = None
 
 MAX_NEW_TOKENS = 2000
 
@@ -130,7 +130,11 @@ for lang in LANGUAGES:
         print(f"\n---------- Split: {split} ----------")
 
         dataset = dataset_dict[split]
-        total = min(MAX_EXAMPLES_PER_SPLIT, len(dataset))
+
+        if MAX_EXAMPLES_PER_SPLIT is None:
+            total = len(dataset)
+        else:
+            total = min(MAX_EXAMPLES_PER_SPLIT, len(dataset))
 
         correct_count = 0
         boxed_count = 0
