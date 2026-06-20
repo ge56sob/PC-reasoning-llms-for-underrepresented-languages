@@ -3708,8 +3708,3 @@ Results for vi/top
 Correct: 1/125
 Accuracy: 0.80%
 Boxed-answer rate: 60.00%
-[main c90c562] automated push
- 2 files changed, 3715 insertions(+)
- create mode 100644 Cuong/5682708.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   67754e4..c90c562  main -> main
