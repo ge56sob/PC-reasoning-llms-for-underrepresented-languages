@@ -5,7 +5,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 MODEL_ID = "sail/Sailor2-1B-Chat"
 
-LANGUAGES = ["vi"]
+LANGUAGES = ["en"]
 SPLITS = ["low", "medium", "high", "top"]
 MAX_EXAMPLES_PER_SPLIT = None
 
