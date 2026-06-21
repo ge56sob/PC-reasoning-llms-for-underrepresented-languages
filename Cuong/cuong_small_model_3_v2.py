@@ -3,9 +3,9 @@ import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_ID = "sail/Sailor2-1B-Chat"
+MODEL_ID = "BlossomsAI/BloomVN-8B-Chat-Reasoning"
 
-LANGUAGES = ["en"]
+LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
 MAX_EXAMPLES_PER_SPLIT = None
 
