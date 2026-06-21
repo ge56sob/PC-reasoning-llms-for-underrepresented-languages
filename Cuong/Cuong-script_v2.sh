@@ -8,7 +8,7 @@ python -m pip install --user datasets
 python -m pip install --user transformers
 python -m pip install --user accelerate sentencepiece
 
-python cuong_small_model_3.py
+python cuong_small_model_3_v2.py
 
 git add -A && \
 git commit -m "automated push" && \
