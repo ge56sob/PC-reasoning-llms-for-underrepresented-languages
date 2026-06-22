@@ -33,14 +33,30 @@ def extract_boxed_answer(text):
     Extracts the last answer written as \\boxed{...}.
     Returns None if no boxed answer exists.
     """
-    text = str(text)
+    marker = r"\boxed{"
 
-    matches = re.findall(r"\\boxed\{([^{}]*)\}", text)
+    start = text.rfind(marker)
 
-    if len(matches) == 0:
+    if start == -1:
         return None
 
-    return matches[-1].strip()
+    start += len(marker)
+
+    depth = 1
+    i = start
+
+    while i < len(text) and depth > 0:
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+
+        i += 1
+
+    if depth != 0:
+        return None
+
+    return text[start:i-1].strip()
 
 
 def normalize_answer(text):
