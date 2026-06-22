@@ -3,9 +3,9 @@ import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_ID = "sail/Sailor2-1B-Chat"
+MODEL_ID = "mradermacher/command-a-reasoning-08-2025-GGUF"
 
-LANGUAGES = ["en"]
+LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
 MAX_EXAMPLES_PER_SPLIT = None
 
