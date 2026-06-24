@@ -1,0 +1,7 @@
+/usr/bin/python: No module named pip
+/usr/bin/python: No module named pip
+/usr/bin/python: No module named pip
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/PC-reasoning-llms-for-underrepresented-languages/Cuong/cuong_small_model_3.py", line 2, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
