@@ -7,8 +7,3 @@ Traceback (most recent call last):
   File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/torch/__init__.py", line 444, in <module>
     from torch._C import *  # noqa: F403
 ImportError: /dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so: undefined symbol: ncclCommResume
-[main 7a2c95b] automated push
- 2 files changed, 17 insertions(+)
- create mode 100644 Cuong/5687314.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   deeca71..7a2c95b  main -> main
