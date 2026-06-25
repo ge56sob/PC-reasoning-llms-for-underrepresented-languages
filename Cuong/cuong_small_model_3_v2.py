@@ -3,7 +3,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_ID = "BlossomsAI/BloomVN-8B-Chat-Reasoning"
+MODEL_ID = "mradermacher/command-a-reasoning-08-2025-GGUF"
 
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
