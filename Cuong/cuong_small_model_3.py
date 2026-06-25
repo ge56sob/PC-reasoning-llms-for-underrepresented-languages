@@ -1,7 +1,7 @@
 import re
 import torch
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
 
 MODEL_ID = "mradermacher/command-a-reasoning-08-2025-GGUF"
 
@@ -113,14 +113,7 @@ tokenizer = AutoTokenizer.from_pretrained(
     trust_remote_code=True,
 )
 
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_ID,
-    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-    device_map="auto",
-    trust_remote_code=True,
-)
-
-model.eval()
+model = AutoModel.from_pretrained("mradermacher/command-a-reasoning-08-2025-GGUF", dtype="auto")
 
 if tokenizer.pad_token_id is None:
     tokenizer.pad_token = tokenizer.eos_token
