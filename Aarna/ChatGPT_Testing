@@ -1,0 +1,60 @@
+//ChatGPT default
+//does not consistently follow the "give answer in boxed form" instruction
+
+English
+------------------------------------------------------------------------------------------------------------------------------
+ID: low-en-0
+Question: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?
+Gold: 18
+Predicted: 18
+Correct: True
+------------------------------------------------------------------------------------------------------------------------------
+ID: medium-en-0
+Question: In $\triangle ABC$, $(a+c)(\sin A - \sin C) = b(\sin A - \sin B)$, what is the value of $\angle C$ in radian?
+Gold: $\frac{\pi}{3}$
+Predicted: pi/3
+Correct: True
+------------------------------------------------------------------------------------------------------------------------------
+ID: high-en-0
+Question: Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.
+Gold: 70
+Predicted: 70
+Correct: True
+------------------------------------------------------------------------------------------------------------------------------
+ID: top-en-0
+Question: Turbo the snail plays a game on a board with $2024$ rows and $2023$ columns. There are hidden monsters in $2022$ of the cells. Initially, Turbo does not know where any of the monsters are, but he knows that there is exactly one monster in each row except the first row and the last row, and that each column contains at most one monster.
+Turbo makes a series of attempts to go from the first row to the last row. On each attempt, he chooses to start on any cell in the first row, then repeatedly moves to an adjacent cell sharing a common side. (He is allowed to return to a previously visited cell.) If he reaches a cell with a monster, his attempt ends and he is transported back to the first row to start a new attempt. The monsters do not move, and Turbo remembers whether or not each cell he has visited contains a monster. If he reaches any cell in the last row, his attempt ends and the game is over.
+Determine the minimum value of $n$ for which Turbo has a strategy that guarantees reaching the last row on the $n$-th attempt or earlier, regardless of the locations of the monsters.
+Gold: 3
+Predicted: 2023
+Correct: False
+
+
+
+Vietnamese
+------------------------------------------------------------------------------------------------------------------------------
+ID: low-vi-0
+Question: Con vịt của Janet mỗi ngày đẻ 16 quả trứng. Cô ấy ăn ba quả vào bữa sáng mỗi ngày và làm bánh nướng cho bạn bè của cô ấy mỗi ngày với bốn quả trứng. Cô ấy bán số còn lại tại chợ nông sản hàng ngày với giá 2 đô la mỗi quả trứng vịt tươi. Cô ấy kiếm được bao nhiêu đô la mỗi ngày tại chợ nông sản?
+Gold: 18
+Predicted: 18
+Correct: True
+------------------------------------------------------------------------------------------------------------------------------
+ID: medium-vi-0
+Question: Trong $\triangle ABC$, $(a+c)(\sin A - \sin C) = b(\sin A - \sin B)$, giá trị của $\angle C$ tính bằng radian là bao nhiêu?
+Gold: $\frac{\pi}{3}$
+Predicted: pi/3
+Correct: True
+------------------------------------------------------------------------------------------------------------------------------
+ID: high-vi-0
+Question: Tìm tổng tất cả các hệ cơ số nguyên $b>9$ sao cho $17_{b}$ là ước số của $97_{b}$.
+Gold: 70
+Predicted: 70
+Correct: True
+------------------------------------------------------------------------------------------------------------------------------
+ID: top-vi-0
+Question: Turbo, con ốc sên, chơi một trò chơi trên một bảng có $2024$ hàng và $2023$ cột. Có $2022$ quái vật ẩn trong các ô. Ban đầu, Turbo không biết vị trí của bất kỳ quái vật nào, nhưng anh ấy biết rằng có chính xác một quái vật trong mỗi hàng trừ hàng đầu tiên và hàng cuối cùng, và mỗi cột chứa tối đa một quái vật.
+Turbo thực hiện một loạt các lần thử để đi từ hàng đầu tiên đến hàng cuối cùng. Trong mỗi lần thử, anh ấy chọn bắt đầu từ bất kỳ ô nào trong hàng đầu tiên, sau đó liên tục di chuyển đến một ô liền kề có chung một cạnh. (Anh ấy được phép trở lại một ô đã thăm trước đó.) Nếu anh ấy đến một ô có quái vật, lần thử của anh ấy kết thúc và anh ấy được chuyển trở lại hàng đầu tiên để bắt đầu lần thử mới. Quái vật không di chuyển, và Turbo nhớ liệu mỗi ô anh ấy đã thăm có chứa quái vật hay không. Nếu anh ấy đến bất kỳ ô nào trong hàng cuối cùng, lần thử kết thúc và trò chơi kết thúc.
+Xác định giá trị nhỏ nhất của $n$ để Turbo có một chiến lược đảm bảo đến hàng cuối cùng ở lần thử thứ $n$ hoặc sớm hơn, bất kể vị trí của các quái vật.
+Gold: 3
+Predicted: 3
+Correct: True
