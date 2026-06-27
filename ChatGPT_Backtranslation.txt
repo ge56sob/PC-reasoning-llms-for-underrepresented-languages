@@ -1,0 +1,527 @@
+CHATGPT BACKTRANSLATION
+
+ENLGISH TO VIETNAMESE
+
+For the following tasks, translate the questions to vietnamese first and then solve: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market? Give final answer in \{boxed}
+
+Bản dịch tiếng Việt của đề bài:
+
+Những con vịt của Janet đẻ 16 quả trứng mỗi ngày. Mỗi sáng, cô ấy ăn 3 quả vào bữa sáng và dùng 4 quả để làm bánh muffin cho bạn bè mỗi ngày. Cô ấy bán số trứng còn lại ở chợ nông sản với giá 2 đô la cho mỗi quả trứng vịt tươi. Hỏi mỗi ngày cô ấy kiếm được bao nhiêu đô la từ việc bán trứng ở chợ nông sản?
+
+Lời giải:
+
+Tổng số trứng mỗi ngày: 16
+Ăn sáng: 3 quả
+Làm bánh: 4 quả
+
+Số trứng còn lại để bán:
+
+16−3−4=9
+
+Mỗi quả bán được 2 đô la, nên số tiền thu được:
+
+9×2=18
+
+Đáp án cuối cùng:
+
+18
+	​
+
+ In $\triangle ABC$, $(a+c)(\sin A - \sin C) = b(\sin A - \sin B)$, what is the value of $\angle C$ in radian?
+
+Bản dịch tiếng Việt của đề bài:
+
+Trong tam giác ABC, biết rằng
+
+(a+c)(sinA−sinC)=b(sinA−sinB).
+
+Hãy tìm giá trị của góc C (đơn vị radian).
+
+Lời giải:
+
+Theo định luật sin,
+
+sinA
+a
+	​
+
+=
+sinB
+b
+	​
+
+=
+sinC
+c
+	​
+
+=2R.
+
+Do đó,
+
+a=2RsinA,b=2RsinB,c=2RsinC.
+
+Thay vào giả thiết:
+
+(sinA+sinC)(sinA−sinC)=sinB(sinA−sinB).
+
+Hay
+
+sin
+2
+A−sin
+2
+C=sinAsinB−sin
+2
+B.
+
+Suy ra
+
+(sinA−sinB)(sinA+sinB)=(sinA−sinB)(sinA+sinB+sinC).
+
+Vì nếu sinA=sinB thì A=B, từ giả thiết suy ra sinC=sinA, dẫn đến A=B=C=π/3, cũng là nghiệm cần tìm.
+
+Nếu sinA
+
+=sinB, chia hai vế cho sinA−sinB:
+
+sinA+sinB+sinC=0.
+
+Nhưng trong một tam giác, các góc đều thuộc (0,π), nên các sin đều dương, điều này là không thể.
+
+Vậy chỉ còn trường hợp
+
+A=B=C.
+
+Do
+
+A+B+C=π,
+
+nên
+
+3C=π⟹C=
+3
+π
+	​
+
+.
+
+Đáp án:
+
+3
+π
+	​
+
+	​
+
+.
+Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.
+
+Bản dịch tiếng Việt của đề bài:
+
+Tìm tổng của tất cả các cơ số nguyên b>9 sao cho số 17
+b
+	​
+
+ là ước của số 97
+b
+	​
+
+.
+
+Lời giải:
+
+Đổi các số trong cơ số b sang hệ thập phân:
+
+17
+b
+	​
+
+=b+7,
+97
+b
+	​
+
+=9b+7.
+
+Ta cần
+
+b+7∣9b+7.
+
+Xét hiệu:
+
+9(b+7)−(9b+7)=56.
+
+Do đó,
+
+b+7∣56.
+
+Vì b>9, nên
+
+b+7>16.
+
+Các ước dương của 56 lớn hơn 16 là
+
+28,56.
+
+Suy ra:
+
+b+7=28⇒b=21.
+b+7=56⇒b=49.
+
+Kiểm tra:
+
+b=21: 17
+21
+	​
+
+=28,97
+21
+	​
+
+=196,196/28=7.
+b=49: 17
+49
+	​
+
+=56,97
+49
+	​
+
+=448,448/56=8.
+
+Cả hai đều thỏa mãn.
+
+Vậy tổng các cơ số là
+
+21+49=70.
+
+Đáp án:
+
+70
+	​
+
+Turbo the snail plays a game on a board with $2024$ rows and $2023$ columns. There are hidden monsters in $2022$ of the cells. Initially, Turbo does not know where any of the monsters are, but he knows that there is exactly one monster in each row except the first row and the last row, and that each column contains at most one monster.
+Turbo makes a series of attempts to go from the first row to the last row. On each attempt, he chooses to start on any cell in the first row, then repeatedly moves to an adjacent cell sharing a common side. (He is allowed to return to a previously visited cell.) If he reaches a cell with a monster, his attempt ends and he is transported back to the first row to start a new attempt. The monsters do not move, and Turbo remembers whether or not each cell he has visited contains a monster. If he reaches any cell in the last row, his attempt ends and the game is over.
+Determine the minimum value of $n$ for which Turbo has a strategy that guarantees reaching the last row on the $n$-th attempt or earlier, regardless of the locations of the monsters.
+
+Bản dịch tiếng Việt của đề bài:
+
+Ốc sên Turbo chơi một trò chơi trên một bảng có 2024 hàng và 2023 cột. Có 2022 con quái vật được giấu trong 2022 ô của bảng.
+
+Ban đầu, Turbo không biết vị trí của bất kỳ con quái vật nào, nhưng biết rằng:
+
+Có đúng một con quái vật ở mỗi hàng, ngoại trừ hàng đầu tiên và hàng cuối cùng.
+Mỗi cột chứa nhiều nhất một con quái vật.
+
+Turbo thực hiện nhiều lần thử để đi từ hàng đầu tiên đến hàng cuối cùng. Mỗi lần thử, cậu chọn một ô bất kỳ ở hàng đầu tiên để bắt đầu, rồi liên tục di chuyển sang một ô kề cạnh (chung cạnh). Cậu được phép quay lại các ô đã đi qua.
+
+Nếu đi vào một ô có quái vật thì lần thử kết thúc ngay lập tức, và Turbo được đưa trở lại hàng đầu tiên để bắt đầu lần thử mới. Các con quái vật không di chuyển, và Turbo nhớ chính xác ô nào mình đã biết là có hoặc không có quái vật.
+
+Nếu Turbo đến được bất kỳ ô nào ở hàng cuối cùng thì trò chơi kết thúc.
+
+Hãy xác định giá trị nhỏ nhất của n sao cho Turbo luôn có một chiến lược đảm bảo đến được hàng cuối cùng không muộn hơn lần thử thứ n, bất kể vị trí các quái vật.
+
+Lời giải
+
+Gọi các cột là 1,2,…,2023.
+
+Vì có 2022 quái vật và mỗi cột chứa nhiều nhất một quái vật nên:
+
+đúng một cột hoàn toàn không có quái vật;
+nếu Turbo biết cột đó là cột nào thì chỉ cần đi thẳng xuống cột ấy là thắng.
+
+Do đó, vấn đề là làm sao xác định được cột an toàn.
+
+Chiến lược
+
+Turbo lần lượt kiểm tra từng cột.
+
+Trong một lần thử, cậu đi xuống theo một cột chưa bị loại.
+Nếu gặp quái vật ở hàng r, thì cậu biết:
+ô đó có quái vật;
+cột ấy không phải cột an toàn.
+Ở những hàng phía trên r, tất cả các ô trong cột đều đã được xác nhận an toàn.
+
+Sau mỗi lần thất bại, Turbo bỏ cột đó và chuyển sang một cột khác.
+
+Sau khi đã thất bại ở 2022 cột khác nhau, cột còn lại bắt buộc là cột không chứa quái vật. Khi đó Turbo đi thẳng xuống cột này và chắc chắn tới đích.
+
+Như vậy Turbo luôn thắng trong nhiều nhất
+
+2022+1=2023
+
+lần thử.
+
+Chứng minh không thể làm tốt hơn
+
+Ta chứng minh rằng ít nhất 2023 lần thử là cần thiết.
+
+Kẻ đặt quái vật có thể hành động theo kiểu đối kháng:
+
+Trong 2022 lần thử đầu tiên, mỗi khi Turbo chọn một cột chưa từng bị chứng minh có quái vật, kẻ đặt quái vật có thể coi cột đó là một cột có quái vật (điều này luôn khả thi vì đến lúc đó vẫn còn đủ các hàng chưa sử dụng để đặt một quái vật trong cột ấy).
+Như vậy Turbo luôn bị chặn ở một quái vật mới trong mỗi lần thử đầu tiên.
+
+Sau 2022 lần thất bại, mới chỉ còn đúng một cột chưa bị chứng minh có quái vật; đó mới là cột an toàn.
+
+Vì thế không có chiến lược nào có thể đảm bảo thắng trong 2022 lần thử hoặc ít hơn.
+
+Do đó giá trị nhỏ nhất là
+
+2023
+	​
+
+VIETNAMESE TO ENGLISH
+
+for the following questions, translate to english first and then solve: Con vịt của Janet mỗi ngày đẻ 16 quả trứng. Cô ấy ăn ba quả vào bữa sáng mỗi ngày và làm bánh nướng cho bạn bè của cô ấy mỗi ngày với bốn quả trứng. Cô ấy bán số còn lại tại chợ nông sản hàng ngày với giá 2 đô la mỗi quả trứng vịt tươi. Cô ấy kiếm được bao nhiêu đô la mỗi ngày tại chợ nông sản?
+English translation
+
+"Janet's duck lays 16 eggs every day. She eats 3 eggs for breakfast each day and uses 4 eggs to bake pastries for her friends every day. She sells the remaining eggs at the farmers' market for $2 per fresh duck egg. How many dollars does she earn each day at the farmers' market?"
+
+Solution
+Eggs laid each day: 16
+Eggs eaten for breakfast: 3
+Eggs used for baking: 4
+Eggs remaining to sell: 16 - 3 - 4 = 9
+Price per egg: $2
+
+Money earned:
+
+9×2=18
+
+**Answer: 
+$18
+	​
+
+ per day.
+
+Trong $\triangle ABC$, $(a+c)(\sin A - \sin C) = b(\sin A - \sin B)$, giá trị của $\angle C$ tính bằng radian là bao nhiêu?
+English translation
+
+"In triangle ABC, if
+
+(a+c)(sinA−sinC)=b(sinA−sinB),
+
+find the value of ∠C in radians."
+
+Solution
+
+Using the Law of Sines,
+
+sinA
+a
+	​
+
+=
+sinB
+b
+	​
+
+=
+sinC
+c
+	​
+
+=2R,
+
+where R is the circumradius. Hence,
+
+a=2RsinA,b=2RsinB,c=2RsinC.
+
+Substitute these into the given equation:
+
+(2RsinA+2RsinC)(sinA−sinC)=2RsinB(sinA−sinB).
+
+Cancel 2R:
+
+(sinA+sinC)(sinA−sinC)=sinB(sinA−sinB).
+
+Expanding,
+
+sin
+2
+A−sin
+2
+C=sinAsinB−sin
+2
+B.
+
+Rearrange:
+
+sin
+2
+A+sin
+2
+B−sinAsinB=sin
+2
+C.
+
+Since
+
+C=π−(A+B),
+
+we have
+
+sinC=sin(A+B).
+
+Now,
+
+sin
+2
+(A+B)=sin
+2
+A+sin
+2
+B−sinAsinB
+
+holds if and only if
+
+cosC=
+2
+1
+	​
+
+.
+
+Thus,
+
+C=
+3
+π
+	​
+
+,
+
+since 0<C<π.
+
+Answer
+3
+π
+	​
+
+	​
+
+.
+Tìm tổng tất cả các hệ cơ số nguyên $b>9$ sao cho $17_{b}$ là ước số của $97_{b}$.
+English translation
+
+"Find the sum of all integer bases b>9 such that the number 17
+b
+	​
+
+ is a divisor of 97
+b
+	​
+
+."
+
+Solution
+
+First, convert the base-b numbers to decimal:
+
+17
+b
+	​
+
+=1⋅b+7=b+7.
+97
+b
+	​
+
+=9⋅b+7=9b+7.
+
+We require
+
+b+7∣9b+7.
+
+Express 9b+7 in terms of b+7:
+
+9b+7=9(b+7)−56.
+
+Therefore,
+
+b+7∣56.
+
+Since b>9,
+
+b+7>16.
+
+The positive divisors of 56 greater than 16 are
+
+28,56.
+
+Thus,
+
+b+7=28⟹b=21,
+b+7=56⟹b=49.
+
+Both satisfy b>9.
+
+Hence the required sum is
+
+21+49=70.
+Answer
+70
+	​
+
+Turbo, con ốc sên, chơi một trò chơi trên một bảng có $2024$ hàng và $2023$ cột. Có $2022$ quái vật ẩn trong các ô. Ban đầu, Turbo không biết vị trí của bất kỳ quái vật nào, nhưng anh ấy biết rằng có chính xác một quái vật trong mỗi hàng trừ hàng đầu tiên và hàng cuối cùng, và mỗi cột chứa tối đa một quái vật.
+Turbo thực hiện một loạt các lần thử để đi từ hàng đầu tiên đến hàng cuối cùng. Trong mỗi lần thử, anh ấy chọn bắt đầu từ bất kỳ ô nào trong hàng đầu tiên, sau đó liên tục di chuyển đến một ô liền kề có chung một cạnh. (Anh ấy được phép trở lại một ô đã thăm trước đó.) Nếu anh ấy đến một ô có quái vật, lần thử của anh ấy kết thúc và anh ấy được chuyển trở lại hàng đầu tiên để bắt đầu lần thử mới. Quái vật không di chuyển, và Turbo nhớ liệu mỗi ô anh ấy đã thăm có chứa quái vật hay không. Nếu anh ấy đến bất kỳ ô nào trong hàng cuối cùng, lần thử kết thúc và trò chơi kết thúc.
+Xác định giá trị nhỏ nhất của $n$ để Turbo có một chiến lược đảm bảo đến hàng cuối cùng ở lần thử thứ $n$ hoặc sớm hơn, bất kể vị trí của các quái vật.
+English translation
+
+Turbo the snail plays a game on a board with 2024 rows and 2023 columns. There are 2022 monsters hidden in the cells. Initially, Turbo does not know where any monster is, but he knows that there is exactly one monster in every row except the first and last rows, and that each column contains at most one monster.
+
+Turbo makes a sequence of attempts to travel from the first row to the last row. In each attempt, he starts at any cell in the first row and repeatedly moves to an edge-adjacent cell. (He may revisit previously visited cells.) If he enters a cell containing a monster, the attempt immediately ends, and he is returned to the first row to begin a new attempt. The monsters do not move, and Turbo remembers whether each cell he has visited contains a monster or not. If he reaches any cell in the last row, the attempt ends and the game is won.
+
+Determine the smallest value of n such that Turbo has a strategy guaranteeing that he reaches the last row on or before the n-th attempt, regardless of the placement of the monsters.
+
+Solution
+
+Let the board have
+
+R=2024 rows,
+C=2023 columns.
+
+There are 2022=R−2 monsters, one in each interior row, and each column contains at most one monster.
+
+Key observation
+
+Each failed attempt reveals the location of exactly one previously unknown monster, because the attempt ends immediately upon stepping onto a monster.
+
+Since every interior row has exactly one monster, there are exactly 2022 monsters altogether.
+
+Upper bound
+
+A simple strategy is:
+
+explore cautiously downward,
+whenever a monster is encountered, remember its location,
+on later attempts never step on that monster again.
+
+After at most 2022 failures, every monster location is known.
+
+Since each interior row has exactly one blocked cell and every other cell is safe, Turbo can then plan an entirely safe path from the first row to the last.
+
+Thus victory is guaranteed on the next attempt.
+
+Hence
+
+n≤2022+1=2023.
+Lower bound
+
+Now suppose an adversary chooses the monster positions adaptively, consistent with everything Turbo has seen.
+
+Before Turbo has discovered all 2022 monsters, there is still some interior row whose monster position is unknown.
+
+Whenever Turbo first enters such a row through a previously untested cell, the adversary can declare that very cell to contain the monster (while keeping all constraints satisfied, since each column has been used at most once).
+
+Therefore every attempt before all 2022 monsters have been identified can be forced to fail.
+
+So Turbo cannot guarantee success before attempt
+
+2022+1=2023.
+
+Since the upper and lower bounds agree,
+
+n=2023.
+	​
