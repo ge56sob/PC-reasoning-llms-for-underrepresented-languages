@@ -175,8 +175,3 @@ ValueError: Couldn't instantiate the backend tokenizer from one of:
 (2) a slow tokenizer instance to convert or 
 (3) an equivalent slow tokenizer class to instantiate and convert. 
 You need to have sentencepiece or tiktoken installed to convert a slow tokenizer to a fast one.
-[main 17ed0be] automated push
- 2 files changed, 182 insertions(+)
- create mode 100644 Cuong/Large/5698100.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   c97f9ba..17ed0be  main -> main
