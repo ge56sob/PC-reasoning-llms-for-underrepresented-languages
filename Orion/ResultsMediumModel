@@ -1,1 +1,62 @@
+Test 1:
+SECTION SUMMARY [VIETNAMESE - MEDIUM]:
+Current Level Performance Tracker: 4/125 Correct
+Level Accuracy Rate: 3.20%
+Reasoning breakdown: 2 English, 123 Vietnamese
+--------------------------------------------------------
+ SECTION SUMMARY [VIETNAMESE - LOW]:
+Current Level Performance Tracker: 37/125 Correct
+Level Accuracy Rate: 29.60%
+Reasoning breakdown: 5 English, 120 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [ENGLISH - MEDIUM]:
+Current Level Performance Tracker: 6/125 Correct
+Level Accuracy Rate: 4.80%
+Reasoning breakdown: 125 English, 0 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [ENGLISH - LOW]:
+Current Level Performance Tracker: 40/125 Correct
+Level Accuracy Rate: 32.00%
+Reasoning breakdown: 125 English, 0 Vietnamese
 
+Test 2:
+SECTION SUMMARY [VIETNAMESE - MEDIUM]:
+Current Level Performance Tracker: 1/125 Correct
+Level Accuracy Rate: 0.80%
+Reasoning breakdown: 6 English, 119 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [VIETNAMESE - LOW]:
+Current Level Performance Tracker: 39/125 Correct
+Level Accuracy Rate: 31.20%
+Reasoning breakdown: 1 English, 124 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [ENGLISH - MEDIUM]:
+Current Level Performance Tracker: 7/125 Correct
+Level Accuracy Rate: 5.60%
+Reasoning breakdown: 125 English, 0 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [ENGLISH - LOW]:
+Current Level Performance Tracker: 52/125 Correct
+Level Accuracy Rate: 41.60%
+Reasoning breakdown: 125 English, 0 Vietnamese
+
+Test 3:
+SECTION SUMMARY [VIETNAMESE - MEDIUM]:
+Current Level Performance Tracker: 8/125 Correct
+Level Accuracy Rate: 6.40%
+Reasoning breakdown: 6 English, 119 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [VIETNAMESE - LOW]:
+Current Level Performance Tracker: 47/125 Correct
+Level Accuracy Rate: 37.60%
+Reasoning breakdown: 2 English, 123 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [ENGLISH - MEDIUM]:
+Current Level Performance Tracker: 10/125 Correct
+Level Accuracy Rate: 8.00%
+Reasoning breakdown: 125 English, 0 Vietnamese
+--------------------------------------------------------
+SECTION SUMMARY [ENGLISH - LOW]:
+Current Level Performance Tracker: 56/125 Correct
+Level Accuracy Rate: 44.80%
+Reasoning breakdown: 125 English, 0 Vietnamese
