@@ -1,8 +1,6 @@
 import os
 import re
-import torch
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM
 
 MODEL_ID = "mradermacher/command-a-reasoning-08-2025-GGUF"
 
@@ -12,7 +10,6 @@ SPLITS = ["low", "medium", "high", "top"]
 MAX_EXAMPLES_PER_SPLIT = 1
 MAX_NEW_TOKENS = 2000
 
-HF_TOKEN = os.environ.get("HF_TOKEN")
 
 PROMPT_NOTES = {
     "en": r"Note: Please put the final answer in \boxed{}.",
@@ -26,11 +23,30 @@ def make_messages(question, lang):
 
 
 def extract_boxed_answer(text):
-    text = str(text)
-    matches = re.findall(r"\\boxed\{([^{}]*)\}", text)
-    if not matches:
+    marker = r"\boxed{"
+
+    start = str(text).rfind(marker)
+
+    if start == -1:
         return None
-    return matches[-1].strip()
+
+    start += len(marker)
+
+    depth = 1
+    i = start
+
+    while i < len(text) and depth > 0:
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+
+        i += 1
+
+    if depth != 0:
+        return None
+
+    return text[start:i-1].strip()
 
 
 def normalize_answer(text):
@@ -192,63 +208,31 @@ def analyze_output(model_output, prompt_lang):
     }
 
 
-def generate_response(question, lang, tokenizer, model):
+def generate_response(question, lang, llm):
     messages = make_messages(question, lang)
 
-    inputs = tokenizer.apply_chat_template(
-        messages,
-        add_generation_prompt=True,
-        tokenize=True,
-        return_dict=True,
-        return_tensors="pt",
-        reasoning=True,
+    output = llm.create_chat_completion(
+        messages=messages,
+        max_tokens=MAX_NEW_TOKENS,
+        temperature=0,
     )
 
-    input_device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    inputs = inputs.to(input_device)
+    response = output["choices"][0]["message"]["content"]
 
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=MAX_NEW_TOKENS,
-            do_sample=False,
-            pad_token_id=tokenizer.eos_token_id,
-        )
-
-    generated_tokens = outputs[0][inputs["input_ids"].shape[-1]:]
-
-    response = tokenizer.decode(
-        generated_tokens,
-        skip_special_tokens=False,
-    ).strip()
-
-    return response
-
-
-print("CUDA available:", torch.cuda.is_available(), flush=True)
-if torch.cuda.is_available():
-    print("GPU:", torch.cuda.get_device_name(0), flush=True)
-
-print("Loading tokenizer...", flush=True)
-tokenizer = AutoTokenizer.from_pretrained(
-    MODEL_ID,
-    token=HF_TOKEN,
-)
-print("Tokenizer loaded.", flush=True)
+    return response.strip()
 
 print("Loading model...", flush=True)
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_ID,
-    torch_dtype="auto",
-    device_map="auto",
-    token=HF_TOKEN,
+
+from llama_cpp import Llama
+
+llm = Llama.from_pretrained(
+    repo_id="mradermacher/command-a-reasoning-08-2025-GGUF",
+    filename="command-a-reasoning-08-2025.Q2_K.gguf",
+    n_gpu_layers=-1,
+    n_ctx=4096,
+    verbose=False,
 )
 print("Model loaded.", flush=True)
-
-model.eval()
-
-if tokenizer.pad_token_id is None:
-    tokenizer.pad_token = tokenizer.eos_token
 
 
 for lang in LANGUAGES:
@@ -274,8 +258,7 @@ for lang in LANGUAGES:
             model_output = generate_response(
                 question=question,
                 lang=lang,
-                tokenizer=tokenizer,
-                model=model,
+                llm=llm,
             )
 
             analysis = analyze_output(model_output, prompt_lang=lang)
