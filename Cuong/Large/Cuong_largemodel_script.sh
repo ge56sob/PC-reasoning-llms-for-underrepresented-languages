@@ -4,9 +4,9 @@
 #SBATCH --time=12:00:00
 #SBATCH --output %j.out
 
-python -m pip install --user datasets
-python -m pip install --user transformers
-python -m pip install --user accelerate sentencepiece
+python -m pip install datasets
+python -m pip install llama-cpp-python
+
 
 python Cuong_LargeModel.py
 
