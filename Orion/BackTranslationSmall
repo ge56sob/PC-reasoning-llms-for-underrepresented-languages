@@ -1,0 +1,31 @@
+Results for en/low
+Correct: 43/125
+Accuracy: 34.40%
+Boxed-answer rate: 72.00%
+Language match rate: 100.00%
+Average coherence score: 0.64
+Average reasoning length: 286.6 words
+
+Results for en/medium
+Correct: 3/125
+Accuracy: 2.40%
+Boxed-answer rate: 49.60%
+Language match rate: 100.00%
+Average coherence score: 0.58
+Average reasoning length: 507.0 words
+
+Results for en/high
+Correct: 2/125
+Accuracy: 1.60%
+Boxed-answer rate: 55.20%
+Language match rate: 100.00%
+Average coherence score: 0.59
+Average reasoning length: 584.3 words
+
+Results for en/top
+Correct: 1/125
+Accuracy: 0.80%
+Boxed-answer rate: 55.20%
+Language match rate: 100.00%
+Average coherence score: 0.59
+Average reasoning length: 540.0 words
