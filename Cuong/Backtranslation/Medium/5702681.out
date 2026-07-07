@@ -11887,3 +11887,16 @@ Boxed-answer rate: 91.20%
 Language match rate: 0.80%
 Average coherence score: 0.34
 Average reasoning length: 1.8 words
+[main d6c3a6d] automated push
+ 3 files changed, 12185 insertions(+)
+ create mode 100644 Cuong/Backtranslation/Medium/5702681.out
+ create mode 100644 Cuong/Backtranslation/Medium/Cuong_Backtranslation_Medium.py
+ create mode 100644 Cuong/Backtranslation/Medium/Cuong_Backtranslation_Medium_bash.sh
+To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
