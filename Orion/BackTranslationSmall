@@ -6,3 +6,11 @@ Language match rate: 100.00%
 Average coherence score: 0.64
 Average reasoning length: 286.6 words
 
+Results for en/medium
+Correct: 3/125
+Accuracy: 2.40%
+Boxed-answer rate: 49.60%
+Language match rate: 100.00%
+Average coherence score: 0.58
+Average reasoning length: 507.0 words
+
