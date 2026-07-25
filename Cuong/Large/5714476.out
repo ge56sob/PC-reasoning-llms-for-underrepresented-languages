@@ -65,8 +65,8 @@ Error processing line 1 of /dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-
 Remainder of file ignored
 Defaulting to user installation because normal site-packages is not writeable
 Collecting llama-cpp-python
-  Downloading llama_cpp_python-0.3.33.tar.gz (70.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.5/70.5 MB 108.3 MB/s  0:00:00
+  Downloading llama_cpp_python-0.3.34.tar.gz (71.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 78.0 MB/s  0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status 'error'
   error: subprocess-exited-with-error
@@ -84,7 +84,7 @@ Collecting llama-cpp-python
       
       Remainder of file ignored
       Collecting scikit-build-core>=0.9.2 (from scikit-build-core[pyproject]>=0.9.2)
-        Downloading scikit_build_core-0.12.2-py3-none-any.whl.metadata (16 kB)
+        Downloading scikit_build_core-1.0.3-py3-none-any.whl.metadata (19 kB)
       ERROR: Could not install packages due to an OSError: ('Connection broken: IncompleteRead(6773 bytes read, -20 more expected)', IncompleteRead(6773 bytes read, -20 more expected))
       
       [end of output]
@@ -105,8 +105,3 @@ Traceback (most recent call last):
   File "/dss/dssfs05/lwp-dss-0003/pn39je/pn39je-dss-0004/go35wit2/PC-reasoning-llms-for-underrepresented-languages/Cuong/Large/Cuong_LargeModel.py", line 226, in <module>
     from llama_cpp import Llama
 ModuleNotFoundError: No module named 'llama_cpp'
-[main aeb4a47] automated push
- 2 files changed, 112 insertions(+)
- create mode 100644 Cuong/Large/5700951.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   59221ff..aeb4a47  main -> main
