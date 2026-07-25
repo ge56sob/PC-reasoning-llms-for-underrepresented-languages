@@ -66,7 +66,7 @@ Remainder of file ignored
 Defaulting to user installation because normal site-packages is not writeable
 Collecting llama-cpp-python
   Downloading llama_cpp_python-0.3.34.tar.gz (71.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 78.0 MB/s  0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 82.3 MB/s  0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status 'error'
   error: subprocess-exited-with-error
@@ -105,16 +105,3 @@ Traceback (most recent call last):
   File "/dss/dssfs05/lwp-dss-0003/pn39je/pn39je-dss-0004/go35wit2/PC-reasoning-llms-for-underrepresented-languages/Cuong/Large/Cuong_LargeModel.py", line 226, in <module>
     from llama_cpp import Llama
 ModuleNotFoundError: No module named 'llama_cpp'
-[main 6d6aa29] automated push
- 3 files changed, 3 insertions(+), 693 deletions(-)
- delete mode 100644 Cuong/Large/5700950.out
- delete mode 100644 Cuong/Large/5700952.out
- rename Cuong/Large/{5700951.out => 5714476.out} (95%)
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
