@@ -4,7 +4,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_ID = "sumgai/Mistral-Magistral-Devstral-Instruct-FUSED-CODER-Reasoning-36B-Q8_0-GGUF"
+MODEL_ID = "ura-hcmut/MixSUra"
 
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
