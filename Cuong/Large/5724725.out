@@ -54,6 +54,9 @@ Requirement already satisfied: python-dateutil>=2.8.2 in /dss/dsshome1/07/go35wi
 Requirement already satisfied: pytz>=2020.1 in /dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages (from pandas->datasets) (2026.2)
 Requirement already satisfied: tzdata>=2022.7 in /dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages (from pandas->datasets) (2026.2)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.2->pandas->datasets) (1.16.0)
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2
+[notice] To update, run: python -m pip install --upgrade pip
 Error processing line 1 of /dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/distutils-precedence.pth:
 
   Traceback (most recent call last):
@@ -66,7 +69,7 @@ Remainder of file ignored
 Defaulting to user installation because normal site-packages is not writeable
 Collecting llama-cpp-python
   Downloading llama_cpp_python-0.3.34.tar.gz (71.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 64.0 MB/s  0:00:01
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 78.0 MB/s  0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status 'error'
   error: subprocess-exited-with-error
@@ -90,6 +93,9 @@ Collecting llama-cpp-python
       [end of output]
   
   note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2
+[notice] To update, run: python -m pip install --upgrade pip
 ERROR: Failed to build 'llama-cpp-python' when installing build dependencies for llama-cpp-python
 Error processing line 1 of /dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/distutils-precedence.pth:
 
@@ -103,27 +109,122 @@ Remainder of file ignored
 CUDA available: True
 GPU: NVIDIA H100
 Loading tokenizer...
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 772, in hf_raise_for_status
+    response.raise_for_status()
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1167, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1805, in _raise_on_head_call_error
+    raise head_call_error
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1691, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1613, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 703, in _httpx_follow_relative_redirects_with_backoff
+    hf_raise_for_status(response)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 798, in hf_raise_for_status
+    raise _format(GatedRepoError, message, response, repo_type=repo_type, repo_id=repo_id) from e
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a6ee128-5519f0b00a0321e110f494a4;8d45ec7e-87b4-47b0-a839-f2211c777b29)
+
+Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
+Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 716, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 376, in from_pretrained
+    config_dict, unused_kwargs = PreTrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 687, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 742, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 503, in cached_files
+    raise OSError(
+OSError: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/ura-hcmut/MixSUra.
+401 Client Error. (Request ID: Root=1-6a6ee128-5519f0b00a0321e110f494a4;8d45ec7e-87b4-47b0-a839-f2211c777b29)
+
+Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
+Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 772, in hf_raise_for_status
+    response.raise_for_status()
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1167, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1805, in _raise_on_head_call_error
+    raise head_call_error
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1691, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1613, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 703, in _httpx_follow_relative_redirects_with_backoff
+    hf_raise_for_status(response)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 798, in hf_raise_for_status
+    raise _format(GatedRepoError, message, response, repo_type=repo_type, repo_id=repo_id) from e
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a6ee128-5a2d86ef46e3aa7637bde875;cc15dfd0-069a-4bd3-847c-6e39152f5d67)
+
+Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
+Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/dss/dssfs05/lwp-dss-0003/pn39je/pn39je-dss-0004/go35wit2/PC-reasoning-llms-for-underrepresented-languages/Cuong/Large/Cuong_LargeModel.py", line 233, in <module>
     tokenizer = AutoTokenizer.from_pretrained(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 891, in from_pretrained
-    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1744, in from_pretrained
-    return cls._from_pretrained(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1934, in _from_pretrained
-    tokenizer = cls(*init_inputs, **init_kwargs)
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/tokenization_utils_tokenizers.py", line 376, in __init__
-    raise ValueError(
-ValueError: Couldn't instantiate the backend tokenizer from one of: 
-(1) a `tokenizers` library serialization file, 
-(2) a slow tokenizer instance to convert or 
-(3) an equivalent slow tokenizer class to instantiate and convert. 
-You need to have sentencepiece or tiktoken installed to convert a slow tokenizer to a fast one.
-[main f3d4295] automated push
- 3 files changed, 20 insertions(+), 254 deletions(-)
- delete mode 100644 Cuong/Large/5714477.out
- delete mode 100644 Cuong/Large/5714478.out
- rename Cuong/Large/{5714476.out => 5722727.out} (87%)
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   b734bd5..f3d4295  main -> main
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 720, in from_pretrained
+    config = PreTrainedConfig.from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 646, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 687, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 742, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 503, in cached_files
+    raise OSError(
+OSError: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/ura-hcmut/MixSUra.
+401 Client Error. (Request ID: Root=1-6a6ee128-5a2d86ef46e3aa7637bde875;cc15dfd0-069a-4bd3-847c-6e39152f5d67)
+
+Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
+Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
