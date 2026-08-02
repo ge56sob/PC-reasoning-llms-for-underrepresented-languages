@@ -69,7 +69,7 @@ Remainder of file ignored
 Defaulting to user installation because normal site-packages is not writeable
 Collecting llama-cpp-python
   Downloading llama_cpp_python-0.3.34.tar.gz (71.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 82.0 MB/s  0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 80.9 MB/s  0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status 'error'
   error: subprocess-exited-with-error
@@ -140,7 +140,7 @@ Traceback (most recent call last):
     hf_raise_for_status(response)
   File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 798, in hf_raise_for_status
     raise _format(GatedRepoError, message, response, repo_type=repo_type, repo_id=repo_id) from e
-huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a6ee140-1080923a55e9f1c43c4b6a51;46337ef0-cf5d-4d1c-b33b-0212d683b4b1)
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a6ee15e-307043e3161d518f7a69b760;ece40751-747e-4bbc-8bd5-1e3e4b90c97c)
 
 Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
 Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
@@ -162,7 +162,7 @@ Traceback (most recent call last):
     raise OSError(
 OSError: You are trying to access a gated repo.
 Make sure to have access to it at https://huggingface.co/ura-hcmut/MixSUra.
-401 Client Error. (Request ID: Root=1-6a6ee140-1080923a55e9f1c43c4b6a51;46337ef0-cf5d-4d1c-b33b-0212d683b4b1)
+401 Client Error. (Request ID: Root=1-6a6ee15e-307043e3161d518f7a69b760;ece40751-747e-4bbc-8bd5-1e3e4b90c97c)
 
 Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
 Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
@@ -200,7 +200,7 @@ Traceback (most recent call last):
     hf_raise_for_status(response)
   File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 798, in hf_raise_for_status
     raise _format(GatedRepoError, message, response, repo_type=repo_type, repo_id=repo_id) from e
-huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a6ee140-0990ca09365881621a93f0f9;b4b960bf-a6f5-4d19-9bd4-b96a1078f8e5)
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6a6ee15e-7c8e1a4268c1983b30eeca7c;6b80b461-a593-40d0-a704-cc49a7524101)
 
 Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
 Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
@@ -224,12 +224,7 @@ Traceback (most recent call last):
     raise OSError(
 OSError: You are trying to access a gated repo.
 Make sure to have access to it at https://huggingface.co/ura-hcmut/MixSUra.
-401 Client Error. (Request ID: Root=1-6a6ee140-0990ca09365881621a93f0f9;b4b960bf-a6f5-4d19-9bd4-b96a1078f8e5)
+401 Client Error. (Request ID: Root=1-6a6ee15e-7c8e1a4268c1983b30eeca7c;6b80b461-a593-40d0-a704-cc49a7524101)
 
 Cannot access gated repo for url https://huggingface.co/ura-hcmut/MixSUra/resolve/main/config.json.
 Access to model ura-hcmut/MixSUra is restricted. You must have access to it and be authenticated to access it. Please log in.
-[main 63c2588] automated push
- 2 files changed, 237 insertions(+)
- create mode 100644 Cuong/Large/5724726.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   b52a831..63c2588  main -> main
