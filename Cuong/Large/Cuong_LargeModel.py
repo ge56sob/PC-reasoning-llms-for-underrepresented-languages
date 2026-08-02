@@ -4,7 +4,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_ID = "ura-hcmut/MixSUra"
+MODEL_ID = "macadeliccc/Polyglot-8x7b-v0.1"
 
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
