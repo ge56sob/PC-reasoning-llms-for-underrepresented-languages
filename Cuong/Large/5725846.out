@@ -132,3 +132,8 @@ Traceback (most recent call last):
   File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1851, in _download_to_tmp_and_move
     with tmp_path.open("wb") as f:
 OSError: [Errno 122] Disk quota exceeded
+[main c4410d2] automated push
+ 2 files changed, 139 insertions(+)
+ create mode 100644 Cuong/Large/5725846.out
+To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
+   ed3ddee..c4410d2  main -> main
