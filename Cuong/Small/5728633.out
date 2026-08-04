@@ -170,7 +170,7 @@ Loading tokenizer...
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 Tokenizer loaded.
 Loading model...
-Loading weights:   0%|          | 0/579 [00:00<?, ?it/s]Loading weights:   0%|          | 1/579 [00:00<01:21,  7.11it/s]Loading weights:   0%|          | 2/579 [00:00<01:48,  5.29it/s]Loading weights:   7%|▋         | 40/579 [00:00<00:04, 118.03it/s]Loading weights:  13%|█▎        | 76/579 [00:00<00:02, 175.03it/s]Loading weights:  20%|█▉        | 114/579 [00:00<00:02, 227.29it/s]Loading weights:  26%|██▌       | 150/579 [00:00<00:01, 260.13it/s]Loading weights:  32%|███▏      | 186/579 [00:00<00:01, 282.59it/s]Loading weights:  38%|███▊      | 222/579 [00:01<00:01, 298.26it/s]Loading weights:  45%|████▍     | 258/579 [00:01<00:01, 310.00it/s]Loading weights:  50%|█████     | 292/579 [00:01<00:00, 312.19it/s]Loading weights:  57%|█████▋    | 330/579 [00:01<00:00, 324.54it/s]Loading weights:  63%|██████▎   | 364/579 [00:01<00:00, 321.67it/s]Loading weights:  69%|██████▉   | 401/579 [00:01<00:00, 330.46it/s]Loading weights:  76%|███████▌  | 438/579 [00:01<00:00, 335.05it/s]Loading weights:  82%|████████▏ | 474/579 [00:01<00:00, 335.64it/s]Loading weights:  88%|████████▊ | 510/579 [00:01<00:00, 336.32it/s]Loading weights:  94%|█████████▍| 546/579 [00:01<00:00, 336.27it/s]Loading weights: 100%|██████████| 579/579 [00:02<00:00, 279.89it/s]
+Loading weights:   0%|          | 0/579 [00:00<?, ?it/s]Loading weights:   0%|          | 1/579 [00:00<03:26,  2.80it/s]Loading weights:   7%|▋         | 40/579 [00:00<00:05, 106.00it/s]Loading weights:  13%|█▎        | 78/579 [00:00<00:02, 178.07it/s]Loading weights:  20%|█▉        | 114/579 [00:00<00:02, 223.80it/s]Loading weights:  26%|██▌       | 149/579 [00:00<00:01, 253.93it/s]Loading weights:  32%|███▏      | 186/579 [00:00<00:01, 280.13it/s]Loading weights:  38%|███▊      | 222/579 [00:01<00:01, 295.66it/s]Loading weights:  44%|████▍     | 257/579 [00:01<00:01, 304.73it/s]Loading weights:  51%|█████     | 294/579 [00:01<00:00, 316.04it/s]Loading weights:  57%|█████▋    | 330/579 [00:01<00:00, 320.95it/s]Loading weights:  63%|██████▎   | 364/579 [00:01<00:00, 320.52it/s]Loading weights:  69%|██████▉   | 402/579 [00:01<00:00, 330.61it/s]Loading weights:  75%|███████▌  | 437/579 [00:01<00:00, 330.03it/s]Loading weights:  82%|████████▏ | 472/579 [00:01<00:00, 328.42it/s]Loading weights:  88%|████████▊ | 510/579 [00:01<00:00, 335.84it/s]Loading weights:  94%|█████████▍| 546/579 [00:01<00:00, 336.28it/s]Loading weights: 100%|██████████| 579/579 [00:02<00:00, 280.62it/s]
 Model loaded.
 
 ================ LANGUAGE: EN ================
@@ -842,8 +842,3 @@ Results for vi/top
 Correct: 0/1
 Accuracy: 0.00%
 Boxed-answer rate: 100.00%
-[main 72e0b7f] automated push
- 2 files changed, 849 insertions(+)
- create mode 100644 Cuong/Small/5728632.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   61188d3..72e0b7f  main -> main
