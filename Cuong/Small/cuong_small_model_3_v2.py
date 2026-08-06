@@ -9,7 +9,7 @@ MODEL_ID = "sail/Sailor2-1B-Chat"
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
 
-MAX_EXAMPLES_PER_SPLIT = 1
+MAX_EXAMPLES_PER_SPLIT = 1000
 MAX_NEW_TOKENS = 2000
 
 HF_TOKEN = os.environ.get("HF_TOKEN")
@@ -26,11 +26,40 @@ def make_messages(question, lang):
 
 
 def extract_boxed_answer(text):
+    """
+    Extracts the LAST answer written as \boxed{...},
+    correctly handling nested braces.
+
+    Returns:
+        str | None
+    """
     text = str(text)
-    matches = re.findall(r"\\boxed\{([^{}]*)\}", text)
-    if not matches:
+
+    marker = r"\boxed{"
+
+    # Find the last occurrence of \boxed{
+    start = text.rfind(marker)
+
+    if start == -1:
         return None
-    return matches[-1].strip()
+
+    start += len(marker)
+
+    depth = 1
+    i = start
+
+    while i < len(text) and depth > 0:
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+        i += 1
+
+    # Unmatched braces
+    if depth != 0:
+        return None
+
+    return text[start:i - 1].strip()
 
 
 def normalize_answer(text):
