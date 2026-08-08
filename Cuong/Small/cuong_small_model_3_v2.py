@@ -293,6 +293,8 @@ for lang in LANGUAGES:
 
         correct_count = 0
         boxed_count = 0
+        reasoning_language_consistent = 0
+        response_language_consistent = 0
 
         for i in range(total):
             item = dataset[i]
@@ -326,6 +328,7 @@ for lang in LANGUAGES:
 
             print(f"ID: {item.get('id', i)}", flush=True)
             print(f"Question: {question}", flush=True)
+            print(f"Answer: {model_output}", flush=True)
             print(f"Gold: {gold_answer}", flush=True)
             print(f"Predicted: {predicted_answer}", flush=True)
             print(f"Correct: {is_correct}", flush=True)
@@ -333,7 +336,11 @@ for lang in LANGUAGES:
             print("\nAnalysis:", flush=True)
             print(f"Has boxed answer: {analysis['has_boxed_answer']}", flush=True)
             print(f"Reasoning language: {analysis['reasoning_language']}", flush=True)
+            if analysis['reasoning_language'] == lang:
+                reasoning_language_consistent += 1
             print(f"Response language: {analysis['response_language']}", flush=True)
+            if analysis['response_language'] == lang:
+                response_language_consistent += 1
             print(f"Answer language: {analysis['answer_language']}", flush=True)
             print(
                 "Answer language consistent with prompt: "
