@@ -9,10 +9,8 @@ MODEL_ID = "BlossomsAI/BloomVN-8B-Chat-Reasoning"
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
 
-MAX_EXAMPLES_PER_SPLIT = 1
+MAX_EXAMPLES_PER_SPLIT = None
 MAX_NEW_TOKENS = 2000
-
-HF_TOKEN = os.environ.get("HF_TOKEN")
 
 PROMPT_NOTES = {
     "en": r"Note: Please put the final answer in \boxed{}.",
@@ -26,11 +24,40 @@ def make_messages(question, lang):
 
 
 def extract_boxed_answer(text):
+    """
+    Extracts the LAST answer written as \boxed{...},
+    correctly handling nested braces.
+
+    Returns:
+        str | None
+    """
     text = str(text)
-    matches = re.findall(r"\\boxed\{([^{}]*)\}", text)
-    if not matches:
+
+    marker = r"\boxed{"
+
+    # Find the last occurrence of \boxed{
+    start = text.rfind(marker)
+
+    if start == -1:
         return None
-    return matches[-1].strip()
+
+    start += len(marker)
+
+    depth = 1
+    i = start
+
+    while i < len(text) and depth > 0:
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+        i += 1
+
+    # Unmatched braces
+    if depth != 0:
+        return None
+
+    return text[start:i - 1].strip()
 
 
 def normalize_answer(text):
@@ -82,7 +109,7 @@ def extract_response_text(model_output):
     return str(model_output).strip()
 
 
-def detect_language(text):
+def detect_language(text, curr_lang):
     text = str(text).lower()
 
     vietnamese_chars = re.findall(
@@ -114,7 +141,7 @@ def detect_language(text):
         en_score += len(re.findall(rf"\b{re.escape(marker)}\b", text))
 
     if vi_score == 0 and en_score == 0:
-        return "unknown"
+        return curr_lang
 
     if vi_score >= 2 and en_score >= 2:
         return "mixed"
@@ -128,18 +155,18 @@ def detect_language(text):
     return "mixed"
 
 
-def reasoning_length_stats(reasoning_text):
-    reasoning_text = str(reasoning_text).strip()
-    words = reasoning_text.split()
+def response_length_stats(response_text):
+    response_text = str(response_text).strip()
+    words = response_text.split()
 
     return {
-        "reasoning_num_words": len(words),
-        "reasoning_num_chars": len(reasoning_text),
+        "response_num_words": len(words),
+        "response_num_chars": len(response_text),
     }
 
 
-def check_coherent_reasoning(reasoning_text):
-    text = str(reasoning_text).strip().lower()
+def check_coherent_reasoning(response_text):
+    text = str(response_text).strip().lower()
 
     if len(text) < 30:
         return False
@@ -166,17 +193,11 @@ def analyze_output(model_output, prompt_lang):
     boxed_answer = extract_boxed_answer(response_text)
     has_boxed_answer = boxed_answer is not None
 
-    reasoning_language = detect_language(thinking_text)
-    response_language = detect_language(response_text)
-    answer_language = detect_language(boxed_answer) if boxed_answer is not None else "unknown"
+    reasoning_language = detect_language(thinking_text, prompt_lang)
+    response_language = detect_language(response_text, prompt_lang)
 
-    length_stats = reasoning_length_stats(thinking_text)
-    coherent_reasoning = check_coherent_reasoning(thinking_text)
-
-    answer_language_consistent = (
-        answer_language == prompt_lang
-        or answer_language == "unknown"
-    )
+    length_stats = response_length_stats(response_text)
+    coherent_reasoning = check_coherent_reasoning(response_text)
 
     return {
         "thinking_text": thinking_text,
@@ -185,8 +206,6 @@ def analyze_output(model_output, prompt_lang):
         "boxed_answer": boxed_answer,
         "reasoning_language": reasoning_language,
         "response_language": response_language,
-        "answer_language": answer_language,
-        "answer_language_consistent_with_prompt": answer_language_consistent,
         "coherent_reasoning_heuristic": coherent_reasoning,
         **length_stats,
     }
@@ -200,8 +219,7 @@ def generate_response(question, lang, tokenizer, model):
         add_generation_prompt=True,
         tokenize=True,
         return_dict=True,
-        return_tensors="pt",
-        reasoning=True,
+        return_tensors="pt"
     )
 
     input_device = "cuda:0" if torch.cuda.is_available() else "cpu"
@@ -231,8 +249,7 @@ if torch.cuda.is_available():
 
 print("Loading tokenizer...", flush=True)
 tokenizer = AutoTokenizer.from_pretrained(
-    MODEL_ID,
-    token=HF_TOKEN,
+    MODEL_ID
 )
 print("Tokenizer loaded.", flush=True)
 
@@ -240,8 +257,7 @@ print("Loading model...", flush=True)
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
     torch_dtype="auto",
-    device_map="auto",
-    token=HF_TOKEN,
+    device_map="auto"
 )
 print("Model loaded.", flush=True)
 
@@ -260,10 +276,17 @@ for lang in LANGUAGES:
         print(f"\n---------- Split: {split} ----------", flush=True)
 
         dataset = dataset_dict[split]
-        total = min(MAX_EXAMPLES_PER_SPLIT, len(dataset))
+
+        if MAX_EXAMPLES_PER_SPLIT is None:
+            total = len(dataset)
+        else:
+            total = min(MAX_EXAMPLES_PER_SPLIT, len(dataset))
 
         correct_count = 0
         boxed_count = 0
+        reasoning_language_consistent = 0
+        response_language_consistent = 0
+        response_length = 0
 
         for i in range(total):
             item = dataset[i]
@@ -297,6 +320,7 @@ for lang in LANGUAGES:
 
             print(f"ID: {item.get('id', i)}", flush=True)
             print(f"Question: {question}", flush=True)
+            print(f"Answer: {model_output}", flush=True)
             print(f"Gold: {gold_answer}", flush=True)
             print(f"Predicted: {predicted_answer}", flush=True)
             print(f"Correct: {is_correct}", flush=True)
@@ -304,25 +328,18 @@ for lang in LANGUAGES:
             print("\nAnalysis:", flush=True)
             print(f"Has boxed answer: {analysis['has_boxed_answer']}", flush=True)
             print(f"Reasoning language: {analysis['reasoning_language']}", flush=True)
+            if analysis['reasoning_language'] == lang:
+                reasoning_language_consistent += 1
             print(f"Response language: {analysis['response_language']}", flush=True)
-            print(f"Answer language: {analysis['answer_language']}", flush=True)
-            print(
-                "Answer language consistent with prompt: "
-                f"{analysis['answer_language_consistent_with_prompt']}",
-                flush=True,
-            )
+            if analysis['response_language'] == lang:
+                response_language_consistent += 1
             print(
                 f"Coherent reasoning heuristic: {analysis['coherent_reasoning_heuristic']}",
                 flush=True,
             )
-            print(f"Reasoning words: {analysis['reasoning_num_words']}", flush=True)
-            print(f"Reasoning chars: {analysis['reasoning_num_chars']}", flush=True)
-
-            print("\nThinking text:", flush=True)
-            print(analysis["thinking_text"], flush=True)
-
-            print("\nResponse text:", flush=True)
-            print(analysis["response_text"], flush=True)
+            print(f"Response words: {analysis['response_num_words']}", flush=True)
+            response_length += analysis["response_num_words"]
+            print(f"Response chars: {analysis['response_num_chars']}", flush=True)
 
             print("\nFull raw model output:", flush=True)
             print(model_output, flush=True)
@@ -330,8 +347,32 @@ for lang in LANGUAGES:
 
         accuracy = correct_count / total if total else 0
         boxed_rate = boxed_count / total if total else 0
+        thinking_consistency_rate = (
+            reasoning_language_consistent / total if total else 0
+        )
+
+        response_consistency_rate = (
+            response_language_consistent / total if total else 0
+        )
+
+        response_length = response_length / total if total else 0
 
         print(f"\nResults for {lang}/{split}", flush=True)
         print(f"Correct: {correct_count}/{total}", flush=True)
         print(f"Accuracy: {accuracy:.2%}", flush=True)
         print(f"Boxed-answer rate: {boxed_rate:.2%}", flush=True)
+        print(
+            f"Thinking language consistency rate: "
+            f"{thinking_consistency_rate:.2%}",
+            flush=True,
+        )
+        print(
+            f"Response consistency rate: "
+            f"{response_consistency_rate:.2%}",
+            flush=True,
+        )
+
+        print(
+            f"Average response length: {response_length:.0f} words",
+            flush=True,
+        )
