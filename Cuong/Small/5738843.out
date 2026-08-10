@@ -79622,3 +79622,12 @@ Boxed-answer rate: 81.60%
 Thinking language consistency rate: 100.00%
 Response consistency rate: 97.60%
 Average response length: 208 words
+[main 36b95e3] automated push
+ 5 files changed, 91825 insertions(+), 2547 deletions(-)
+ delete mode 100644 Cuong/Small/5728631.out
+ delete mode 100644 Cuong/Small/5728632.out
+ delete mode 100644 Cuong/Small/5728633.out
+ create mode 100644 Cuong/Small/5738843.out
+ create mode 100644 Cuong/Small/5738844.out
+To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
+   04d3b29..36b95e3  main -> main
