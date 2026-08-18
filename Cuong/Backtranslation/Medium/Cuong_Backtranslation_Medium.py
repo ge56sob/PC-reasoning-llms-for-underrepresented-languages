@@ -360,7 +360,7 @@ for lang in LANGUAGES:
             print("\nAnalysis:", flush=True)
             print(f"Has boxed answer: {analysis['has_boxed_answer']}", flush=True)
             print(f"Response language: {analysis['response_language']}", flush=True)
-            if analysis['response_language'] == lang:
+            if analysis['response_language'] == "en":
                 response_language_consistent += 1
             print(
                 f"Coherent reasoning heuristic: {analysis['coherent_reasoning_heuristic']}",
