@@ -1,3 +1,4 @@
+import os
 import re
 import torch
 from datasets import load_dataset
@@ -7,7 +8,9 @@ MODEL_ID = "BlossomsAI/BloomVN-8B-Chat-Reasoning"
 
 LANGUAGES = ["en", "vi"]
 SPLITS = ["low", "medium", "high", "top"]
+
 MAX_EXAMPLES_PER_SPLIT = None
+MAX_NEW_TOKENS = 2000
 
 PROMPT_NOTES = {
     "en": r"Note: Please put the final answer in \boxed{}.",
@@ -17,28 +20,44 @@ PROMPT_NOTES = {
 
 def make_messages(question, lang):
     user_prompt = f"{question}\n\n{PROMPT_NOTES[lang]}"
-
-    return [
-        {
-            "role": "user",
-            "content": user_prompt,
-        }
-    ]
+    return [{"role": "user", "content": user_prompt}]
 
 
 def extract_boxed_answer(text):
     """
-    Extracts the last answer written as \\boxed{...}.
-    Returns None if no boxed answer exists.
+    Extracts the LAST answer written as \boxed{...},
+    correctly handling nested braces.
+
+    Returns:
+        str | None
     """
     text = str(text)
 
-    matches = re.findall(r"\\boxed\{([^{}]*)\}", text)
+    marker = r"\boxed{"
 
-    if len(matches) == 0:
+    # Find the last occurrence of \boxed{
+    start = text.rfind(marker)
+
+    if start == -1:
         return None
 
-    return matches[-1].strip()
+    start += len(marker)
+
+    depth = 1
+    i = start
+
+    while i < len(text) and depth > 0:
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+        i += 1
+
+    # Unmatched braces
+    if depth != 0:
+        return None
+
+    return text[start:i - 1].strip()
 
 
 def normalize_answer(text):
@@ -46,60 +65,151 @@ def normalize_answer(text):
         return ""
 
     text = str(text).strip().lower()
-
     text = text.replace("$", "")
     text = text.replace("\\left", "")
     text = text.replace("\\right", "")
     text = text.replace("{", "")
     text = text.replace("}", "")
     text = text.replace(",", "")
-
     text = re.sub(r"\s+", "", text)
     text = text.rstrip(".。")
 
     return text
 
-def detect_language_heuristic(text):
-    text = text.lower()
 
-    vi_markers = ["và", "là", "không", "có", "cho", "một", "các", "trong", "để", "với"]
-    vi_score = sum(1 for w in vi_markers if w in text)
+def extract_between(text, start_tag, end_tag):
+    text = str(text)
+    start = text.find(start_tag)
+    end = text.find(end_tag)
 
-    en_words = ["the", "is", "are", "therefore", "solution", "answer", "step"]
-    en_score = sum(1 for w in en_words if w in text)
+    if start == -1 or end == -1 or end <= start:
+        return ""
 
-    if vi_score > en_score and vi_score > 0:
+    return text[start + len(start_tag):end].strip()
+
+
+def extract_thinking_text(model_output):
+    return extract_between(
+        model_output,
+        "<|START_THINKING|>",
+        "<|END_THINKING|>",
+    )
+
+
+def extract_response_text(model_output):
+    response = extract_between(
+        model_output,
+        "<|START_RESPONSE|>",
+        "<|END_RESPONSE|>",
+    )
+
+    if response:
+        return response
+
+    return str(model_output).strip()
+
+
+def detect_language(text, curr_lang):
+    text = str(text).lower()
+
+    vietnamese_chars = re.findall(
+        r"[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễ"
+        r"ìíịỉĩòóọỏõôồốộổỗơờớợởỡ"
+        r"ùúụủũưừứựửữỳýỵỷỹđ]",
+        text,
+    )
+
+    vi_markers = [
+        "vì", "nên", "ta", "có", "là", "vậy", "suy ra", "giả sử",
+        "khi đó", "từ đó", "do đó", "bằng", "phương trình", "nghiệm",
+        "tổng", "hiệu", "tích", "chia", "số", "đáp án"
+    ]
+
+    en_markers = [
+        "we", "have", "therefore", "so", "thus", "since", "let",
+        "then", "because", "equation", "solution", "answer",
+        "sum", "product", "divide", "number", "hence"
+    ]
+
+    vi_score = len(vietnamese_chars)
+    en_score = 0
+
+    for marker in vi_markers:
+        vi_score += len(re.findall(rf"\b{re.escape(marker)}\b", text))
+
+    for marker in en_markers:
+        en_score += len(re.findall(rf"\b{re.escape(marker)}\b", text))
+
+    if vi_score == 0 and en_score == 0:
+        return curr_lang
+
+    if vi_score >= 2 and en_score >= 2:
+        return "mixed"
+
+    if vi_score > en_score:
         return "vi"
-    if en_score > 0:
+
+    if en_score > vi_score:
         return "en"
-    return "unknown"
+
+    return "mixed"
 
 
-def coherence_score(text):
-    text = text.lower()
-    score = 0.0
+def response_length_stats(response_text):
+    response_text = str(response_text).strip()
+    words = response_text.split()
 
-    if any(k in text for k in ["therefore", "thus", "hence", "step", "1.", "2."]):
-        score += 0.4
+    return {
+        "response_num_words": len(words),
+        "response_num_chars": len(response_text),
+    }
 
-    if any(k in text for k in ["=", "+", "-", "\\frac", "because"]):
-        score += 0.3
+
+def check_coherent_reasoning(response_text):
+    text = str(response_text).strip().lower()
+
+    if len(text) < 30:
+        return False
+
+    reasoning_markers = [
+        "therefore", "thus", "so", "since", "because", "we have", "let",
+        "do đó", "vì", "nên", "suy ra", "giả sử", "khi đó", "từ đó"
+    ]
+
+    has_reasoning_marker = any(marker in text for marker in reasoning_markers)
+    has_math_symbol = bool(re.search(r"[=+\-*/^<>]|\\frac|\\sqrt", text))
 
     words = text.split()
-    if len(words) > 0:
-        rep = len(words) / len(set(words))
-        if rep < 1.3:
-            score += 0.3
+    unique_ratio = len(set(words)) / len(words) if words else 0
+    not_too_repetitive = unique_ratio > 0.25
 
-    return min(score, 1.0)
+    return has_reasoning_marker and has_math_symbol and not_too_repetitive
 
 
-def reasoning_length(text):
-    idx = text.rfind("\\boxed")
-    if idx == -1:
-        return len(text.split())
-    return len(text[:idx].split())
+def analyze_output(model_output, prompt_lang):
+    thinking_text = extract_thinking_text(model_output)
+    response_text = extract_response_text(model_output)
 
+    boxed_answer = extract_boxed_answer(response_text)
+    has_boxed_answer = boxed_answer is not None
+
+    reasoning_language = detect_language(thinking_text, prompt_lang)
+    response_language = detect_language(response_text, prompt_lang)
+
+    length_stats = response_length_stats(response_text)
+    coherent_reasoning = check_coherent_reasoning(response_text)
+
+    return {
+        "thinking_text": thinking_text,
+        "response_text": response_text,
+        "has_boxed_answer": has_boxed_answer,
+        "boxed_answer": boxed_answer,
+        "reasoning_language": reasoning_language,
+        "response_language": response_language,
+        "coherent_reasoning_heuristic": coherent_reasoning,
+        **length_stats,
+    }
+    
 def backtranslate_vi_to_en(question, tokenizer, model):
     prompt = f"""
 Translate this Vietnamese math problem into clear English.
@@ -138,13 +248,16 @@ def generate_response(question, lang, tokenizer, model):
         add_generation_prompt=True,
         tokenize=True,
         return_dict=True,
-        return_tensors="pt",
-    ).to(model.device)
+        return_tensors="pt"
+    )
+
+    input_device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    inputs = inputs.to(input_device)
 
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
-            max_new_tokens=2000,
+            max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
             pad_token_id=tokenizer.eos_token_id,
         )
@@ -153,21 +266,29 @@ def generate_response(question, lang, tokenizer, model):
 
     response = tokenizer.decode(
         generated_tokens,
-        skip_special_tokens=True,
+        skip_special_tokens=False,
     ).strip()
 
     return response
 
 
-print("Loading model...")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
+print("CUDA available:", torch.cuda.is_available(), flush=True)
+if torch.cuda.is_available():
+    print("GPU:", torch.cuda.get_device_name(0), flush=True)
 
+print("Loading tokenizer...", flush=True)
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_ID
+)
+print("Tokenizer loaded.", flush=True)
+
+print("Loading model...", flush=True)
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
-    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-    device_map="auto",
-    trust_remote_code=True,
+    torch_dtype="auto",
+    device_map="auto"
 )
+print("Model loaded.", flush=True)
 
 model.eval()
 
@@ -175,24 +296,26 @@ if tokenizer.pad_token_id is None:
     tokenizer.pad_token = tokenizer.eos_token
 
 
-all_results = []
-
 for lang in LANGUAGES:
-    print(f"\n================ LANGUAGE: {lang.upper()} ================")
+    print(f"\n================ LANGUAGE: {lang.upper()} ================", flush=True)
 
     dataset_dict = load_dataset("Qwen/PolyMath", lang)
 
     for split in SPLITS:
-        print(f"\n---------- Split: {split} ----------")
+        print(f"\n---------- Split: {split} ----------", flush=True)
 
         dataset = dataset_dict[split]
-        total = len(dataset)
+
+        if MAX_EXAMPLES_PER_SPLIT is None:
+            total = len(dataset)
+        else:
+            total = min(MAX_EXAMPLES_PER_SPLIT, len(dataset))
 
         correct_count = 0
         boxed_count = 0
-        language_match_count = 0
-        coherence_sum = 0.0
-        reasoning_sum = 0
+        reasoning_language_consistent = 0
+        response_language_consistent = 0
+        response_length = 0
 
         for i in range(total):
             item = dataset[i]
@@ -201,6 +324,7 @@ for lang in LANGUAGES:
 
             if lang == "vi":
                 question = backtranslate_vi_to_en(question, tokenizer, model)
+            
             gold_answer = str(item["answer"]).strip()
 
             model_output = generate_response(
@@ -210,7 +334,9 @@ for lang in LANGUAGES:
                 model=model,
             )
 
-            predicted_answer = extract_boxed_answer(model_output)
+            analysis = analyze_output(model_output, prompt_lang=lang)
+
+            predicted_answer = analysis["boxed_answer"]
 
             if predicted_answer is not None:
                 boxed_count += 1
@@ -221,61 +347,53 @@ for lang in LANGUAGES:
             normalized_gold = normalize_answer(gold_answer)
 
             is_correct = normalized_pred == normalized_gold
-            lang_detected = detect_language_heuristic(model_output)
-            lang_match = (lang_detected == lang)
-
-            coherence = coherence_score(model_output)
-            reason_len = reasoning_length(model_output)
-
-            if lang_match:
-                language_match_count += 1
-
-            coherence_sum += coherence
-            reasoning_sum += reason_len
 
             if is_correct:
                 correct_count += 1
 
-            all_results.append(
-           {
-            "language": lang,
-            "split": split,
-            "id": item.get("id", i),
-            "question": question,
-            "gold_answer": gold_answer,
-            "model_output": model_output,
-            "predicted_answer": predicted_answer,
-            "correct": is_correct,
+            print(f"ID: {item.get('id', i)}", flush=True)
+            print(f"Question: {question}", flush=True)
+            print(f"Gold: {gold_answer}", flush=True)
+            print(f"Predicted: {predicted_answer}", flush=True)
+            print(f"Correct: {is_correct}", flush=True)
 
-            # NEW METRICS
-            "detected_language": lang_detected,
-            "language_match": lang_match,
-            "coherence_score": coherence,
-            "reasoning_length": reason_len,
-          }
-        )
+            print("\nAnalysis:", flush=True)
+            print(f"Has boxed answer: {analysis['has_boxed_answer']}", flush=True)
+            print(f"Response language: {analysis['response_language']}", flush=True)
+            if analysis['response_language'] == "en":
+                response_language_consistent += 1
+            print(
+                f"Coherent reasoning heuristic: {analysis['coherent_reasoning_heuristic']}",
+                flush=True,
+            )
+            print(f"Response words: {analysis['response_num_words']}", flush=True)
+            response_length += analysis["response_num_words"]
+            print(f"Response chars: {analysis['response_num_chars']}", flush=True)
 
-            print(f"ID: {item.get('id', i)}")
-            print(f"Question: {question}")
-            print(f"Gold: {gold_answer}")
-            print(f"Predicted: {predicted_answer}")
-            print(f"Correct: {is_correct}")
-            print(f"Detected language: {lang_detected}")
-            print(f"Language match: {lang_match}")
-            print(f"Coherence score: {coherence:.2f}")
-            print(f"Reasoning length: {reason_len} words")
-            print("-" * 80)
+            print("\nFull raw model output:", flush=True)
+            print(model_output, flush=True)
+            print("-" * 80, flush=True)
 
         accuracy = correct_count / total if total else 0
         boxed_rate = boxed_count / total if total else 0
-        language_rate = language_match_count / total if total else 0
-        avg_coherence = coherence_sum / total if total else 0
-        avg_reasoning = reasoning_sum / total if total else 0
 
-        print(f"\nResults for {lang}/{split}")
-        print(f"Correct: {correct_count}/{total}")
-        print(f"Accuracy: {accuracy:.2%}")
-        print(f"Boxed-answer rate: {boxed_rate:.2%}")
-        print(f"Language match rate: {language_rate:.2%}")
-        print(f"Average coherence score: {avg_coherence:.2f}")
-        print(f"Average reasoning length: {avg_reasoning:.1f} words")
+        response_consistency_rate = (
+            response_language_consistent / total if total else 0
+        )
+
+        response_length = response_length / total if total else 0
+
+        print(f"\nResults for {lang}/{split}", flush=True)
+        print(f"Correct: {correct_count}/{total}", flush=True)
+        print(f"Accuracy: {accuracy:.2%}", flush=True)
+        print(f"Boxed-answer rate: {boxed_rate:.2%}", flush=True)
+        print(
+            f"Response consistency rate: "
+            f"{response_consistency_rate:.2%}",
+            flush=True,
+        )
+
+        print(
+            f"Average response length: {response_length:.0f} words",
+            flush=True,
+        )

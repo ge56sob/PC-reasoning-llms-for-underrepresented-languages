@@ -320,16 +320,12 @@ for lang in LANGUAGES:
 
             print(f"ID: {item.get('id', i)}", flush=True)
             print(f"Question: {question}", flush=True)
-            print(f"Answer: {model_output}", flush=True)
             print(f"Gold: {gold_answer}", flush=True)
             print(f"Predicted: {predicted_answer}", flush=True)
             print(f"Correct: {is_correct}", flush=True)
 
             print("\nAnalysis:", flush=True)
             print(f"Has boxed answer: {analysis['has_boxed_answer']}", flush=True)
-            print(f"Reasoning language: {analysis['reasoning_language']}", flush=True)
-            if analysis['reasoning_language'] == lang:
-                reasoning_language_consistent += 1
             print(f"Response language: {analysis['response_language']}", flush=True)
             if analysis['response_language'] == lang:
                 response_language_consistent += 1
@@ -347,9 +343,6 @@ for lang in LANGUAGES:
 
         accuracy = correct_count / total if total else 0
         boxed_rate = boxed_count / total if total else 0
-        thinking_consistency_rate = (
-            reasoning_language_consistent / total if total else 0
-        )
 
         response_consistency_rate = (
             response_language_consistent / total if total else 0
@@ -361,11 +354,6 @@ for lang in LANGUAGES:
         print(f"Correct: {correct_count}/{total}", flush=True)
         print(f"Accuracy: {accuracy:.2%}", flush=True)
         print(f"Boxed-answer rate: {boxed_rate:.2%}", flush=True)
-        print(
-            f"Thinking language consistency rate: "
-            f"{thinking_consistency_rate:.2%}",
-            flush=True,
-        )
         print(
             f"Response consistency rate: "
             f"{response_consistency_rate:.2%}",
