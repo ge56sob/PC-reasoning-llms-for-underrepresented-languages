@@ -59156,3 +59156,10 @@ Accuracy: 0.00%
 Boxed-answer rate: 69.60%
 Response consistency rate: 98.40%
 Average response length: 181 words
+[main 00b7e1d] automated push
+ 3 files changed, 175039 insertions(+)
+ create mode 100644 Cuong/Backtranslation/Small/5752674.out
+ create mode 100644 Cuong/Backtranslation/Small/5752675.out
+ create mode 100644 Cuong/Backtranslation/Small/5752676.out
+To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
+   eac8884..00b7e1d  main -> main
