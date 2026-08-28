@@ -162,30 +162,6 @@ CUDA available: True
 GPU: NVIDIA H100
 Loading tokenizer...
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Traceback (most recent call last):
-  File "/dss/dssfs05/lwp-dss-0003/pn39je/pn39je-dss-0004/go35wit2/PC-reasoning-llms-for-underrepresented-languages/Cuong/Large/Cuong_LargeModel.py", line 251, in <module>
-    tokenizer = AutoTokenizer.from_pretrained(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 786, in from_pretrained
-    return TokenizersBackend.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1713, in from_pretrained
-    resolved_vocab_files[file_id] = cached_file(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 293, in cached_file
-    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 527, in cached_files
-    raise e
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 437, in cached_files
-    hf_hub_download(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
-    return fn(*args, **kwargs)
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1016, in hf_hub_download
-    return _hf_hub_download_to_cache_dir(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1238, in _hf_hub_download_to_cache_dir
-    _download_to_tmp_and_move(
-  File "/dss/dsshome1/07/go35wit2/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1851, in _download_to_tmp_and_move
-    with tmp_path.open("wb") as f:
-OSError: [Errno 122] Disk quota exceeded
-[main 97c7cb9] automated push
- 2 files changed, 191 insertions(+)
- create mode 100644 Cuong/Large/5754069.out
-To github.com:ge56sob/PC-reasoning-llms-for-underrepresented-languages.git
-   1b2091b..97c7cb9  main -> main
+Tokenizer loaded.
+Loading model...
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  10%|█         | 1/10 [47:29<7:07:29, 2849.95s/it]Fetching 10 files:  20%|██        | 2/10 [50:10<2:49:01, 1267.66s/it]
