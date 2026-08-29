@@ -164,4 +164,4 @@ Loading tokenizer...
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 Tokenizer loaded.
 Loading model...
-Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  10%|█         | 1/10 [47:29<7:07:29, 2849.95s/it]Fetching 10 files:  20%|██        | 2/10 [50:10<2:49:01, 1267.66s/it]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  10%|█         | 1/10 [47:29<7:07:29, 2849.95s/it]Fetching 10 files:  20%|██        | 2/10 [50:10<2:49:01, 1267.66s/it]slurmstepd: error: *** JOB 5762267 ON lrz-hgx-h100-010 CANCELLED AT 2026-08-29T03:52:09 DUE TO TIME LIMIT ***
